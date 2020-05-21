@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <m-header></m-header>
+    <span>{{d}}</span>
+    <!-- <router-view /> -->
   </div>
 </template>
-
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import MHeader from "./components/m-header/m-header.vue";
+@Component({
+  components: { MHeader }
+})
+export default class App extends Vue {
+  d = "sbsb";
+}
+</script>
 <style lang="stylus">
 #app
   font-family Avenir, Helvetica, Arial, sans-serif
