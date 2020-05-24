@@ -4,12 +4,17 @@ import recommend from "@/components/recommend/recommend.vue"
 import rank from "@/components/rank/rank.vue"
 import search from "@/components/search/search.vue"
 import singer from "@/components/singer/singer.vue"
+import slider from "@/components/slider/slider.vue"
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
     {
         path: "/",
         redirect: "/recommend",
+    },
+    {
+        path: "/slider",
+        component: slider,
     },
     {
         path: "/recommend",

@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "@types/fastclick": "^1.0.29",
+    "@types/jsonp": "^0.2.0",
     "babel-runtime": "^6.0.0",
     "core-js": "^3.6.4",
     "fastclick": "^1.0.6",
+    "jsonp": "^0.2.1",
+    "swiper": "^5.4.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.1",
@@ -53,7 +56,12 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off",
+      "no-debugger": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/camelcase": "off"
+    }
   },
   "browserslist": [
     "> 1%",
