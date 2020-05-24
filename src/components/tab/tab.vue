@@ -1,14 +1,57 @@
 <template>
-  <div class="tab">
-    <ul>
-      <li>tab</li>
-    </ul>
-  </div>
+    <div class="tab">
+        <ul>
+            <router-link
+                v-for="item in items"
+                :key="item.id"
+                :to="item.path"
+                tag="li"
+                :class="item.class"
+                ><span>{{ item.content }}</span></router-link>
+        </ul>
+    </div>
 </template>
 
-<script lang='ts'>
-export default {};
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+@Component
+export default class Tab extends Vue {
+    items = [
+        { id: "nav-1", content: "推荐", path: '/recommend', class: "" },
+        { id: "nav-2", content: "歌手", path: '/singer', class: "" },
+        { id: "nav-3", content: "排行", path: '/rank', class: "" },
+        { id: "nav-4", content: "搜索", path: '/search', class: "" }
+    ];
+}
 </script>
+<style lang="stylus">
+div.tab
+    color #fff
 
-<style>
+    ul
+        display flex
+
+        li
+            flex 1
+            background-color #272727
+            box-sizing border-box
+            height 2.5em
+            line-height @height
+            vertical-align top
+            span
+            &.router-link-active
+                color rgb(157, 138, 77)
+                font-weight 600
+                span
+                    position relative
+                    display inline-flex
+                    &::after
+                        position absolute
+                        bottom 0
+                        left 0
+                        content ''
+                        display inline-block
+                        width 100%
+                        border-bottom 3px solid rgb(157, 138, 77)
+            
 </style>
