@@ -25,7 +25,8 @@ export default class Tab extends Vue {
   ];
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
+@import '../../common/stylus/variable.styl'
 div.tab
     height 35px
     flex 0 0 auto
@@ -43,8 +44,7 @@ div.tab
             vertical-align top
             span
             &.router-link-active
-                color rgb(157, 138, 77)
-                font-weight 600
+                color $text-highlight-color
                 span
                     position relative
                     display inline-flex

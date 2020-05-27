@@ -1,50 +1,50 @@
 <template>
-    <div class="scroll" ref="scroll">
-        <slot></slot>
-    </div>
+  <div class="scroll" ref="scroll">
+    <slot></slot>
+  </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import BScroll from "@better-scroll/core";
 @Component
 export default class Scroll extends Vue {
-    scroll: object = null;
+  scroll: object = null;
 
-    @Prop({
-        default: () => {
-            return [];
-        }
-    })
-    data;
-
-    mounted() {
-        this.$nextTick(() => {
-            this.__initScroll();
-        });
+  @Prop({
+    default: () => {
+      return [];
     }
+  })
+  data;
 
-    __initScroll() {
-        const options: object = {
-            click: true,
-            probetype: 1
-        };
-        if (this.$refs.scroll) {
-            this.scroll = new BScroll(".scroll", options);
-        }
-    }
+  mounted() {
+    this.$nextTick(() => {
+      this.__initScroll();
+    });
+  }
 
-    refresh() {
-        this.scroll && this.scroll.refresh();
+  __initScroll() {
+    const options: object = {
+      click: true,
+      probetype: 1
+    };
+    if (this.$refs.scroll) {
+      this.scroll = new BScroll(".scroll", options);
     }
+  }
 
-    @Watch("data")
-    getData() {
-        this.$nextTick(() => {
-            this.refresh();
-        });
-    }
+  refresh() {
+    this.scroll && this.scroll.refresh();
+  }
+
+  @Watch("data")
+  getData() {
+    this.$nextTick(() => {
+      this.refresh();
+    });
+  }
 }
 </script>
 
-<style lang='stylus' scoped></style>
+<style lang="stylus" scoped></style>

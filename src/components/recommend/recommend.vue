@@ -1,43 +1,41 @@
 <template>
-    <scroll class="recommend" :data="descList" ref="recommend">
-        <div class="recommend-wrap">
-            <div class="banner" v-if="slideList.length">
-                <slider>
-                    <div
-                        class="swiper-slide"
-                        v-for="(item, index) in slideList"
-                        :key="'slider' + index"
-                    >
-                        <a :href="item.linkUrl"
-                            ><img @load="imgLoad" :src="item.picUrl" alt=""
-                        /></a>
-                    </div>
-                </slider>
-            </div>
+  <scroll class="recommend" :data="descList" ref="recommend">
+    <div class="recommend-wrap">
+      <div class="banner" v-if="slideList.length">
+        <slider>
+          <div
+            class="swiper-slide"
+            v-for="(item, index) in slideList"
+            :key="'slider' + index"
+          >
+            <a :href="item.linkUrl"
+              ><img @load="imgLoad" v-lazy="item.picUrl" alt=""
+            /></a>
+          </div>
+        </slider>
+      </div>
 
-            <div class="descLists">
-                <h2>热门歌单推荐</h2>
-                <ul class="descLists-wrap">
-                    <li v-for="desc in descList" :key="desc.contend_id">
-                        <div class="icon">
-                            <img
-                                :src="desc.cover"
-                                alt="icon"
-                                width="60"
-                                height="60"
-                            />
-                        </div>
-                        <div class="text">
-                            <h3 class="desc-name">{{ desc.title }}</h3>
-                            <p class="listen-number">
-                                播放量：{{ getListenNum(desc.listen_num) }}万
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+      <div class="descLists">
+        <h2>热门歌单推荐</h2>
+        <ul class="descLists-wrap">
+          <li v-for="desc in descList" :key="desc.contend_id" >
+            <div class="icon">
+              <img v-lazy="desc.cover" alt="icon" width="60" height="60" />
             </div>
+            <div class="text">
+              <h3 class="desc-name">{{ desc.title }}</h3>
+              <p class="listen-number">
+                播放量：{{ getListenNum(desc.listen_num) }}万
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="loading-wrap" v-show="!descList.length">
+          <loading></loading>
         </div>
-    </scroll>
+      </div>
+    </div>
+  </scroll>
 </template>
 
 <script lang="ts">
@@ -46,8 +44,10 @@ import { getRecommend, getDescLists } from "../../api/recommend";
 import { ERR_OK } from "../../api/config";
 import Slider from "../slider/slider.vue";
 import Scroll from "../../base/scroll/scroll.vue";
+import Loading from "../../base/loading/loading.vue";
+
 @Component({
-    components: { Slider, Scroll }
+    components: { Slider, Scroll, Loading }
 })
 export default class Recommend extends Vue {
     slideList = [];
@@ -85,11 +85,14 @@ export default class Recommend extends Vue {
 </script>
 
 <style lang="stylus" scoped>
+@import '../../common/stylus/variable.styl'
+
 .recommend
     flex 1 1 auto
     height 100vh
     overflow hidden
     background-color #272727
+    position relative
 
     .recommend-wrap
         .banner
@@ -119,10 +122,11 @@ export default class Recommend extends Vue {
                     display block
 
         .descLists
-            padding 20px 0
+            padding-bottom 20px
 
             h2
-                color rgb(157, 138, 77)
+                color $text-highlight-color
+                font-weight normal
                 padding-top 20px
 
             ul.descLists-wrap
@@ -155,6 +159,7 @@ export default class Recommend extends Vue {
 
                         .desc-name
                             font-size 12px
+                            font-weight normal
 
                         .listen-number
                             font-size 12px
@@ -166,4 +171,11 @@ export default class Recommend extends Vue {
                             height 2.4em
                             text-overflow ellipsis
                             overflow hidden
+
+            .loading-wrap
+                position absolute
+                width 100%
+                top 50%
+                transform translateY(-50%)
+                z-index 3
 </style>
