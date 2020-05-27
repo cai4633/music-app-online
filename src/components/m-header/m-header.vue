@@ -16,6 +16,8 @@ export default class MHeader extends Vue {}
 
 <style lang="stylus">
 div.m-header
+    height 68px
+    flex 0 0 auto
     .banner
         display flex
         justify-content center

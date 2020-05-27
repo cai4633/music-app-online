@@ -1,8 +1,6 @@
 <template>
     <div class="slider">
-        <div class="swiper-wrapper">
-            <slot></slot>
-        </div>
+        <div class="swiper-wrapper"><slot></slot></div>
         <div class="swiper-pagination"></div>
         <!-- 
         <div class="swiper-button-prev"></div>
@@ -50,11 +48,11 @@ export default class Slider extends Vue {
 <style lang='stylus' scoped>
 .slider
     margin auto
-    border 1px solid #000
     width 100vw
     height 40vw
     position relative
     overflow hidden
+    font-size 0px
 </style>
 
 <style lang="stylus">

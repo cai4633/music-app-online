@@ -27,6 +27,8 @@ export default class Tab extends Vue {
 </script>
 <style lang="stylus">
 div.tab
+    height 35px
+    flex 0 0 auto
     color #fff
 
     ul
