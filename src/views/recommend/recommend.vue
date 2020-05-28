@@ -1,50 +1,55 @@
 <template>
-  <scroll class="recommend" :data="descList" ref="recommend">
-    <div class="recommend-wrap">
-      <div class="banner" v-if="slideList.length">
-        <slider>
-          <div
-            class="swiper-slide"
-            v-for="(item, index) in slideList"
-            :key="'slider' + index"
-          >
-            <a :href="item.linkUrl"
-              ><img @load="imgLoad" v-lazy="item.picUrl" alt=""
-            /></a>
-          </div>
-        </slider>
-      </div>
+    <scroll class="recommend" :data="descList" ref="recommend">
+        <div class="recommend-wrap">
+            <div class="banner" v-if="slideList.length">
+                <slider>
+                    <div
+                        class="swiper-slide"
+                        v-for="(item, index) in slideList"
+                        :key="'slider' + index"
+                    >
+                        <a :href="item.linkUrl"
+                            ><img @load="imgLoad" v-lazy="item.picUrl" alt=""
+                        /></a>
+                    </div>
+                </slider>
+            </div>
 
-      <div class="descLists">
-        <h2>热门歌单推荐</h2>
-        <ul class="descLists-wrap">
-          <li v-for="desc in descList" :key="desc.contend_id" >
-            <div class="icon">
-              <img v-lazy="desc.cover" alt="icon" width="60" height="60" />
+            <div class="descLists">
+                <h2>热门歌单推荐</h2>
+                <ul class="descLists-wrap">
+                    <li v-for="desc in descList" :key="desc.contend_id">
+                        <div class="icon">
+                            <img
+                                v-lazy="desc.cover"
+                                alt="icon"
+                                width="60"
+                                height="60"
+                            />
+                        </div>
+                        <div class="text">
+                            <h3 class="desc-name">{{ desc.title }}</h3>
+                            <p class="listen-number">
+                                播放量：{{ getListenNum(desc.listen_num) }}万
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="loading-wrap" v-show="!descList.length">
+                    <loading></loading>
+                </div>
             </div>
-            <div class="text">
-              <h3 class="desc-name">{{ desc.title }}</h3>
-              <p class="listen-number">
-                播放量：{{ getListenNum(desc.listen_num) }}万
-              </p>
-            </div>
-          </li>
-        </ul>
-        <div class="loading-wrap" v-show="!descList.length">
-          <loading></loading>
         </div>
-      </div>
-    </div>
-  </scroll>
+    </scroll>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Provide } from "vue-property-decorator";
-import { getRecommend, getDescLists } from "../../api/recommend";
-import { ERR_OK } from "../../api/config";
-import Slider from "../slider/slider.vue";
-import Scroll from "../../base/scroll/scroll.vue";
-import Loading from "../../base/loading/loading.vue";
+import { getRecommend, getDescLists } from "api/recommend";
+import { ERR_OK } from "api/config";
+import Slider from "components/slider/slider.vue";
+import Scroll from "base/scroll/scroll.vue";
+import Loading from "base/loading/loading.vue";
 
 @Component({
     components: { Slider, Scroll, Loading }
@@ -64,7 +69,7 @@ export default class Recommend extends Vue {
     }
 
     __getRecommend() {
-        getRecommend().then(({ err, data }) => {
+        getRecommend().then(({ err, data }): void => {
             this.slideList = data.slider;
         });
     }

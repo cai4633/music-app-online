@@ -6,7 +6,6 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 import MHeader from "@/components/m-header/m-header";
 export default {
   name: "Home",

@@ -19,7 +19,8 @@ module.exports = {
             .set("@", resolve("src"))
             .set("assets", resolve("src/assets"))
             .set("components", resolve("src/components"))
-            .set("base", resolve("baseConfig"))
+            .set("api", resolve("src/api"))
+            .set("base", resolve("src/base"))
             .set("public", resolve("public"))
     },
     devServer: {
@@ -45,7 +46,7 @@ module.exports = {
                     params: req.query,
                 })
                     .then((response) => {
-                        res.status(200).json({ data: response['data'].singerList}) // nodejs使用res.json()直接传入response变量会引起循环引用报错
+                        res.status(200).json({ data: response["data"].singerList }) // nodejs使用res.json()直接传入response变量会引起循环引用报错
                     })
                     .catch((e) => {
                         console.log(e)
