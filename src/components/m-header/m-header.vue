@@ -23,7 +23,7 @@ div.m-header
         display flex
         justify-content center
         align-items center
-        background-color #272727
+        background-color $background-color
 
         img
             width 30px

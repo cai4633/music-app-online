@@ -55,5 +55,5 @@ div.tab
                         content ''
                         display inline-block
                         width 100%
-                        border-bottom 3px solid rgb(157, 138, 77)
+                        border-bottom 3px solid $text-highlight-color
 </style>
