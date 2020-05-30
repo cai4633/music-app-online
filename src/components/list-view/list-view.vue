@@ -1,5 +1,5 @@
 <template>
-  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY">
+  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY" ref="scroll" @scrollEnd='scrollEnd'>
     <div class="singer-wrap">
       <ul class="singer-content">
         <li v-for="item in singerlist" :key="item.id" ref="listgroup">
@@ -20,20 +20,24 @@
     </h2>
     <div class="list-shortcut">
       <ul>
-        <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }">
+        <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }" :data-index='index' @click='shortcutClick'>
           {{ item }}
         </li>
       </ul>
+    </div>
+    <div class="loading-wrap" v-show="!singerlist.length">
+      <loading></loading>
     </div>
   </scroll>
 </template>
 
 <script lang='ts'>
 import Scroll from "base/scroll/scroll.vue";
+import Loading from "base/loading/loading.vue";
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
 @Component({
-  components: { Scroll }
+  components: { Scroll, Loading }
 })
 
 export default class ListView extends Vue {
@@ -42,6 +46,7 @@ export default class ListView extends Vue {
   titleList: string[] = [];
   currentIndex = 0;
   titleHeight = 0;
+  isClick = false
 
   @Prop()
   private singerlist!: object[];
@@ -57,6 +62,22 @@ export default class ListView extends Vue {
     this._getShortcutList();
   }
 
+  scrollEnd() {
+    this.isClick = false
+  }
+  shortcutClick(e: any) {
+    this.currentIndex = parseInt(e.currentTarget.dataset.index)
+    this._scrollTo(this.currentIndex)
+    this.isClick = true
+  }
+
+  _scrollTo(index: number) {
+    if (this.heightlist.length) {
+      const y: number = (index >= 1) ? -this.heightlist[index - 1] : 0;
+      (this.$refs.scroll as Scroll).scrollTo(0, y)
+    }
+  }
+  // 计算热门,[a-z] li的高度
   calHeight() {
     this.$nextTick(() => {
       const listgroup: Element[] = (this.$refs.listgroup as Element[]) || [];
@@ -72,8 +93,9 @@ export default class ListView extends Vue {
     });
   }
 
+  //滚动事件
   getPosY(y: number) {
-    if (this.heightlist.length) {
+    if (this.heightlist.length && !this.isClick) {
       for (let i = 0; i < this.heightlist.length; i++) {
         if (this.heightlist[i] >= -y) {
           this.currentIndex = i;
@@ -84,19 +106,19 @@ export default class ListView extends Vue {
     this.diff(y)
   }
 
+
+  //fixed bar 滚动切换效果
   diff(y: number) {
-    const distance = this.heightlist[this.currentIndex] + y - this.titleHeight
-    if (this.heightlist.length && distance <= 0) {
-      this.fixedTransfrom(distance)
-    } else {
-      this.fixedTransfrom(0)
-    }
+    let distance = this.heightlist.length ? this.heightlist[this.currentIndex] + y - this.titleHeight : 0
+    distance = distance > 0 ? 0 : distance
+    this.fixedTransfrom(distance)
   }
 
   fixedTransfrom(distance: number) {
     (this.$refs.fixed as HTMLElement).style.transform = `translateY(${distance}px)`
   }
 
+  //获取list-shortcut的content
   _getShortcutList() {
     this.singerlist.forEach((item: any) => {
       this.shotcutList.push(item.title[0]);
@@ -105,7 +127,7 @@ export default class ListView extends Vue {
   }
 
   @Watch("singerlist")
-  getlist() {
+  watchSingerlist() {
     this.init();
   }
 }
@@ -186,4 +208,11 @@ header-style()
 
         &.active
           color $text-highlight-color
+
+.loading-wrap
+  position fixed
+  width 100%
+  top 40%
+  transform translateY(-50%)
+  z-index 3
 </style>
