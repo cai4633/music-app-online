@@ -1,49 +1,70 @@
 <template>
-  <div class="scroll" ref="scroll">
-    <slot></slot>
-  </div>
+    <div class="scroll" ref="scroll">
+        <slot></slot>
+    </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import BScroll from "@better-scroll/core";
-@Component
+import MouseWheel from "@better-scroll/mouse-wheel";
+BScroll.use(MouseWheel);
+@Component({})
 export default class Scroll extends Vue {
-  scroll: object = null;
+    scroll: any = null;
 
-  @Prop({
-    default: () => {
-      return [];
+    @Prop({
+        default: null
+    })
+    private data!: any[];
+
+    @Prop({
+        default: 1
+    })
+    private probeType!: number;
+
+    @Prop({
+        default: true
+    })
+    private click!: boolean;
+
+    mounted() {
+        this.$nextTick(() => {
+            this.__initScroll();
+        });
     }
-  })
-  data;
 
-  mounted() {
-    this.$nextTick(() => {
-      this.__initScroll();
-    });
-  }
-
-  __initScroll() {
-    const options: object = {
-      click: true,
-      probetype: 1
-    };
-    if (this.$refs.scroll) {
-      this.scroll = new BScroll(".scroll", options);
+    __initScroll() {
+        const options: object = {
+            click: this.click,
+            probeType: 3,
+            mouseWheel: {
+                speed: 20,
+                invert: false,
+                easeTime: 300
+            }
+        };
+        if (this.$refs.scroll) {
+            this.scroll = new BScroll(".scroll", options);
+            this.bindEvents();
+        }
     }
-  }
 
-  refresh() {
-    this.scroll && this.scroll.refresh();
-  }
+    bindEvents() {
+        this.scroll.on("scroll", (pos: { y: number }) => {
+            this.$emit("scroll", pos.y);
+        });
+    }
+    refresh() {
+        this.scroll && this.scroll.refresh();
+    }
 
-  @Watch("data")
-  getData() {
-    this.$nextTick(() => {
-      this.refresh();
-    });
-  }
+    @Watch("data")
+    getData() {
+        this.$nextTick(() => {
+            this.refresh();
+        });
+    }
 }
 </script>
 

@@ -8,6 +8,7 @@ const express = require("express")
 const app = express()
 const apiRoutes = express.Router()
 const bodyParser = require("body-parser")
+const singerlistMock = require("./src/common/mock/singerlist.ts")
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json()) // for parsing application/json
@@ -20,6 +21,7 @@ module.exports = {
             .set("assets", resolve("src/assets"))
             .set("components", resolve("src/components"))
             .set("api", resolve("src/api"))
+            .set("common", resolve("src/common"))
             .set("base", resolve("src/base"))
             .set("public", resolve("public"))
     },
@@ -46,7 +48,8 @@ module.exports = {
                     params: req.query,
                 })
                     .then((response) => {
-                        res.status(200).json({ data: response["data"].singerList }) // nodejs使用res.json()直接传入response变量会引起循环引用报错
+                        // res.status(200).json({ data: response["data"].singerList }) // nodejs使用res.json()直接传入response变量会引起循环引用报错
+                        res.json(singerlistMock)
                     })
                     .catch((e) => {
                         console.log(e)

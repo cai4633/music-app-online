@@ -1,0 +1,189 @@
+<template>
+  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY">
+    <div class="singer-wrap">
+      <ul class="singer-content">
+        <li v-for="item in singerlist" :key="item.id" ref="listgroup">
+          <ul class="singer-inner">
+            <h3 ref="title">{{ item.title }}</h3>
+            <li v-for="singer in item.items" :key="singer.id" class="clearfix">
+              <div class="avatar">
+                <img v-lazy="singer.singer_pic" alt="" />
+              </div>
+              <p class="name">{{ singer.singer_name }}</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <h2 class="fixed-title" v-if="titleList && titleList.length" ref="fixed">
+      {{ titleList[currentIndex] }}
+    </h2>
+    <div class="list-shortcut">
+      <ul>
+        <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </scroll>
+</template>
+
+<script lang='ts'>
+import Scroll from "base/scroll/scroll.vue";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+
+@Component({
+  components: { Scroll }
+})
+
+export default class ListView extends Vue {
+  shotcutList: string[] = [];
+  heightlist: any[] = [];
+  titleList: string[] = [];
+  currentIndex = 0;
+  titleHeight = 0;
+
+  @Prop()
+  private singerlist!: object[];
+
+  mounted() {
+    this.$nextTick(() => {
+      this.init();
+    });
+  }
+
+  init() {
+    this.calHeight();
+    this._getShortcutList();
+  }
+
+  calHeight() {
+    this.$nextTick(() => {
+      const listgroup: Element[] = (this.$refs.listgroup as Element[]) || [];
+      let height = 0;
+      if (listgroup.length) {
+        this.titleHeight = (this.$refs.title as HTMLElement[])[0].offsetHeight;
+        this.heightlist = Array.prototype.map.call(listgroup, (li: { [key: string]: number }): number => {
+          height += li.offsetHeight;
+          return height;
+        }
+        );
+      }
+    });
+  }
+
+  getPosY(y: number) {
+    if (this.heightlist.length) {
+      for (let i = 0; i < this.heightlist.length; i++) {
+        if (this.heightlist[i] >= -y) {
+          this.currentIndex = i;
+          break;
+        }
+      }
+    }
+    this.diff(y)
+  }
+
+  diff(y: number) {
+    const distance = this.heightlist[this.currentIndex] + y - this.titleHeight
+    if (this.heightlist.length && distance <= 0) {
+      this.fixedTransfrom(distance)
+    } else {
+      this.fixedTransfrom(0)
+    }
+  }
+
+  fixedTransfrom(distance: number) {
+    (this.$refs.fixed as HTMLElement).style.transform = `translateY(${distance}px)`
+  }
+
+  _getShortcutList() {
+    this.singerlist.forEach((item: any) => {
+      this.shotcutList.push(item.title[0]);
+      this.titleList.push(item.title);
+    });
+  }
+
+  @Watch("singerlist")
+  getlist() {
+    this.init();
+  }
+}
+</script>
+
+<style lang='stylus' scoped>
+@import '~common/stylus/variable.styl'
+
+header-style()
+  text-align left
+  padding-left 20px
+  font-weight normal
+  line-height 2.5
+  height 2.5em
+  font-size 12px
+  background-color #333
+  text-transform uppercase
+
+.list-view
+  background-color $background-color
+  height 100vh
+  flex 1 1 auto
+  overflow scroll
+  color $text-color
+  position relative
+  overflow hidden
+
+  h2.fixed-title
+    header-style()
+    position absolute
+    top 0px
+    width 100%
+    left 0
+    z-index 6
+
+  .singer-wrap
+    ul.singer-content
+      ul.singer-inner
+        h3
+          header-style()
+
+        li
+          $line-height = 50px
+          padding-left 30px
+          padding-top 20px
+
+          .avatar
+            float left
+
+            img
+              width $line-height
+              height $line-height
+              display block
+              border-radius 50%
+
+          .name
+            padding-left 70px
+            text-align left
+            line-height $line-height
+
+  .list-shortcut
+    position fixed
+    top 50%
+    transform translateY(-50%)
+    right 5px
+    color red
+    font-size 12px
+    z-index 12
+
+    ul
+      background-color $list-shortcut-bc
+      padding 10px 2px
+      border-radius 2em
+
+      li
+        color $text-color
+        padding 2px 0
+
+        &.active
+          color $text-highlight-color
+</style>

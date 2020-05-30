@@ -24,6 +24,9 @@
       "base/*": [
         "src/base/*"
       ],
+      "common/*": [
+        "src/common/*"
+      ],
     },
     "lib": [
       "esnext",

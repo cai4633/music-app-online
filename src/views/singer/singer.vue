@@ -1,17 +1,7 @@
 <template>
-    <scroll class="singer" :data='singerlist'>
-        <div class="singer-content">
-            <h2>热门</h2>
-            <ul class="singer-content">
-                <li v-for="item in singerlist" :key="item.id" class="clearfix">
-                    <div class="avatar">
-                        <img :src="item.singer_pic" alt="" />
-                    </div>
-                    <p class="name">{{ item.singer_name }}</p>
-                </li>
-            </ul>
-        </div>
-    </scroll>
+  <div class="singer">
+    <list-view :singerlist="singerlist"></list-view>
+  </div>
 </template>
 
 <script lang="ts">
@@ -19,70 +9,74 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import { getSingerLists } from "../../api/singer";
 import { ERR_OK } from "api/config";
 import Scroll from "base/scroll/scroll.vue";
+import ListView from "@/components/list-view/list-view.vue";
+const HOT_NAME = "热门";
+const HOT_SONG_LENGTH = 10;
 @Component({
-    components: { Scroll }
+  components: { Scroll, ListView }
 })
 export default class Singer extends Vue {
-    items = [
-        {
-            avatar:
-                "https://y.gtimg.cn/music/photo_new/T001R300x300M000002J4UUk29y8BY.jpg?max_age=2592000",
-            name: "薛之谦"
-        }
-    ];
-    singerlist = [];
-    mounted() {
-        this.$nextTick(() => {
-            this.__getSingerLists();
-        });
+  items = [
+    {
+      avatar: "https://y.gtimg.cn/music/photo_new/T001R300x300M000002J4UUk29y8BY.jpg?max_age=2592000",
+      name: "薛之谦"
     }
+  ];
+  singerlist: object[] = [];
 
-    __getSingerLists() {
-        getSingerLists().then(response => {
-            if (response.code === ERR_OK) {
-                this.singerlist = response.data.singerlist;
-            }
-        });
+  mounted() {
+    this.$nextTick(() => {
+      this.__getSingerLists();
+    });
+  }
+
+  normalizeSinger(data: { title: string }[]) {
+    const map: any = {
+      hot: {
+        title: HOT_NAME,
+        items: []
+      }
+    };
+    data.forEach((item, index, arr) => {
+      if (index <= HOT_SONG_LENGTH - 1) {
+        map.hot.items.push(item);
+      }
+      const key = item.title;
+      if (!map[key]) {
+        map[key] = {
+          title: key,
+          items: []
+        };
+      }
+      map[key].items.push(item);
+    });
+
+    // 处理map.items 得到有序列表
+    const hot: object[] = [];
+    const ret: object[] = [];
+    for (const key in map) {
+      if (key.match(/^[a-zA-Z]$/g)) {
+        ret.push(map[key]);
+      } else if (key === "hot") {
+        hot.push(map[key]);
+      }
     }
+    ret.sort((a: any, b: any): any => {
+      return a.title.charCodeAt(0) - b.title.charCodeAt(0);
+    });
+    return hot.concat(ret);
+  }
+
+  __getSingerLists() {
+    getSingerLists().then(response => {
+      if (response.code === ERR_OK) {
+        this.singerlist = this.normalizeSinger(
+          response.data.singerlist
+        );
+      }
+    });
+  }
 }
 </script>
 
-<style lang="stylus" scoped>
-@import '../../common/stylus/variable.styl'
-
-.singer
-    background-color $background-color
-    height 100vh
-    flex 1 1 auto
-    overflow hidden
-    color rgba(255, 255, 255, 0.5)
-
-    h2
-        text-align left
-        padding-left 20px
-        font-weight normal
-        line-height 2.5
-        height 2.5em
-        font-size 12px
-        background-color #333
-
-    ul.singer-content
-        li
-            $line-height = 50px
-            padding-left 30px
-            padding-top 20px
-
-            .avatar
-                float left
-
-                img
-                    width $line-height
-                    height $line-height
-                    display block
-                    border-radius 50%
-
-            .name
-                padding-left 70px
-                text-align left
-                line-height $line-height
-</style>
+<style lang="stylus" scoped></style>

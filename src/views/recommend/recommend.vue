@@ -69,8 +69,8 @@ export default class Recommend extends Vue {
     }
 
     __getRecommend() {
-        getRecommend().then(({ err, data }): void => {
-            this.slideList = data.slider;
+        getRecommend().then((response: any): void => {
+            this.slideList = response.data.slider;
         });
     }
     __getDescLists() {
@@ -84,7 +84,8 @@ export default class Recommend extends Vue {
         return (parseFloat(number) / 10000).toFixed(1);
     }
     imgLoad() {
-        this.$refs.recommend.scroll.refresh();
+        const el = this.$refs.recommend as any;
+        el.scroll.refresh();
     }
 }
 </script>
