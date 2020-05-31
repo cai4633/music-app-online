@@ -1,11 +1,11 @@
 <template>
-  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY" ref="scroll" @scrollEnd='scrollEnd'>
+  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY" ref="scroll" @scrollEnd="scrollEnd">
     <div class="singer-wrap">
       <ul class="singer-content">
         <li v-for="item in singerlist" :key="item.id" ref="listgroup">
           <ul class="singer-inner">
             <h3 ref="title">{{ item.title }}</h3>
-            <li v-for="singer in item.items" :key="singer.id" class="clearfix">
+            <li v-for="singer in item.items" :key="singer.id" class="clearfix" @click="selectItem(singer)">
               <div class="avatar">
                 <img v-lazy="singer.singer_pic" alt="" />
               </div>
@@ -20,7 +20,7 @@
     </h2>
     <div class="list-shortcut">
       <ul>
-        <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }" :data-index='index' @click='shortcutClick'>
+        <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }" :data-index="index" @click="shortcutClick">
           {{ item }}
         </li>
       </ul>
@@ -31,22 +31,21 @@
   </scroll>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import Scroll from "base/scroll/scroll.vue";
 import Loading from "base/loading/loading.vue";
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 
 @Component({
-  components: { Scroll, Loading }
+  components: { Scroll, Loading },
 })
-
 export default class ListView extends Vue {
   shotcutList: string[] = [];
   heightlist: any[] = [];
   titleList: string[] = [];
   currentIndex = 0;
   titleHeight = 0;
-  isClick = false
+  isClick = false;
 
   @Prop()
   private singerlist!: object[];
@@ -63,20 +62,14 @@ export default class ListView extends Vue {
   }
 
   scrollEnd() {
-    this.isClick = false
+    this.isClick = false;
   }
   shortcutClick(e: any) {
-    this.currentIndex = parseInt(e.currentTarget.dataset.index)
-    this._scrollTo(this.currentIndex)
-    this.isClick = true
+    this.currentIndex = parseInt(e.currentTarget.dataset.index);
+    this._scrollTo(this.currentIndex);
+    this.isClick = true;
   }
 
-  _scrollTo(index: number) {
-    if (this.heightlist.length) {
-      const y: number = (index >= 1) ? -this.heightlist[index - 1] : 0;
-      (this.$refs.scroll as Scroll).scrollTo(0, y)
-    }
-  }
   // 计算热门,[a-z] li的高度
   calHeight() {
     this.$nextTick(() => {
@@ -87,10 +80,16 @@ export default class ListView extends Vue {
         this.heightlist = Array.prototype.map.call(listgroup, (li: { [key: string]: number }): number => {
           height += li.offsetHeight;
           return height;
-        }
-        );
+        });
       }
     });
+  }
+
+  _scrollTo(index: number) {
+    if (this.heightlist.length) {
+      const y: number = index >= 1 ? -this.heightlist[index - 1] : 0;
+      (this.$refs.scroll as Scroll).scrollTo(0, y);
+    }
   }
 
   //滚动事件
@@ -103,19 +102,18 @@ export default class ListView extends Vue {
         }
       }
     }
-    this.diff(y)
+    this.diff(y);
   }
-
 
   //fixed bar 滚动切换效果
   diff(y: number) {
-    let distance = this.heightlist.length ? this.heightlist[this.currentIndex] + y - this.titleHeight : 0
-    distance = distance > 0 ? 0 : distance
-    this.fixedTransfrom(distance)
+    let distance = this.heightlist.length ? this.heightlist[this.currentIndex] + y - this.titleHeight : 0;
+    distance = distance > 0 ? 0 : distance;
+    this.fixedTransfrom(distance);
   }
 
   fixedTransfrom(distance: number) {
-    (this.$refs.fixed as HTMLElement).style.transform = `translateY(${distance}px)`
+    (this.$refs.fixed as HTMLElement).style.transform = `translateY(${distance}px)`;
   }
 
   //获取list-shortcut的content
@@ -126,6 +124,10 @@ export default class ListView extends Vue {
     });
   }
 
+  selectItem(item: object) {
+    this.$emit("select", item);
+  }
+
   @Watch("singerlist")
   watchSingerlist() {
     this.init();
@@ -133,7 +135,7 @@ export default class ListView extends Vue {
 }
 </script>
 
-<style lang='stylus' scoped>
+<style lang="stylus" scoped>
 @import '~common/stylus/variable.styl'
 
 header-style()

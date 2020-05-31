@@ -4,7 +4,7 @@
       <div class="banner" v-if="slideList.length">
         <slider>
           <div class="swiper-slide" v-for="(item, index) in slideList" :key="'slider' + index">
-            <a :href="item.linkUrl"><img @load="imgLoad" v-lazy="item.picUrl" alt="" /></a>
+            <a :href="item.linkUrl"><img @load="imgLoad" v-lazy="item.picUrl" alt=""/></a>
           </div>
         </slider>
       </div>
@@ -18,9 +18,7 @@
             </div>
             <div class="text">
               <h3 class="desc-name">{{ desc.title }}</h3>
-              <p class="listen-number">
-                播放量：{{ getListenNum(desc.listen_num) }}万
-              </p>
+              <p class="listen-number">播放量：{{ getListenNum(desc.listen_num) }}万</p>
             </div>
           </li>
         </ul>
@@ -41,7 +39,7 @@ import Scroll from "base/scroll/scroll.vue";
 import Loading from "base/loading/loading.vue";
 
 @Component({
-  components: { Slider, Scroll, Loading }
+  components: { Slider, Scroll, Loading },
 })
 export default class Recommend extends Vue {
   slideList = [];
@@ -63,7 +61,7 @@ export default class Recommend extends Vue {
     });
   }
   __getDescLists() {
-    getDescLists().then(res => {
+    getDescLists().then((res) => {
       if (res.code === ERR_OK) {
         this.descList = Array.from(res["recomPlaylist"].data.v_hot);
       }

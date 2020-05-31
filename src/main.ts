@@ -3,10 +3,11 @@ import App from "./App.vue"
 import router from "./router"
 import store from "./store"
 import FastClick from "fastclick"
-const fastclick = FastClick as any
-fastclick.attach(document.body)
 import "./common/stylus/index.styl"
 import VueLazyload from "vue-lazyload"
+
+const fastclick = FastClick as any
+fastclick.attach(document.body)
 Vue.use(VueLazyload, {
     preLoad: 1.3,
     error: "./common/images/default.png",

@@ -4,6 +4,7 @@ import recommend from "@/views/recommend/recommend.vue"
 import rank from "@/views/rank/rank.vue"
 import search from "@/views/search/search.vue"
 import singer from "@/views/singer/singer.vue"
+import singerDetails from '@/views/singer-details/singer-details.vue'
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
@@ -26,6 +27,12 @@ const routes: Array<RouteConfig> = [
     {
         path: "/singer",
         component: singer,
+        children: [
+            {
+                path: ':id',
+                component: singerDetails
+            }
+        ]
     },
     {
         path: "/home",
