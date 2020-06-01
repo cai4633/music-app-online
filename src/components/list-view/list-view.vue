@@ -198,7 +198,7 @@ header-style()
     right 8px
     color red
     font-size 12px
-    z-index 100000
+    z-index 16
 
     ul
       background-color $list-shortcut-bc

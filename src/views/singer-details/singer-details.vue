@@ -2,7 +2,7 @@
   <div class="singer-details">
     <div class="banner">
       <h1>{{ singer.singer_name }}</h1>
-      <img :src="bgImg" alt="" />
+      <img :src="bgImg" alt="" @load="scrollFresh" />
       <div class="playbtn">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#el-icon-play1"></use>
@@ -10,7 +10,7 @@
         <span>随机播放全部</span>
       </div>
     </div>
-    <scroll class="songlist" :data="items">
+    <scroll class="songlist" :data="items" ref="songlist">
       <ul>
         <li v-for="item in items" :key="item.id">
           <h2>{{ item.name }}</h2>
@@ -54,6 +54,9 @@ export default class SingerDetails extends Vue {
     return item.singer + "·" + item.album
   }
 
+  scrollFresh() {
+    this.$refs.songlist.scroll.refresh()
+  }
   normalizeData({ songList }) {
     return songList.map((item) => {
       return createSong(item)
@@ -71,7 +74,7 @@ export default class SingerDetails extends Vue {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
-// @import '~common/stylus/font.styl';
+@import '~common/stylus/font.styl';
 .singer-details
   background-color $background-color
   position fixed
@@ -82,7 +85,7 @@ export default class SingerDetails extends Vue {
   z-index 20
   color $text-color
   .banner
-    height 40vh
+    height 70vw
     overflow hidden
     position relative
     h1
@@ -130,10 +133,15 @@ export default class SingerDetails extends Vue {
 
 
   .songlist
-    padding  20px   30px
-    height 60vh
+    position fixed
+    top 70vw
+    bottom 0
+    left 0
+    width 100%
+    box-sizing border-box
     overflow hidden
     ul
+      padding  5px  30px  15px 30px
       li
         text-align left
         padding  10px 0
