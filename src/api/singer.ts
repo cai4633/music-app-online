@@ -27,7 +27,7 @@ function getSingerSongs(mid: string) {
   }
 
   const query = Object.assign({}, xhrOptions, userOption)
-  
+
   return axios.get("/api/getSingerSongs", { params: query }).then((response) => {
     return Promise.resolve(response.data.singerSongList)
   })

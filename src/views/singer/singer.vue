@@ -1,9 +1,7 @@
 <template>
   <div class="singer">
     <list-view :singerlist="singerlist" @select="gotoDetails"></list-view>
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>
+    <router-view></router-view>
   </div>
 </template>
 

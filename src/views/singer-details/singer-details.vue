@@ -2,7 +2,7 @@
   <div class="singer-details">
     <div class="banner">
       <h1>{{ singer.singer_name }}</h1>
-      <img :src="items.bannerUrl" alt="" />
+      <img :src="bgImg" alt="" />
       <div class="playbtn">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#el-icon-play1"></use>
@@ -10,11 +10,11 @@
         <span>随机播放全部</span>
       </div>
     </div>
-    <scroll class="songlist" :data='items.songList'>
+    <scroll class="songlist" :data="items">
       <ul>
-        <li v-for="item in items.songList" :key="item.id">
-          <h2>{{ item.songInfo.name }}</h2>
-          <p>{{ item.songInfo.singer[0].name + "·" + item.songInfo.album.name }}</p>
+        <li v-for="item in items" :key="item.id">
+          <h2>{{ item.name }}</h2>
+          <p>{{ getDesc(item) }}</p>
         </li>
       </ul>
     </scroll>
@@ -26,13 +26,17 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { mapGetters } from "vuex"
 import { getSingerSongs } from "../../api/singer"
 import { ERR_OK } from "api/config"
+import { createSong } from "common/js/song"
 import Scroll from "@/base/scroll/scroll"
 @Component({
-  components:{
+  components: {
     Scroll,
   },
   computed: {
     ...mapGetters(["singer"]),
+    bgImg() {
+      return `https://y.gtimg.cn/music/photo_new/T001R300x300M000${this.singer.singer_mid}.jpg?max_age=2592000`
+    },
   },
 })
 export default class SingerDetails extends Vue {
@@ -46,17 +50,21 @@ export default class SingerDetails extends Vue {
     })
   }
 
-  _getSingerSongs(mid) {
-    getSingerSongs(mid).then((response) => {
-      if (response.code === ERR_OK) {
-        this.items = this.normalizeData(mid, response.data)
-      }
-    })
+  getDesc(item) {
+    return item.singer + "·" + item.album
   }
 
-  normalizeData(mid, data) {
-    const imgUrl = `https://y.gtimg.cn/music/photo_new/T001R300x300M000${mid}.jpg?max_age=2592000`
-    return Object.assign({ bannerUrl: imgUrl }, data)
+  normalizeData({ songList }) {
+    return songList.map((item) => {
+      return createSong(item)
+    })
+  }
+  _getSingerSongs(mid) {
+    getSingerSongs(mid).then(({ data, code }) => {
+      if (code === ERR_OK) {
+        this.items = this.normalizeData(data)
+      }
+    })
   }
 }
 </script>
@@ -136,4 +144,7 @@ export default class SingerDetails extends Vue {
         p
          margin-top 2px
          color rgba(255,255,255,.3)
+         white-space nowrap
+         text-overflow ellipsis
+         overflow hidden
 </style>
