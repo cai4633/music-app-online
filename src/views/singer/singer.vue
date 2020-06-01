@@ -91,4 +91,19 @@ export default class Singer extends Vue {
 }
 </script>
 
-<style lang="stylus" scoped></style>
+<style lang="stylus" scoped>
+  // $height = 100px
+  // height()
+  //   height calc(100% - $height)
+  //   height -webkit-calc(100% - $height)
+  //   height -moz-calc(100% - $height)
+  //   height -ms-calc(100% - $height)
+
+
+.singer
+  background-color #272727
+  position fixed
+  top 81px
+  bottom 0px
+  width 100%
+</style>

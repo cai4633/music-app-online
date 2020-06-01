@@ -64,7 +64,6 @@ export default class Scroll extends Vue {
   }
   refresh() {
     this.scroll && this.scroll.refresh()
-    console.log(this.scroll)
   }
 
   @Watch("data")

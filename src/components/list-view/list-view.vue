@@ -1,5 +1,5 @@
 <template>
-  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY" ref="scroll" @scrollEnd="scrollEnd">
+  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY" ref="listView" @scrollEnd="scrollEnd">
     <div class="singer-wrap">
       <ul class="singer-content">
         <li v-for="item in singerlist" :key="item.id" ref="listgroup">
@@ -7,7 +7,7 @@
             <h3 ref="title">{{ item.title }}</h3>
             <li v-for="singer in item.items" :key="singer.id" class="clearfix" @click="selectItem(singer)">
               <div class="avatar">
-                <img v-lazy="singer.singer_pic" alt="" />
+                <img v-lazy="webp2jpg(singer.singer_pic)" />
               </div>
               <p class="name">{{ singer.singer_name }}</p>
             </li>
@@ -15,18 +15,16 @@
         </li>
       </ul>
     </div>
-    <h2 class="fixed-title" v-if="titleList && titleList.length" ref="fixed">
-      {{ titleList[currentIndex] }}
-    </h2>
+    <h2 class="fixed-title" ref="fixed">{{ titleList[currentIndex] }}</h2>
+    <div class="loading-wrap" v-show="!singerlist.length">
+      <loading></loading>
+    </div>
     <div class="list-shortcut">
       <ul>
         <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }" :data-index="index" @click="shortcutClick" >
           {{ item }}
         </li>
       </ul>
-    </div>
-    <div class="loading-wrap" v-show="!singerlist.length">
-      <loading></loading>
     </div>
   </scroll>
 </template>
@@ -61,6 +59,9 @@ export default class ListView extends Vue {
     this._getShortcutList()
   }
 
+  webp2jpg(img) {
+    return img.replace(/webp$/, "jpg")
+  }
   scrollEnd() {
     this.isClick = false
   }
@@ -88,7 +89,7 @@ export default class ListView extends Vue {
   _scrollTo(index: number) {
     if (this.heightlist.length) {
       const y: number = index >= 1 ? -this.heightlist[index - 1] : 0
-      ;(this.$refs.scroll as Scroll).scrollTo(0, y)
+      ;(this.$refs.listView as Scroll).scrollTo(0, y)
     }
   }
 
@@ -121,7 +122,6 @@ export default class ListView extends Vue {
     this.singerlist.forEach((item: any) => {
       this.shotcutList.push(item.title[0])
       this.titleList.push(item.title)
-
     })
   }
 
@@ -151,12 +151,10 @@ header-style()
 
 .list-view
   background-color $background-color
-  height 100vh
-  flex 1 1 auto
-  overflow scroll
+  height 100%
   color $text-color
-  position relative
   overflow hidden
+  position relative
 
   h2.fixed-title
     header-style()
@@ -167,38 +165,40 @@ header-style()
     z-index 6
 
   .singer-wrap
+    padding-bottom 1px
+    position relative
     ul.singer-content
-      ul.singer-inner
-        h3
-          header-style()
+      li
+        padding-bottom 18px
+        ul.singer-inner
+          h3
+            header-style()
+          li
+            $line-height = 50px
+            padding 20px 0 0px 30px
+            .avatar
+              float left
 
-        li
-          $line-height = 50px
-          padding-left 30px
-          padding-top 20px
+              img
+                width $line-height
+                height $line-height
+                display block
+                border-radius 50%
 
-          .avatar
-            float left
+            .name
+              padding-left 70px
+              text-align left
+              line-height $line-height
 
-            img
-              width $line-height
-              height $line-height
-              display block
-              border-radius 50%
-
-          .name
-            padding-left 70px
-            text-align left
-            line-height $line-height
 
   .list-shortcut
-    position fixed
+    position absolute
     top 50%
     transform translateY(-50%)
-    right 5px
+    right 8px
     color red
     font-size 12px
-    z-index 12
+    z-index 100000
 
     ul
       background-color $list-shortcut-bc
@@ -215,7 +215,7 @@ header-style()
 .loading-wrap
   position fixed
   width 100%
-  top 40%
+  top 50%
   transform translateY(-50%)
   z-index 3
 </style>

@@ -71,7 +71,7 @@ export default class SingerDetails extends Vue {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
-@import '~common/stylus/font.styl';
+// @import '~common/stylus/font.styl';
 .singer-details
   background-color $background-color
   position fixed
