@@ -1,13 +1,36 @@
-import jsonp from "@/common/js/jsonp"
-import { singerQuery } from "./config"
+import { singerQuery, xhrOptions } from "./config"
+import { sign_generator } from "@/common/js/xhr"
 import axios from "axios"
 
+// const url = "https://u.y.qq.com/cgi-bin/musics.fcg"
 function getSingerLists() {
-    // const url = "https://u.y.qq.com/cgi-bin/musics.fcg"
-    const query = Object.assign({}, singerQuery)
-    return axios.get("/api/getSingerLists", { params: query }).then((response) => {
-        return Promise.resolve(response.data.data)
-    })
+  const query = Object.assign({}, xhrOptions, singerQuery)
+  return axios.get("/api/getSingerLists", { params: query }).then((response) => {
+    return Promise.resolve(response.data.data)
+  })
 }
 
-export { getSingerLists }
+function getSingerSongs(mid: string) {
+  const data = {
+    comm: { ct: 24, cv: 0 },
+    singerSongList: {
+      method: "GetSingerSongList",
+      param: { order: 1, singerMid: mid, begin: 0, num: 10 },
+      module: "musichall.song_list_server",
+    },
+  }
+
+  const userOption = {
+    "-": "getSingerSong09973278224209037",
+    sign: sign_generator(data),
+    data: data,
+  }
+
+  const query = Object.assign({}, xhrOptions, userOption)
+  
+  return axios.get("/api/getSingerSongs", { params: query }).then((response) => {
+    return Promise.resolve(response.data.singerSongList)
+  })
+}
+
+export { getSingerLists, getSingerSongs }

@@ -1,1 +1,1 @@
-export const singer = (state:any)=> state.singer
+export const singer = (state: any) => state.singer;

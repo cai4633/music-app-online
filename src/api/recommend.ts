@@ -1,5 +1,5 @@
 import jsonp from "@/common/js/jsonp";
-import { queryData, options, descQuery } from "./config";
+import { queryData, options, descQuery, xhrOptions } from "./config";
 import axios from "axios";
 
 function getRecommend() {
@@ -14,7 +14,7 @@ function getRecommend() {
 }
 
 function getDescLists() {
-  const param = Object.assign({}, descQuery);
+  const param = Object.assign({}, xhrOptions, descQuery);
   return axios
     .get("/api/getDescLists", {
       params: param
