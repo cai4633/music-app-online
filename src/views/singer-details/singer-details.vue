@@ -1,23 +1,6 @@
 <template>
   <div class="singer-details">
-    <div class="banner">
-      <h1>{{ singer.singer_name }}</h1>
-      <img :src="bgImg" alt="" @load="scrollFresh" />
-      <div class="playbtn">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#el-icon-play1"></use>
-        </svg>
-        <span>随机播放全部</span>
-      </div>
-    </div>
-    <scroll class="songlist" :data="items" ref="songlist">
-      <ul>
-        <li v-for="item in items" :key="item.id">
-          <h2>{{ item.name }}</h2>
-          <p>{{ getDesc(item) }}</p>
-        </li>
-      </ul>
-    </scroll>
+    <music-list :songs="items" ref="musicList" :title="singer.singer_name" :bgImg="bgImg"></music-list>
   </div>
 </template>
 
@@ -27,10 +10,11 @@ import { mapGetters } from "vuex"
 import { getSingerSongs } from "../../api/singer"
 import { ERR_OK } from "api/config"
 import { createSong } from "common/js/song"
-import Scroll from "@/base/scroll/scroll"
+
+import MusicList from "components/music-list/music-list"
 @Component({
   components: {
-    Scroll,
+    MusicList,
   },
   computed: {
     ...mapGetters(["singer"]),
@@ -41,6 +25,7 @@ import Scroll from "@/base/scroll/scroll"
 })
 export default class SingerDetails extends Vue {
   items = []
+
   mounted() {
     this.$nextTick(() => {
       if (!this.singer.singer_mid) {
@@ -50,13 +35,6 @@ export default class SingerDetails extends Vue {
     })
   }
 
-  getDesc(item) {
-    return item.singer + "·" + item.album
-  }
-
-  scrollFresh() {
-    this.$refs.songlist.scroll.refresh()
-  }
   normalizeData({ songList }) {
     return songList.map((item) => {
       return createSong(item)
@@ -74,7 +52,7 @@ export default class SingerDetails extends Vue {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
-@import '~common/stylus/font.styl';
+
 .singer-details
   background-color $background-color
   position fixed
@@ -83,76 +61,4 @@ export default class SingerDetails extends Vue {
   left 0
   right 0
   z-index 20
-  color $text-color
-  .banner
-    height 70vw
-    overflow hidden
-    position relative
-    h1
-      position fixed
-      top 10px
-      left 50%
-      transform translateX(-50%)
-      font-size 18px
-      color #fff
-      font-weight 500
-      z-index 10
-    img
-      width 100%
-    &::after
-      content ''
-      display block
-      position absolute
-      top 0
-      left 0
-      height 100%
-      width 100%
-      background-color rgba(7,17,27,.4)
-      z-index 5
-    .playbtn
-      position absolute
-      bottom 20px
-      left 50%
-      transform translateX(-50%)
-      border 1px solid $text-highlight-color
-      color $text-highlight-color
-      z-index 6
-      padding 7px 25px
-      line-height 1.1
-      border-radius 30px
-
-      svg
-        width 16px
-        height @width
-        fill $text-highlight-color
-        vertical-align middle
-      span
-        margin-left 5px
-        vertical-align middle
-        font-size 12px
-
-
-  .songlist
-    position fixed
-    top 70vw
-    bottom 0
-    left 0
-    width 100%
-    box-sizing border-box
-    overflow hidden
-    ul
-      padding  5px  30px  15px 30px
-      li
-        text-align left
-        padding  10px 0
-        line-height 1.6
-        h2
-         font-weight normal
-         color #fff
-        p
-         margin-top 2px
-         color rgba(255,255,255,.3)
-         white-space nowrap
-         text-overflow ellipsis
-         overflow hidden
 </style>
