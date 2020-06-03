@@ -53,6 +53,13 @@ export default class SingerDetails extends Vue {
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
 
+.come-enter,.come-leave-to
+  transform translateX(-100%)
+.come-enter-to,.come-leave
+  transform translateX(0)
+.come-enter-active,.come-leave-active
+  transition all 0.5s
+
 .singer-details
   background-color $background-color
   position fixed

@@ -1,7 +1,9 @@
 <template>
   <div class="singer">
     <list-view :singerlist="singerlist" @select="gotoDetails"></list-view>
-    <router-view></router-view>
+    <transition name="come">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -92,12 +94,12 @@ export default class Singer extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-  // $height = 100px
-  // height()
-  //   height calc(100% - $height)
-  //   height -webkit-calc(100% - $height)
-  //   height -moz-calc(100% - $height)
-  //   height -ms-calc(100% - $height)
+.come-enter,.come-leave-to
+  transform translateX(-100%)
+.come-enter-to,.come-leave
+  transform translateX(0)
+.come-enter-active,.come-leave-active
+  transition all 0.5s
 
 
 .singer

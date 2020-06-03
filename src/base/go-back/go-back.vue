@@ -1,0 +1,30 @@
+<template>
+  <div class="go-back" @click="goBack">
+    <icon-svg icon="#el-icon-back" class="back"></icon-svg>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import IconSvg from "base/icon-svg/icon-svg"
+@Component({
+  components: {
+    IconSvg,
+  },
+})
+export default class GoBack extends Vue {
+  goBack() {
+    this.$router.go(-1)
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+@import '~common/stylus/variable.styl';
+.go-back
+  svg
+    width 20px
+    height @width
+    fill $text-highlight-color
+    padding 5px
+</style>

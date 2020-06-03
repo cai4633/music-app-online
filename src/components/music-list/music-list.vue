@@ -3,9 +3,7 @@
     <h1 ref="title">{{ title }}</h1>
     <div class="banner" ref="banner" :style="'background-image:url(' + bgImg + ')'">
       <div class="playbtn" v-show="playbtn">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#el-icon-play1"></use>
-        </svg>
+        <icon-svg icon="#el-icon-play1"></icon-svg>
         <span>随机播放全部</span>
       </div>
     </div>
@@ -13,6 +11,10 @@
     <scroll class="list" :data="songs" ref="list" @scroll="getY" :probeType="3">
       <song-list :songs="songs" ref="songList"></song-list>
     </scroll>
+    <div class="loading-wrap" v-show='!songs.length'>
+      <loading></loading>
+    </div>
+    <go-back class="icon-wrap"></go-back>
   </div>
 </template>
 
@@ -20,10 +22,12 @@
 import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator"
 import SongList from "base/song-list/song-list"
 import Scroll from "base/scroll/scroll"
-import Loading from "../../base/loading/loading.vue"
+import Loading from "../../base/loading/loading"
+import IconSvg from "base/icon-svg/icon-svg"
+import GoBack from "base/go-back/go-back"
 
 @Component({
-  components: { SongList, Scroll },
+  components: { SongList, Scroll, Loading, IconSvg, GoBack },
 })
 export default class MusicList extends Vue {
   @Provide()
@@ -72,7 +76,7 @@ export default class MusicList extends Vue {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
-@import '~common/stylus/font.styl';
+
 .music-list
   position relative
   width 100vw
@@ -127,7 +131,7 @@ export default class MusicList extends Vue {
         border-radius 30px
 
         svg
-          width 16px
+          width 14px
           height @width
           fill $text-highlight-color
           vertical-align middle
@@ -151,4 +155,17 @@ export default class MusicList extends Vue {
     height 100%
     background-color $background-color
     z-index 15
+
+  div.icon-wrap
+    position fixed
+    z-index 80
+    top 8px
+    left 15px
+
+  .loading-wrap
+    position fixed
+    top 50%
+    left 50%
+    transform  translate3d(-50%,-50%,0)
+    z-index 20
 </style>

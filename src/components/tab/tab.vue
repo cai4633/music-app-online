@@ -37,7 +37,7 @@ div.tab
 
         li
             flex 1
-            background-color #272727
+            background-color $background-color
             box-sizing border-box
             height 2.5em
             line-height @height
