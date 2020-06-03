@@ -37,7 +37,7 @@ export default class Scroll extends Vue {
   init() {
     const options: object = {
       click: this.click,
-      probeType: 3,
+      probeType: this.probeType,
       mouseWheel: {
         speed: 20,
         invert: false,
@@ -50,8 +50,8 @@ export default class Scroll extends Vue {
     }
   }
 
-  scrollTo(x: number, y: number) {
-    this.scroll.scrollTo(x, y, 300)
+  scrollTo(x: number, y: number, duaring=300) {
+    this.scroll.scrollTo(x, y, duaring)
   }
 
   bindEvents() {
@@ -62,8 +62,15 @@ export default class Scroll extends Vue {
       this.$emit("scrollEnd", pos.y)
     })
   }
+   
   refresh() {
     this.scroll && this.scroll.refresh()
+  }
+  enable(){
+    this.scroll && this.scroll.enable()
+  }
+  disable(){
+    this.scroll && this.scroll.disable()
   }
 
   @Watch("data")

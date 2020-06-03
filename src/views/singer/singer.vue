@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import { getSingerLists, getSingerSongs } from "../../api/singer"
+import { getSingerLists } from "../../api/singer"
 import { ERR_OK } from "api/config"
 import Scroll from "base/scroll/scroll.vue"
 import ListView from "@/components/list-view/list-view.vue"

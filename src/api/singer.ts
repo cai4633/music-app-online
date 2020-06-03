@@ -15,7 +15,7 @@ function getSingerSongs(mid: string) {
     comm: { ct: 24, cv: 0 },
     singerSongList: {
       method: "GetSingerSongList",
-      param: { order: 1, singerMid: mid, begin: 0, num: 10 },
+      param: { order: 1, singerMid: mid, begin: 0, num: 30 },
       module: "musichall.song_list_server",
     },
   }
