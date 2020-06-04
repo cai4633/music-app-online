@@ -17,14 +17,14 @@ function getSinger(singers) {
   return ret.join("/")
 }
 
-export function createSong({ songInfo }) {
+export function createSong(song) {
   return new Song({
-    id: songInfo.id,
-    mid: songInfo.mid,
-    name: songInfo.name,
-    album: songInfo.album.name,
+    id: song.id,
+    mid: song.mid,
+    name: song.name,
+    album: song.album.name,
     image: "",
-    singer: getSinger(songInfo.singer),
-    url: `http://ws.stream.qqmusic.qq.com/${songInfo.id}.m4a?fromtag=46`,
+    singer: getSinger(song.singer),
+    url: song.purl && `http://ws.stream.qqmusic.qq.com/${song.purl}`,
   })
 }

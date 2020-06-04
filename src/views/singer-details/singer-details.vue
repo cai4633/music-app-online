@@ -1,6 +1,6 @@
 <template>
   <div class="singer-details">
-    <music-list :songs="items" ref="musicList" :title="singer.singer_name" :bgImg="bgImg"></music-list>
+    <music-list :songs="songs" ref="musicList" :title="singer.singer_name" :bgImg="bgImg"></music-list>
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { mapGetters } from "vuex"
 import { getSingerSongs } from "../../api/singer"
+import { getSongUrl } from "../../api/songs"
 import { ERR_OK } from "api/config"
 import { createSong } from "common/js/song"
 
@@ -24,7 +25,7 @@ import MusicList from "components/music-list/music-list"
   },
 })
 export default class SingerDetails extends Vue {
-  items = []
+  songs = []
 
   mounted() {
     this.$nextTick(() => {
@@ -35,17 +36,24 @@ export default class SingerDetails extends Vue {
     })
   }
 
-  normalizeData({ songList }) {
-    return songList.map((item) => {
+  normalizeData(data) {
+    return data.map((item) => {
       return createSong(item)
     })
   }
   _getSingerSongs(mid) {
     getSingerSongs(mid).then(({ data, code }) => {
       if (code === ERR_OK) {
-        this.items = this.normalizeData(data)
+        this._getSongUrl(data.songList).then((res) => {
+          this.songs = this.normalizeData(res)
+          console.log(this.songs);
+          
+        })
       }
     })
+  }
+  _getSongUrl(data) {
+    return getSongUrl(data)
   }
 }
 </script>

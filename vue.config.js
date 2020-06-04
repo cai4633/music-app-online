@@ -29,6 +29,7 @@ module.exports = {
   devServer: {
     before(app) {
       const url = "https://u.y.qq.com/cgi-bin/musics.fcg"
+      const surl = "https://u.y.qq.com/cgi-bin/musicu.fcg"
       app.get("/api/getDescLists", function(req, res) {
         axios({
           url,
@@ -74,6 +75,18 @@ module.exports = {
           .catch((e) => {
             console.log("歌手歌曲列表请求失败")
             // console.log(e)
+          })
+      })
+      app.get("/api/getSongUrl", (req, res) => {
+        axios
+          .get(surl, {
+            params: req.query,
+          })
+          .then((response) => {
+            res.json(response.data)
+          })
+          .catch((e) => {
+            console.log("歌曲播放链接请求失败")
           })
       })
     },
