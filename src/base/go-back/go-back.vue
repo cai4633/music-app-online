@@ -1,5 +1,5 @@
 <template>
-  <div class="go-back" @click="goBack">
+  <div class="go-back">
     <icon-svg icon="#el-icon-back" class="back"></icon-svg>
   </div>
 </template>
@@ -13,9 +13,7 @@ import IconSvg from "base/icon-svg/icon-svg"
   },
 })
 export default class GoBack extends Vue {
-  goBack() {
-    this.$router.go(-1)
-  }
+
 }
 </script>
 

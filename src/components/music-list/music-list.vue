@@ -9,12 +9,12 @@
     </div>
     <div class="bg-layer" ref="layer"></div>
     <scroll class="list" :data="songs" ref="list" @scroll="getY" :probeType="3">
-      <song-list :songs="songs" ref="songList"></song-list>
+      <song-list :songs="songs" ref="songList" @select="playlistInit"></song-list>
     </scroll>
-    <div class="loading-wrap" v-show='!songs.length'>
+    <div class="loading-wrap" v-show="!songs.length">
       <loading></loading>
     </div>
-    <go-back class="icon-wrap"></go-back>
+    <go-back class="icon-wrap" @click.native="back"></go-back>
   </div>
 </template>
 
@@ -25,9 +25,20 @@ import Scroll from "base/scroll/scroll"
 import Loading from "../../base/loading/loading"
 import IconSvg from "base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
+import { mapMutations, mapGetters, mapActions } from "vuex"
+import { selectPlay } from "../../store/actions"
 
 @Component({
   components: { SongList, Scroll, Loading, IconSvg, GoBack },
+  computed: {
+    ...mapGetters(["playlist"]),
+  },
+  methods: {
+    ...mapMutations({
+      setPlaylist: "SET_PLAYLIST",
+    }),
+    ...mapActions(["selectPlay"]),
+  },
 })
 export default class MusicList extends Vue {
   @Provide()
@@ -46,6 +57,12 @@ export default class MusicList extends Vue {
       this.layerTop = this.$refs.layer.offsetTop
       this.bgHeight = this.$refs.banner.offsetHeight
     })
+  }
+
+  playlistInit(song, index) {
+    console.log(this.songs)
+
+    this.selectPlay({ list: this.songs, index: index })
   }
 
   getY(pos) {
@@ -67,6 +84,9 @@ export default class MusicList extends Vue {
       banner.height = minTop + "px"
       banner.zIndex = 50
     }
+  }
+  back() {
+    this.$router.back()
   }
   _refresh() {
     this.$refs.list.refresh()

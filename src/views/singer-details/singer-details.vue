@@ -1,21 +1,23 @@
 <template>
   <div class="singer-details">
-    <music-list :songs="songs" ref="musicList" :title="singer.singer_name" :bgImg="bgImg"></music-list>
+    <music-list :songs="songs" ref="musicList" :title="singer.singer_name" :bgImg="bgImg" ></music-list>
+    <player></player>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import { mapGetters } from "vuex"
+import { mapGetters, mapMutations } from "vuex"
 import { getSingerSongs } from "../../api/singer"
 import { getSongUrl } from "../../api/songs"
 import { ERR_OK } from "api/config"
 import { createSong } from "common/js/song"
-
+import Player from "@/components/player/player"
 import MusicList from "components/music-list/music-list"
 @Component({
   components: {
     MusicList,
+    Player,
   },
   computed: {
     ...mapGetters(["singer"]),
@@ -41,13 +43,13 @@ export default class SingerDetails extends Vue {
       return createSong(item)
     })
   }
+
+
   _getSingerSongs(mid) {
     getSingerSongs(mid).then(({ data, code }) => {
       if (code === ERR_OK) {
         this._getSongUrl(data.songList).then((res) => {
           this.songs = this.normalizeData(res)
-          console.log(this.songs);
-          
         })
       }
     })

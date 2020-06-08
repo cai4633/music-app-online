@@ -23,7 +23,7 @@ export function createSong(song) {
     mid: song.mid,
     name: song.name,
     album: song.album.name,
-    image: "",
+    image: song.album.pmid && `http://y.gtimg.cn/music/photo_new/T002R300x300M000${song.album.pmid}.jpg?max_age=2592000`,
     singer: getSinger(song.singer),
     url: song.purl && `http://ws.stream.qqmusic.qq.com/${song.purl}`,
   })
