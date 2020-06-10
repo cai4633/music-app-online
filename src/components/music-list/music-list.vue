@@ -37,7 +37,7 @@ import { selectPlay } from "../../store/actions"
     ...mapMutations({
       setPlaylist: "SET_PLAYLIST",
     }),
-    ...mapActions(["selectPlay"]),
+    ...mapActions(["selectPlay","clearSongList"]),
   },
 })
 export default class MusicList extends Vue {
@@ -60,8 +60,6 @@ export default class MusicList extends Vue {
   }
 
   playlistInit(song, index) {
-    console.log(this.songs)
-
     this.selectPlay({ list: this.songs, index: index })
   }
 
@@ -87,6 +85,7 @@ export default class MusicList extends Vue {
   }
   back() {
     this.$router.back()
+    this.clearSongList()
   }
   _refresh() {
     this.$refs.list.refresh()

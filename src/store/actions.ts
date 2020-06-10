@@ -15,5 +15,12 @@ export const selectPlay = ({ commit, state }: any, { list, index }: any) => {
   }
   commit(types.SET_CURRENTINDEX, index)
   commit(types.SET_FULLSCREEN, true)
-  commit(types.SET_PLAYIGG_STATE, true)
+  commit(types.SET_PLAYING_STATE, true)
+}
+
+export const clearSongList = ({ commit, state }: any) => {
+  commit(types.SET_PLAYING_STATE, false)
+  commit(types.SET_PLAYLIST, [])
+  commit(types.SET_SEQUENCELIST, [])
+  commit(types.SET_CURRENTINDEX, -1)
 }

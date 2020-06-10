@@ -1,5 +1,5 @@
 interface State {
-  singer: string
+  singer: any
   playing: boolean
   fullScreen: boolean
   playlist: any[]

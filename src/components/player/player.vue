@@ -1,55 +1,59 @@
 <template>
-  <div class="player" v-if="playlist.length">
-    <div class="fullScreen" v-show="fullScreen">
-      <h1>{{ currentSong.name }}</h1>
-      <h2>{{ currentSong.singer }}</h2>
-      <div class="disk-wrap">
-        <div class="disk"><img :src="currentSong.image" alt="" /></div>
+  <div class="player" v-show="playlist.length">
+    <transition name="normal">
+      <div class="normal-player" v-show="fullScreen">
+        <h1>{{ currentSong.name }}</h1>
+        <h2>{{ currentSong.singer }}</h2>
+        <div class="disk-wrap" :class="diskAnimation">
+          <div class="disk"><img :src="currentSong.image" alt="" /></div>
+        </div>
+        <div class="control-wrap">
+          <div class="control">
+            <div class="play-mode">
+              <icon-svg icon="#el-icon-random" v-show="mode === 2"></icon-svg>
+              <icon-svg icon="#el-icon-loop" v-show="mode === 1"></icon-svg>
+            </div>
+            <div class="previous" @click="previous">
+              <icon-svg icon="#el-icon-previous"></icon-svg>
+            </div>
+            <div class="play" @click="togglePlaying">
+              <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
+              <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
+            </div>
+            <div class="next" @click="next">
+              <icon-svg icon="#el-icon-next"></icon-svg>
+            </div>
+            <div class="favorites">
+              <icon-svg icon="#el-icon-favorites"></icon-svg>
+            </div>
+          </div>
+        </div>
+        <div class="back" @click="minimize"><icon-svg icon="#el-icon-arrowdown"></icon-svg></div>
       </div>
-      <div class="control-wrap">
-        <div class="control">
-          <div class="play-mode">
-            <icon-svg icon="#el-icon-random" v-show="mode === 2"></icon-svg>
-            <icon-svg icon="#el-icon-loop" v-show="mode === 1"></icon-svg>
+    </transition>
+    <transition name="mini">
+      <div class="mini-player" v-show="!fullScreen" @click="toFullScreen">
+        <div class="content">
+          <div class="avatar">
+            <img :src="currentSong.image" alt="" />
           </div>
-          <div class="previous">
-            <icon-svg icon="#el-icon-previous"></icon-svg>
+          <div class="text">
+            <h2>{{ currentSong.name }}</h2>
+            <h3>{{ currentSong.singer }}</h3>
           </div>
-          <div class="play">
-            <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
-            <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
-          </div>
-          <div class="next">
-            <icon-svg icon="#el-icon-next"></icon-svg>
-          </div>
-          <div class="favorites">
-            <icon-svg icon="#el-icon-favorites"></icon-svg>
-          </div>
-        </div>
-      </div>
-      <audio :src="currentSong.url" autoplay></audio>
-      <div class="back" @click="showMiniPlayer"><go-back></go-back></div>
-    </div>
-    <div class="mini-player" v-show="!fullScreen">
-      <div class="content">
-        <div class="avatar">
-          <img :src="currentSong.image" alt="" />
-        </div>
-        <div class="text">
-          <h2>{{ currentSong.name }}</h2>
-          <h3>{{ currentSong.singer }}</h3>
-        </div>
-        <div class="control">
-          <div class="play">
-            <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
-            <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
-          </div>
-          <div class="list">
-            <icon-svg icon="#el-icon-list"></icon-svg>
+          <div class="control">
+            <div class="play" @click.stop="togglePlaying">
+              <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
+              <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
+            </div>
+            <div class="list">
+              <icon-svg icon="#el-icon-list"></icon-svg>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition>
+    <audio :src="currentSong.url" ref="audio" @error="error" @canplay="ready" @ended="end"></audio>
   </div>
 </template>
 
@@ -66,27 +70,100 @@ import GoBack from "base/go-back/go-back"
   methods: {
     ...mapMutations({
       setFullScreen: "SET_FULLSCREEN",
+      setPlayingState: "SET_PLAYING_STATE",
+      setCurrentIndex: "SET_CURRENTINDEX",
     }),
   },
 })
 export default class Player extends Vue {
-  mounted() {
-    console.log(this.currentSong)
+  songReady = false
+  get diskAnimation() {
+    return this.playing ? "play" : "play pause"
   }
-  showMiniPlayer() {
+  minimize() {
     this.setFullScreen(false)
+  }
+  toFullScreen() {
+    this.setFullScreen(true)
+  }
+  togglePlaying() {
+    this.setPlayingState(!this.playing)
+  }
+  previous() {
+    if (!this.songReady) return
+    let index = this.currentIndex - 1
+    if (index < 0) {
+      index = this.playlist.length - 1
+    }
+    this.setCurrentIndex(index)
+    this.nextOrPreToPlay()
+    this.songReady = false
+  }
+  next() {
+    if (!this.songReady) return
+    let index = this.currentIndex + 1
+    if (index >= this.playlist.length) {
+      index = 0
+    }
+    this.setCurrentIndex(index)
+    this.nextOrPreToPlay()
+    this.songReady = false
+  }
+  nextOrPreToPlay() {
+    const audio = this.$refs.audio
+    this.$nextTick(() => {
+      this.playing ? audio.play() : this.togglePlaying()
+    })
+  }
+  ready() {
+    this.songReady = true
+  }
+  error() {
+    this.songReady = true
+  }
+  end() {
+    this.next()
+  }
+
+  @Watch("playing")
+  watchPlaying(newPlaying) {
+    this.$nextTick(() => {
+      const audio = this.$refs.audio
+      newPlaying ? audio.play() : audio.pause()
+    })
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl'
+
+.normal-enter-active,.normal-leave-to-active,.mini-enter-active,.mini-leave-active
+  transition all .5s cubic-bezier(.51,.77,.62,1.42)
+.normal-enter,.normal-leave-to
+  transform translateY(-100%)
+  opacity 0
+.mini-enter,.mini-leave-to
+  transform translateY(100%)
+  opacity 0
+
+@keyframes myPlay
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)
+
+
 .player
   .back
     position fixed
     top 10px
-    left 10px
-  .fullScreen
+    left 20px
+    svg
+      width 20px
+      height @width
+      fill $text-highlight-color
+  .normal-player
     position fixed
     top 0
     left 0
@@ -104,6 +181,10 @@ export default class Player extends Vue {
 
     .disk-wrap
       margin-top 20px
+      &.play
+        animation myPlay 18s linear infinite
+      &.pause
+        animation-play-state paused
       .disk
         display inline-block
         img
