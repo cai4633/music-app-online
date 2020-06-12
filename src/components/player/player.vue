@@ -1,11 +1,11 @@
 <template>
   <div class="player" v-show="playlist.length">
-    <transition name="normal">
+    <transition name="normal" @enter="enter">
       <div class="normal-player" v-show="fullScreen">
         <h1>{{ currentSong.name }}</h1>
         <h2>{{ currentSong.singer }}</h2>
-        <div class="disk-wrap" :class="diskAnimation">
-          <div class="disk"><img :src="currentSong.image" alt="" /></div>
+        <div class="disk-wrap" @click="togglePlaying" :class="diskAnimation">
+          <div class="disk" ref="disk"><img :src="currentSong.image" alt="" /></div>
         </div>
         <div class="control-wrap">
           <div class="control">
@@ -16,7 +16,7 @@
             <div class="previous" @click="previous">
               <icon-svg icon="#el-icon-previous"></icon-svg>
             </div>
-            <div class="play" @click="togglePlaying">
+            <div class="play" @click="togglePlaying" ref="play">
               <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
               <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
             </div>
@@ -34,7 +34,7 @@
     <transition name="mini">
       <div class="mini-player" v-show="!fullScreen" @click="toFullScreen">
         <div class="content">
-          <div class="avatar">
+          <div class="avatar" ref="avatar">
             <img :src="currentSong.image" alt="" />
           </div>
           <div class="text">
@@ -62,6 +62,7 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { mapGetters, mapMutations } from "vuex"
 import IconSvg from "base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
+import animations from "create-keyframe-animation"
 @Component({
   components: { GoBack, IconSvg },
   computed: {
@@ -124,6 +125,38 @@ export default class Player extends Vue {
   end() {
     this.next()
   }
+  enter(el, done) {
+    this.$nextTick(() => {
+      const disk = this.$refs.disk
+      const avatar = this.$refs.avatar
+      const { x, y, scale } = this._getPos(avatar, disk)
+      const animation = {
+        "0%": { transform: `translate3d(${x}px,${y}px,0) scale(${scale})` },
+        "70%": { transform: `translate3d(0,0,0) scale(1.2)` },
+        "100%": { transform: `translate3d(0,0,0) scale(1)` },
+      }
+      animations.registerAnimation({
+        name: "move",
+        animation: animation,
+        presets: {
+          duration: 400,
+          delay: 10,
+        },
+      })
+
+      animations.runAnimation(disk, "move", done)
+    })
+  }
+
+  _getPos(target, el) {
+    const targetWidth = target.offsetWidth
+    const elWidth = el.offsetWidth
+    const x = -(document.body.clientWidth / 2 - 40 - targetWidth / 2)
+    const y = document.body.clientHeight  - 30 - 64 - elWidth / 2
+    // debugger
+    const scale = targetWidth /elWidth 
+    return { x, y, scale }
+  }
 
   @Watch("playing")
   watchPlaying(newPlaying) {
@@ -139,9 +172,9 @@ export default class Player extends Vue {
 @import '~common/stylus/variable.styl'
 
 .normal-enter-active,.normal-leave-to-active,.mini-enter-active,.mini-leave-active
-  transition all .5s cubic-bezier(.51,.77,.62,1.42)
+  transition all 0.4s cubic-bezier(.51,.77,.62,1.42)
 .normal-enter,.normal-leave-to
-  transform translateY(-100%)
+  transform translateY(-5%)
   opacity 0
 .mini-enter,.mini-leave-to
   transform translateY(100%)
@@ -180,6 +213,7 @@ export default class Player extends Vue {
       font-size 14px
 
     .disk-wrap
+      position relative
       margin-top 20px
       &.play
         animation myPlay 18s linear infinite
@@ -188,6 +222,7 @@ export default class Player extends Vue {
       .disk
         display inline-block
         img
+          box-shadow 0px 0px 10px 0px rgba(255,255,255,.9)
           border-radius  50%
           width 200px
           height 200px
