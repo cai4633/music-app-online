@@ -2,6 +2,7 @@
   <div class="player" v-show="playlist.length">
     <transition name="normal" @enter="enter">
       <div class="normal-player" v-show="fullScreen">
+        <div class="bg" :style="`background-image:url(${currentSong.image})`"></div>
         <h1>{{ currentSong.name }}</h1>
         <h2>{{ currentSong.singer }}</h2>
         <div class="disk-wrap" @click="togglePlaying" :class="diskAnimation">
@@ -9,6 +10,9 @@
         </div>
         <div class="control-wrap">
           <div class="control">
+            <div class="progress-bar-wrap">
+              <progress-bar :currentTime="currentTime" :totalTime="totalTime" @drag-bar="dragBar"></progress-bar>
+            </div>
             <div class="play-mode">
               <icon-svg icon="#el-icon-random" v-show="mode === 2"></icon-svg>
               <icon-svg icon="#el-icon-loop" v-show="mode === 1"></icon-svg>
@@ -53,7 +57,7 @@
         </div>
       </div>
     </transition>
-    <audio :src="currentSong.url" ref="audio" @error="error" @canplay="ready" @ended="end"></audio>
+    <audio :src="currentSong.url" ref="audio" @error="error" @canplay="ready" @ended="end" @timeupdate="updataTime"></audio>
   </div>
 </template>
 
@@ -63,8 +67,9 @@ import { mapGetters, mapMutations } from "vuex"
 import IconSvg from "base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
 import animations from "create-keyframe-animation"
+import ProgressBar from "base/progress-bar/progress-bar"
 @Component({
-  components: { GoBack, IconSvg },
+  components: { GoBack, IconSvg, ProgressBar },
   computed: {
     ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode"]),
   },
@@ -78,6 +83,8 @@ import animations from "create-keyframe-animation"
 })
 export default class Player extends Vue {
   songReady = false
+  currentTime = 0
+  totalTime = 0
   get diskAnimation() {
     return this.playing ? "play" : "play pause"
   }
@@ -116,7 +123,11 @@ export default class Player extends Vue {
       this.playing ? audio.play() : this.togglePlaying()
     })
   }
-  ready() {
+  updataTime(e) {
+    this.currentTime = e.target.currentTime
+  }
+  ready(e) {
+    this.totalTime = e.target.duration
     this.songReady = true
   }
   error() {
@@ -147,14 +158,17 @@ export default class Player extends Vue {
       animations.runAnimation(disk, "move", done)
     })
   }
+  dragBar(newCurrentTime) {
+    this.$refs.audio.currentTime = newCurrentTime
+  }
 
   _getPos(target, el) {
     const targetWidth = target.offsetWidth
     const elWidth = el.offsetWidth
     const x = -(document.body.clientWidth / 2 - 40 - targetWidth / 2)
-    const y = document.body.clientHeight  - 30 - 64 - elWidth / 2
+    const y = document.body.clientHeight - 30 - 64 - elWidth / 2
     // debugger
-    const scale = targetWidth /elWidth 
+    const scale = targetWidth / elWidth
     return { x, y, scale }
   }
 
@@ -205,6 +219,26 @@ export default class Player extends Vue {
     z-index 100
     background-color $background-color
     color #fff
+    .bg
+      position absolute
+      top 0
+      left 0
+      bottom 0
+      right 0
+      background-repeat no-repeat
+      background-position center
+      background-size cover
+      filter blur(3px)
+      z-index -1
+      &::after
+        content ""
+        display block
+        position absolute
+        width 100%
+        height 100%
+        top 0
+        left 0
+        background-color rgba(0,0,0,.6)
     h1
       margin 10px 0px
       font-size 18px
@@ -236,6 +270,10 @@ export default class Player extends Vue {
           display flex
           padding 0 20px
           justify-content space-between
+          flex-wrap wrap
+          .progress-bar-wrap
+            width 100%
+            margin-bottom 10px
 
         svg
           width 20px
