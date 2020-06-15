@@ -1,10 +1,10 @@
 <template>
   <div class="progress-bar">
     <span class="ct">{{ formatTime(currentTime) }}</span>
-    <div class="bar" ref="bar">
-      <div class="bar-inner" ref="barInner" :style="{ width: !this.touch.init && `${this.percent}` }">
+    <div class="bar" ref="bar" @click="click">
+      <div class="bar-inner" ref="barInner">
         <div class="progress"></div>
-        <div class="progress-btn-wrap" @touchstart="touchstart" @touchmove="touchmove" @touchend="touchend" @click="click">
+        <div class="progress-btn-wrap" @touchstart.prevent="touchstart" @touchmove.prevent="touchmove" @touchend="touchend">
           <div class="progress-btn"></div>
         </div>
       </div>
@@ -24,10 +24,6 @@ export default class ProgressBar extends Vue {
   @Prop({ default: "0" })
   totalTime!: number
 
-  get percent() {
-    return `${(this.currentTime / this.totalTime) * 100}%`
-  }
-
   formatTime(time = 0) {
     const min = (time / 60) | 0
     const second = time % 60 | 0
@@ -35,6 +31,9 @@ export default class ProgressBar extends Vue {
   }
 
   click(e) {
+    const bar = this.$refs.bar
+    const ct = (e.offsetX / bar.offsetWidth) * this.totalTime
+    this.$emit("drag-bar", Math.max(0, Math.min(ct, this.totalTime)))
     return
   }
   touchstart(e) {
@@ -46,10 +45,9 @@ export default class ProgressBar extends Vue {
   touchmove(e) {
     // e.preventDefault()
     const width = this.$refs.bar.offsetWidth
-
     this.touch.endX = e.touches[0].pageX
-    const newWidth = this.touch.currentWidth + this.touch.endX - this.touch.startX
-    this.$refs.barInner.style.width = `${Math.min(width, newWidth)}px`
+    const newWidth = Math.min(this.touch.currentWidth + this.touch.endX - this.touch.startX, width)
+    this.$refs.barInner.style.width = `${(newWidth / width) * 100}%`
     return
   }
   touchend(e) {
@@ -61,6 +59,13 @@ export default class ProgressBar extends Vue {
     this.$emit("drag-bar", newCurrentTime)
     this.touch.init = false
     return
+  }
+
+  @Watch("currentTime")
+  watchCurrentTime(newCurrentTime) {
+    if (!this.touch.init) {
+      this.$refs.barInner.style.width = `${(this.currentTime / this.totalTime) * 100}%`
+    }
   }
 }
 </script>

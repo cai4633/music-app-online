@@ -46,10 +46,13 @@
             <h3>{{ currentSong.singer }}</h3>
           </div>
           <div class="control">
-            <div class="play" @click.stop="togglePlaying">
-              <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
-              <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
-            </div>
+            <progress-circle :percent='percent' radius='36'>
+              <div class="play" @click.stop="togglePlaying">
+                <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
+                <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
+              </div>
+            </progress-circle>
+
             <div class="list">
               <icon-svg icon="#el-icon-list"></icon-svg>
             </div>
@@ -68,8 +71,9 @@ import IconSvg from "base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
 import animations from "create-keyframe-animation"
 import ProgressBar from "base/progress-bar/progress-bar"
+import ProgressCircle from "base/progress-circle/progress-circle"
 @Component({
-  components: { GoBack, IconSvg, ProgressBar },
+  components: { GoBack, IconSvg, ProgressBar, ProgressCircle },
   computed: {
     ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode"]),
   },
@@ -88,6 +92,10 @@ export default class Player extends Vue {
   get diskAnimation() {
     return this.playing ? "play" : "play pause"
   }
+  get percent(){
+    return this.currentTime/this.totalTime
+  }
+
   minimize() {
     this.setFullScreen(false)
   }
@@ -160,6 +168,7 @@ export default class Player extends Vue {
   }
   dragBar(newCurrentTime) {
     this.$refs.audio.currentTime = newCurrentTime
+    !this.playing && this.togglePlaying()
   }
 
   _getPos(target, el) {
@@ -314,7 +323,16 @@ export default class Player extends Vue {
         flex 1 1 auto
         display flex
         justify-content flex-end
+        align-items center
+        .progress-circle
+          .play
+            position absolute
+            margin auto
+            top 50%
+            left 50%
+            transform translate3d(-50%,-50%,0)
         svg
+          display block
           fill $text-highlight-color
           width 15px
           height @width
