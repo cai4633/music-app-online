@@ -13,9 +13,10 @@
             <div class="progress-bar-wrap">
               <progress-bar :currentTime="currentTime" :totalTime="totalTime" @drag-bar="dragBar"></progress-bar>
             </div>
-            <div class="play-mode">
+            <div class="play-mode" @click="toggleMode">
+              <icon-svg icon="#el-icon-loop" v-show="mode === 0"></icon-svg>
+              <icon-svg icon="#el-icon-single-cycle" v-show="mode === 1"></icon-svg>
               <icon-svg icon="#el-icon-random" v-show="mode === 2"></icon-svg>
-              <icon-svg icon="#el-icon-loop" v-show="mode === 1"></icon-svg>
             </div>
             <div class="previous" @click="previous">
               <icon-svg icon="#el-icon-previous"></icon-svg>
@@ -46,7 +47,7 @@
             <h3>{{ currentSong.singer }}</h3>
           </div>
           <div class="control">
-            <progress-circle :percent='percent' radius='36'>
+            <progress-circle :percent="percent" radius="36">
               <div class="play" @click.stop="togglePlaying">
                 <icon-svg icon="#el-icon-play2" v-show="!playing"></icon-svg>
                 <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
@@ -72,16 +73,20 @@ import GoBack from "base/go-back/go-back"
 import animations from "create-keyframe-animation"
 import ProgressBar from "base/progress-bar/progress-bar"
 import ProgressCircle from "base/progress-circle/progress-circle"
+import { playMode } from "common/js/config.ts"
+import { shuffle } from "common/js/util.ts"
 @Component({
   components: { GoBack, IconSvg, ProgressBar, ProgressCircle },
   computed: {
-    ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode"]),
+    ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode", "sequencelist"]),
   },
   methods: {
     ...mapMutations({
       setFullScreen: "SET_FULLSCREEN",
       setPlayingState: "SET_PLAYING_STATE",
       setCurrentIndex: "SET_CURRENTINDEX",
+      setMode: "SET_MODE",
+      setPlaylist: "SET_PLAYLIST",
     }),
   },
 })
@@ -92,8 +97,8 @@ export default class Player extends Vue {
   get diskAnimation() {
     return this.playing ? "play" : "play pause"
   }
-  get percent(){
-    return this.currentTime/this.totalTime
+  get percent() {
+    return this.currentTime / this.totalTime
   }
 
   minimize() {
@@ -105,22 +110,24 @@ export default class Player extends Vue {
   togglePlaying() {
     this.setPlayingState(!this.playing)
   }
+  toggleMode() {
+    this.setMode((this.mode + 1) % 3)
+    const originList = JSON.parse(JSON.stringify(this.sequencelist))
+    const newList = this.mode === playMode.random ? shuffle(originList) : originList
+    const index = this._getCurrentSongIndex(newList)
+    this.setPlaylist(newList)
+    this.setCurrentIndex(index)
+  }
   previous() {
     if (!this.songReady) return
-    let index = this.currentIndex - 1
-    if (index < 0) {
-      index = this.playlist.length - 1
-    }
+    const index = this.currentIndex - 1 < 0 ? this.playlist.length - 1 : this.currentIndex - 1
     this.setCurrentIndex(index)
     this.nextOrPreToPlay()
     this.songReady = false
   }
   next() {
     if (!this.songReady) return
-    let index = this.currentIndex + 1
-    if (index >= this.playlist.length) {
-      index = 0
-    }
+    const index = this.currentIndex + 1 >= this.playlist.length ? 0 : this.currentIndex + 1
     this.setCurrentIndex(index)
     this.nextOrPreToPlay()
     this.songReady = false
@@ -142,7 +149,15 @@ export default class Player extends Vue {
     this.songReady = true
   }
   end() {
-    this.next()
+    if (this.mode === playMode.loop) {
+      this.loop()
+    } else {
+      this.next()
+    }
+  }
+  loop() {
+    this.$refs.audio.currentTime = 0
+    this.$refs.audio.play()
   }
   enter(el, done) {
     this.$nextTick(() => {
@@ -176,9 +191,11 @@ export default class Player extends Vue {
     const elWidth = el.offsetWidth
     const x = -(document.body.clientWidth / 2 - 40 - targetWidth / 2)
     const y = document.body.clientHeight - 30 - 64 - elWidth / 2
-    // debugger
     const scale = targetWidth / elWidth
     return { x, y, scale }
+  }
+  _getCurrentSongIndex(newList) {
+    return newList.findIndex((song) => this.currentSong.id === song.id)
   }
 
   @Watch("playing")

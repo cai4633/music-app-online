@@ -1,9 +1,6 @@
 import * as types from "./mutation-types"
 import { playMode } from "@/common/js/config"
-
-function shuffle(list: string[]) {
-  return list
-}
+import { shuffle } from "@/common/js/util.ts"
 
 export const selectPlay = ({ commit, state }: any, { list, index }: any) => {
   commit(types.SET_SEQUENCELIST, list)

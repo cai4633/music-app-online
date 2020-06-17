@@ -5,7 +5,7 @@ const state: any = {
   fullScreen: false,
   playlist: [],
   sequencelist: [],
-  mode: playMode.loop,
+  mode: playMode.sequence,
   currentIndex: -1,
 }
 export default state

@@ -43,7 +43,6 @@ export default class ProgressBar extends Vue {
     return
   }
   touchmove(e) {
-    // e.preventDefault()
     const width = this.$refs.bar.offsetWidth
     this.touch.endX = e.touches[0].pageX
     const newWidth = Math.min(this.touch.currentWidth + this.touch.endX - this.touch.startX, width)
