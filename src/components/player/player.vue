@@ -75,6 +75,7 @@ import ProgressBar from "base/progress-bar/progress-bar"
 import ProgressCircle from "base/progress-circle/progress-circle"
 import { playMode } from "common/js/config.ts"
 import { shuffle } from "common/js/util.ts"
+import { findIndex } from "common/js/player.ts"
 @Component({
   components: { GoBack, IconSvg, ProgressBar, ProgressCircle },
   computed: {
@@ -114,7 +115,7 @@ export default class Player extends Vue {
     this.setMode((this.mode + 1) % 3)
     const originList = JSON.parse(JSON.stringify(this.sequencelist))
     const newList = this.mode === playMode.random ? shuffle(originList) : originList
-    const index = this._getCurrentSongIndex(newList)
+    const index = findIndex(newList, this.currentSong)
     this.setPlaylist(newList)
     this.setCurrentIndex(index)
   }
@@ -177,7 +178,6 @@ export default class Player extends Vue {
           delay: 10,
         },
       })
-
       animations.runAnimation(disk, "move", done)
     })
   }
@@ -194,15 +194,17 @@ export default class Player extends Vue {
     const scale = targetWidth / elWidth
     return { x, y, scale }
   }
-  _getCurrentSongIndex(newList) {
-    return newList.findIndex((song) => this.currentSong.id === song.id)
-  }
 
   @Watch("playing")
   watchPlaying(newPlaying) {
     this.$nextTick(() => {
-      const audio = this.$refs.audio
-      newPlaying ? audio.play() : audio.pause()
+      newPlaying ? this.$refs.audio.play() : this.$refs.audio.pause()
+    })
+  }
+  @Watch("currentSong")
+  watchCurrentSong(newSong) {
+    this.$nextTick(() => {
+      this.playing && this.$refs.audio.play()
     })
   }
 }
