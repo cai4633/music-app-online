@@ -1,7 +1,14 @@
 <template>
   <div class="progress-circle">
     <svg :height="radius" :width="radius" viewBox="0 0 40 40">
-      <circle cx="20" cy="20" r="17" fill="transparent" stroke="#777" stroke-width="2"></circle>
+      <circle
+        cx="20"
+        cy="20"
+        r="17"
+        fill="transparent"
+        stroke="#777"
+        stroke-width="2"
+      ></circle>
       <circle
         cx="20"
         cy="20"
@@ -18,18 +25,18 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 @Component
 export default class ProgressCircle extends Vue {
-  dasharray = Math.PI * 2 * 17
+  dasharray = Math.PI * 2 * 17;
 
   @Prop({ default: 0 })
-  percent!: number
+  percent!: number;
   @Prop({ default: 0 })
-  radius!: number
+  radius!: number;
 
   get dashoffset() {
-    return this.dasharray * (1 - this.percent)
+    return this.dasharray * (1 - this.percent);
   }
 }
 </script>

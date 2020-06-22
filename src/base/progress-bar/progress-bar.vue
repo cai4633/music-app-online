@@ -4,7 +4,12 @@
     <div class="bar" ref="bar" @click="click">
       <div class="bar-inner" ref="barInner">
         <div class="progress"></div>
-        <div class="progress-btn-wrap" @touchstart.prevent="touchstart" @touchmove.prevent="touchmove" @touchend="touchend">
+        <div
+          class="progress-btn-wrap"
+          @touchstart.prevent="touchstart"
+          @touchmove.prevent="touchmove"
+          @touchend="touchend"
+        >
           <div class="progress-btn" ref="progressBar"></div>
         </div>
       </div>
@@ -14,58 +19,69 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 @Component
 export default class ProgressBar extends Vue {
-  touch = { init: false, startX: 0, endX: 0, currentWidth: 0, moved: false }
+  touch = { init: false, startX: 0, endX: 0, currentWidth: 0, moved: false };
   @Prop({ default: "0" })
-  currentTime!: number
+  currentTime!: number;
   @Prop({ default: "0" })
-  totalTime!: number
+  totalTime!: number;
 
   formatTime(time = 0) {
-    const min = (time / 60) | 0
-    const second = time % 60 | 0
-    return `${min}:${second < 10 ? "0" + second : second}`
+    const min = (time / 60) | 0;
+    const second = time % 60 | 0;
+    return `${min}:${second < 10 ? "0" + second : second}`;
   }
 
   click(e) {
-    if (e.target === this.$refs.progressBar || e.target === this.$refs.progressBar.parentNode) return
-    const bar = this.$refs.bar
-    const ct = (e.offsetX / bar.offsetWidth) * this.totalTime
-    this.$emit("drag-bar", Math.max(0, Math.min(ct, this.totalTime)))
+    if (
+      e.target === this.$refs.progressBar ||
+      e.target === this.$refs.progressBar.parentNode
+    )
+      return;
+    const bar = this.$refs.bar;
+    const ct = (e.offsetX / bar.offsetWidth) * this.totalTime;
+    this.$emit("drag-bar", Math.max(0, Math.min(ct, this.totalTime)));
   }
   touchstart(e) {
-    this.touch.startX = e.touches[0].pageX
-    this.touch.currentWidth = this.$refs.barInner.offsetWidth
-    this.touch.init = true
+    this.touch.startX = e.touches[0].pageX;
+    this.touch.currentWidth = this.$refs.barInner.offsetWidth;
+    this.touch.init = true;
   }
   touchmove(e) {
-    this.touch.moved = true
-    const width = this.$refs.bar.offsetWidth
-    this.touch.endX = e.touches[0].pageX
-    const newWidth = Math.min(this.touch.currentWidth + this.touch.endX - this.touch.startX, width)
-    this.$refs.barInner.style.width = `${(newWidth / width) * 100}%`
+    this.touch.moved = true;
+    const width = this.$refs.bar.offsetWidth;
+    this.touch.endX = e.touches[0].pageX;
+    const newWidth = Math.min(
+      this.touch.currentWidth + this.touch.endX - this.touch.startX,
+      width
+    );
+    this.$refs.barInner.style.width = `${(newWidth / width) * 100}%`;
   }
   touchend(e) {
     // touchend e.touches.length === 0
     if (this.touch.moved) {
-      const width = this.$refs.bar.offsetWidth
-      const dx = this.touch.endX - this.touch.startX
-      let newCurrentTime = this.currentTime + (this.totalTime * dx) / width
-      console.log("ended", newCurrentTime)
-      newCurrentTime = newCurrentTime >= 0 && newCurrentTime < this.totalTime ? newCurrentTime : 0
-      this.$emit("drag-bar", newCurrentTime)
+      const width = this.$refs.bar.offsetWidth;
+      const dx = this.touch.endX - this.touch.startX;
+      let newCurrentTime = this.currentTime + (this.totalTime * dx) / width;
+      console.log("ended", newCurrentTime);
+      newCurrentTime =
+        newCurrentTime >= 0 && newCurrentTime < this.totalTime
+          ? newCurrentTime
+          : 0;
+      this.$emit("drag-bar", newCurrentTime);
     }
 
-    this.touch.init = false
-    this.touch.moved = false
+    this.touch.init = false;
+    this.touch.moved = false;
   }
 
   @Watch("currentTime")
   watchCurrentTime(newCurrentTime) {
     if (!this.touch.init) {
-      this.$refs.barInner.style.width = `${(this.currentTime / this.totalTime) * 100}%`
+      this.$refs.barInner.style.width = `${(this.currentTime / this.totalTime) *
+        100}%`;
     }
   }
 }

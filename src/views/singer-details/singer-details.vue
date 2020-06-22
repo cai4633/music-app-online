@@ -1,61 +1,65 @@
 <template>
   <div class="singer-details">
-    <music-list :songs="songs" ref="musicList" :title="singer.singer_name" :bgImg="bgImg" ></music-list>
+    <music-list
+      :songs="songs"
+      ref="musicList"
+      :title="singer.singer_name"
+      :bgImg="bgImg"
+    ></music-list>
     <player></player>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import { mapGetters, mapMutations } from "vuex"
-import { getSingerSongs } from "../../api/singer"
-import { getSongUrl } from "../../api/songs"
-import { ERR_OK } from "api/config"
-import { createSong } from "common/js/song"
-import Player from "@/components/player/player"
-import MusicList from "components/music-list/music-list"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import { mapGetters, mapMutations } from "vuex";
+import { getSingerSongs } from "../../api/singer";
+import { getSongUrl } from "../../api/songs";
+import { ERR_OK } from "api/config";
+import { createSong } from "common/js/song";
+import Player from "@/components/player/player";
+import MusicList from "components/music-list/music-list";
 @Component({
   components: {
     MusicList,
-    Player,
+    Player
   },
   computed: {
     ...mapGetters(["singer"]),
     bgImg() {
-      return `https://y.gtimg.cn/music/photo_new/T001R300x300M000${this.singer.singer_mid}.jpg?max_age=2592000`
-    },
-  },
+      return `https://y.gtimg.cn/music/photo_new/T001R300x300M000${this.singer.singer_mid}.jpg?max_age=2592000`;
+    }
+  }
 })
 export default class SingerDetails extends Vue {
-  songs = []
+  songs = [];
 
   mounted() {
     this.$nextTick(() => {
       if (!this.singer.singer_mid) {
-        this.$router.push({ path: "/singer" })
+        this.$router.push({ path: "/singer" });
       }
-      this._getSingerSongs(this.singer.singer_mid)
-    })
+      this._getSingerSongs(this.singer.singer_mid);
+    });
   }
 
   normalizeData(data) {
-    return data.map((item) => {
-      return createSong(item)
-    })
+    return data.map(item => {
+      return createSong(item);
+    });
   }
-
 
   _getSingerSongs(mid) {
     getSingerSongs(mid).then(({ data, code }) => {
       if (code === ERR_OK) {
-        this._getSongUrl(data.songList).then((res) => {
-          this.songs = this.normalizeData(res)
-        })
+        this._getSongUrl(data.songList).then(res => {
+          this.songs = this.normalizeData(res);
+        });
       }
-    })
+    });
   }
   _getSongUrl(data) {
-    return getSongUrl(data)
+    return getSongUrl(data);
   }
 }
 </script>

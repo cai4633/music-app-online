@@ -2,11 +2,30 @@
   <div class="player" v-show="playlist.length">
     <transition name="normal" @enter="enter">
       <div class="normal-player" v-show="fullScreen">
-        <div class="bg" :style="`background-image:url(${currentSong.image})`"></div>
         <h1>{{ currentSong.name }}</h1>
         <h2>{{ currentSong.singer }}</h2>
-        <div class="disk-wrap" @click="togglePlaying" :class="diskAnimation">
-          <div class="disk" ref="disk"><img :src="currentSong.image" alt="" /></div>
+        <div class="main" @touchstart="lyricStart" @touchmove="lyricMove" @touchend="lyricEnd" ref="main">
+          <div class="main-disk-wrap" ref="mainDiskWrap">
+            <div class="disk-wrap" @click="togglePlaying" :class="diskAnimation">
+              <div class="disk" ref="disk"><img :src="currentSong.image" alt="" ref="diskImg" @error="changeSrc" /></div>
+            </div>
+            <div class="current-lyric">
+              <p class="txt" v-html="currentLyric"></p>
+            </div>
+          </div>
+          <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines">
+            <div class="lyric" ref="lyric">
+              <p
+                class="txt"
+                v-for="(item, index) in lyrics.lines"
+                v-html="item.txt"
+                :key="'lyric' + index"
+                :id="'line-' + index"
+                :class="{ current: currentLine === index }"
+                ref="lyricTxt"
+              ></p>
+            </div>
+          </scroll>
         </div>
         <div class="control-wrap">
           <div class="control">
@@ -33,15 +52,15 @@
             </div>
           </div>
         </div>
-        <div class="back" @click="minimize"><icon-svg icon="#el-icon-arrowdown"></icon-svg></div>
+        <div class="back" @click="minimize">
+          <icon-svg icon="#el-icon-arrowdown"></icon-svg>
+        </div>
       </div>
     </transition>
     <transition name="mini">
       <div class="mini-player" v-show="!fullScreen" @click="toFullScreen">
         <div class="content">
-          <div class="avatar" ref="avatar">
-            <img :src="currentSong.image" alt="" />
-          </div>
+          <div class="avatar" ref="avatar"></div>
           <div class="text">
             <h2>{{ currentSong.name }}</h2>
             <h3>{{ currentSong.singer }}</h3>
@@ -61,6 +80,7 @@
         </div>
       </div>
     </transition>
+
     <audio :src="currentSong.url" ref="audio" @error="error" @canplay="ready" @ended="end" @timeupdate="updataTime"></audio>
   </div>
 </template>
@@ -74,10 +94,13 @@ import animations from "create-keyframe-animation"
 import ProgressBar from "base/progress-bar/progress-bar"
 import ProgressCircle from "base/progress-circle/progress-circle"
 import { playMode } from "common/js/config.ts"
-import { shuffle } from "common/js/util.ts"
+import { shuffle, lyricParser } from "common/js/util.ts"
 import { findIndex } from "common/js/player.ts"
+import { Base64 } from "js-base64"
+import Scroll from "@/base/scroll/scroll.vue"
+import disc_default from "@/common/images/disc_default.png"
 @Component({
-  components: { GoBack, IconSvg, ProgressBar, ProgressCircle },
+  components: { Scroll, GoBack, IconSvg, ProgressBar, ProgressCircle },
   computed: {
     ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode", "sequencelist"]),
   },
@@ -94,14 +117,31 @@ import { findIndex } from "common/js/player.ts"
 export default class Player extends Vue {
   songReady = false
   currentTime = 0
+  currentShow = "cd" //'cd' or 'lyric'
   totalTime = 0
+  lyrics: { [key: string]: any } = {}
+  touch: { [key: string]: any } = { startX: 0, startY: 0, endY: 0, endX: 0, init: false, percent: 0, moved: false }
   get diskAnimation() {
     return this.playing ? "play" : "play pause"
   }
   get percent() {
     return this.currentTime / this.totalTime
   }
+  get currentLine() {
+    return this.lyrics ? this.lyrics.curline : 0
+  }
+  get currentLyric() {
+    return this.lyrics && this.currentLine >= 0 ? this.lyrics.lines[this.currentLine].txt : ""
+  }
 
+  mounted() {
+    this.$nextTick(() => {
+      return
+    })
+  }
+  changeSrc() {
+    this.$refs.diskImg.src = disc_default
+  }
   minimize() {
     this.setFullScreen(false)
   }
@@ -141,6 +181,52 @@ export default class Player extends Vue {
   }
   updataTime(e) {
     this.currentTime = e.target.currentTime
+    this.lyrics.play && this.lyrics.play(this.currentTime)
+    this.lyricScroll(this.currentLine)
+  }
+  lyricStart(e) {
+    this.touch.init = true
+    this.touch.startX = e.touches[0].pageX
+    this.touch.startY = e.touches[0].pageY
+    return
+  }
+  lyricMove(e) {
+    if (!this.touch.init) { 
+      return
+    }
+    const dx = e.touches[0].pageX - this.touch.startX
+    const dy = e.touches[0].pageY - this.touch.startY
+    if (Math.abs(dy) > Math.abs(dx)) {
+      return
+    }
+    this.touch.moved = true
+    const width = document.documentElement.clientWidth
+    const left = this.currentShow === "cd" ? 0 : -width
+    const offsetWidth = Math.min(0, Math.max(-width, left + dx))
+    this.touch.percent = Math.abs(offsetWidth / width)
+    this.$refs.lyrics.$el.style["transform"] = `translateX(${offsetWidth}px)`
+    return
+  }
+  lyricEnd() {
+    const width = document.documentElement.clientWidth
+    if (this.currentShow === "cd") {
+      //cd
+      if (this.touch.percent > 0.05 && this.touch.moved) {
+        this.$refs.lyrics.$el.style["transform"] = `translateX(${-width}px)`
+        this.$refs.mainDiskWrap.style.opacity = 0
+        this.currentShow = "lyric"
+      }
+    } else {
+      //lyric
+      if (this.touch.percent < 0.95 && this.touch.moved) {
+        this.$refs.lyrics.$el.style["transform"] = `translateX(0px)`
+        this.$refs.mainDiskWrap.style.opacity = 1
+        this.currentShow = "cd"
+      }
+    }
+    this.touch.moved = false
+    this.touch.init = false
+    return
   }
   ready(e) {
     this.totalTime = e.target.duration
@@ -186,6 +272,14 @@ export default class Player extends Vue {
     !this.playing && this.togglePlaying()
   }
 
+  lyricScroll(lineNum) {
+    const GAP = 5
+    if (lineNum > GAP) {
+      this.$refs.lyrics && this.$refs.lyrics.scrollToElement(this.$refs.lyricTxt[lineNum - 5], 1000)
+    }
+    return
+  }
+
   _getPos(target, el) {
     const targetWidth = target.offsetWidth
     const elWidth = el.offsetWidth
@@ -202,10 +296,15 @@ export default class Player extends Vue {
     })
   }
   @Watch("currentSong")
-  watchCurrentSong(newSong) {
-    this.$nextTick(() => {
-      this.playing && this.$refs.audio.play()
-    })
+  watchCurrentSong(newSong, oldSong) {
+    newSong &&
+      newSong._getLyric().then((res) => {
+        this.lyrics = lyricParser(newSong.lyric)
+        return
+      })
+
+    if (newSong.id === oldSong.id) return
+    this.$refs.audio.play()
   }
 }
 </script>
@@ -274,21 +373,51 @@ export default class Player extends Vue {
 
       font-size 14px
 
-    .disk-wrap
-      position relative
-      margin-top 20px
-      &.play
-        animation myPlay 18s linear infinite
-      &.pause
-        animation-play-state paused
-      .disk
-        display inline-block
-        img
-          box-shadow 0px 0px 10px 0px rgba(255,255,255,.9)
-          border-radius  50%
-          width 200px
-          height 200px
-          vertical-align top
+    .main
+      position absolute
+      left 0
+      right 0
+      top 50px
+      bottom 20px
+      margin-top 16px
+      .main-disk-wrap
+        transition all 0.5s linear
+        .disk-wrap
+          position relative
+          margin-top 20px
+          transition all 0.5s linear
+          &.play
+            animation myPlay 18s linear infinite
+          &.pause
+            animation-play-state paused
+          .disk
+            display inline-block
+            transition all 0.5s linear
+            img
+              box-shadow 0px 0px 0px 8px rgba(255,255,255,.1)
+              border-radius  50%
+              width 200px
+              height 200px
+              vertical-align top
+            img[src='']
+              opacity 0
+        .current-lyric
+          margin-top 20px
+          color $text-highlight-color
+      .lyric-wrap
+        position: absolute
+        overflow hidden
+        top 10px
+        bottom 100px
+        left 100%
+        width 100%
+        color $text-color
+        transition all 0.5s linear
+        .lyric
+          p
+            line-height 1.5
+            &.current
+              color $text-highlight-color
     .control-wrap
         position absolute
         width 100%

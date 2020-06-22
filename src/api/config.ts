@@ -7,6 +7,21 @@ const queryData = {
   nobase64: 1,
   songtype: 0
 };
+
+const jsonpOptions = {
+  format: "json",
+  g_tk: 5381,
+  uin: 0,
+  inCharset: "utf-8",
+  outCharset: "utf-8",
+  notice: 0,
+  platform: "h5",
+  nobase64: 1,
+  songtype: 0,
+  needNewCode: 1,
+  g_tk_new_20200303: 5381,
+  jsonpCallback: "jsonp1"
+};
 const options = {
   param: "jsonpCallback",
   name: "jsonp2"
@@ -91,4 +106,12 @@ const singerQuery = {
     }
   }
 };
-export { ERR_OK, queryData, options, descQuery, singerQuery, xhrOptions };
+export {
+  ERR_OK,
+  queryData,
+  options,
+  descQuery,
+  singerQuery,
+  xhrOptions,
+  jsonpOptions
+};

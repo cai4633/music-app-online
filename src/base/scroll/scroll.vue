@@ -5,33 +5,33 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import BScroll from "@better-scroll/core"
-import MouseWheel from "@better-scroll/mouse-wheel"
-BScroll.use(MouseWheel)
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import BScroll from "@better-scroll/core";
+import MouseWheel from "@better-scroll/mouse-wheel";
+BScroll.use(MouseWheel);
 @Component({})
 export default class Scroll extends Vue {
-  scroll: any = null
+  scroll: any = null;
 
   @Prop({
-    default: null,
+    default: null
   })
-  private data!: any[]
+  private data!: any[];
 
   @Prop({
-    default: 1,
+    default: 1
   })
-  private probeType!: number
+  private probeType!: number;
 
   @Prop({
-    default: true,
+    default: true
   })
-  private click!: boolean
+  private click!: boolean;
 
   mounted() {
     this.$nextTick(() => {
-      this.init()
-    })
+      this.init();
+    });
   }
 
   init() {
@@ -41,43 +41,46 @@ export default class Scroll extends Vue {
       mouseWheel: {
         speed: 20,
         invert: false,
-        easeTime: 300,
-      },
-    }
+        easeTime: 300
+      }
+    };
     if (this.$refs.scroll) {
-      this.scroll = new BScroll(this.$refs.scroll, options)
-      this.bindEvents()
+      this.scroll = new BScroll(this.$refs.scroll, options);
+      this.bindEvents();
     }
   }
 
-  scrollTo(x: number, y: number, duaring=300) {
-    this.scroll.scrollTo(x, y, duaring)
+  scrollTo(x: number, y: number, duaring = 300) {
+    this.scroll.scrollTo(x, y, duaring);
   }
 
   bindEvents() {
     this.scroll.on("scroll", (pos: { y: number }) => {
-      this.$emit("scroll", pos.y)
-    })
+      this.$emit("scroll", pos.y);
+    });
     this.scroll.on("scrollEnd", (pos: { y: number }) => {
-      this.$emit("scrollEnd", pos.y)
-    })
+      this.$emit("scrollEnd", pos.y);
+    });
   }
-   
+
   refresh() {
-    this.scroll && this.scroll.refresh()
+    this.scroll && this.scroll.refresh();
   }
-  enable(){
-    this.scroll && this.scroll.enable()
+  enable() {
+    this.scroll && this.scroll.enable();
   }
-  disable(){
-    this.scroll && this.scroll.disable()
+  disable() {
+    this.scroll && this.scroll.disable();
+  }
+  scrollToElement(el, duration) {
+    this.scroll && this.scroll.scrollToElement(el, duration);
   }
 
   @Watch("data")
   getData() {
     this.$nextTick(() => {
-      this.refresh()
-    })
+      this.refresh();
+    });
   }
 }
 </script>

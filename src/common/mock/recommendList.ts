@@ -18,10 +18,11 @@ module.exports = {
               item_hot: 0,
               show_type: 0,
               is_parent: 0,
-              reimgurl: "http://y.gtimg.cn/music/common/upload/recent_category_pic/55372.png",
+              reimgurl:
+                "http://y.gtimg.cn/music/common/upload/recent_category_pic/55372.png",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 3357,
@@ -31,10 +32,11 @@ module.exports = {
               item_hot: 0,
               show_type: 0,
               is_parent: 0,
-              reimgurl: "http://y.gtimg.cn/music/common/upload/recent_category_pic/55372.png",
+              reimgurl:
+                "http://y.gtimg.cn/music/common/upload/recent_category_pic/55372.png",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 3056,
@@ -44,10 +46,11 @@ module.exports = {
               item_hot: 0,
               show_type: 0,
               is_parent: 0,
-              reimgurl: "http://y.gtimg.cn/music/common/upload/recent_category_pic/55372.png",
+              reimgurl:
+                "http://y.gtimg.cn/music/common/upload/recent_category_pic/55372.png",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 3317,
@@ -60,7 +63,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 71,
@@ -73,7 +76,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 59,
@@ -86,7 +89,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 64,
@@ -99,7 +102,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 107,
@@ -112,7 +115,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 74,
@@ -125,7 +128,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 3,
@@ -138,7 +141,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 1,
@@ -151,7 +154,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 45,
@@ -164,7 +167,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 46,
@@ -177,7 +180,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 49,
@@ -190,7 +193,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: 142,
@@ -203,7 +206,7 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
+              group_id: 0
             },
             {
               item_id: -100,
@@ -216,12 +219,12 @@ module.exports = {
               reimgurl: "",
               item_share_pic: "",
               show_detail: 0,
-              group_id: 0,
-            },
-          ],
-        },
-      ],
-    },
+              group_id: 0
+            }
+          ]
+        }
+      ]
+    }
   },
   recomPlaylist: {
     code: 0,
@@ -231,7 +234,8 @@ module.exports = {
         {
           album_pic_mid: "003cWU1M2qNwxZ",
           content_id: 2372395517,
-          cover: "http://qpic.y.qq.com/music_cover/RKeTZss1qVWgCic5Y0VMa049eGxScVlPMic3tiaLYuDEWSpgMEa1oeic7A/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/RKeTZss1qVWgCic5Y0VMa049eGxScVlPMic3tiaLYuDEWSpgMEa1oeic7A/300?n=1",
           creator: 3432418715,
           edge_mark: "",
           id: 0,
@@ -247,12 +251,13 @@ module.exports = {
           title: "「怀旧」回顾那些70后喜爱的华语经典",
           tjreport: "",
           type: 10014,
-          username: "西瓜撞地球。",
+          username: "西瓜撞地球。"
         },
         {
           album_pic_mid: "",
           content_id: 7440475402,
-          cover: "http://qpic.y.qq.com/music_cover/oZuv9Uf9kZibkSn5xnlD5Nc1XmKMw7G0cria2Pe7EdwCgyiccUr3bDhSQ/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/oZuv9Uf9kZibkSn5xnlD5Nc1XmKMw7G0cria2Pe7EdwCgyiccUr3bDhSQ/300?n=1",
           creator: 2748789268,
           edge_mark: "",
           id: 0,
@@ -268,12 +273,13 @@ module.exports = {
           title: "余生的路，就不需要你了",
           tjreport: "",
           type: 10014,
-          username: "陈浩笙",
+          username: "陈浩笙"
         },
         {
           album_pic_mid: "",
           content_id: 7565310126,
-          cover: "http://qpic.y.qq.com/music_cover/hnDEgeVgcGt29EAibFZhAibEAjqWtltCFGofO7XM63PpWSZoc4ibQG96Q/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/hnDEgeVgcGt29EAibFZhAibEAjqWtltCFGofO7XM63PpWSZoc4ibQG96Q/300?n=1",
           creator: 904305634,
           edge_mark: "",
           id: 0,
@@ -289,12 +295,13 @@ module.exports = {
           title: "车载嗨曲：行驶路上必备",
           tjreport: "",
           type: 10014,
-          username: "叫我宝贝",
+          username: "叫我宝贝"
         },
         {
           album_pic_mid: "0016Uhbj0qUCWG",
           content_id: 7122767682,
-          cover: "http://qpic.y.qq.com/music_cover/6NxcVdED3ruAspXrWsQxUuSO9U6qmINp4uom4SX2XrJHsAHPyVI27w/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/6NxcVdED3ruAspXrWsQxUuSO9U6qmINp4uom4SX2XrJHsAHPyVI27w/300?n=1",
           creator: 1662059100,
           edge_mark: "",
           id: 0,
@@ -310,12 +317,13 @@ module.exports = {
           title: "温柔男嗓：失眠少年清醒记",
           tjreport: "",
           type: 10014,
-          username: "Rose",
+          username: "Rose"
         },
         {
           album_pic_mid: "00174HSZ3CArSD",
           content_id: 7481218377,
-          cover: "http://qpic.y.qq.com/music_cover/ZxFhHIic15equyHQJ4akclbs2NEyLLvNNCXryUlqIwdVWicWuSzUuAFQ/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/ZxFhHIic15equyHQJ4akclbs2NEyLLvNNCXryUlqIwdVWicWuSzUuAFQ/300?n=1",
           creator: 2437910260,
           edge_mark: "",
           id: 0,
@@ -331,12 +339,13 @@ module.exports = {
           title: "轻音乐 | 优雅的钢琴弹奏安静",
           tjreport: "",
           type: 10014,
-          username: "谜一般的年轻人",
+          username: "谜一般的年轻人"
         },
         {
           album_pic_mid: "",
           content_id: 7580864284,
-          cover: "http://qpic.y.qq.com/music_cover/MhQ4bJBPt3Yt5icXyBGNhyKGvQe0zKd3zbnKw7cSNcz7qic96jQaeV4A/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/MhQ4bJBPt3Yt5icXyBGNhyKGvQe0zKd3zbnKw7cSNcz7qic96jQaeV4A/300?n=1",
           creator: 452775188,
           edge_mark: "",
           id: 0,
@@ -352,12 +361,13 @@ module.exports = {
           title: "粉墨BLACKPINK热歌精选",
           tjreport: "",
           type: 10014,
-          username: "还不是因为你长得不好看",
+          username: "还不是因为你长得不好看"
         },
         {
           album_pic_mid: "000QNEz92D73X6",
           content_id: 7459589815,
-          cover: "http://qpic.y.qq.com/music_cover/PVKGnfAF64ibFQU7ra7bV3vqibgPp74dNvNcNZgZLXEibm2gDS3EmdWEA/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/PVKGnfAF64ibFQU7ra7bV3vqibgPp74dNvNcNZgZLXEibm2gDS3EmdWEA/300?n=1",
           creator: 2468952852,
           edge_mark: "",
           id: 0,
@@ -373,12 +383,13 @@ module.exports = {
           title: "DJ点歌台，这里免费下载！",
           tjreport: "",
           type: 10014,
-          username: "MC界扛把子",
+          username: "MC界扛把子"
         },
         {
           album_pic_mid: "004Fygrr4Ywh2I",
           content_id: 7279595982,
-          cover: "http://qpic.y.qq.com/music_cover/bHPqAnZT602EQ8ughA701xUP9ibw2QumMx9hlGLTdia2Jj6wqbMDkXlA/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/bHPqAnZT602EQ8ughA701xUP9ibw2QumMx9hlGLTdia2Jj6wqbMDkXlA/300?n=1",
           creator: 1820825348,
           edge_mark: "",
           id: 0,
@@ -394,12 +405,13 @@ module.exports = {
           title: "华语流行 · 重返06年华语盛世",
           tjreport: "",
           type: 10014,
-          username: "野渡无人",
+          username: "野渡无人"
         },
         {
           album_pic_mid: "002DwtPj3B805y",
           content_id: 7309309175,
-          cover: "http://qpic.y.qq.com/music_cover/eIEBbEmwjYcfIaX1ia7dqUuZwutOPvGUtDLsmsMcM9cYaGYUictOnUbg/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/eIEBbEmwjYcfIaX1ia7dqUuZwutOPvGUtDLsmsMcM9cYaGYUictOnUbg/300?n=1",
           creator: 2402601078,
           edge_mark: "",
           id: 0,
@@ -415,12 +427,13 @@ module.exports = {
           title: "愿心灵化一方净土无杂念",
           tjreport: "",
           type: 10014,
-          username: "兴奋的大学生小潘",
+          username: "兴奋的大学生小潘"
         },
         {
           album_pic_mid: "002a0REq1z2QXv",
           content_id: 1124917552,
-          cover: "http://qpic.y.qq.com/music_cover/PiajxSqBRaEIVkIJWAadu4gb4VREgNQY8UgU1dhfACf0/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/PiajxSqBRaEIVkIJWAadu4gb4VREgNQY8UgU1dhfACf0/300?n=1",
           creator: 1257702551,
           edge_mark: "",
           id: 0,
@@ -436,12 +449,13 @@ module.exports = {
           title: "咖啡馆·静谧悠闲的造物者",
           tjreport: "",
           type: 10014,
-          username: "Ava.H",
+          username: "Ava.H"
         },
         {
           album_pic_mid: "0021FpQp1zGFHx",
           content_id: 1467620008,
-          cover: "http://qpic.y.qq.com/music_cover/oQ7QIr12iawo8AdKZPxIeuaCESpRuk40vQPedtIQVf0jMq1BNwGDCBQ/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/oQ7QIr12iawo8AdKZPxIeuaCESpRuk40vQPedtIQVf0jMq1BNwGDCBQ/300?n=1",
           creator: 20138652,
           edge_mark: "",
           id: 0,
@@ -457,12 +471,13 @@ module.exports = {
           title: "不做游戏做音乐？拳头的音乐不归路",
           tjreport: "",
           type: 10014,
-          username: "Katharsis",
+          username: "Katharsis"
         },
         {
           album_pic_mid: "002Vjc8v1RUTNc",
           content_id: 4713458141,
-          cover: "http://qpic.y.qq.com/music_cover/N989Yfypibia4roDxwxzpl9jicvjzzT6GU3rPzRw3icXOJ8mESKIMZmb6g/300?n=1",
+          cover:
+            "http://qpic.y.qq.com/music_cover/N989Yfypibia4roDxwxzpl9jicvjzzT6GU3rPzRw3icXOJ8mESKIMZmb6g/300?n=1",
           creator: 349915071,
           edge_mark: "",
           id: 0,
@@ -478,10 +493,10 @@ module.exports = {
           title: "宋冬野：才华横溢的孤独回响",
           tjreport: "",
           type: 10014,
-          username: "梅内斯",
-        },
-      ],
-    },
+          username: "梅内斯"
+        }
+      ]
+    }
   },
   playlist: {
     code: 0,
@@ -496,9 +511,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1557669163,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/53Unr0jHFibpmKbAEqvT1Up9FHYm7Q2MotsQbicVBEVrkqClAlWwbn3g/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/53Unr0jHFibpmKbAEqvT1Up9FHYm7Q2MotsQbicVBEVrkqClAlWwbn3g/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/53Unr0jHFibpmKbAEqvT1Up9FHYm7Q2MotsQbicVBEVrkqClAlWwbn3g/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/53Unr0jHFibpmKbAEqvT1Up9FHYm7Q2MotsQbicVBEVrkqClAlWwbn3g/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/53Unr0jHFibpmKbAEqvT1Up9FHYm7Q2MotsQbicVBEVrkqClAlWwbn3g/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/53Unr0jHFibpmKbAEqvT1Up9FHYm7Q2MotsQbicVBEVrkqClAlWwbn3g/600?n=1",
           create_time: 1557476696,
           creator_info: {
             avatar: "",
@@ -507,7 +525,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 1602037810,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 1602037810,
           desc: "",
@@ -538,14 +556,35 @@ module.exports = {
             65428,
             7704217,
             494412,
-            125224960,
+            125224960
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [21, 117],
           tag_names: [],
           tid: 6975481262,
           title: "慵懒爵士 | 清晨被窝的暖时光",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 58392,
@@ -555,9 +594,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1530075379,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDNyAhS2tibmEaHB0MiaxY1Lvib4tfI6WTkJhQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDNyAhS2tibmEaHB0MiaxY1Lvib4tfI6WTkJhQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDNyAhS2tibmEaHB0MiaxY1Lvib4tfI6WTkJhQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDNyAhS2tibmEaHB0MiaxY1Lvib4tfI6WTkJhQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDNyAhS2tibmEaHB0MiaxY1Lvib4tfI6WTkJhQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDNyAhS2tibmEaHB0MiaxY1Lvib4tfI6WTkJhQ/600?n=1",
           create_time: 1529978681,
           creator_info: {
             avatar: "",
@@ -566,7 +608,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 1302998248,
-            vip_type: 7,
+            vip_type: 7
           },
           creator_uin: 1302998248,
           desc: "",
@@ -595,14 +637,33 @@ module.exports = {
             202155152,
             108013767,
             7055697,
-            207642111,
+            207642111
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [131, 117],
           tag_names: [],
           tid: 4180513374,
           title: "这些歌可以提升宝宝食欲哦！",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 27589,
@@ -612,9 +673,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1561604231,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/y6QbkETndicaKm6IQ35YpHwWoOoGsq3eians5nrDibrWLLAzDFFwcIhcg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/y6QbkETndicaKm6IQ35YpHwWoOoGsq3eians5nrDibrWLLAzDFFwcIhcg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/y6QbkETndicaKm6IQ35YpHwWoOoGsq3eians5nrDibrWLLAzDFFwcIhcg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/y6QbkETndicaKm6IQ35YpHwWoOoGsq3eians5nrDibrWLLAzDFFwcIhcg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/y6QbkETndicaKm6IQ35YpHwWoOoGsq3eians5nrDibrWLLAzDFFwcIhcg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/y6QbkETndicaKm6IQ35YpHwWoOoGsq3eians5nrDibrWLLAzDFFwcIhcg/600?n=1",
           create_time: 1561564113,
           creator_info: {
             avatar: "",
@@ -623,7 +687,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 345766234,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 345766234,
           desc: "",
@@ -772,7 +836,7 @@ module.exports = {
             232113474,
             232411806,
             229531299,
-            229531300,
+            229531300
           ],
           song_types: [
             13,
@@ -912,13 +976,13 @@ module.exports = {
             13,
             13,
             13,
-            13,
+            13
           ],
           tag_ids: [24, 14, 117],
           tag_names: [],
           tid: 7063425421,
           title: "比利时硬派厂牌 | Dirty Workz",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 57977,
@@ -928,9 +992,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1472608754,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqL0xMDj0U0YkhZd0amTAQRrg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqL0xMDj0U0YkhZd0amTAQRrg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqL0xMDj0U0YkhZd0amTAQRrg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqL0xMDj0U0YkhZd0amTAQRrg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqL0xMDj0U0YkhZd0amTAQRrg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqL0xMDj0U0YkhZd0amTAQRrg/600?n=1",
           create_time: 1472608754,
           creator_info: {
             avatar: "",
@@ -939,7 +1006,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 236257557,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 236257557,
           desc: "",
@@ -968,14 +1035,33 @@ module.exports = {
             108252952,
             108252943,
             108252946,
-            108252947,
+            108252947
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [224, 117],
           tag_names: [],
           tid: 2928792476,
           title: "小小派对，跟随斯卡旋律摇摆！",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 16172,
@@ -985,9 +1071,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1558421229,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/YAJJShFMHm3thIEcPcOnanibmTje6ccarEDQQBGTaE5h4qMkW8iaEib9Q/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/YAJJShFMHm3thIEcPcOnanibmTje6ccarEDQQBGTaE5h4qMkW8iaEib9Q/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/YAJJShFMHm3thIEcPcOnanibmTje6ccarEDQQBGTaE5h4qMkW8iaEib9Q/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/YAJJShFMHm3thIEcPcOnanibmTje6ccarEDQQBGTaE5h4qMkW8iaEib9Q/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/YAJJShFMHm3thIEcPcOnanibmTje6ccarEDQQBGTaE5h4qMkW8iaEib9Q/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/YAJJShFMHm3thIEcPcOnanibmTje6ccarEDQQBGTaE5h4qMkW8iaEib9Q/600?n=1",
           create_time: 1558406506,
           creator_info: {
             avatar: "",
@@ -996,7 +1085,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3163854005,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3163854005,
           desc: "",
@@ -1036,14 +1125,44 @@ module.exports = {
             6258531,
             856291,
             105754966,
-            8161765,
+            8161765
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [168, 6, 117],
           tag_names: [],
           tid: 6998066344,
           title: "吃货的快乐:来一份韩式大餐",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 65512,
@@ -1053,9 +1172,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1530074936,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVw8MU8NBlicppoObIFFDsZwA/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVw8MU8NBlicppoObIFFDsZwA/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVw8MU8NBlicppoObIFFDsZwA/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVw8MU8NBlicppoObIFFDsZwA/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVw8MU8NBlicppoObIFFDsZwA/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVw8MU8NBlicppoObIFFDsZwA/600?n=1",
           create_time: 1529993599,
           creator_info: {
             avatar: "",
@@ -1064,7 +1186,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 1302998248,
-            vip_type: 7,
+            vip_type: 7
           },
           creator_uin: 1302998248,
           desc: "",
@@ -1092,14 +1214,32 @@ module.exports = {
             107424277,
             109623051,
             107738775,
-            4756354,
+            4756354
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [131, 117, 165],
           tag_names: [],
           tid: 4180811611,
           title: "听说达芬奇画鸡蛋时听的就是这些歌",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 71055,
@@ -1109,9 +1249,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089473,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqLougpKpw62YrEpT4eS83h8A/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqLougpKpw62YrEpT4eS83h8A/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqLougpKpw62YrEpT4eS83h8A/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqLougpKpw62YrEpT4eS83h8A/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqLougpKpw62YrEpT4eS83h8A/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/giaHouCicD4RCj22NHorNuk3bd8Jy5fvqLougpKpw62YrEpT4eS83h8A/600?n=1",
           create_time: 1472805981,
           creator_info: {
             avatar: "",
@@ -1120,7 +1263,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 236257557,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 236257557,
           desc: "",
@@ -1151,14 +1294,35 @@ module.exports = {
             601275,
             108274378,
             106667230,
-            108131962,
+            108131962
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [224, 117],
           tag_names: [],
           tid: 2929069995,
           title: "快乐的节奏，跃动的音符",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 109919,
@@ -1168,9 +1332,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1486689789,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/g7hl9DicAYq6xNsbMELzjBx9YJkMicndFp94ISfH8gkoiaBJUv8O1sAZA/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/g7hl9DicAYq6xNsbMELzjBx9YJkMicndFp94ISfH8gkoiaBJUv8O1sAZA/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/g7hl9DicAYq6xNsbMELzjBx9YJkMicndFp94ISfH8gkoiaBJUv8O1sAZA/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/g7hl9DicAYq6xNsbMELzjBx9YJkMicndFp94ISfH8gkoiaBJUv8O1sAZA/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/g7hl9DicAYq6xNsbMELzjBx9YJkMicndFp94ISfH8gkoiaBJUv8O1sAZA/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/g7hl9DicAYq6xNsbMELzjBx9YJkMicndFp94ISfH8gkoiaBJUv8O1sAZA/600?n=1",
           create_time: 1486522411,
           creator_info: {
             avatar: "",
@@ -1179,7 +1346,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3092816710,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3092816710,
           desc: "",
@@ -1208,14 +1375,33 @@ module.exports = {
             105304563,
             8159826,
             106679174,
-            8159812,
+            8159812
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 855147084,
           title: "欢快纯乐 · 倘佯一份寻觅的喜悦",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 47872,
@@ -1225,9 +1411,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1536634097,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRSfPhTzEh4GgkK3nXwVJdxpczuK6651zOw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRSfPhTzEh4GgkK3nXwVJdxpczuK6651zOw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRSfPhTzEh4GgkK3nXwVJdxpczuK6651zOw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRSfPhTzEh4GgkK3nXwVJdxpczuK6651zOw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRSfPhTzEh4GgkK3nXwVJdxpczuK6651zOw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRSfPhTzEh4GgkK3nXwVJdxpczuK6651zOw/600?n=1",
           create_time: 1535008688,
           creator_info: {
             avatar: "",
@@ -1236,7 +1425,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3043667928,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3043667928,
           desc: "",
@@ -1268,14 +1457,36 @@ module.exports = {
             1977830,
             202450808,
             108014199,
-            7524003,
+            7524003
           ],
-          song_types: [3, 13, 3, 3, 3, 3, 3, 13, 13, 3, 13, 3, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            3,
+            13,
+            3,
+            3,
+            3,
+            3,
+            3,
+            13,
+            13,
+            3,
+            13,
+            3,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [222, 59, 117],
           tag_names: [],
           tid: 4311066357,
           title: "皇室婚礼背景音乐",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 643601,
@@ -1285,9 +1496,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1477483426,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/SOftSED2VibgaZItvv1RsiauXGuSXgicROGUsPrQxQsqdibvlJJaNibYj2g/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/SOftSED2VibgaZItvv1RsiauXGuSXgicROGUsPrQxQsqdibvlJJaNibYj2g/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/SOftSED2VibgaZItvv1RsiauXGuSXgicROGUsPrQxQsqdibvlJJaNibYj2g/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/SOftSED2VibgaZItvv1RsiauXGuSXgicROGUsPrQxQsqdibvlJJaNibYj2g/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/SOftSED2VibgaZItvv1RsiauXGuSXgicROGUsPrQxQsqdibvlJJaNibYj2g/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/SOftSED2VibgaZItvv1RsiauXGuSXgicROGUsPrQxQsqdibvlJJaNibYj2g/600?n=1",
           create_time: 1474954458,
           creator_info: {
             avatar: "",
@@ -1296,7 +1510,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3050901369,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3050901369,
           desc: "",
@@ -1325,14 +1539,33 @@ module.exports = {
             630633,
             816186,
             1009782,
-            1009780,
+            1009780
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117, 167],
           tag_names: [],
           tid: 3534056164,
           title: "音乐添色彩，欢快欧美佳作",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 39501,
@@ -1342,9 +1575,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1493891173,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/8JW2hoQldW7fIhI6rtN1rW6R8icOlBYfmvQaETWDrY0ibwF2hsoar3UQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/8JW2hoQldW7fIhI6rtN1rW6R8icOlBYfmvQaETWDrY0ibwF2hsoar3UQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/8JW2hoQldW7fIhI6rtN1rW6R8icOlBYfmvQaETWDrY0ibwF2hsoar3UQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/8JW2hoQldW7fIhI6rtN1rW6R8icOlBYfmvQaETWDrY0ibwF2hsoar3UQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/8JW2hoQldW7fIhI6rtN1rW6R8icOlBYfmvQaETWDrY0ibwF2hsoar3UQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/8JW2hoQldW7fIhI6rtN1rW6R8icOlBYfmvQaETWDrY0ibwF2hsoar3UQ/600?n=1",
           create_time: 1493777204,
           creator_info: {
             avatar: "",
@@ -1353,7 +1589,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 379827740,
-            vip_type: 0,
+            vip_type: 0
           },
           creator_uin: 379827740,
           desc: "",
@@ -1379,14 +1615,14 @@ module.exports = {
             1708631,
             106308002,
             7181696,
-            7582454,
+            7582454
           ],
           song_types: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 13, 3, 3, 3],
           tag_ids: [27, 117, 116],
           tag_names: [],
           tid: 866251341,
           title: "忽尔今夏 - 漫天飞舞的清凉音符",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 31912,
@@ -1396,9 +1632,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1496903684,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/HzL9814HkwwY8x0TWnmJe9UiamtwiadMKGN8GTrZvUDicqdkuYbYdDVOg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/HzL9814HkwwY8x0TWnmJe9UiamtwiadMKGN8GTrZvUDicqdkuYbYdDVOg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/HzL9814HkwwY8x0TWnmJe9UiamtwiadMKGN8GTrZvUDicqdkuYbYdDVOg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/HzL9814HkwwY8x0TWnmJe9UiamtwiadMKGN8GTrZvUDicqdkuYbYdDVOg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/HzL9814HkwwY8x0TWnmJe9UiamtwiadMKGN8GTrZvUDicqdkuYbYdDVOg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/HzL9814HkwwY8x0TWnmJe9UiamtwiadMKGN8GTrZvUDicqdkuYbYdDVOg/600?n=1",
           create_time: 1496801668,
           creator_info: {
             avatar: "",
@@ -1407,7 +1646,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 287322531,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 287322531,
           desc: "",
@@ -1438,14 +1677,35 @@ module.exports = {
             100993438,
             100993466,
             100993491,
-            100993452,
+            100993452
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [27, 117],
           tag_names: [],
           tid: 1165717985,
           title: "民族的才是世界的—古典舞曲",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 175848,
@@ -1455,9 +1715,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1480678982,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/pBNeTQrUba1icAwnEJZedia2RZjvialCjnXWcd7HaZAicP5T2KzbWdhwmQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/pBNeTQrUba1icAwnEJZedia2RZjvialCjnXWcd7HaZAicP5T2KzbWdhwmQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/pBNeTQrUba1icAwnEJZedia2RZjvialCjnXWcd7HaZAicP5T2KzbWdhwmQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/pBNeTQrUba1icAwnEJZedia2RZjvialCjnXWcd7HaZAicP5T2KzbWdhwmQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/pBNeTQrUba1icAwnEJZedia2RZjvialCjnXWcd7HaZAicP5T2KzbWdhwmQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/pBNeTQrUba1icAwnEJZedia2RZjvialCjnXWcd7HaZAicP5T2KzbWdhwmQ/600?n=1",
           create_time: 1477452956,
           creator_info: {
             avatar: "",
@@ -1466,7 +1729,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3464982830,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3464982830,
           desc: "",
@@ -1496,14 +1759,34 @@ module.exports = {
             436100,
             710895,
             934732,
-            1313191,
+            1313191
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 840796251,
           title: "欢快英文歌，小心High过头哦~",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 73284,
@@ -1513,9 +1796,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1480337323,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRTmQwEnAWE9kg5xoiaKOCjmmNjl1b4Wbng/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRTmQwEnAWE9kg5xoiaKOCjmmNjl1b4Wbng/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRTmQwEnAWE9kg5xoiaKOCjmmNjl1b4Wbng/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRTmQwEnAWE9kg5xoiaKOCjmmNjl1b4Wbng/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRTmQwEnAWE9kg5xoiaKOCjmmNjl1b4Wbng/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRTmQwEnAWE9kg5xoiaKOCjmmNjl1b4Wbng/600?n=1",
           create_time: 1473831823,
           creator_info: {
             avatar: "",
@@ -1524,7 +1810,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2753358585,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2753358585,
           desc: "",
@@ -1554,14 +1840,34 @@ module.exports = {
             105304286,
             105542829,
             1507939,
-            4784525,
+            4784525
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [81, 117, 168],
           tag_names: [],
           tid: 2334052745,
           title: "一路欢歌，走遍世界",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 43885,
@@ -1571,9 +1877,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089327,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/cIbAphQk35JMG8FZBZUxQyvcKCYcMDwXFN2ia9f0T3lZrdOmg1W9P3Q/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/cIbAphQk35JMG8FZBZUxQyvcKCYcMDwXFN2ia9f0T3lZrdOmg1W9P3Q/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/cIbAphQk35JMG8FZBZUxQyvcKCYcMDwXFN2ia9f0T3lZrdOmg1W9P3Q/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/cIbAphQk35JMG8FZBZUxQyvcKCYcMDwXFN2ia9f0T3lZrdOmg1W9P3Q/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/cIbAphQk35JMG8FZBZUxQyvcKCYcMDwXFN2ia9f0T3lZrdOmg1W9P3Q/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/cIbAphQk35JMG8FZBZUxQyvcKCYcMDwXFN2ia9f0T3lZrdOmg1W9P3Q/600?n=1",
           create_time: 1477377315,
           creator_info: {
             avatar: "",
@@ -1582,7 +1891,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3463221285,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3463221285,
           desc: "",
@@ -1611,14 +1920,33 @@ module.exports = {
             105763224,
             7692638,
             7692637,
-            102918327,
+            102918327
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [170, 6, 117],
           tag_names: [],
           tid: 2338844911,
           title: "用一首俄语清新流行舞曲，结束一天的忙碌",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 233890,
@@ -1628,9 +1956,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1494513195,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/FicCThRvK2IyauqoncdicFQ44m23mCuXWaZhxkasMfG6jFmCu2XOmlmQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/FicCThRvK2IyauqoncdicFQ44m23mCuXWaZhxkasMfG6jFmCu2XOmlmQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/FicCThRvK2IyauqoncdicFQ44m23mCuXWaZhxkasMfG6jFmCu2XOmlmQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/FicCThRvK2IyauqoncdicFQ44m23mCuXWaZhxkasMfG6jFmCu2XOmlmQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/FicCThRvK2IyauqoncdicFQ44m23mCuXWaZhxkasMfG6jFmCu2XOmlmQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/FicCThRvK2IyauqoncdicFQ44m23mCuXWaZhxkasMfG6jFmCu2XOmlmQ/600?n=1",
           create_time: 1494386245,
           creator_info: {
             avatar: "",
@@ -1639,7 +1970,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3335306653,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3335306653,
           desc: "",
@@ -1668,14 +1999,33 @@ module.exports = {
             106417262,
             144227,
             106451316,
-            2927393,
+            2927393
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [165, 117],
           tag_names: [],
           tid: 1762335168,
           title: "零零年代，谁的节奏最摇摆",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 151929,
@@ -1685,9 +2035,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1493345872,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/IknB7UUG0ME0zalRpPKYjEibwbapdgmNibTbUGyZ4PqAcibfkNNZ9Z7jg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/IknB7UUG0ME0zalRpPKYjEibwbapdgmNibTbUGyZ4PqAcibfkNNZ9Z7jg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/IknB7UUG0ME0zalRpPKYjEibwbapdgmNibTbUGyZ4PqAcibfkNNZ9Z7jg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/IknB7UUG0ME0zalRpPKYjEibwbapdgmNibTbUGyZ4PqAcibfkNNZ9Z7jg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/IknB7UUG0ME0zalRpPKYjEibwbapdgmNibTbUGyZ4PqAcibfkNNZ9Z7jg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/IknB7UUG0ME0zalRpPKYjEibwbapdgmNibTbUGyZ4PqAcibfkNNZ9Z7jg/600?n=1",
           create_time: 1493187119,
           creator_info: {
             avatar: "",
@@ -1696,7 +2049,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3545474218,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3545474218,
           desc: "",
@@ -1725,14 +2078,33 @@ module.exports = {
             652648,
             102385691,
             2852171,
-            9058640,
+            9058640
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117, 165],
           tag_names: [],
           tid: 3259666400,
           title: "画一个靓妆出门，心情美美哒",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 350738,
@@ -1742,9 +2114,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089508,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/uhmBELdVgMXkrmA8Q4kibwxbLoB3SZYBZXiaIAa4zbe2ATiaqW6ZfhhTw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/uhmBELdVgMXkrmA8Q4kibwxbLoB3SZYBZXiaIAa4zbe2ATiaqW6ZfhhTw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/uhmBELdVgMXkrmA8Q4kibwxbLoB3SZYBZXiaIAa4zbe2ATiaqW6ZfhhTw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/uhmBELdVgMXkrmA8Q4kibwxbLoB3SZYBZXiaIAa4zbe2ATiaqW6ZfhhTw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/uhmBELdVgMXkrmA8Q4kibwxbLoB3SZYBZXiaIAa4zbe2ATiaqW6ZfhhTw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/uhmBELdVgMXkrmA8Q4kibwxbLoB3SZYBZXiaIAa4zbe2ATiaqW6ZfhhTw/600?n=1",
           create_time: 1477376389,
           creator_info: {
             avatar: "",
@@ -1753,7 +2128,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3463680457,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3463680457,
           desc: "",
@@ -1784,14 +2159,35 @@ module.exports = {
             677743,
             4907244,
             169424,
-            5075075,
+            5075075
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 2935233966,
           title: "只属于软妹子的欢声笑语",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 57221,
@@ -1801,9 +2197,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1530623769,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/b03yv5AXb5lrgIvpov59FtyNmJR96BuVPUodP6ibPJiaQoaflHicreoicg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/b03yv5AXb5lrgIvpov59FtyNmJR96BuVPUodP6ibPJiaQoaflHicreoicg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/b03yv5AXb5lrgIvpov59FtyNmJR96BuVPUodP6ibPJiaQoaflHicreoicg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/b03yv5AXb5lrgIvpov59FtyNmJR96BuVPUodP6ibPJiaQoaflHicreoicg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/b03yv5AXb5lrgIvpov59FtyNmJR96BuVPUodP6ibPJiaQoaflHicreoicg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/b03yv5AXb5lrgIvpov59FtyNmJR96BuVPUodP6ibPJiaQoaflHicreoicg/600?n=1",
           create_time: 1530620574,
           creator_info: {
             avatar: "",
@@ -1812,7 +2211,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2041254345,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2041254345,
           desc: "",
@@ -1847,14 +2246,39 @@ module.exports = {
             213387483,
             213443234,
             205014428,
-            200835885,
+            200835885
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [205, 25, 117],
           tag_names: [],
           tid: 4192676792,
           title: "西语 | 慢速动感Latin ",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 319945,
@@ -1864,9 +2288,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089332,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LwfrIWom48kIvk2bqgibrnwQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LwfrIWom48kIvk2bqgibrnwQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LwfrIWom48kIvk2bqgibrnwQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LwfrIWom48kIvk2bqgibrnwQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LwfrIWom48kIvk2bqgibrnwQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LwfrIWom48kIvk2bqgibrnwQ/600?n=1",
           create_time: 1477456708,
           creator_info: {
             avatar: "",
@@ -1875,7 +2302,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3473267585,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3473267585,
           desc: "",
@@ -1906,14 +2333,35 @@ module.exports = {
             257611,
             185878,
             1098066,
-            109750,
+            109750
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 2338925418,
           title: "阳光好心情，音乐送给你",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 38246,
@@ -1923,9 +2371,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1531195865,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/MibhME4PmHVsXcNFs5UACwPVntbqFU4xArtOgrnuYc0UUMTa1T4y1uQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/MibhME4PmHVsXcNFs5UACwPVntbqFU4xArtOgrnuYc0UUMTa1T4y1uQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/MibhME4PmHVsXcNFs5UACwPVntbqFU4xArtOgrnuYc0UUMTa1T4y1uQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/MibhME4PmHVsXcNFs5UACwPVntbqFU4xArtOgrnuYc0UUMTa1T4y1uQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/MibhME4PmHVsXcNFs5UACwPVntbqFU4xArtOgrnuYc0UUMTa1T4y1uQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/MibhME4PmHVsXcNFs5UACwPVntbqFU4xArtOgrnuYc0UUMTa1T4y1uQ/600?n=1",
           create_time: 1527216722,
           creator_info: {
             avatar: "",
@@ -1934,7 +2385,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 512483521,
-            vip_type: 1,
+            vip_type: 1
           },
           creator_uin: 512483521,
           desc: "",
@@ -1978,14 +2429,48 @@ module.exports = {
             4947361,
             107437884,
             681735,
-            212839302,
+            212839302
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 3, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 3, 3, 13, 13, 13, 13, 3, 13, 13, 3],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            3,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            3,
+            3,
+            13,
+            13,
+            13,
+            13,
+            3,
+            13,
+            13,
+            3
+          ],
           tag_ids: [165, 6, 117],
           tag_names: [],
           tid: 4114640001,
           title: "三字食 | 宅家点外卖参考List ",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 46110,
@@ -1995,9 +2480,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089146,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/VX7CYGcRTCiaZhm8oOxBfiaZ25aeC3M1npicYjnaV23oE6t66sJ4c1Omw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/VX7CYGcRTCiaZhm8oOxBfiaZ25aeC3M1npicYjnaV23oE6t66sJ4c1Omw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/VX7CYGcRTCiaZhm8oOxBfiaZ25aeC3M1npicYjnaV23oE6t66sJ4c1Omw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/VX7CYGcRTCiaZhm8oOxBfiaZ25aeC3M1npicYjnaV23oE6t66sJ4c1Omw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/VX7CYGcRTCiaZhm8oOxBfiaZ25aeC3M1npicYjnaV23oE6t66sJ4c1Omw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/VX7CYGcRTCiaZhm8oOxBfiaZ25aeC3M1npicYjnaV23oE6t66sJ4c1Omw/600?n=1",
           create_time: 1477272154,
           creator_info: {
             avatar: "",
@@ -2006,7 +2494,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3051920143,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3051920143,
           desc: "",
@@ -2035,14 +2523,33 @@ module.exports = {
             475934,
             1413559,
             688718,
-            478486,
+            478486
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [170, 6, 117],
           tag_names: [],
           tid: 1735986860,
           title: "迎着朝阳前进！活力感爆棚的意文歌曲",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 84536,
@@ -2052,9 +2559,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1514861880,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/Kw0js0dh71gAUlYpdebialxOiaGnkgGqfeODkOQaoibptYZGJ4o39DeqA/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/Kw0js0dh71gAUlYpdebialxOiaGnkgGqfeODkOQaoibptYZGJ4o39DeqA/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/Kw0js0dh71gAUlYpdebialxOiaGnkgGqfeODkOQaoibptYZGJ4o39DeqA/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/Kw0js0dh71gAUlYpdebialxOiaGnkgGqfeODkOQaoibptYZGJ4o39DeqA/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/Kw0js0dh71gAUlYpdebialxOiaGnkgGqfeODkOQaoibptYZGJ4o39DeqA/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/Kw0js0dh71gAUlYpdebialxOiaGnkgGqfeODkOQaoibptYZGJ4o39DeqA/600?n=1",
           create_time: 1514790525,
           creator_info: {
             avatar: "",
@@ -2063,7 +2573,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 1738160012,
-            vip_type: 0,
+            vip_type: 0
           },
           creator_uin: 1738160012,
           desc: "",
@@ -2095,14 +2605,36 @@ module.exports = {
             227843466,
             107601447,
             203510846,
-            203845504,
+            203845504
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [167, 117],
           tag_names: [],
           tid: 3627088651,
           title: "最新出炉！2018纽约时代广场跨年演唱会",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 96241,
@@ -2112,9 +2644,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1505274627,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/G4TbibkcBn5ZGjoicUG69iaWO3mSqfDE1SJwGjR3kia0FuPjNmJJVDFiczw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/G4TbibkcBn5ZGjoicUG69iaWO3mSqfDE1SJwGjR3kia0FuPjNmJJVDFiczw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/G4TbibkcBn5ZGjoicUG69iaWO3mSqfDE1SJwGjR3kia0FuPjNmJJVDFiczw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/G4TbibkcBn5ZGjoicUG69iaWO3mSqfDE1SJwGjR3kia0FuPjNmJJVDFiczw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/G4TbibkcBn5ZGjoicUG69iaWO3mSqfDE1SJwGjR3kia0FuPjNmJJVDFiczw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/G4TbibkcBn5ZGjoicUG69iaWO3mSqfDE1SJwGjR3kia0FuPjNmJJVDFiczw/600?n=1",
           create_time: 1505105550,
           creator_info: {
             avatar: "",
@@ -2123,7 +2658,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 519473114,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 519473114,
           desc: "",
@@ -2184,7 +2719,7 @@ module.exports = {
             1429420,
             667188,
             2458630,
-            955452,
+            955452
           ],
           song_types: [
             13,
@@ -2236,13 +2771,13 @@ module.exports = {
             13,
             13,
             13,
-            13,
+            13
           ],
           tag_ids: [6, 117],
           tag_names: [],
           tid: 2076446987,
           title: "态度向｜向那些装腔作势的家伙竖起中指开火",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 83553,
@@ -2252,9 +2787,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1472722347,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRlXT8zVXNt3gApf44YXZCFibObtjYvjeKQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRlXT8zVXNt3gApf44YXZCFibObtjYvjeKQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRlXT8zVXNt3gApf44YXZCFibObtjYvjeKQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRlXT8zVXNt3gApf44YXZCFibObtjYvjeKQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRlXT8zVXNt3gApf44YXZCFibObtjYvjeKQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/0Fvp5LwdLLDtCTPt1WSVeRlXT8zVXNt3gApf44YXZCFibObtjYvjeKQ/600?n=1",
           create_time: 1472722347,
           creator_info: {
             avatar: "",
@@ -2263,7 +2801,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2753358585,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2753358585,
           desc: "",
@@ -2280,7 +2818,7 @@ module.exports = {
           tag_names: [],
           tid: 2332616633,
           title: "因为有梦，所以我们去旅行",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 117067,
@@ -2290,9 +2828,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089071,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/SDxXr3xW1IibTLlQibxibEgJ2mSC6qL9VyFm9C2WicAzIz7urccGbZzltg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/SDxXr3xW1IibTLlQibxibEgJ2mSC6qL9VyFm9C2WicAzIz7urccGbZzltg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/SDxXr3xW1IibTLlQibxibEgJ2mSC6qL9VyFm9C2WicAzIz7urccGbZzltg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/SDxXr3xW1IibTLlQibxibEgJ2mSC6qL9VyFm9C2WicAzIz7urccGbZzltg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/SDxXr3xW1IibTLlQibxibEgJ2mSC6qL9VyFm9C2WicAzIz7urccGbZzltg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/SDxXr3xW1IibTLlQibxibEgJ2mSC6qL9VyFm9C2WicAzIz7urccGbZzltg/600?n=1",
           create_time: 1477385166,
           creator_info: {
             avatar: "",
@@ -2301,7 +2842,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3476572262,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3476572262,
           desc: "",
@@ -2330,14 +2871,33 @@ module.exports = {
             726298,
             487302,
             4887244,
-            213263411,
+            213263411
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [222, 6, 117],
           tag_names: [],
           tid: 1438603195,
           title: "我们结婚吧，就现在",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 495140,
@@ -2347,9 +2907,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1489632444,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/dibiaTFIl5E8cUF3XUibZsicVYicGAnm1hYbecDkufxJbSOJqP0ybSeu1DQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/dibiaTFIl5E8cUF3XUibZsicVYicGAnm1hYbecDkufxJbSOJqP0ybSeu1DQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/dibiaTFIl5E8cUF3XUibZsicVYicGAnm1hYbecDkufxJbSOJqP0ybSeu1DQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/dibiaTFIl5E8cUF3XUibZsicVYicGAnm1hYbecDkufxJbSOJqP0ybSeu1DQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/dibiaTFIl5E8cUF3XUibZsicVYicGAnm1hYbecDkufxJbSOJqP0ybSeu1DQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/dibiaTFIl5E8cUF3XUibZsicVYicGAnm1hYbecDkufxJbSOJqP0ybSeu1DQ/600?n=1",
           create_time: 1489026329,
           creator_info: {
             avatar: "",
@@ -2358,7 +2921,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3158470376,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3158470376,
           desc: "",
@@ -2389,14 +2952,35 @@ module.exports = {
             8447867,
             109922981,
             726710,
-            109745955,
+            109745955
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 2655856612,
           title: "太阳和爱 我快乐的源泉",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 299091,
@@ -2406,9 +2990,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089333,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LZCMDC5lsTdMWpZslYj2Xjw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LZCMDC5lsTdMWpZslYj2Xjw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LZCMDC5lsTdMWpZslYj2Xjw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LZCMDC5lsTdMWpZslYj2Xjw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LZCMDC5lsTdMWpZslYj2Xjw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/OmT4ibflJ4UHdpVjIJM6iaMMPwpVsaTL1LZCMDC5lsTdMWpZslYj2Xjw/600?n=1",
           create_time: 1477456710,
           creator_info: {
             avatar: "",
@@ -2417,7 +3004,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3473267585,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3473267585,
           desc: "",
@@ -2447,14 +3034,34 @@ module.exports = {
             420621,
             1026967,
             150560,
-            107785311,
+            107785311
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 2338925422,
           title: "融入你生活的每一天，欢快国语音乐",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 153451,
@@ -2464,9 +3071,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089629,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/c1vbhreKbmwibABXvGeOJE25VRn36sYS6icy6xrTsicUuTCDyfXnibJ1kw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/c1vbhreKbmwibABXvGeOJE25VRn36sYS6icy6xrTsicUuTCDyfXnibJ1kw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/c1vbhreKbmwibABXvGeOJE25VRn36sYS6icy6xrTsicUuTCDyfXnibJ1kw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/c1vbhreKbmwibABXvGeOJE25VRn36sYS6icy6xrTsicUuTCDyfXnibJ1kw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/c1vbhreKbmwibABXvGeOJE25VRn36sYS6icy6xrTsicUuTCDyfXnibJ1kw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/c1vbhreKbmwibABXvGeOJE25VRn36sYS6icy6xrTsicUuTCDyfXnibJ1kw/600?n=1",
           create_time: 1476951087,
           creator_info: {
             avatar: "",
@@ -2475,7 +3085,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2146615988,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2146615988,
           desc: "",
@@ -2504,14 +3114,33 @@ module.exports = {
             4685188,
             8301480,
             8301490,
-            101306943,
+            101306943
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [170, 117],
           tag_names: [],
           tid: 3234772420,
           title: "德语儿歌 / 打开耳朵聆听童年",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 560531,
@@ -2521,9 +3150,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1488506564,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/zXciaBNvbG6hvUGQndZ1EGCCI6uIQKBxZpVgT9RuSR6F7lLKKevkQzw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/zXciaBNvbG6hvUGQndZ1EGCCI6uIQKBxZpVgT9RuSR6F7lLKKevkQzw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/zXciaBNvbG6hvUGQndZ1EGCCI6uIQKBxZpVgT9RuSR6F7lLKKevkQzw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/zXciaBNvbG6hvUGQndZ1EGCCI6uIQKBxZpVgT9RuSR6F7lLKKevkQzw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/zXciaBNvbG6hvUGQndZ1EGCCI6uIQKBxZpVgT9RuSR6F7lLKKevkQzw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/zXciaBNvbG6hvUGQndZ1EGCCI6uIQKBxZpVgT9RuSR6F7lLKKevkQzw/600?n=1",
           create_time: 1488253535,
           creator_info: {
             avatar: "",
@@ -2532,7 +3164,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3316320864,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3316320864,
           desc: "",
@@ -2561,14 +3193,33 @@ module.exports = {
             8129256,
             4830766,
             106450965,
-            181607,
+            181607
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 2050507767,
           title: "让你的人生充满笑脸",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 198483,
@@ -2578,9 +3229,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089761,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/uOwUQDG1AfFg3VAHKSWFt698icClI3ia6b4Yt8pfKfwHRdu4YcaVcaiaw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/uOwUQDG1AfFg3VAHKSWFt698icClI3ia6b4Yt8pfKfwHRdu4YcaVcaiaw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/uOwUQDG1AfFg3VAHKSWFt698icClI3ia6b4Yt8pfKfwHRdu4YcaVcaiaw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/uOwUQDG1AfFg3VAHKSWFt698icClI3ia6b4Yt8pfKfwHRdu4YcaVcaiaw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/uOwUQDG1AfFg3VAHKSWFt698icClI3ia6b4Yt8pfKfwHRdu4YcaVcaiaw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/uOwUQDG1AfFg3VAHKSWFt698icClI3ia6b4Yt8pfKfwHRdu4YcaVcaiaw/600?n=1",
           create_time: 1477365343,
           creator_info: {
             avatar: "",
@@ -2589,7 +3243,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2784608409,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2784608409,
           desc: "",
@@ -2622,14 +3276,37 @@ module.exports = {
             7017,
             622576,
             455246,
-            391157,
+            391157
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117],
           tag_names: [],
           tid: 3537364153,
           title: "港式快乐滋味，令你笑得甜美",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 556960,
@@ -2639,9 +3316,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1490151140,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/YXUTo5JKKKd3qFXyvSJqz4DrY0sCZOokdFd1KZ0ymquEenFFvDe2Bw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/YXUTo5JKKKd3qFXyvSJqz4DrY0sCZOokdFd1KZ0ymquEenFFvDe2Bw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/YXUTo5JKKKd3qFXyvSJqz4DrY0sCZOokdFd1KZ0ymquEenFFvDe2Bw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/YXUTo5JKKKd3qFXyvSJqz4DrY0sCZOokdFd1KZ0ymquEenFFvDe2Bw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/YXUTo5JKKKd3qFXyvSJqz4DrY0sCZOokdFd1KZ0ymquEenFFvDe2Bw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/YXUTo5JKKKd3qFXyvSJqz4DrY0sCZOokdFd1KZ0ymquEenFFvDe2Bw/600?n=1",
           create_time: 1489995711,
           creator_info: {
             avatar: "",
@@ -2650,7 +3330,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3511486103,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3511486103,
           desc: "",
@@ -2679,14 +3359,33 @@ module.exports = {
             201033833,
             201185857,
             5238165,
-            393671,
+            393671
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [165, 117],
           tag_names: [],
           tid: 1755667228,
           title: "心情好，就唱一首快乐的歌",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 181652,
@@ -2696,9 +3395,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1480337373,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/QviaUUA4YqIMo3N6TseIlbuviaI68TLhNRYbk0fQRroHTlrem64zlLVg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/QviaUUA4YqIMo3N6TseIlbuviaI68TLhNRYbk0fQRroHTlrem64zlLVg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/QviaUUA4YqIMo3N6TseIlbuviaI68TLhNRYbk0fQRroHTlrem64zlLVg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/QviaUUA4YqIMo3N6TseIlbuviaI68TLhNRYbk0fQRroHTlrem64zlLVg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/QviaUUA4YqIMo3N6TseIlbuviaI68TLhNRYbk0fQRroHTlrem64zlLVg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/QviaUUA4YqIMo3N6TseIlbuviaI68TLhNRYbk0fQRroHTlrem64zlLVg/600?n=1",
           create_time: 1477969469,
           creator_info: {
             avatar: "",
@@ -2707,7 +3409,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2955143385,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2955143385,
           desc: "",
@@ -2736,14 +3438,33 @@ module.exports = {
             5020869,
             1215547,
             5058050,
-            5029148,
+            5029148
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117, 167],
           tag_names: [],
           tid: 2339557736,
           title: "美好时光的愉悦小调",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 556864,
@@ -2753,9 +3474,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1484646535,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/CWicWfBTb9hhZU7ia18JvSxB4DTPUj66XEJBbIF03yjc7M3MK6pPicUsw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/CWicWfBTb9hhZU7ia18JvSxB4DTPUj66XEJBbIF03yjc7M3MK6pPicUsw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/CWicWfBTb9hhZU7ia18JvSxB4DTPUj66XEJBbIF03yjc7M3MK6pPicUsw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/CWicWfBTb9hhZU7ia18JvSxB4DTPUj66XEJBbIF03yjc7M3MK6pPicUsw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/CWicWfBTb9hhZU7ia18JvSxB4DTPUj66XEJBbIF03yjc7M3MK6pPicUsw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/CWicWfBTb9hhZU7ia18JvSxB4DTPUj66XEJBbIF03yjc7M3MK6pPicUsw/600?n=1",
           create_time: 1484270025,
           creator_info: {
             avatar: "",
@@ -2764,7 +3488,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3547425501,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3547425501,
           desc: "",
@@ -2793,14 +3517,33 @@ module.exports = {
             235109,
             3586109,
             5093977,
-            99052,
+            99052
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [165, 117],
           tag_names: [],
           tid: 1145607093,
           title: "『快乐前奏』论几秒喜欢上一首歌",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 631477,
@@ -2810,9 +3553,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1476954575,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/wwQnRI807QCWmsVKT7f9KhYuQdBsZzqyicWfUUPkXdtuwEI3dlxtoxQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/wwQnRI807QCWmsVKT7f9KhYuQdBsZzqyicWfUUPkXdtuwEI3dlxtoxQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/wwQnRI807QCWmsVKT7f9KhYuQdBsZzqyicWfUUPkXdtuwEI3dlxtoxQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/wwQnRI807QCWmsVKT7f9KhYuQdBsZzqyicWfUUPkXdtuwEI3dlxtoxQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/wwQnRI807QCWmsVKT7f9KhYuQdBsZzqyicWfUUPkXdtuwEI3dlxtoxQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/wwQnRI807QCWmsVKT7f9KhYuQdBsZzqyicWfUUPkXdtuwEI3dlxtoxQ/600?n=1",
           create_time: 1470627428,
           creator_info: {
             avatar: "",
@@ -2821,7 +3567,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2774963009,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2774963009,
           desc: "",
@@ -2856,14 +3602,39 @@ module.exports = {
             7042277,
             5379457,
             102051568,
-            623699,
+            623699
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [165, 117, 85],
           tag_names: [],
           tid: 3527809241,
           title: "好心情从上班的路上开始",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 193316,
@@ -2873,9 +3644,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1491528989,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/o83KyXmT8ggX7JZsMd5zv4AD0lLPnE0Yg3A9CDqrYBfBzshL8O7zFg/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/o83KyXmT8ggX7JZsMd5zv4AD0lLPnE0Yg3A9CDqrYBfBzshL8O7zFg/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/o83KyXmT8ggX7JZsMd5zv4AD0lLPnE0Yg3A9CDqrYBfBzshL8O7zFg/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/o83KyXmT8ggX7JZsMd5zv4AD0lLPnE0Yg3A9CDqrYBfBzshL8O7zFg/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/o83KyXmT8ggX7JZsMd5zv4AD0lLPnE0Yg3A9CDqrYBfBzshL8O7zFg/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/o83KyXmT8ggX7JZsMd5zv4AD0lLPnE0Yg3A9CDqrYBfBzshL8O7zFg/600?n=1",
           create_time: 1491380046,
           creator_info: {
             avatar: "",
@@ -2884,7 +3658,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3204940873,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3204940873,
           desc: "",
@@ -2913,14 +3687,33 @@ module.exports = {
             108403478,
             126718,
             126721,
-            107093125,
+            107093125
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [117, 165],
           tag_names: [],
           tid: 1757798227,
           title: "吃货的世界 就是那么简单快乐",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 75179,
@@ -2930,9 +3723,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1534752542,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRcIibeYFvvz14qQmJzHvcLMAd6hJfCMG71A/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRcIibeYFvvz14qQmJzHvcLMAd6hJfCMG71A/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRcIibeYFvvz14qQmJzHvcLMAd6hJfCMG71A/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRcIibeYFvvz14qQmJzHvcLMAd6hJfCMG71A/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRcIibeYFvvz14qQmJzHvcLMAd6hJfCMG71A/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/ia1BhHY0pBXp25tpaaiaCzRcIibeYFvvz14qQmJzHvcLMAd6hJfCMG71A/600?n=1",
           create_time: 1534752310,
           creator_info: {
             avatar: "",
@@ -2941,7 +3737,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3043667928,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 3043667928,
           desc: "",
@@ -2969,14 +3765,14 @@ module.exports = {
             9457620,
             799755,
             103375787,
-            125314,
+            125314
           ],
           song_types: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
           tag_ids: [76, 59, 117],
           tag_names: [],
           tid: 4277697463,
           title: "《文周》文艺青年婚礼配乐指南 ",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 79545,
@@ -2986,9 +3782,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1530074928,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVjPDRmIAh8iaBMtMxqEibtlLA/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVjPDRmIAh8iaBMtMxqEibtlLA/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVjPDRmIAh8iaBMtMxqEibtlLA/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVjPDRmIAh8iaBMtMxqEibtlLA/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVjPDRmIAh8iaBMtMxqEibtlLA/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/fx76QicKT5fa7gfzOBqCkDIIwDzewZicJVjPDRmIAh8iaBMtMxqEibtlLA/600?n=1",
           create_time: 1529993988,
           creator_info: {
             avatar: "",
@@ -2997,7 +3796,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 1302998248,
-            vip_type: 7,
+            vip_type: 7
           },
           creator_uin: 1302998248,
           desc: "",
@@ -3025,14 +3824,32 @@ module.exports = {
             2650690,
             108908240,
             108218116,
-            7206277,
+            7206277
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [131, 117, 165],
           tag_names: [],
           tid: 4180819271,
           title: "谁能告诉宝宝“苏格拉有没有底？”",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 136541,
@@ -3042,9 +3859,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1478089854,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/AIeG5T519yBnibgbzJnl7dfMyO89qDh8F9fib3dzeF7Y6mmONMm8Srmw/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/AIeG5T519yBnibgbzJnl7dfMyO89qDh8F9fib3dzeF7Y6mmONMm8Srmw/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/AIeG5T519yBnibgbzJnl7dfMyO89qDh8F9fib3dzeF7Y6mmONMm8Srmw/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/AIeG5T519yBnibgbzJnl7dfMyO89qDh8F9fib3dzeF7Y6mmONMm8Srmw/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/AIeG5T519yBnibgbzJnl7dfMyO89qDh8F9fib3dzeF7Y6mmONMm8Srmw/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/AIeG5T519yBnibgbzJnl7dfMyO89qDh8F9fib3dzeF7Y6mmONMm8Srmw/600?n=1",
           create_time: 1477289883,
           creator_info: {
             avatar: "",
@@ -3053,7 +3873,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 2889221140,
-            vip_type: 2,
+            vip_type: 2
           },
           creator_uin: 2889221140,
           desc: "",
@@ -3082,14 +3902,33 @@ module.exports = {
             106137152,
             4792645,
             5204076,
-            7135317,
+            7135317
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [169, 117],
           tag_names: [],
           tid: 840621413,
           title: "日系青春｜透着阳光的日系少女音",
-          tjreport: "",
+          tjreport: ""
         },
         {
           access_num: 46559,
@@ -3099,9 +3938,12 @@ module.exports = {
           censor_time: 0,
           commit_time: 1530842993,
           cover_mid: "",
-          cover_url_big: "http://p.qpic.cn/music_cover/nnRNzNd5rZaggsDwk2uSnTSznMtC9ZX0vfaDtqXZdkop60DYdToEBQ/600?n=1",
-          cover_url_medium: "http://p.qpic.cn/music_cover/nnRNzNd5rZaggsDwk2uSnTSznMtC9ZX0vfaDtqXZdkop60DYdToEBQ/600?n=1",
-          cover_url_small: "http://p.qpic.cn/music_cover/nnRNzNd5rZaggsDwk2uSnTSznMtC9ZX0vfaDtqXZdkop60DYdToEBQ/600?n=1",
+          cover_url_big:
+            "http://p.qpic.cn/music_cover/nnRNzNd5rZaggsDwk2uSnTSznMtC9ZX0vfaDtqXZdkop60DYdToEBQ/600?n=1",
+          cover_url_medium:
+            "http://p.qpic.cn/music_cover/nnRNzNd5rZaggsDwk2uSnTSznMtC9ZX0vfaDtqXZdkop60DYdToEBQ/600?n=1",
+          cover_url_small:
+            "http://p.qpic.cn/music_cover/nnRNzNd5rZaggsDwk2uSnTSznMtC9ZX0vfaDtqXZdkop60DYdToEBQ/600?n=1",
           create_time: 1530772695,
           creator_info: {
             avatar: "",
@@ -3110,7 +3952,7 @@ module.exports = {
             taoge_avatar: "",
             taoge_nick: "",
             uin: 3525093560,
-            vip_type: 0,
+            vip_type: 0
           },
           creator_uin: 3525093560,
           desc: "",
@@ -3145,17 +3987,42 @@ module.exports = {
             108492994,
             1116406,
             212679976,
-            213248631,
+            213248631
           ],
-          song_types: [13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13],
+          song_types: [
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13,
+            13
+          ],
           tag_ids: [8, 169, 117],
           tag_names: [],
           tid: 4195324634,
           title: "360°沦陷 · 日本男声R&B鉴赏",
-          tjreport: "",
-        },
-      ],
-    },
+          tjreport: ""
+        }
+      ]
+    }
   },
   new_song: {
     code: 0,
@@ -3166,38 +4033,38 @@ module.exports = {
           lan: "最新",
           name: "new_song",
           tjreport: "10_0_0_1_10001_5",
-          type: 5,
+          type: 5
         },
         {
           lan: "内地",
           name: "neidi",
           tjreport: "10_0_0_2_10001_1",
-          type: 1,
+          type: 1
         },
         {
           lan: "港台",
           name: "gangtai",
           tjreport: "10_0_0_3_10001_6",
-          type: 6,
+          type: 6
         },
         {
           lan: "欧美",
           name: "oumei",
           tjreport: "10_0_0_4_10001_2",
-          type: 2,
+          type: 2
         },
         {
           lan: "韩国",
           name: "hanguo",
           tjreport: "10_0_0_5_10001_4",
-          type: 4,
+          type: 4
         },
         {
           lan: "日本",
           name: "riben",
           tjreport: "10_0_0_6_10001_3",
-          type: 3,
-        },
+          type: 3
+        }
       ],
       ret_msg: "success!",
       songlist: [
@@ -3210,7 +4077,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -3220,7 +4087,7 @@ module.exports = {
             pmid: "001Pysmq3rk57j_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "别找我麻烦",
+            title: "别找我麻烦"
           },
           bpm: 0,
           data_type: 0,
@@ -3246,7 +4113,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -3257,7 +4124,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11172902,
-            mid: "002h4dsJ2K3wi1",
+            mid: "002h4dsJ2K3wi1"
           },
           label: "0",
           language: 0,
@@ -3268,7 +4135,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "别找我麻烦",
           ov: 0,
@@ -3279,7 +4146,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -3291,8 +4158,8 @@ module.exports = {
               name: "王广允",
               title: "王广允",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -3306,8 +4173,8 @@ module.exports = {
           volume: {
             gain: -6.689,
             lra: 6.923,
-            peak: 0.947,
-          },
+            peak: 0.947
+          }
         },
         {
           action: {
@@ -3318,7 +4185,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -3328,7 +4195,7 @@ module.exports = {
             pmid: "002ut5P73V63mS_1",
             subtitle: "《少年游之一寸相思》电视剧片头曲",
             time_public: "2020-06-02",
-            title: "少年游之一寸相思 影视原声音乐",
+            title: "少年游之一寸相思 影视原声音乐"
           },
           bpm: 0,
           data_type: 0,
@@ -3354,7 +4221,7 @@ module.exports = {
             size_try: 0,
             try_begin: 107551,
             try_end: 213170,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 37,
@@ -3365,7 +4232,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169649,
-            mid: "0029CE1c1abnVq",
+            mid: "0029CE1c1abnVq"
           },
           label: "0",
           language: 0,
@@ -3376,7 +4243,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "相思",
           ov: 0,
@@ -3387,7 +4254,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -3399,7 +4266,7 @@ module.exports = {
               name: "王晰",
               title: "王晰",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 4605,
@@ -3407,8 +4274,8 @@ module.exports = {
               name: "弦子",
               title: "弦子",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《少年游之一寸相思》电视剧片头曲",
@@ -3422,8 +4289,8 @@ module.exports = {
           volume: {
             gain: -8.061,
             lra: 10.045,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -3434,7 +4301,7 @@ module.exports = {
             msgid: 0,
             msgpay: 0,
             msgshare: 0,
-            switch: 605971,
+            switch: 605971
           },
           aid: 0,
           album: {
@@ -3444,7 +4311,7 @@ module.exports = {
             pmid: "0011MSy61taGMs_3",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "艺术行动 儿歌新唱",
+            title: "艺术行动 儿歌新唱"
           },
           bpm: 0,
           data_type: 0,
@@ -3470,7 +4337,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 0,
           genre: 1,
@@ -3481,7 +4348,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11091905,
-            mid: "002ezRbT0bo6Ff",
+            mid: "002ezRbT0bo6Ff"
           },
           label: "0",
           language: 0,
@@ -3492,7 +4359,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "j0034bm1msz",
-            vt: 0,
+            vt: 0
           },
           name: "点亮",
           ov: 0,
@@ -3503,7 +4370,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 0,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -3515,7 +4382,7 @@ module.exports = {
               name: "王俊凯",
               title: "王俊凯",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5887246,
@@ -3523,7 +4390,7 @@ module.exports = {
               name: "艺术行动小朋友",
               title: "艺术行动小朋友",
               type: 2,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5845358,
@@ -3531,8 +4398,8 @@ module.exports = {
               name: "AI艾灵",
               title: "AI艾灵",
               type: 5,
-              uin: 109542146,
-            },
+              uin: 109542146
+            }
           ],
           status: 31,
           subtitle: "",
@@ -3546,8 +4413,8 @@ module.exports = {
           volume: {
             gain: -8.823,
             lra: 4.228,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -3558,7 +4425,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -3568,7 +4435,7 @@ module.exports = {
             pmid: "002R03ad2CxfG7_4",
             subtitle: "",
             time_public: "2020-05-25",
-            title: "遇见•再见",
+            title: "遇见•再见"
           },
           bpm: 0,
           data_type: 0,
@@ -3594,7 +4461,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 57010,
             try_end: 96022,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -3605,7 +4472,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11156395,
-            mid: "000AEXZk2WEID8",
+            mid: "000AEXZk2WEID8"
           },
           label: "0",
           language: 0,
@@ -3616,7 +4483,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "嘘！我跟你讲 ",
           ov: 0,
@@ -3627,7 +4494,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -3639,8 +4506,8 @@ module.exports = {
               name: "火箭少女101",
               title: "火箭少女101",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -3654,8 +4521,8 @@ module.exports = {
           volume: {
             gain: -7.423,
             lra: 11.592,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -3666,7 +4533,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -3676,7 +4543,7 @@ module.exports = {
             pmid: "003m1hA00xbCSn_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "天生恶童 (Dazed China Version)",
+            title: "天生恶童 (Dazed China Version)"
           },
           bpm: 0,
           data_type: 0,
@@ -3702,7 +4569,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -3713,7 +4580,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11172398,
-            mid: "003b74ls0VP8iR",
+            mid: "003b74ls0VP8iR"
           },
           label: "0",
           language: 7,
@@ -3724,7 +4591,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "天生恶童",
           ov: 0,
@@ -3735,7 +4602,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -3747,8 +4614,8 @@ module.exports = {
               name: "太一",
               title: "太一",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -3762,8 +4629,8 @@ module.exports = {
           volume: {
             gain: -7.782,
             lra: 6.34,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -3774,7 +4641,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -3784,7 +4651,7 @@ module.exports = {
             pmid: "002EJJBC23tk4M_2",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "MORE & MORE",
+            title: "MORE & MORE"
           },
           bpm: 0,
           data_type: 0,
@@ -3810,7 +4677,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 20,
@@ -3821,7 +4688,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11170893,
-            mid: "003h4cku4WfI6P",
+            mid: "003h4cku4WfI6P"
           },
           label: "0",
           language: 4,
@@ -3832,7 +4699,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "m0034dv8acr",
-            vt: 0,
+            vt: 0
           },
           name: "MORE & MORE",
           ov: 0,
@@ -3843,7 +4710,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -3855,8 +4722,8 @@ module.exports = {
               name: "TWICE",
               title: "TWICE (트와이스)",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -3870,8 +4737,8 @@ module.exports = {
           volume: {
             gain: -11.578,
             lra: 4.203,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -3882,7 +4749,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -3892,7 +4759,7 @@ module.exports = {
             pmid: "001xHrTa14gazi_1",
             subtitle: "《龙道 双面复仇者》日剧主题曲",
             time_public: "2020-06-01",
-            title: "umbrella",
+            title: "umbrella"
           },
           bpm: 0,
           data_type: 0,
@@ -3918,7 +4785,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -3929,7 +4796,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11171978,
-            mid: "000nB9cD0G72KM",
+            mid: "000nB9cD0G72KM"
           },
           label: "0",
           language: 3,
@@ -3940,7 +4807,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "k00341c7a60",
-            vt: 0,
+            vt: 0
           },
           name: "umbrella",
           ov: 0,
@@ -3951,7 +4818,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -3963,8 +4830,8 @@ module.exports = {
               name: "End of the World",
               title: "End of the World (世界の終わり)",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《龙道 双面复仇者》日剧主题曲",
@@ -3978,8 +4845,8 @@ module.exports = {
           volume: {
             gain: -8.906,
             lra: 12.151,
-            peak: 0.883,
-          },
+            peak: 0.883
+          }
         },
         {
           action: {
@@ -3990,7 +4857,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -4000,7 +4867,7 @@ module.exports = {
             pmid: "004LRP174W0VZC_2",
             subtitle: "",
             time_public: "2020-05-30",
-            title: "创造营2020 第5期",
+            title: "创造营2020 第5期"
           },
           bpm: 0,
           data_type: 0,
@@ -4026,7 +4893,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -4037,7 +4904,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11146900,
-            mid: "0030DueC2mRrDD",
+            mid: "0030DueC2mRrDD"
           },
           label: "0",
           language: 0,
@@ -4048,7 +4915,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "世界不会轻易崩塌",
           ov: 0,
@@ -4059,7 +4926,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4071,7 +4938,7 @@ module.exports = {
               name: "希林娜依·高",
               title: "希林娜依·高",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3017816,
@@ -4079,7 +4946,7 @@ module.exports = {
               name: "陈倩楠",
               title: "陈倩楠",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 2107406,
@@ -4087,7 +4954,7 @@ module.exports = {
               name: "黄恩茹",
               title: "黄恩茹",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5594314,
@@ -4095,7 +4962,7 @@ module.exports = {
               name: "王艺瑾",
               title: "王艺瑾",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5595760,
@@ -4103,8 +4970,8 @@ module.exports = {
               name: "张清",
               title: "张清",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -4118,8 +4985,8 @@ module.exports = {
           volume: {
             gain: -6.9,
             lra: 15.533,
-            peak: 0.897,
-          },
+            peak: 0.897
+          }
         },
         {
           action: {
@@ -4130,7 +4997,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -4140,7 +5007,7 @@ module.exports = {
             pmid: "004LRP174W0VZC_2",
             subtitle: "",
             time_public: "2020-05-30",
-            title: "创造营2020 第5期",
+            title: "创造营2020 第5期"
           },
           bpm: 0,
           data_type: 0,
@@ -4166,7 +5033,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -4177,7 +5044,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11146901,
-            mid: "004U6G6l3B3mzl",
+            mid: "004U6G6l3B3mzl"
           },
           label: "0",
           language: 0,
@@ -4188,7 +5055,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "一步成诗",
           ov: 0,
@@ -4199,7 +5066,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4211,7 +5078,7 @@ module.exports = {
               name: "妙静鸥",
               title: "妙静鸥",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5595262,
@@ -4219,7 +5086,7 @@ module.exports = {
               name: "冯琬贺",
               title: "冯琬贺",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5595400,
@@ -4227,7 +5094,7 @@ module.exports = {
               name: "伍雅露",
               title: "伍雅露",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5595330,
@@ -4235,7 +5102,7 @@ module.exports = {
               name: "郑乃馨",
               title: "郑乃馨",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5595909,
@@ -4243,8 +5110,8 @@ module.exports = {
               name: "仲菲菲",
               title: "仲菲菲",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -4258,8 +5125,8 @@ module.exports = {
           volume: {
             gain: -6.424,
             lra: 11.125,
-            peak: 0.911,
-          },
+            peak: 0.911
+          }
         },
         {
           action: {
@@ -4270,7 +5137,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17409795,
+            switch: 17409795
           },
           aid: 0,
           album: {
@@ -4280,7 +5147,7 @@ module.exports = {
             pmid: "004FXeFH4QkWpR_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "玛咖威力MAKAVELI AK (feat. Ty.)",
+            title: "玛咖威力MAKAVELI AK (feat. Ty.)"
           },
           bpm: 0,
           data_type: 0,
@@ -4306,7 +5173,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 34,
@@ -4317,7 +5184,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 0,
-            mid: "",
+            mid: ""
           },
           label: "0",
           language: 0,
@@ -4328,7 +5195,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "n0034vdumyl",
-            vt: 0,
+            vt: 0
           },
           name: "玛咖威力MAKAVELI AK (feat. Ty.)",
           ov: 0,
@@ -4339,7 +5206,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4351,7 +5218,7 @@ module.exports = {
               name: "邓典果",
               title: "邓典果",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 965736,
@@ -4359,8 +5226,8 @@ module.exports = {
               name: "Ty.",
               title: "Ty.",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -4374,8 +5241,8 @@ module.exports = {
           volume: {
             gain: -8.319,
             lra: 6.779,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -4386,7 +5253,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -4396,7 +5263,7 @@ module.exports = {
             pmid: "000ii1df2urJBY_4",
             subtitle: "",
             time_public: "2020-04-24",
-            title: "某年夏天",
+            title: "某年夏天"
           },
           bpm: 0,
           data_type: 0,
@@ -4422,7 +5289,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -4433,7 +5300,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11157058,
-            mid: "000mxSSC2c89LR",
+            mid: "000mxSSC2c89LR"
           },
           label: "0",
           language: 0,
@@ -4444,7 +5311,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "童年",
           ov: 0,
@@ -4455,7 +5322,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4467,8 +5334,8 @@ module.exports = {
               name: "刘瑞琦",
               title: "刘瑞琦",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -4482,8 +5349,8 @@ module.exports = {
           volume: {
             gain: -7.44,
             lra: 10.79,
-            peak: 0.916,
-          },
+            peak: 0.916
+          }
         },
         {
           action: {
@@ -4494,7 +5361,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -4504,7 +5371,7 @@ module.exports = {
             pmid: "002ocq9818vG6U_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "핑크몬스터(《粉红野兽》韩文版)",
+            title: "핑크몬스터(《粉红野兽》韩文版)"
           },
           bpm: 0,
           data_type: 0,
@@ -4530,7 +5397,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -4541,7 +5408,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11155947,
-            mid: "002VtddY1OPvPA",
+            mid: "002VtddY1OPvPA"
           },
           label: "0",
           language: 4,
@@ -4552,7 +5419,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "핑크몬스터",
           ov: 0,
@@ -4563,7 +5430,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4575,8 +5442,8 @@ module.exports = {
               name: "蔡妍",
               title: "蔡妍 (채연)",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -4590,8 +5457,8 @@ module.exports = {
           volume: {
             gain: -11.581,
             lra: 2.824,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -4602,7 +5469,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -4612,7 +5479,7 @@ module.exports = {
             pmid: "003JtjFV0uL66A_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "Butterflies",
+            title: "Butterflies"
           },
           bpm: 0,
           data_type: 0,
@@ -4638,7 +5505,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 33,
@@ -4649,7 +5516,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11171315,
-            mid: "004NljtL0Eashr",
+            mid: "004NljtL0Eashr"
           },
           label: "0",
           language: 5,
@@ -4660,7 +5527,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Butterflies",
           ov: 0,
@@ -4671,7 +5538,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4683,7 +5550,7 @@ module.exports = {
               name: "Wolftyla",
               title: "Wolftyla",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 20580,
@@ -4691,8 +5558,8 @@ module.exports = {
               name: "朴宰范",
               title: "朴宰范 (박재범)",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -4706,8 +5573,8 @@ module.exports = {
           volume: {
             gain: -9.037,
             lra: 4.441,
-            peak: 0.99,
-          },
+            peak: 0.99
+          }
         },
         {
           action: {
@@ -4718,7 +5585,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -4728,7 +5595,7 @@ module.exports = {
             pmid: "002bvjb12CqJrs_1",
             subtitle: "",
             time_public: "2020-05-30",
-            title: "青春有你2 第23期",
+            title: "青春有你2 第23期"
           },
           bpm: 0,
           data_type: 0,
@@ -4754,7 +5621,7 @@ module.exports = {
             size_try: 0,
             try_begin: 13136,
             try_end: 42322,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -4765,7 +5632,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11116074,
-            mid: "000r9B7t38VLdF",
+            mid: "000r9B7t38VLdF"
           },
           label: "0",
           language: 0,
@@ -4776,7 +5643,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "给女孩",
           ov: 0,
@@ -4787,7 +5654,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4799,7 +5666,7 @@ module.exports = {
               name: "李宇春",
               title: "李宇春",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5914843,
@@ -4807,8 +5674,8 @@ module.exports = {
               name: "青春有你2训练生",
               title: "青春有你2训练生",
               type: 3,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -4822,8 +5689,8 @@ module.exports = {
           volume: {
             gain: -7.072,
             lra: 14.958,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -4834,7 +5701,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -4844,7 +5711,7 @@ module.exports = {
             pmid: "002bvjb12CqJrs_1",
             subtitle: "",
             time_public: "2020-05-30",
-            title: "青春有你2 第23期",
+            title: "青春有你2 第23期"
           },
           bpm: 0,
           data_type: 0,
@@ -4870,7 +5737,7 @@ module.exports = {
             size_try: 0,
             try_begin: 45558,
             try_end: 69205,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -4881,7 +5748,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11115802,
-            mid: "003BiiNB3ltGQG",
+            mid: "003BiiNB3ltGQG"
           },
           label: "0",
           language: 0,
@@ -4892,7 +5759,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "猎",
           ov: 0,
@@ -4903,7 +5770,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -4915,7 +5782,7 @@ module.exports = {
               name: "安崎",
               title: "安崎",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 198930,
@@ -4923,7 +5790,7 @@ module.exports = {
               name: "戴燕妮",
               title: "戴燕妮",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3783273,
@@ -4931,7 +5798,7 @@ module.exports = {
               name: "金子涵",
               title: "金子涵",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5292588,
@@ -4939,7 +5806,7 @@ module.exports = {
               name: "陆柯燃",
               title: "陆柯燃",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5292592,
@@ -4947,7 +5814,7 @@ module.exports = {
               name: "刘令姿",
               title: "刘令姿",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3017642,
@@ -4955,7 +5822,7 @@ module.exports = {
               name: "SNH48孙芮",
               title: "SNH48孙芮",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 966857,
@@ -4963,7 +5830,7 @@ module.exports = {
               name: "许佳琪",
               title: "许佳琪",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 2688101,
@@ -4971,7 +5838,7 @@ module.exports = {
               name: "徐紫茵",
               title: "徐紫茵",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3069943,
@@ -4979,7 +5846,7 @@ module.exports = {
               name: "虞书欣",
               title: "虞书欣",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 2161316,
@@ -4987,8 +5854,8 @@ module.exports = {
               name: "赵小棠",
               title: "赵小棠",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -5002,8 +5869,8 @@ module.exports = {
           volume: {
             gain: -8.348,
             lra: 3.5,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -5014,7 +5881,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5024,7 +5891,7 @@ module.exports = {
             pmid: "002bvjb12CqJrs_1",
             subtitle: "",
             time_public: "2020-05-30",
-            title: "青春有你2 第23期",
+            title: "青春有你2 第23期"
           },
           bpm: 0,
           data_type: 0,
@@ -5050,7 +5917,7 @@ module.exports = {
             size_try: 0,
             try_begin: 47063,
             try_end: 68637,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -5061,7 +5928,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11115841,
-            mid: "002ERZLf4d8MiN",
+            mid: "002ERZLf4d8MiN"
           },
           label: "0",
           language: 0,
@@ -5072,7 +5939,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "A Little Bit",
           ov: 0,
@@ -5083,7 +5950,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5095,7 +5962,7 @@ module.exports = {
               name: "戴萌",
               title: "戴萌",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1234244,
@@ -5103,7 +5970,7 @@ module.exports = {
               name: "孔雪儿",
               title: "孔雪儿",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1456756,
@@ -5111,7 +5978,7 @@ module.exports = {
               name: "刘雨昕",
               title: "刘雨昕",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1571852,
@@ -5119,7 +5986,7 @@ module.exports = {
               name: "NINEONE #",
               title: "NINEONE #",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5292554,
@@ -5127,7 +5994,7 @@ module.exports = {
               name: "上官喜爱",
               title: "上官喜爱",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1510381,
@@ -5135,7 +6002,7 @@ module.exports = {
               name: "宋昕冉",
               title: "宋昕冉",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5292795,
@@ -5143,7 +6010,7 @@ module.exports = {
               name: "王承渲",
               title: "王承渲",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 2725344,
@@ -5151,7 +6018,7 @@ module.exports = {
               name: "谢可寅",
               title: "谢可寅",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 951271,
@@ -5159,7 +6026,7 @@ module.exports = {
               name: "喻言",
               title: "喻言",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5292567,
@@ -5167,8 +6034,8 @@ module.exports = {
               name: "曾可妮",
               title: "曾可妮",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -5182,8 +6049,8 @@ module.exports = {
           volume: {
             gain: -10.319,
             lra: 2.423,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -5194,7 +6061,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5204,7 +6071,7 @@ module.exports = {
             pmid: "003GLOWT2h6nYX_1",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "我在",
+            title: "我在"
           },
           bpm: 0,
           data_type: 0,
@@ -5230,7 +6097,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 43446,
             try_end: 82058,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -5241,7 +6108,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11115364,
-            mid: "001eKoSJ2tTH2d",
+            mid: "001eKoSJ2tTH2d"
           },
           label: "0",
           language: 0,
@@ -5252,7 +6119,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "b0034r26zoy",
-            vt: 0,
+            vt: 0
           },
           name: "我在",
           ov: 0,
@@ -5263,7 +6130,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5275,8 +6142,8 @@ module.exports = {
               name: "谭松韵",
               title: "谭松韵",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -5290,8 +6157,8 @@ module.exports = {
           volume: {
             gain: -5.132,
             lra: 9.046,
-            peak: 0.956,
-          },
+            peak: 0.956
+          }
         },
         {
           action: {
@@ -5302,7 +6169,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5312,7 +6179,7 @@ module.exports = {
             pmid: "0044lfbx39DTPu_1",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "寻常传奇·水上诗",
+            title: "寻常传奇·水上诗"
           },
           bpm: 0,
           data_type: 0,
@@ -5338,7 +6205,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -5349,7 +6216,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11119774,
-            mid: "002LpCzp4YiLlf",
+            mid: "002LpCzp4YiLlf"
           },
           label: "0",
           language: 0,
@@ -5360,7 +6227,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "寻常传奇·水上诗",
           ov: 0,
@@ -5371,7 +6238,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5383,8 +6250,8 @@ module.exports = {
               name: "河图",
               title: "河图",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -5398,8 +6265,8 @@ module.exports = {
           volume: {
             gain: -5.541,
             lra: 12.459,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -5410,7 +6277,7 @@ module.exports = {
             msgid: 13,
             msgpay: 6,
             msgshare: 0,
-            switch: 17405185,
+            switch: 17405185
           },
           aid: 0,
           album: {
@@ -5420,7 +6287,7 @@ module.exports = {
             pmid: "003vWjA90EEatR_2",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "The Riot",
+            title: "The Riot"
           },
           bpm: 0,
           data_type: 0,
@@ -5446,7 +6313,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 22,
@@ -5457,7 +6324,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11154118,
-            mid: "000DYg3e2G2oAA",
+            mid: "000DYg3e2G2oAA"
           },
           label: "0",
           language: 5,
@@ -5468,7 +6335,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "z0034nqk755",
-            vt: 0,
+            vt: 0
           },
           name: "The Riot",
           ov: 0,
@@ -5479,7 +6346,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5491,7 +6358,7 @@ module.exports = {
               name: "긴조",
               title: "긴조 (GINJO)",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1448387,
@@ -5499,7 +6366,7 @@ module.exports = {
               name: "TEN",
               title: "TEN",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1060989,
@@ -5507,8 +6374,8 @@ module.exports = {
               name: "肖俊",
               title: "肖俊",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -5522,8 +6389,8 @@ module.exports = {
           volume: {
             gain: -11.108,
             lra: 6.262,
-            peak: 0.984,
-          },
+            peak: 0.984
+          }
         },
         {
           action: {
@@ -5534,7 +6401,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5544,7 +6411,7 @@ module.exports = {
             pmid: "003jZgR43JiuuD_1",
             subtitle: "我是唱作人2第7期",
             time_public: "2020-05-29",
-            title: "湘江水 (Live)",
+            title: "湘江水 (Live)"
           },
           bpm: 0,
           data_type: 0,
@@ -5570,7 +6437,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -5581,7 +6448,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099660,
-            mid: "000d5KJM1ne6JT",
+            mid: "000d5KJM1ne6JT"
           },
           label: "0",
           language: 0,
@@ -5592,7 +6459,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "湘江水",
           ov: 0,
@@ -5603,7 +6470,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5615,8 +6482,8 @@ module.exports = {
               name: "张艺兴",
               title: "张艺兴",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "我是唱作人2第7期",
@@ -5630,8 +6497,8 @@ module.exports = {
           volume: {
             gain: -9.105,
             lra: 3.415,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -5642,7 +6509,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5652,7 +6519,7 @@ module.exports = {
             pmid: "001qq92B0GoVz5_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "最佳拍档",
+            title: "最佳拍档"
           },
           bpm: 0,
           data_type: 0,
@@ -5678,7 +6545,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 23330,
             try_end: 44916,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 34,
@@ -5689,7 +6556,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11080428,
-            mid: "003O28ZF0Uf14p",
+            mid: "003O28ZF0Uf14p"
           },
           label: "0",
           language: 0,
@@ -5700,7 +6567,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "最佳拍档",
           ov: 0,
@@ -5711,7 +6578,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5723,7 +6590,7 @@ module.exports = {
               name: "满舒克",
               title: "满舒克",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1106725,
@@ -5731,8 +6598,8 @@ module.exports = {
               name: "Jony J",
               title: "Jony J",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -5746,8 +6613,8 @@ module.exports = {
           volume: {
             gain: -7.94,
             lra: 7.613,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -5758,7 +6625,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5768,7 +6635,7 @@ module.exports = {
             pmid: "002HPfZm1nNDxp_1",
             subtitle: "《燃烧》电视剧片尾主题曲",
             time_public: "2020-05-29",
-            title: "燃烧 电视剧原声专辑",
+            title: "燃烧 电视剧原声专辑"
           },
           bpm: 0,
           data_type: 0,
@@ -5794,7 +6661,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -5805,7 +6672,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11079670,
-            mid: "000V01kE4HrLQ8",
+            mid: "000V01kE4HrLQ8"
           },
           label: "0",
           language: 0,
@@ -5816,7 +6683,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "心路",
           ov: 0,
@@ -5827,7 +6694,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5839,8 +6706,8 @@ module.exports = {
               name: "阿云嘎",
               title: "阿云嘎",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《燃烧》电视剧片尾主题曲",
@@ -5854,8 +6721,8 @@ module.exports = {
           volume: {
             gain: -7.649,
             lra: 8.85,
-            peak: 0.94,
-          },
+            peak: 0.94
+          }
         },
         {
           action: {
@@ -5866,7 +6733,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5876,7 +6743,7 @@ module.exports = {
             pmid: "002T1gqd1LlhTg_1",
             subtitle: "《燃烧》电视剧推广曲",
             time_public: "2020-05-29",
-            title: "燃烧 电视剧原声带",
+            title: "燃烧 电视剧原声带"
           },
           bpm: 0,
           data_type: 0,
@@ -5902,7 +6769,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 37,
@@ -5913,7 +6780,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11075982,
-            mid: "001ZuZ6j1Yu2XU",
+            mid: "001ZuZ6j1Yu2XU"
           },
           label: "0",
           language: 0,
@@ -5924,7 +6791,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "在阳光中寻找你",
           ov: 0,
@@ -5935,7 +6802,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -5947,8 +6814,8 @@ module.exports = {
               name: "双笙",
               title: "双笙",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《燃烧》电视剧推广曲",
@@ -5962,8 +6829,8 @@ module.exports = {
           volume: {
             gain: -5.087,
             lra: 12.199,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -5974,7 +6841,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -5984,7 +6851,7 @@ module.exports = {
             pmid: "002P8AW44ACxaV_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "先生呀",
+            title: "先生呀"
           },
           bpm: 0,
           data_type: 0,
@@ -6010,7 +6877,7 @@ module.exports = {
             size_try: 0,
             try_begin: 67847,
             try_end: 92402,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 12,
@@ -6021,7 +6888,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099704,
-            mid: "004aW52W14FmUZ",
+            mid: "004aW52W14FmUZ"
           },
           label: "0",
           language: 0,
@@ -6032,7 +6899,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "先生呀",
           ov: 0,
@@ -6043,7 +6910,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6055,8 +6922,8 @@ module.exports = {
               name: "倪莫问",
               title: "倪莫问",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -6070,8 +6937,8 @@ module.exports = {
           volume: {
             gain: -6.852,
             lra: 9.331,
-            peak: 0.989,
-          },
+            peak: 0.989
+          }
         },
         {
           action: {
@@ -6082,7 +6949,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6092,7 +6959,7 @@ module.exports = {
             pmid: "001Wm7Vo2uSan6_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "炙热的我们 第1期",
+            title: "炙热的我们 第1期"
           },
           bpm: 0,
           data_type: 0,
@@ -6118,7 +6985,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -6129,7 +6996,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099658,
-            mid: "000IqThf0SxAHR",
+            mid: "000IqThf0SxAHR"
           },
           label: "0",
           language: 0,
@@ -6140,7 +7007,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "l0034pkj711",
-            vt: 0,
+            vt: 0
           },
           name: "黑猫警长",
           ov: 0,
@@ -6151,7 +7018,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6163,8 +7030,8 @@ module.exports = {
               name: "R1SE",
               title: "R1SE",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -6178,8 +7045,8 @@ module.exports = {
           volume: {
             gain: -7.958,
             lra: 11.467,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -6190,7 +7057,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6200,7 +7067,7 @@ module.exports = {
             pmid: "001Wm7Vo2uSan6_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "炙热的我们 第1期",
+            title: "炙热的我们 第1期"
           },
           bpm: 0,
           data_type: 0,
@@ -6226,7 +7093,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -6237,7 +7104,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099653,
-            mid: "002OvGPl0SySOK",
+            mid: "002OvGPl0SySOK"
           },
           label: "0",
           language: 0,
@@ -6248,7 +7115,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "p00344unzjd",
-            vt: 0,
+            vt: 0
           },
           name: "你要跳舞吗",
           ov: 0,
@@ -6259,7 +7126,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6271,8 +7138,8 @@ module.exports = {
               name: "SNH48",
               title: "SNH48",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -6286,8 +7153,8 @@ module.exports = {
           volume: {
             gain: -11.935,
             lra: 4.735,
-            peak: 0.965,
-          },
+            peak: 0.965
+          }
         },
         {
           action: {
@@ -6298,7 +7165,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6308,7 +7175,7 @@ module.exports = {
             pmid: "000XcLpO2aYB2I_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "Chromatica",
+            title: "Chromatica"
           },
           bpm: 0,
           data_type: 0,
@@ -6334,7 +7201,7 @@ module.exports = {
             size_try: 0,
             try_begin: 63538,
             try_end: 79518,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -6345,7 +7212,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11072087,
-            mid: "003sDAsW3U1BK2",
+            mid: "003sDAsW3U1BK2"
           },
           label: "0",
           language: 5,
@@ -6356,7 +7223,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Sour Candy",
           ov: 0,
@@ -6367,7 +7234,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6379,7 +7246,7 @@ module.exports = {
               name: "Lady Gaga",
               title: "Lady Gaga",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1190986,
@@ -6387,8 +7254,8 @@ module.exports = {
               name: "BLACKPINK",
               title: "BLACKPINK",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -6402,8 +7269,8 @@ module.exports = {
           volume: {
             gain: -8.764,
             lra: 2.41,
-            peak: 0.755,
-          },
+            peak: 0.755
+          }
         },
         {
           action: {
@@ -6414,7 +7281,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6424,7 +7291,7 @@ module.exports = {
             pmid: "001OnoXF228ObE_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "Funeral (Deluxe) [Explicit]",
+            title: "Funeral (Deluxe) [Explicit]"
           },
           bpm: 0,
           data_type: 0,
@@ -6450,7 +7317,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 34,
@@ -6461,7 +7328,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11138640,
-            mid: "004E5JDk4Knnrt",
+            mid: "004E5JDk4Knnrt"
           },
           label: "0",
           language: 5,
@@ -6472,7 +7339,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Shimmy",
           ov: 0,
@@ -6483,7 +7350,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6495,7 +7362,7 @@ module.exports = {
               name: "Lil Wayne",
               title: "Lil Wayne",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 182599,
@@ -6503,8 +7370,8 @@ module.exports = {
               name: "Doja Cat",
               title: "Doja Cat",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -6518,8 +7385,8 @@ module.exports = {
           volume: {
             gain: -7.295,
             lra: 2.531,
-            peak: 0.767,
-          },
+            peak: 0.767
+          }
         },
         {
           action: {
@@ -6530,7 +7397,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6540,7 +7407,7 @@ module.exports = {
             pmid: "000Jdlh13KmhQy_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "Selfish (Alan Walker Remix)",
+            title: "Selfish (Alan Walker Remix)"
           },
           bpm: 0,
           data_type: 0,
@@ -6566,7 +7433,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -6577,7 +7444,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11114276,
-            mid: "002aMnJb0AcvvV",
+            mid: "002aMnJb0AcvvV"
           },
           label: "0",
           language: 5,
@@ -6588,7 +7455,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Selfish",
           ov: 0,
@@ -6599,7 +7466,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6611,7 +7478,7 @@ module.exports = {
               name: "Madison Beer",
               title: "Madison Beer",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 944940,
@@ -6619,8 +7486,8 @@ module.exports = {
               name: "Alan Walker",
               title: "Alan Walker",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -6634,8 +7501,8 @@ module.exports = {
           volume: {
             gain: -5.473,
             lra: 6.253,
-            peak: 0.801,
-          },
+            peak: 0.801
+          }
         },
         {
           action: {
@@ -6646,7 +7513,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6656,7 +7523,7 @@ module.exports = {
             pmid: "001X6OFY47mOgK_1",
             subtitle: "《亲爱的义祁君》影视剧人物主题曲",
             time_public: "2020-06-02",
-            title: "誓爱（《亲爱的义祁君》影视剧人物主题曲）",
+            title: "誓爱（《亲爱的义祁君》影视剧人物主题曲）"
           },
           bpm: 0,
           data_type: 0,
@@ -6682,7 +7549,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -6693,7 +7560,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169650,
-            mid: "002FNdwV1kYmdQ",
+            mid: "002FNdwV1kYmdQ"
           },
           label: "0",
           language: 0,
@@ -6704,7 +7571,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "誓爱",
           ov: 0,
@@ -6715,7 +7582,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6727,8 +7594,8 @@ module.exports = {
               name: "曾一鸣",
               title: "曾一鸣",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《亲爱的义祁君》影视剧人物主题曲",
@@ -6742,8 +7609,8 @@ module.exports = {
           volume: {
             gain: -7.109,
             lra: 10.634,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -6754,7 +7621,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6764,7 +7631,7 @@ module.exports = {
             pmid: "0005AFlT3sK9oC_1",
             subtitle: "我是唱作人2第7期",
             time_public: "2020-05-29",
-            title: "设计 (Live)",
+            title: "设计 (Live)"
           },
           bpm: 0,
           data_type: 0,
@@ -6790,7 +7657,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 34,
@@ -6801,7 +7668,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11099659,
-            mid: "002t7NZp1LwOHa",
+            mid: "002t7NZp1LwOHa"
           },
           label: "0",
           language: 0,
@@ -6812,7 +7679,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "设计",
           ov: 0,
@@ -6823,7 +7690,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6835,8 +7702,8 @@ module.exports = {
               name: "Tizzy T",
               title: "Tizzy T",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "我是唱作人2第7期",
@@ -6850,8 +7717,8 @@ module.exports = {
           volume: {
             gain: -7.103,
             lra: 11.452,
-            peak: 0.998,
-          },
+            peak: 0.998
+          }
         },
         {
           action: {
@@ -6862,7 +7729,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6872,7 +7739,7 @@ module.exports = {
             pmid: "002PVUx82MYAgs_1",
             subtitle: "我是唱作人2第7期",
             time_public: "2020-05-29",
-            title: "且慢 (Live)",
+            title: "且慢 (Live)"
           },
           bpm: 0,
           data_type: 0,
@@ -6898,7 +7765,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -6909,7 +7776,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099677,
-            mid: "002vGe1P0F4DJQ",
+            mid: "002vGe1P0F4DJQ"
           },
           label: "0",
           language: 0,
@@ -6920,7 +7787,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "且慢",
           ov: 0,
@@ -6931,7 +7798,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -6943,8 +7810,8 @@ module.exports = {
               name: "陈粒",
               title: "陈粒",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "我是唱作人2第7期",
@@ -6958,8 +7825,8 @@ module.exports = {
           volume: {
             gain: -6.95,
             lra: 12.993,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -6970,7 +7837,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -6980,7 +7847,7 @@ module.exports = {
             pmid: "000h2qn246jCl8_1",
             subtitle: "我是唱作人2第7期",
             time_public: "2020-05-29",
-            title: "夕阳下的奔跑 (Live)",
+            title: "夕阳下的奔跑 (Live)"
           },
           bpm: 0,
           data_type: 0,
@@ -7006,7 +7873,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -7017,7 +7884,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099661,
-            mid: "001GEqgb2gF7wn",
+            mid: "001GEqgb2gF7wn"
           },
           label: "0",
           language: 0,
@@ -7028,7 +7895,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "夕阳下的奔跑",
           ov: 0,
@@ -7039,7 +7906,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7051,8 +7918,8 @@ module.exports = {
               name: "霍尊",
               title: "霍尊",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "我是唱作人2第7期",
@@ -7066,8 +7933,8 @@ module.exports = {
           volume: {
             gain: -3.929,
             lra: 4.536,
-            peak: 0.877,
-          },
+            peak: 0.877
+          }
         },
         {
           action: {
@@ -7078,7 +7945,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -7088,7 +7955,7 @@ module.exports = {
             pmid: "002pyNzs1W8ge9_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "Tell Me U Luv Me (Explicit)",
+            title: "Tell Me U Luv Me (Explicit)"
           },
           bpm: 0,
           data_type: 0,
@@ -7114,7 +7981,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 34,
@@ -7125,7 +7992,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11098958,
-            mid: "001Fr4nv0qd95z",
+            mid: "001Fr4nv0qd95z"
           },
           label: "0",
           language: 5,
@@ -7136,7 +8003,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "e003401xd72",
-            vt: 0,
+            vt: 0
           },
           name: "Tell Me U Luv Me",
           ov: 0,
@@ -7147,7 +8014,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7159,7 +8026,7 @@ module.exports = {
               name: "Juice WRLD",
               title: "Juice WRLD",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1427477,
@@ -7167,8 +8034,8 @@ module.exports = {
               name: "Trippie Redd",
               title: "Trippie Redd",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -7182,8 +8049,8 @@ module.exports = {
           volume: {
             gain: -7.887,
             lra: 2.552,
-            peak: 0.845,
-          },
+            peak: 0.845
+          }
         },
         {
           action: {
@@ -7194,7 +8061,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -7204,7 +8071,7 @@ module.exports = {
             pmid: "002dgPoi18WtTc_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "Better Days - Giorni Migliori",
+            title: "Better Days - Giorni Migliori"
           },
           bpm: 0,
           data_type: 0,
@@ -7230,7 +8097,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -7241,7 +8108,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11111967,
-            mid: "001DLGSA1Jwjlk",
+            mid: "001DLGSA1Jwjlk"
           },
           label: "0",
           language: 5,
@@ -7252,7 +8119,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Better Days - Giorni Migliori",
           ov: 0,
@@ -7263,7 +8130,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7275,7 +8142,7 @@ module.exports = {
               name: "OneRepublic",
               title: "OneRepublic",
               type: 2,
-              uin: 0,
+              uin: 0
             },
             {
               id: 265027,
@@ -7283,8 +8150,8 @@ module.exports = {
               name: "Negramaro",
               title: "Negramaro",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -7298,8 +8165,8 @@ module.exports = {
           volume: {
             gain: -8.258,
             lra: 5.526,
-            peak: 0.869,
-          },
+            peak: 0.869
+          }
         },
         {
           action: {
@@ -7310,7 +8177,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -7320,7 +8187,7 @@ module.exports = {
             pmid: "003g6lpB3KL1Qy_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "門OON : REPACKAGE",
+            title: "門OON : REPACKAGE"
           },
           bpm: 0,
           data_type: 0,
@@ -7346,7 +8213,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 67387,
             try_end: 94462,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -7357,7 +8224,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099028,
-            mid: "004Dgg2I0N8PGz",
+            mid: "004Dgg2I0N8PGz"
           },
           label: "0",
           language: 4,
@@ -7368,7 +8235,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "j003481476g",
-            vt: 0,
+            vt: 0
           },
           name: "부재 (Absence)",
           ov: 0,
@@ -7379,7 +8246,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7391,8 +8258,8 @@ module.exports = {
               name: "玟星",
               title: "玟星 (문별)",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -7406,8 +8273,8 @@ module.exports = {
           volume: {
             gain: -11.65,
             lra: 8.658,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -7418,7 +8285,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -7428,7 +8295,7 @@ module.exports = {
             pmid: "003PeET02CQHOa_1",
             subtitle: "《机智的医生生活》韩剧插曲",
             time_public: "2020-05-29",
-            title: "슬기로운 의사생활 OST Part 12 (机智的医生生活 OST  Part 12)",
+            title: "슬기로운 의사생활 OST Part 12 (机智的医生生活 OST  Part 12)"
           },
           bpm: 0,
           data_type: 0,
@@ -7454,7 +8321,7 @@ module.exports = {
             size_try: 0,
             try_begin: 79024,
             try_end: 105802,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 37,
@@ -7465,7 +8332,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11080289,
-            mid: "001nVGpY3N1s9P",
+            mid: "001nVGpY3N1s9P"
           },
           label: "0",
           language: 4,
@@ -7476,7 +8343,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "e0034iv5ydi",
-            vt: 0,
+            vt: 0
           },
           name: "너에게 난, 나에게 넌",
           ov: 0,
@@ -7487,7 +8354,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7499,8 +8366,8 @@ module.exports = {
               name: "Mido and Falasol",
               title: "Mido and Falasol (미도와 파라솔)",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《机智的医生生活》韩剧插曲",
@@ -7514,8 +8381,8 @@ module.exports = {
           volume: {
             gain: -7.527,
             lra: 10.169,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -7526,7 +8393,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -7536,7 +8403,7 @@ module.exports = {
             pmid: "000OyhgY3KEnX9_1",
             subtitle: "我是唱作人2第7期",
             time_public: "2020-05-29",
-            title: "没对 (Live)",
+            title: "没对 (Live)"
           },
           bpm: 0,
           data_type: 0,
@@ -7562,7 +8429,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 34,
@@ -7573,7 +8440,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099698,
-            mid: "001LjtqM0ua32M",
+            mid: "001LjtqM0ua32M"
           },
           label: "0",
           language: 0,
@@ -7584,7 +8451,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "没对",
           ov: 0,
@@ -7595,7 +8462,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7607,8 +8474,8 @@ module.exports = {
               name: "GAI周延",
               title: "GAI周延",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "我是唱作人2第7期",
@@ -7622,8 +8489,8 @@ module.exports = {
           volume: {
             gain: -8.897,
             lra: 4.708,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -7634,7 +8501,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -7644,7 +8511,7 @@ module.exports = {
             pmid: "000yk3PV3X4qri_1",
             subtitle: "我是唱作人2第7期",
             time_public: "2020-05-29",
-            title: "Ai ma huo (哎玛吙) (Live)",
+            title: "Ai ma huo (哎玛吙) (Live)"
           },
           bpm: 0,
           data_type: 0,
@@ -7670,7 +8537,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -7681,7 +8548,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11099662,
-            mid: "003SFMMh0a6ohl",
+            mid: "003SFMMh0a6ohl"
           },
           label: "0",
           language: 0,
@@ -7692,7 +8559,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Ai ma huo (哎玛吙)",
           ov: 0,
@@ -7703,7 +8570,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7715,8 +8582,8 @@ module.exports = {
               name: "郑钧",
               title: "郑钧",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "我是唱作人2第7期",
@@ -7730,8 +8597,8 @@ module.exports = {
           volume: {
             gain: -7.042,
             lra: 10.54,
-            peak: 0.992,
-          },
+            peak: 0.992
+          }
         },
         {
           action: {
@@ -7742,7 +8609,7 @@ module.exports = {
             msgid: 0,
             msgpay: 0,
             msgshare: 0,
-            switch: 605971,
+            switch: 605971
           },
           aid: 0,
           album: {
@@ -7752,7 +8619,7 @@ module.exports = {
             pmid: "000KYv9Y0FDSKs_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "为爱向前",
+            title: "为爱向前"
           },
           bpm: 0,
           data_type: 0,
@@ -7778,7 +8645,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 0,
           genre: 1,
@@ -7789,7 +8656,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11180778,
-            mid: "003ypIOb1erUBC",
+            mid: "003ypIOb1erUBC"
           },
           label: "0",
           language: 0,
@@ -7800,7 +8667,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "为爱向前",
           ov: 0,
@@ -7811,7 +8678,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 0,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7823,8 +8690,8 @@ module.exports = {
               name: "洪之光",
               title: "洪之光",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 31,
           subtitle: "",
@@ -7838,8 +8705,8 @@ module.exports = {
           volume: {
             gain: -9.43,
             lra: 13.557,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -7850,7 +8717,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -7860,7 +8727,7 @@ module.exports = {
             pmid: "001wx84Z22X0eo_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "飞蛾",
+            title: "飞蛾"
           },
           bpm: 0,
           data_type: 0,
@@ -7886,7 +8753,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -7897,7 +8764,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11180779,
-            mid: "003Xp16Q2637Ll",
+            mid: "003Xp16Q2637Ll"
           },
           label: "0",
           language: 0,
@@ -7908,7 +8775,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "飞蛾",
           ov: 0,
@@ -7919,7 +8786,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -7931,7 +8798,7 @@ module.exports = {
               name: "W.T.M",
               title: "W.T.M",
               type: 3,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1440221,
@@ -7939,8 +8806,8 @@ module.exports = {
               name: "Freedom Plant Music",
               title: "Freedom Plant Music",
               type: 3,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -7954,8 +8821,8 @@ module.exports = {
           volume: {
             gain: -6.718,
             lra: 8.747,
-            peak: 0.999,
-          },
+            peak: 0.999
+          }
         },
         {
           action: {
@@ -7966,7 +8833,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17409795,
+            switch: 17409795
           },
           aid: 0,
           album: {
@@ -7976,7 +8843,7 @@ module.exports = {
             pmid: "004RNNtx1Td86j_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "Painkiller",
+            title: "Painkiller"
           },
           bpm: 0,
           data_type: 0,
@@ -8002,7 +8869,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -8013,7 +8880,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 0,
-            mid: "",
+            mid: ""
           },
           label: "0",
           language: 0,
@@ -8024,7 +8891,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Painkiller",
           ov: 0,
@@ -8035,7 +8902,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8047,7 +8914,7 @@ module.exports = {
               name: "i7",
               title: "i7",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3709861,
@@ -8055,8 +8922,8 @@ module.exports = {
               name: "璠璠",
               title: "璠璠",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8070,8 +8937,8 @@ module.exports = {
           volume: {
             gain: -3.384,
             lra: 3.662,
-            peak: 0.608,
-          },
+            peak: 0.608
+          }
         },
         {
           action: {
@@ -8082,7 +8949,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8092,7 +8959,7 @@ module.exports = {
             pmid: "001bPNFQ3Q6bmq_1",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "乐队无限公司 第10期",
+            title: "乐队无限公司 第10期"
           },
           bpm: 0,
           data_type: 0,
@@ -8118,7 +8985,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -8129,7 +8996,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11098818,
-            mid: "0023HkGz3tqDYU",
+            mid: "0023HkGz3tqDYU"
           },
           label: "0",
           language: 5,
@@ -8140,7 +9007,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Better Together",
           ov: 0,
@@ -8151,7 +9018,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8163,7 +9030,7 @@ module.exports = {
               name: "MILK",
               title: "MILK",
               type: 2,
-              uin: 0,
+              uin: 0
             },
             {
               id: 4851268,
@@ -8171,7 +9038,7 @@ module.exports = {
               name: "郑伟杰Nigel",
               title: "郑伟杰Nigel",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 283185,
@@ -8179,7 +9046,7 @@ module.exports = {
               name: "王鲁飞",
               title: "王鲁飞",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3655528,
@@ -8187,7 +9054,7 @@ module.exports = {
               name: "唐西锐",
               title: "唐西锐",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5394290,
@@ -8195,7 +9062,7 @@ module.exports = {
               name: "赵家强",
               title: "赵家强",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5394287,
@@ -8203,7 +9070,7 @@ module.exports = {
               name: "李佩莹",
               title: "李佩莹",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3760161,
@@ -8211,8 +9078,8 @@ module.exports = {
               name: "黄俊杰",
               title: "黄俊杰",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8226,8 +9093,8 @@ module.exports = {
           volume: {
             gain: -5.036,
             lra: 14.281,
-            peak: 0.962,
-          },
+            peak: 0.962
+          }
         },
         {
           action: {
@@ -8238,7 +9105,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8248,7 +9115,7 @@ module.exports = {
             pmid: "001bPNFQ3Q6bmq_1",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "乐队无限公司 第10期",
+            title: "乐队无限公司 第10期"
           },
           bpm: 0,
           data_type: 0,
@@ -8274,7 +9141,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -8285,7 +9152,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11098820,
-            mid: "003mfCVm2qR4sD",
+            mid: "003mfCVm2qR4sD"
           },
           label: "0",
           language: 0,
@@ -8296,7 +9163,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "没什么遗憾，只要追着光",
           ov: 0,
@@ -8307,7 +9174,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8319,7 +9186,7 @@ module.exports = {
               name: "EzGoin",
               title: "EzGoin",
               type: 2,
-              uin: 0,
+              uin: 0
             },
             {
               id: 3669282,
@@ -8327,7 +9194,7 @@ module.exports = {
               name: "郑洛宇",
               title: "郑洛宇",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1447293,
@@ -8335,7 +9202,7 @@ module.exports = {
               name: "郭欣",
               title: "郭欣",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5365383,
@@ -8343,7 +9210,7 @@ module.exports = {
               name: "杨靖涛",
               title: "杨靖涛",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5365384,
@@ -8351,7 +9218,7 @@ module.exports = {
               name: "孙首地",
               title: "孙首地",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5365385,
@@ -8359,8 +9226,8 @@ module.exports = {
               name: "朱彬赫",
               title: "朱彬赫",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8374,8 +9241,8 @@ module.exports = {
           volume: {
             gain: -8.588,
             lra: 11.781,
-            peak: 0.987,
-          },
+            peak: 0.987
+          }
         },
         {
           action: {
@@ -8386,7 +9253,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8396,7 +9263,7 @@ module.exports = {
             pmid: "001bPNFQ3Q6bmq_1",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "乐队无限公司 第10期",
+            title: "乐队无限公司 第10期"
           },
           bpm: 0,
           data_type: 0,
@@ -8422,7 +9289,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -8433,7 +9300,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11098869,
-            mid: "000aZr9B32SE6g",
+            mid: "000aZr9B32SE6g"
           },
           label: "0",
           language: 0,
@@ -8444,7 +9311,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "被驯服的象",
           ov: 0,
@@ -8455,7 +9322,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8467,7 +9334,7 @@ module.exports = {
               name: "泡腾胶囊",
               title: "泡腾胶囊",
               type: 2,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1128784,
@@ -8475,7 +9342,7 @@ module.exports = {
               name: "圈9",
               title: "圈9",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5372115,
@@ -8483,7 +9350,7 @@ module.exports = {
               name: "王之渊",
               title: "王之渊",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1305883,
@@ -8491,7 +9358,7 @@ module.exports = {
               name: "Moison",
               title: "Moison",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5372112,
@@ -8499,7 +9366,7 @@ module.exports = {
               name: "吉元雪",
               title: "吉元雪",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5378067,
@@ -8507,7 +9374,7 @@ module.exports = {
               name: "李立楠",
               title: "李立楠",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5372113,
@@ -8515,8 +9382,8 @@ module.exports = {
               name: "彭志峥",
               title: "彭志峥",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8530,8 +9397,8 @@ module.exports = {
           volume: {
             gain: -7.172,
             lra: 8.031,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -8542,7 +9409,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8552,7 +9419,7 @@ module.exports = {
             pmid: "000NyBdX1dve7s_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "中年",
+            title: "中年"
           },
           bpm: 0,
           data_type: 0,
@@ -8578,7 +9445,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -8589,7 +9456,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169830,
-            mid: "003pH70E2d2Cob",
+            mid: "003pH70E2d2Cob"
           },
           label: "0",
           language: 0,
@@ -8600,7 +9467,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: " 中年",
           ov: 0,
@@ -8611,7 +9478,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8623,8 +9490,8 @@ module.exports = {
               name: "李泉",
               title: "李泉",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8638,8 +9505,8 @@ module.exports = {
           volume: {
             gain: -7.164,
             lra: 5.088,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -8650,7 +9517,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8660,7 +9527,7 @@ module.exports = {
             pmid: "001TPDqc2hHRU2_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "做",
+            title: "做"
           },
           bpm: 0,
           data_type: 0,
@@ -8686,7 +9553,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -8697,7 +9564,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169826,
-            mid: "001zetFm0I5yFK",
+            mid: "001zetFm0I5yFK"
           },
           label: "0",
           language: 0,
@@ -8708,7 +9575,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "做",
           ov: 0,
@@ -8719,7 +9586,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8731,8 +9598,8 @@ module.exports = {
               name: "余枫",
               title: "余枫",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8746,8 +9613,8 @@ module.exports = {
           volume: {
             gain: -8.256,
             lra: 4.915,
-            peak: 0.99,
-          },
+            peak: 0.99
+          }
         },
         {
           action: {
@@ -8758,7 +9625,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8768,7 +9635,7 @@ module.exports = {
             pmid: "004MoCks3z8Sik_2",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "Bachelor, Bomber and Mute",
+            title: "Bachelor, Bomber and Mute"
           },
           bpm: 0,
           data_type: 0,
@@ -8794,7 +9661,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -8805,7 +9672,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169838,
-            mid: "002lXn0U2xDLjm",
+            mid: "002lXn0U2xDLjm"
           },
           label: "0",
           language: 0,
@@ -8816,7 +9683,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "王老五",
           ov: 0,
@@ -8827,7 +9694,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8839,8 +9706,8 @@ module.exports = {
               name: "俞彬",
               title: "俞彬",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8854,8 +9721,8 @@ module.exports = {
           volume: {
             gain: -10.436,
             lra: 8.787,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -8866,7 +9733,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8876,7 +9743,7 @@ module.exports = {
             pmid: "002qotmr4NxIK0_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "长沙故事",
+            title: "长沙故事"
           },
           bpm: 0,
           data_type: 0,
@@ -8902,7 +9769,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -8913,7 +9780,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11149418,
-            mid: "002UPYO64FsXKH",
+            mid: "002UPYO64FsXKH"
           },
           label: "0",
           language: 0,
@@ -8924,7 +9791,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "长沙故事",
           ov: 0,
@@ -8935,7 +9802,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -8947,8 +9814,8 @@ module.exports = {
               name: "杜海涛",
               title: "杜海涛",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -8962,8 +9829,8 @@ module.exports = {
           volume: {
             gain: -2.195,
             lra: 5.533,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -8974,7 +9841,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -8984,7 +9851,7 @@ module.exports = {
             pmid: "004FBvfn43c6Pm_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "如果相遇在光谱尽头-街声大登陆合辑Vol.2绯红篇",
+            title: "如果相遇在光谱尽头-街声大登陆合辑Vol.2绯红篇"
           },
           bpm: 0,
           data_type: 0,
@@ -9010,7 +9877,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -9021,7 +9888,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11156853,
-            mid: "004IkBfS2p8iqs",
+            mid: "004IkBfS2p8iqs"
           },
           label: "0",
           language: 0,
@@ -9032,7 +9899,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "训",
           ov: 0,
@@ -9043,7 +9910,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9055,8 +9922,8 @@ module.exports = {
               name: "白鲨JAWS",
               title: "白鲨JAWS",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9070,8 +9937,8 @@ module.exports = {
           volume: {
             gain: -10.333,
             lra: 4.091,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -9082,7 +9949,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -9092,7 +9959,7 @@ module.exports = {
             pmid: "004FBvfn43c6Pm_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "如果相遇在光谱尽头-街声大登陆合辑Vol.2绯红篇",
+            title: "如果相遇在光谱尽头-街声大登陆合辑Vol.2绯红篇"
           },
           bpm: 0,
           data_type: 0,
@@ -9118,7 +9985,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 0,
@@ -9129,7 +9996,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11156845,
-            mid: "0009SWsF3VNFNI",
+            mid: "0009SWsF3VNFNI"
           },
           label: "0",
           language: 0,
@@ -9140,7 +10007,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "烟火",
           ov: 0,
@@ -9151,7 +10018,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9163,8 +10030,8 @@ module.exports = {
               name: "时光胶囊",
               title: "时光胶囊",
               type: 2,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9178,8 +10045,8 @@ module.exports = {
           volume: {
             gain: -9.805,
             lra: 3.336,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -9190,7 +10057,7 @@ module.exports = {
             msgid: 0,
             msgpay: 0,
             msgshare: 0,
-            switch: 601875,
+            switch: 601875
           },
           aid: 0,
           album: {
@@ -9200,7 +10067,7 @@ module.exports = {
             pmid: "0000ZaFa1jezD8_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "开创",
+            title: "开创"
           },
           bpm: 0,
           data_type: 0,
@@ -9226,7 +10093,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 0,
           genre: 1,
@@ -9237,7 +10104,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 0,
-            mid: "",
+            mid: ""
           },
           label: "0",
           language: 0,
@@ -9248,7 +10115,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "开创",
           ov: 0,
@@ -9259,7 +10126,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 0,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9271,8 +10138,8 @@ module.exports = {
               name: "马佳",
               title: "马佳",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 31,
           subtitle: "",
@@ -9286,8 +10153,8 @@ module.exports = {
           volume: {
             gain: -9.351,
             lra: 9.994,
-            peak: 0.971,
-          },
+            peak: 0.971
+          }
         },
         {
           action: {
@@ -9298,7 +10165,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -9308,7 +10175,7 @@ module.exports = {
             pmid: "0026AG724WbXYY_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "咖喱嘎多",
+            title: "咖喱嘎多"
           },
           bpm: 0,
           data_type: 0,
@@ -9334,7 +10201,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 41,
@@ -9345,7 +10212,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11169759,
-            mid: "002qItr33DHIbb",
+            mid: "002qItr33DHIbb"
           },
           label: "0",
           language: 0,
@@ -9356,7 +10223,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "COME ON BABY GIVE ME FIVE",
           ov: 0,
@@ -9367,7 +10234,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9379,8 +10246,8 @@ module.exports = {
               name: "咖喱3000",
               title: "咖喱3000",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9394,8 +10261,8 @@ module.exports = {
           volume: {
             gain: -13.585,
             lra: 6.554,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -9406,7 +10273,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 632579,
+            switch: 632579
           },
           aid: 0,
           album: {
@@ -9416,7 +10283,7 @@ module.exports = {
             pmid: "0001B4293rcwv9_1",
             subtitle: "",
             time_public: "2020-05-30",
-            title: "Nation Revenge Tour (Mixtape) (Explicit)",
+            title: "Nation Revenge Tour (Mixtape) (Explicit)"
           },
           bpm: 0,
           data_type: 0,
@@ -9442,7 +10309,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 34,
@@ -9453,7 +10320,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 0,
-            mid: "",
+            mid: ""
           },
           label: "0",
           language: 5,
@@ -9464,7 +10331,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Revenge",
           ov: 0,
@@ -9475,7 +10342,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 0,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9487,7 +10354,7 @@ module.exports = {
               name: "Ombre2Choc Nation",
               title: "Ombre2Choc Nation",
               type: 0,
-              uin: 0,
+              uin: 0
             },
             {
               id: 1227276,
@@ -9495,8 +10362,8 @@ module.exports = {
               name: "Cardi B",
               title: "Cardi B",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9510,8 +10377,8 @@ module.exports = {
           volume: {
             gain: -9.651,
             lra: 4.627,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -9522,7 +10389,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -9532,7 +10399,7 @@ module.exports = {
             pmid: "004DDae12Zhvxh_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "I'm Not Crying, You Are (Explicit)",
+            title: "I'm Not Crying, You Are (Explicit)"
           },
           bpm: 0,
           data_type: 0,
@@ -9558,7 +10425,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -9569,7 +10436,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 8613047,
-            mid: "001SShWO0PFIsQ",
+            mid: "001SShWO0PFIsQ"
           },
           label: "0",
           language: 5,
@@ -9580,7 +10447,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Not Together, Together",
           ov: 0,
@@ -9591,7 +10458,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9603,8 +10470,8 @@ module.exports = {
               name: "Tomine Harket",
               title: "Tomine Harket",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9618,8 +10485,8 @@ module.exports = {
           volume: {
             gain: -6.686,
             lra: 5.612,
-            peak: 0.785,
-          },
+            peak: 0.785
+          }
         },
         {
           action: {
@@ -9630,7 +10497,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -9640,7 +10507,7 @@ module.exports = {
             pmid: "002qcXyJ2wB1jZ_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "花开的孤独",
+            title: "花开的孤独"
           },
           bpm: 0,
           data_type: 0,
@@ -9666,7 +10533,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -9677,7 +10544,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169548,
-            mid: "0002Qpsa3UZbBb",
+            mid: "0002Qpsa3UZbBb"
           },
           label: "0",
           language: 0,
@@ -9688,7 +10555,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "花开的孤独",
           ov: 0,
@@ -9699,7 +10566,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9711,8 +10578,8 @@ module.exports = {
               name: "陈瑞",
               title: "陈瑞",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9726,8 +10593,8 @@ module.exports = {
           volume: {
             gain: -9.995,
             lra: 7.597,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -9738,7 +10605,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -9748,7 +10615,7 @@ module.exports = {
             pmid: "002Yiu1z35WGnD_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "偷闲记",
+            title: "偷闲记"
           },
           bpm: 0,
           data_type: 0,
@@ -9774,7 +10641,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -9785,7 +10652,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11148414,
-            mid: "003K6Jdo0pkibv",
+            mid: "003K6Jdo0pkibv"
           },
           label: "0",
           language: 0,
@@ -9796,7 +10663,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "偷闲记",
           ov: 0,
@@ -9807,7 +10674,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9819,8 +10686,8 @@ module.exports = {
               name: "司南",
               title: "司南",
               type: 1,
-              uin: 1394165810,
-            },
+              uin: 1394165810
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9834,8 +10701,8 @@ module.exports = {
           volume: {
             gain: -8.155,
             lra: 5.654,
-            peak: 0.984,
-          },
+            peak: 0.984
+          }
         },
         {
           action: {
@@ -9846,7 +10713,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -9856,7 +10723,7 @@ module.exports = {
             pmid: "000zh0vu0nfqLa_1",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "隐瞒",
+            title: "隐瞒"
           },
           bpm: 0,
           data_type: 0,
@@ -9882,7 +10749,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -9893,7 +10760,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11116596,
-            mid: "003y94a22FM8JN",
+            mid: "003y94a22FM8JN"
           },
           label: "0",
           language: 0,
@@ -9904,7 +10771,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "隐瞒",
           ov: 0,
@@ -9915,7 +10782,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -9927,8 +10794,8 @@ module.exports = {
               name: "梦然",
               title: "梦然",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -9942,8 +10809,8 @@ module.exports = {
           volume: {
             gain: -6.615,
             lra: 12.507,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -9954,7 +10821,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -9964,7 +10831,7 @@ module.exports = {
             pmid: "001xiwmw0m0D7g_1",
             subtitle: "",
             time_public: "2020-05-31",
-            title: "花还在开",
+            title: "花还在开"
           },
           bpm: 0,
           data_type: 0,
@@ -9990,7 +10857,7 @@ module.exports = {
             size_try: 0,
             try_begin: 70827,
             try_end: 104173,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -10001,7 +10868,7 @@ module.exports = {
           isonly: 0,
           ksong: {
             id: 11116677,
-            mid: "002Ivile1x74Ln",
+            mid: "002Ivile1x74Ln"
           },
           label: "0",
           language: 0,
@@ -10012,7 +10879,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "花还在开",
           ov: 0,
@@ -10023,7 +10890,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10035,8 +10902,8 @@ module.exports = {
               name: "艾辰",
               title: "艾辰",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -10050,8 +10917,8 @@ module.exports = {
           volume: {
             gain: -7.677,
             lra: 9.902,
-            peak: 0.951,
-          },
+            peak: 0.951
+          }
         },
         {
           action: {
@@ -10062,7 +10929,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10072,7 +10939,7 @@ module.exports = {
             pmid: "0042IwvT3xq6UQ_1",
             subtitle: "",
             time_public: "2020-05-15",
-            title: "triple j Live At The Wireless - Big Day Out 2011",
+            title: "triple j Live At The Wireless - Big Day Out 2011"
           },
           bpm: 0,
           data_type: 0,
@@ -10098,7 +10965,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 50,
@@ -10109,7 +10976,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11111981,
-            mid: "000xUWSU38mKkK",
+            mid: "000xUWSU38mKkK"
           },
           label: "0",
           language: 5,
@@ -10120,7 +10987,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Clap Your Hands",
           ov: 0,
@@ -10131,7 +10998,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10143,8 +11010,8 @@ module.exports = {
               name: "Sia",
               title: "Sia",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -10158,8 +11025,8 @@ module.exports = {
           volume: {
             gain: -6.466,
             lra: 4.307,
-            peak: 0.781,
-          },
+            peak: 0.781
+          }
         },
         {
           action: {
@@ -10170,7 +11037,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10180,7 +11047,7 @@ module.exports = {
             pmid: "003bjPxr3Mjnag_1",
             subtitle: "",
             time_public: "2020-05-29",
-            title: "Daisies (MK Remix)",
+            title: "Daisies (MK Remix)"
           },
           bpm: 0,
           data_type: 0,
@@ -10206,7 +11073,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 20,
@@ -10217,7 +11084,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11111031,
-            mid: "002ItLfU1FxCOP",
+            mid: "002ItLfU1FxCOP"
           },
           label: "0",
           language: 5,
@@ -10228,7 +11095,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "Daisies",
           ov: 0,
@@ -10239,7 +11106,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10251,8 +11118,8 @@ module.exports = {
               name: "Katy Perry",
               title: "Katy Perry",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -10266,8 +11133,8 @@ module.exports = {
           volume: {
             gain: -7.025,
             lra: 6.117,
-            peak: 0.801,
-          },
+            peak: 0.801
+          }
         },
         {
           action: {
@@ -10278,7 +11145,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10288,7 +11155,7 @@ module.exports = {
             pmid: "002Cdbds1Xb8wC_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "我和她",
+            title: "我和她"
           },
           bpm: 0,
           data_type: 0,
@@ -10314,7 +11181,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -10325,7 +11192,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169653,
-            mid: "000F1Rfe1UCQeQ",
+            mid: "000F1Rfe1UCQeQ"
           },
           label: "0",
           language: 0,
@@ -10336,7 +11203,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "我和她",
           ov: 0,
@@ -10347,7 +11214,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10359,8 +11226,8 @@ module.exports = {
               name: "洛天依",
               title: "洛天依",
               type: 5,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -10374,8 +11241,8 @@ module.exports = {
           volume: {
             gain: -1.126,
             lra: 11.649,
-            peak: 0.988,
-          },
+            peak: 0.988
+          }
         },
         {
           action: {
@@ -10386,7 +11253,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10396,7 +11263,7 @@ module.exports = {
             pmid: "0019D9eV2yQ31Q_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "小世间",
+            title: "小世间"
           },
           bpm: 0,
           data_type: 0,
@@ -10422,7 +11289,7 @@ module.exports = {
             size_try: 0,
             try_begin: 64581,
             try_end: 99041,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 12,
@@ -10433,7 +11300,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11148641,
-            mid: "0035MtVP1ECMoH",
+            mid: "0035MtVP1ECMoH"
           },
           label: "0",
           language: 0,
@@ -10444,7 +11311,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "小世间",
           ov: 0,
@@ -10455,7 +11322,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10467,8 +11334,8 @@ module.exports = {
               name: "KBShinya",
               title: "KBShinya",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -10482,8 +11349,8 @@ module.exports = {
           volume: {
             gain: -10.162,
             lra: 3.766,
-            peak: 0.985,
-          },
+            peak: 0.985
+          }
         },
         {
           action: {
@@ -10494,7 +11361,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10504,7 +11371,7 @@ module.exports = {
             pmid: "001x6fxm1zBSXG_1",
             subtitle: "电视剧《谁说我结不了婚》片尾曲",
             time_public: "2020-05-26",
-            title: "谁说我结不了婚 电视剧OST",
+            title: "谁说我结不了婚 电视剧OST"
           },
           bpm: 0,
           data_type: 0,
@@ -10530,7 +11397,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -10541,7 +11408,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11108447,
-            mid: "002WrMLz1ThwSP",
+            mid: "002WrMLz1ThwSP"
           },
           label: "0",
           language: 0,
@@ -10552,7 +11419,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "再一次",
           ov: 0,
@@ -10563,7 +11430,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10575,8 +11442,8 @@ module.exports = {
               name: "王艳薇",
               title: "王艳薇",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "电视剧《谁说我结不了婚》片尾曲",
@@ -10590,8 +11457,8 @@ module.exports = {
           volume: {
             gain: -7.38,
             lra: 14.62,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -10602,7 +11469,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10612,7 +11479,7 @@ module.exports = {
             pmid: "000s9ogE25vr0h_1",
             subtitle: "《长相守》电视剧插曲",
             time_public: "2020-06-01",
-            title: "花开彼岸",
+            title: "花开彼岸"
           },
           bpm: 0,
           data_type: 0,
@@ -10638,7 +11505,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 37,
@@ -10649,7 +11516,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11155892,
-            mid: "002nTKrA20eqez",
+            mid: "002nTKrA20eqez"
           },
           label: "0",
           language: 0,
@@ -10660,7 +11527,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "花开彼岸",
           ov: 0,
@@ -10671,7 +11538,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10683,7 +11550,7 @@ module.exports = {
               name: "王金金",
               title: "王金金",
               type: 1,
-              uin: 0,
+              uin: 0
             },
             {
               id: 5981,
@@ -10691,8 +11558,8 @@ module.exports = {
               name: "胡灵",
               title: "胡灵",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《长相守》电视剧插曲",
@@ -10706,8 +11573,8 @@ module.exports = {
           volume: {
             gain: -7.869,
             lra: 11.144,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -10718,7 +11585,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10728,7 +11595,7 @@ module.exports = {
             pmid: "001FYqTC4I1JgS_1",
             subtitle: "",
             time_public: "2020-06-01",
-            title: "bye bye i finally disappear from your life",
+            title: "bye bye i finally disappear from your life"
           },
           bpm: 0,
           data_type: 0,
@@ -10754,7 +11621,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -10765,7 +11632,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11171179,
-            mid: "004WQLuu27n4Bz",
+            mid: "004WQLuu27n4Bz"
           },
           label: "0",
           language: 5,
@@ -10776,7 +11643,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "e0034npac7a",
-            vt: 0,
+            vt: 0
           },
           name: "bye bye i finally disappear from your life",
           ov: 0,
@@ -10787,7 +11654,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10799,8 +11666,8 @@ module.exports = {
               name: "msftz",
               title: "msftz",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -10814,8 +11681,8 @@ module.exports = {
           volume: {
             gain: -6.988,
             lra: 7.38,
-            peak: 0.861,
-          },
+            peak: 0.861
+          }
         },
         {
           action: {
@@ -10826,7 +11693,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10836,7 +11703,7 @@ module.exports = {
             pmid: "001mXnTG1imaIa_1",
             subtitle: "《重生》韩剧插曲",
             time_public: "2020-06-01",
-            title: "본 어게인 OST Part.6 (Born Again OST Part.6)",
+            title: "본 어게인 OST Part.6 (Born Again OST Part.6)"
           },
           bpm: 0,
           data_type: 0,
@@ -10862,7 +11729,7 @@ module.exports = {
             size_try: 960887,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 37,
@@ -10873,7 +11740,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11168617,
-            mid: "004YmaFt2z0GEp",
+            mid: "004YmaFt2z0GEp"
           },
           label: "0",
           language: 4,
@@ -10884,7 +11751,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "별과 달처럼",
           ov: 0,
@@ -10895,7 +11762,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -10907,8 +11774,8 @@ module.exports = {
               name: "金保亨",
               title: "金保亨 (김보형|Kim Bo Hyung)",
               type: 1,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "《重生》韩剧插曲",
@@ -10922,8 +11789,8 @@ module.exports = {
           volume: {
             gain: -10.302,
             lra: 13.286,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -10934,7 +11801,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -10944,7 +11811,7 @@ module.exports = {
             pmid: "003sRVj11lTJPA_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "游山恋",
+            title: "游山恋"
           },
           bpm: 0,
           data_type: 0,
@@ -10970,7 +11837,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -10981,7 +11848,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169512,
-            mid: "0005NyfO0kVTyn",
+            mid: "0005NyfO0kVTyn"
           },
           label: "0",
           language: 0,
@@ -10992,7 +11859,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "游山恋",
           ov: 0,
@@ -11003,7 +11870,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -11015,8 +11882,8 @@ module.exports = {
               name: "海伦",
               title: "海伦",
               type: 0,
-              uin: 0,
-            },
+              uin: 0
+            }
           ],
           status: 0,
           subtitle: "",
@@ -11030,8 +11897,8 @@ module.exports = {
           volume: {
             gain: -10.751,
             lra: 8.733,
-            peak: 1,
-          },
+            peak: 1
+          }
         },
         {
           action: {
@@ -11042,7 +11909,7 @@ module.exports = {
             msgid: 14,
             msgpay: 6,
             msgshare: 0,
-            switch: 17413891,
+            switch: 17413891
           },
           aid: 0,
           album: {
@@ -11052,7 +11919,7 @@ module.exports = {
             pmid: "002z8YIn1h0oAI_1",
             subtitle: "",
             time_public: "2020-06-02",
-            title: "偷影子的人",
+            title: "偷影子的人"
           },
           bpm: 0,
           data_type: 0,
@@ -11078,7 +11945,7 @@ module.exports = {
             size_try: 0,
             try_begin: 0,
             try_end: 0,
-            url: "",
+            url: ""
           },
           fnote: 4009,
           genre: 1,
@@ -11089,7 +11956,7 @@ module.exports = {
           isonly: 1,
           ksong: {
             id: 11169582,
-            mid: "002J3tqe3YL87o",
+            mid: "002J3tqe3YL87o"
           },
           label: "0",
           language: 0,
@@ -11100,7 +11967,7 @@ module.exports = {
             name: "",
             title: "",
             vid: "",
-            vt: 0,
+            vt: 0
           },
           name: "偷影子的人",
           ov: 0,
@@ -11111,7 +11978,7 @@ module.exports = {
             pay_status: 0,
             price_album: 0,
             price_track: 200,
-            time_free: 0,
+            time_free: 0
           },
           pingpong: "",
           ppurl: "",
@@ -11123,8 +11990,8 @@ module.exports = {
               name: "李聪硕",
               title: "李聪硕",
               type: 0,
-              uin: 38099953,
-            },
+              uin: 38099953
+            }
           ],
           status: 0,
           subtitle: "",
@@ -11138,12 +12005,12 @@ module.exports = {
           volume: {
             gain: -10.054,
             lra: 8.578,
-            peak: 1,
-          },
-        },
+            peak: 1
+          }
+        }
       ],
-      type: 5,
-    },
+      type: 5
+    }
   },
   new_album: {
     code: 0,
@@ -11154,18 +12021,18 @@ module.exports = {
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11173,7 +12040,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11192,7 +12059,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -11200,7 +12067,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "001X6OFY47mOgK_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-02",
           show_com_new: 0,
@@ -11211,10 +12078,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11225,7 +12092,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11245,35 +12112,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11281,7 +12148,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11300,7 +12167,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -11308,7 +12175,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "000KYv9Y0FDSKs_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-02",
           show_com_new: 0,
@@ -11319,10 +12186,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11333,7 +12200,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11353,35 +12220,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 1,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11389,7 +12256,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11408,7 +12275,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -11416,7 +12283,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "000h2PC82FQt6D_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-02",
           show_com_new: 0,
@@ -11427,10 +12294,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11441,7 +12308,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11461,35 +12328,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11497,7 +12364,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11516,7 +12383,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -11524,7 +12391,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "000StXzd1OuXtY_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-02",
           show_com_new: 0,
@@ -11535,10 +12402,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11549,7 +12416,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11569,35 +12436,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11605,7 +12472,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11624,7 +12491,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -11632,7 +12499,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "004UxgjV2bVN5K_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-02",
           show_com_new: 0,
@@ -11643,10 +12510,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11657,7 +12524,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11677,35 +12544,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11713,7 +12580,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11732,7 +12599,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -11740,7 +12607,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "004FXeFH4QkWpR_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-02",
           show_com_new: 0,
@@ -11751,10 +12618,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11765,7 +12632,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11785,10 +12652,10 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
+              type: 0
             },
             {
               area: 0,
@@ -11796,10 +12663,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11810,7 +12677,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11830,35 +12697,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11866,7 +12733,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11885,7 +12752,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -11893,7 +12760,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "001Pysmq3rk57j_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-02",
           show_com_new: 0,
@@ -11904,10 +12771,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -11918,7 +12785,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -11938,35 +12805,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -11974,7 +12841,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -11993,7 +12860,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12001,7 +12868,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "000sPNQ31bux74_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12012,10 +12879,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12026,7 +12893,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12046,10 +12913,10 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
+              type: 0
             },
             {
               area: 0,
@@ -12057,10 +12924,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12071,7 +12938,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12091,35 +12958,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12127,7 +12994,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12146,7 +13013,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12154,7 +13021,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "003XzNlG3eSgRq_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12165,10 +13032,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12179,7 +13046,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12199,35 +13066,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12235,7 +13102,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12254,7 +13121,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12262,7 +13129,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "00179c0Q3j3KEr_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12273,10 +13140,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12287,7 +13154,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12307,35 +13174,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12343,7 +13210,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12362,7 +13229,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12370,7 +13237,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "003FgHSe3qRFTa_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12381,10 +13248,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12395,7 +13262,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12415,35 +13282,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12451,7 +13318,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12470,7 +13337,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12478,7 +13345,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "001H6oJ91C6TMb_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12489,10 +13356,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12503,7 +13370,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12523,35 +13390,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12559,7 +13426,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12578,7 +13445,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12586,7 +13453,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "002qotmr4NxIK0_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12597,10 +13464,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12611,7 +13478,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12631,35 +13498,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12667,7 +13534,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12686,7 +13553,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12694,7 +13561,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "002Yiu1z35WGnD_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12705,10 +13572,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12719,7 +13586,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12739,35 +13606,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12775,7 +13642,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12794,7 +13661,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12802,7 +13669,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "000cgK6A2WEv0y_2",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12813,10 +13680,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12827,7 +13694,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12847,35 +13714,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12883,7 +13750,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -12902,7 +13769,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -12910,7 +13777,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "004MoCks3z8Sik_2",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -12921,10 +13788,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -12935,7 +13802,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -12955,35 +13822,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -12991,7 +13858,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -13010,7 +13877,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -13018,7 +13885,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "000NyBdX1dve7s_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -13029,10 +13896,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -13043,7 +13910,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -13063,35 +13930,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -13099,7 +13966,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -13118,7 +13985,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -13126,7 +13993,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "003m1hA00xbCSn_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -13137,10 +14004,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -13151,7 +14018,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -13171,35 +14038,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -13207,7 +14074,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -13226,7 +14093,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -13234,7 +14101,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "0000ZaFa1jezD8_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-06-01",
           show_com_new: 0,
@@ -13245,10 +14112,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -13259,7 +14126,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -13279,35 +14146,35 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 1,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
+          type: 0
         },
         {
           area: 0,
           company: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           companyshow: {
             ex: {
               company_photo: 0,
-              desc: "",
+              desc: ""
             },
             id: 0,
-            name: "",
+            name: ""
           },
           ex: {
             album_tag3: 0,
@@ -13315,7 +14182,7 @@ module.exports = {
             desc: "",
             playable_track_nums: 0,
             singer_tag: "",
-            track_nums: 0,
+            track_nums: 0
           },
           ex_status: 1,
           genre: 0,
@@ -13334,7 +14201,7 @@ module.exports = {
             payment_discount_end: 0,
             payment_end: "",
             payment_total: 0,
-            pre_sale_beg: "",
+            pre_sale_beg: ""
           },
           photo: {
             gaus_pic: "",
@@ -13342,7 +14209,7 @@ module.exports = {
             pay_flag: 0,
             pic_mid: "000AdTjE2bGPNc_1",
             version: 0,
-            vip_flag: 0,
+            vip_flag: 0
           },
           release_time: "2020-05-31",
           show_com_new: 0,
@@ -13353,10 +14220,10 @@ module.exports = {
               company: {
                 ex: {
                   company_photo: 0,
-                  desc: "",
+                  desc: ""
                 },
                 id: 0,
-                name: "",
+                name: ""
               },
               country: 0,
               enter: 0,
@@ -13367,7 +14234,7 @@ module.exports = {
                 info_name: "",
                 name_spell: "",
                 tag: "",
-                wiki: "",
+                wiki: ""
               },
               foreign_name: "",
               genre: 0,
@@ -13387,22 +14254,22 @@ module.exports = {
                 photo_cnt: 0,
                 pic1_flag: 0,
                 pic2_flag: 0,
-                pic_mid: "",
+                pic_mid: ""
               },
               status: 0,
-              type: 0,
-            },
+              type: 0
+            }
           ],
           status: 0,
           tag: "",
           tmetags: "",
           trans_name: "",
-          type: 0,
-        },
+          type: 0
+        }
       ],
       ret_msg: "success!",
-      total: 22036,
-    },
+      total: 22036
+    }
   },
   new_album_tag: {
     code: 0,
@@ -13411,35 +14278,35 @@ module.exports = {
         {
           id: 1,
           name: "内地",
-          tjreport: "11_0_0_1_10033_1",
+          tjreport: "11_0_0_1_10033_1"
         },
         {
           id: 2,
           name: "港台",
-          tjreport: "11_0_0_2_10033_2",
+          tjreport: "11_0_0_2_10033_2"
         },
         {
           id: 3,
           name: "欧美",
-          tjreport: "11_0_0_3_10033_3",
+          tjreport: "11_0_0_3_10033_3"
         },
         {
           id: 4,
           name: "韩国",
-          tjreport: "11_0_0_4_10033_4",
+          tjreport: "11_0_0_4_10033_4"
         },
         {
           id: 5,
           name: "日本",
-          tjreport: "11_0_0_5_10033_5",
+          tjreport: "11_0_0_5_10033_5"
         },
         {
           id: 6,
           name: "其他",
-          tjreport: "11_0_0_6_10033_6",
-        },
-      ],
-    },
+          tjreport: "11_0_0_6_10033_6"
+        }
+      ]
+    }
   },
   toplist: {
     code: 0,
@@ -13458,13 +14325,14 @@ module.exports = {
               titleDetail: "飙升榜 第154天",
               titleShare: "飙升榜 2020年第154天",
               titleSub: "",
-              intro: "QQ音乐站内每日搜索热度飙升最快的100首单曲。<br><br>更新时间：每天<br><br>计算方式：搜索播放数据对比前一天涨幅",
+              intro:
+                "QQ音乐站内每日搜索热度飙升最快的100首单曲。<br><br>更新时间：每天<br><br>计算方式：搜索播放数据对比前一天涨幅",
               cornerMark: 0,
               period: "2020-06-02",
               updateTime: "2020-06-02",
               history: {
                 year: [],
-                subPeriod: [],
+                subPeriod: []
               },
               listenNum: 19100000,
               totalNum: 100,
@@ -13481,7 +14349,7 @@ module.exports = {
                   singerName: "TWICE (트와이스)",
                   singerMid: "001p0vF44ewiwB",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -13495,7 +14363,7 @@ module.exports = {
                   singerName: "张艺兴",
                   singerMid: "002MfEld3FWp0R",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -13509,13 +14377,17 @@ module.exports = {
                   singerName: "张艺兴",
                   singerMid: "002MfEld3FWp0R",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003E41Yr3mJRYK.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000eyJiQ3Ma1er.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000002EJJBC23tk4M.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000046RpIZ25dq71.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003E41Yr3mJRYK.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000eyJiQ3Ma1er.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000002EJJBC23tk4M.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000046RpIZ25dq71.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -13534,7 +14406,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "飙升榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000002EJJBC23tk4M.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000002EJJBC23tk4M.jpg"
             },
             {
               topId: 26,
@@ -13545,44 +14418,15 @@ module.exports = {
               titleDetail: "热歌榜 第22周",
               titleShare: "热歌榜 2020年第22周",
               titleSub: "",
-              intro: "QQ音乐内每周热度最高的300首单曲。<br><br>更新时间：每周四<br>计算方式：播放量数据对比上一周",
+              intro:
+                "QQ音乐内每周热度最高的300首单曲。<br><br>更新时间：每周四<br>计算方式：播放量数据对比上一周",
               cornerMark: 0,
               period: "2020_22",
               updateTime: "2020-05-28",
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
                   [
-                    51,
-                    50,
-                    49,
-                    48,
-                    47,
-                    46,
-                    45,
-                    44,
-                    43,
-                    42,
-                    41,
-                    40,
-                    39,
-                    38,
-                    37,
-                    36,
-                    35,
-                    34,
-                    33,
-                    32,
-                    31,
-                    30,
-                    29,
-                    28,
-                    27,
-                    26,
-                    25,
-                    24,
-                    23,
                     22,
                     21,
                     20,
@@ -13604,8 +14448,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
-                    0,
+                    1
                   ],
                   [
                     51,
@@ -13659,9 +14502,63 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
-                ],
+                  [
+                    51,
+                    50,
+                    49,
+                    48,
+                    47,
+                    46,
+                    45,
+                    44,
+                    43,
+                    42,
+                    41,
+                    40,
+                    39,
+                    38,
+                    37,
+                    36,
+                    35,
+                    34,
+                    33,
+                    32,
+                    31,
+                    30,
+                    29,
+                    28,
+                    27,
+                    26,
+                    25,
+                    24,
+                    23,
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
+                  ]
+                ]
               },
               listenNum: 19400000,
               totalNum: 300,
@@ -13678,7 +14575,7 @@ module.exports = {
                   singerName: "阿悠悠",
                   singerMid: "002oKQfI4E0PBk",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -13692,7 +14589,7 @@ module.exports = {
                   singerName: "阿悠悠",
                   singerMid: "002oKQfI4E0PBk",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -13706,13 +14603,17 @@ module.exports = {
                   singerName: "胡66",
                   singerMid: "000wHoyF0OZB6B",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002tY00k0fD9u5.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001Kslsl0I6bNO.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002c2VnY0guous.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002tY00k0fD9u5.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001Kslsl0I6bNO.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002c2VnY0guous.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -13731,7 +14632,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "热歌榜",
               musichallSubtitle: "_36首歌新上榜",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg"
             },
             {
               topId: 27,
@@ -13749,7 +14651,7 @@ module.exports = {
               updateTime: "2020-06-02",
               history: {
                 year: [],
-                subPeriod: [],
+                subPeriod: []
               },
               listenNum: 1009645,
               totalNum: 100,
@@ -13766,7 +14668,7 @@ module.exports = {
                   singerName: "蔡徐坤",
                   singerMid: "002nXp292LIOGV",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -13780,7 +14682,7 @@ module.exports = {
                   singerName: "Lady Gaga/BLACKPINK",
                   singerMid: "001D3C3T2wxP74",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -13794,13 +14696,17 @@ module.exports = {
                   singerName: "孟梓",
                   singerMid: "000TdUy30nvIrT",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003dIbPn18pf1n.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000KJXoQ0hkyJR.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M00000363n7y1Ft6gE.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003gAugG278m0K.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003dIbPn18pf1n.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000KJXoQ0hkyJR.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M00000363n7y1Ft6gE.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003gAugG278m0K.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -13819,7 +14725,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "新歌榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M00000363n7y1Ft6gE.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M00000363n7y1Ft6gE.jpg"
             },
             {
               topId: 4,
@@ -13830,13 +14737,14 @@ module.exports = {
               titleDetail: "流行指数榜 第154天",
               titleShare: "流行指数榜 2020年第154天",
               titleSub: "",
-              intro: "QQ音乐内综合播放得分最高的100首单曲。<br><br>更新时间：每天<br>计算方式：综合播放得分对比七天前涨幅",
+              intro:
+                "QQ音乐内综合播放得分最高的100首单曲。<br><br>更新时间：每天<br>计算方式：综合播放得分对比七天前涨幅",
               cornerMark: 0,
               period: "2020-06-02",
               updateTime: "2020-06-02",
               history: {
                 year: [],
-                subPeriod: [],
+                subPeriod: []
               },
               listenNum: 9100000,
               totalNum: 100,
@@ -13853,7 +14761,7 @@ module.exports = {
                   singerName: "Lady Gaga/BLACKPINK",
                   singerMid: "001D3C3T2wxP74",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -13867,7 +14775,7 @@ module.exports = {
                   singerName: "五月天",
                   singerMid: "000Sp0Bz4JXH0o",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -13881,13 +14789,17 @@ module.exports = {
                   singerName: "山水组合",
                   singerMid: "000mLkCE09tNCb",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001Ut4OL0yeVyY.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000003qtgZo1LZVtR.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002qj0FS1H7byJ.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001Ut4OL0yeVyY.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000003qtgZo1LZVtR.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002qj0FS1H7byJ.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -13906,7 +14818,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "流行指数榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg"
             },
             {
               topId: 67,
@@ -13924,7 +14837,7 @@ module.exports = {
               updateTime: "2020-06-02",
               history: {
                 year: [],
-                subPeriod: [],
+                subPeriod: []
               },
               listenNum: 9200000,
               totalNum: 100,
@@ -13941,7 +14854,7 @@ module.exports = {
                   singerName: "阿悠悠",
                   singerMid: "002oKQfI4E0PBk",
                   songType: 0,
-                  uuidCnt: 100000,
+                  uuidCnt: 100000
                 },
                 {
                   rank: 2,
@@ -13955,7 +14868,7 @@ module.exports = {
                   singerName: "单帅",
                   singerMid: "0016twt54Ho6em",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -13969,13 +14882,17 @@ module.exports = {
                   singerName: "Zealot周星星",
                   singerMid: "004cwxgW3PJOlU",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M00000150Tat4SDSlu.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000004JRPsZ1QOMEp.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M00000386vE8254Aji.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M00000150Tat4SDSlu.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000004JRPsZ1QOMEp.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M00000386vE8254Aji.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -13994,7 +14911,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "听歌识曲榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg"
             },
             {
               topId: 201,
@@ -14012,7 +14930,7 @@ module.exports = {
               updateTime: "",
               history: {
                 year: [],
-                subPeriod: [],
+                subPeriod: []
               },
               listenNum: 3115980,
               totalNum: 20,
@@ -14029,7 +14947,7 @@ module.exports = {
                   singerName: "张艺兴",
                   singerMid: "002MfEld3FWp0R",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -14043,7 +14961,7 @@ module.exports = {
                   singerName: "陈立农/徐佳莹",
                   singerMid: "000W6adM4E0PK6",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -14057,17 +14975,22 @@ module.exports = {
                   singerName: "海来阿木",
                   singerMid: "004WYT5j1s7R6Y",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000Qt8Vi114xbX.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002IxWr23dfdFe.jpg",
-              mbFrontPicUrl: "https://y.gtimg.cn/music/photo_new/T002R300x300M000003XzNlG3eSgRq_1.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003fbkIN1uCsmK.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000Qt8Vi114xbX.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002IxWr23dfdFe.jpg",
+              mbFrontPicUrl:
+                "https://y.gtimg.cn/music/photo_new/T002R300x300M000003XzNlG3eSgRq_1.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003fbkIN1uCsmK.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
-              adJumpUrl: "http://y.qq.com/m/client/v5detail/mv.html?navpage=toplist",
+              adJumpUrl:
+                "http://y.qq.com/m/client/v5detail/mv.html?navpage=toplist",
               h5JumpUrl: "https://y.qq.com/m/client/video_rank_list/index.html",
               url_key: "v5detail_mv",
               url_params: "",
@@ -14082,10 +15005,11 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "MV榜",
               musichallSubtitle: "",
-              musichallPicUrl: "https://y.gtimg.cn/music/photo_new/T002R300x300M000003XzNlG3eSgRq_1.jpg",
-            },
+              musichallPicUrl:
+                "https://y.gtimg.cn/music/photo_new/T002R300x300M000003XzNlG3eSgRq_1.jpg"
+            }
           ],
-          type: 0,
+          type: 0
         },
         {
           groupId: 1,
@@ -14108,37 +15032,7 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
                   [
-                    51,
-                    50,
-                    49,
-                    48,
-                    47,
-                    46,
-                    45,
-                    44,
-                    43,
-                    42,
-                    41,
-                    40,
-                    39,
-                    38,
-                    37,
-                    36,
-                    35,
-                    34,
-                    33,
-                    32,
-                    31,
-                    30,
-                    29,
-                    28,
-                    27,
-                    26,
-                    25,
-                    24,
-                    23,
                     22,
                     21,
                     20,
@@ -14160,8 +15054,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
-                    0,
+                    1
                   ],
                   [
                     51,
@@ -14215,9 +15108,63 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
-                ],
+                  [
+                    51,
+                    50,
+                    49,
+                    48,
+                    47,
+                    46,
+                    45,
+                    44,
+                    43,
+                    42,
+                    41,
+                    40,
+                    39,
+                    38,
+                    37,
+                    36,
+                    35,
+                    34,
+                    33,
+                    32,
+                    31,
+                    30,
+                    29,
+                    28,
+                    27,
+                    26,
+                    25,
+                    24,
+                    23,
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
+                  ]
+                ]
               },
               listenNum: 4026440,
               totalNum: 100,
@@ -14234,7 +15181,7 @@ module.exports = {
                   singerName: "蔡徐坤",
                   singerMid: "002nXp292LIOGV",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -14248,7 +15195,7 @@ module.exports = {
                   singerName: "毛不易",
                   singerMid: "001BHDR33FZVZ0",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -14262,13 +15209,17 @@ module.exports = {
                   singerName: "张艺兴",
                   singerMid: "002MfEld3FWp0R",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002o2Eq82Xkax7.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000004ChGNv24QQDn.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000004ChGNv24QQDn.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002o2Eq82Xkax7.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002o2Eq82Xkax7.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000004ChGNv24QQDn.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000004ChGNv24QQDn.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002o2Eq82Xkax7.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -14287,7 +15238,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "内地榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M00000363n7y1Ft6gE.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M00000363n7y1Ft6gE.jpg"
             },
             {
               topId: 59,
@@ -14306,7 +15258,30 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -14346,9 +15321,9 @@ module.exports = {
                     16,
                     15,
                     14,
-                    13,
-                  ],
-                ],
+                    13
+                  ]
+                ]
               },
               listenNum: 1945470,
               totalNum: 100,
@@ -14365,7 +15340,7 @@ module.exports = {
                   singerName: "许靖韵/林奕匡",
                   singerMid: "0025uYT23dPLye",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -14379,7 +15354,7 @@ module.exports = {
                   singerName: "G.E.M. 邓紫棋",
                   singerMid: "001fNHEf1SFEFN",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -14393,13 +15368,17 @@ module.exports = {
                   singerName: "方大同",
                   singerMid: "003zHcYF44FVEV",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000OHj7o0VrlyP.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002fnHkg26E37x.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002fnHkg26E37x.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000OHj7o0VrlyP.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000OHj7o0VrlyP.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002fnHkg26E37x.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002fnHkg26E37x.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000OHj7o0VrlyP.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -14418,7 +15397,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "香港地区榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000003DtolE3bmdIb.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000003DtolE3bmdIb.jpg"
             },
             {
               topId: 61,
@@ -14437,7 +15417,30 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -14475,9 +15478,9 @@ module.exports = {
                     18,
                     17,
                     16,
-                    15,
-                  ],
-                ],
+                    15
+                  ]
+                ]
               },
               listenNum: 516731,
               totalNum: 100,
@@ -14494,7 +15497,7 @@ module.exports = {
                   singerName: "萧敬腾/林俊杰",
                   singerMid: "004bsIDK0awMOv",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -14508,7 +15511,7 @@ module.exports = {
                   singerName: "张韶涵",
                   singerMid: "002raUWw3PXdkT",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -14522,13 +15525,17 @@ module.exports = {
                   singerName: "董又霖",
                   singerMid: "000QAlxk0kXac5",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002BQ9y03pQRSZ.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000018kl2P4MAjcq.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000018kl2P4MAjcq.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002BQ9y03pQRSZ.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002BQ9y03pQRSZ.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000018kl2P4MAjcq.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000018kl2P4MAjcq.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002BQ9y03pQRSZ.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -14547,7 +15554,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "台湾地区榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000003qt4Zd19X2jr.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000003qt4Zd19X2jr.jpg"
             },
             {
               topId: 3,
@@ -14566,37 +15574,7 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
                   [
-                    51,
-                    50,
-                    49,
-                    48,
-                    47,
-                    46,
-                    45,
-                    44,
-                    43,
-                    42,
-                    41,
-                    40,
-                    39,
-                    38,
-                    37,
-                    36,
-                    35,
-                    34,
-                    33,
-                    32,
-                    31,
-                    30,
-                    29,
-                    28,
-                    27,
-                    26,
-                    25,
-                    24,
-                    23,
                     22,
                     21,
                     20,
@@ -14618,8 +15596,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
-                    0,
+                    1
                   ],
                   [
                     51,
@@ -14673,9 +15650,63 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
-                ],
+                  [
+                    51,
+                    50,
+                    49,
+                    48,
+                    47,
+                    46,
+                    45,
+                    44,
+                    43,
+                    42,
+                    41,
+                    40,
+                    39,
+                    38,
+                    37,
+                    36,
+                    35,
+                    34,
+                    33,
+                    32,
+                    31,
+                    30,
+                    29,
+                    28,
+                    27,
+                    26,
+                    25,
+                    24,
+                    23,
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
+                  ]
+                ]
               },
               listenNum: 8842200,
               totalNum: 100,
@@ -14692,7 +15723,7 @@ module.exports = {
                   singerName: "Lady Gaga/Ariana Grande",
                   singerMid: "001D3C3T2wxP74",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -14706,7 +15737,7 @@ module.exports = {
                   singerName: "Ariana Grande/Justin Bieber",
                   singerMid: "004eTCF03KvBOE",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -14720,13 +15751,17 @@ module.exports = {
                   singerName: "Ava Max",
                   singerMid: "0015UgkM2WB8Go",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000026Qu8u1eMmul.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000pmemb4LG6Pf.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000pmemb4LG6Pf.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000026Qu8u1eMmul.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000026Qu8u1eMmul.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000pmemb4LG6Pf.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000pmemb4LG6Pf.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000026Qu8u1eMmul.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -14745,7 +15780,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "欧美榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg"
             },
             {
               topId: 16,
@@ -14764,37 +15800,7 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
                   [
-                    51,
-                    50,
-                    49,
-                    48,
-                    47,
-                    46,
-                    45,
-                    44,
-                    43,
-                    42,
-                    41,
-                    40,
-                    39,
-                    38,
-                    37,
-                    36,
-                    35,
-                    34,
-                    33,
-                    32,
-                    31,
-                    30,
-                    29,
-                    28,
-                    27,
-                    26,
-                    25,
-                    24,
-                    23,
                     22,
                     21,
                     20,
@@ -14816,8 +15822,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
-                    0,
+                    1
                   ],
                   [
                     51,
@@ -14871,9 +15876,63 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
-                ],
+                  [
+                    51,
+                    50,
+                    49,
+                    48,
+                    47,
+                    46,
+                    45,
+                    44,
+                    43,
+                    42,
+                    41,
+                    40,
+                    39,
+                    38,
+                    37,
+                    36,
+                    35,
+                    34,
+                    33,
+                    32,
+                    31,
+                    30,
+                    29,
+                    28,
+                    27,
+                    26,
+                    25,
+                    24,
+                    23,
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
+                  ]
+                ]
               },
               listenNum: 2504980,
               totalNum: 100,
@@ -14890,7 +15949,7 @@ module.exports = {
                   singerName: "脸红的思春期 (볼빨간사춘기)/伯贤 (백현)",
                   singerMid: "001gN7te3VVr8F",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -14904,7 +15963,7 @@ module.exports = {
                   singerName: "伯贤 (백현)",
                   singerMid: "0029SxgR215af5",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -14915,16 +15974,21 @@ module.exports = {
                   vid: "",
                   albumMid: "0004rWRs1OiCMx",
                   title: "Yours",
-                  singerName: "Raiden/灿烈 (찬열)/李遐怡 (LEE HI)/CHANGMO (창모)",
+                  singerName:
+                    "Raiden/灿烈 (찬열)/李遐怡 (LEE HI)/CHANGMO (창모)",
                   singerMid: "001wrstO36TEJ0",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002ZI7g81oIqD5.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002vveTx4Xq0P5.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002vveTx4Xq0P5.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002ZI7g81oIqD5.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002ZI7g81oIqD5.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002vveTx4Xq0P5.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002vveTx4Xq0P5.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002ZI7g81oIqD5.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -14943,7 +16007,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "韩国榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000002O7a1Z4fOutY.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000002O7a1Z4fOutY.jpg"
             },
             {
               topId: 17,
@@ -14962,37 +16027,7 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
                   [
-                    51,
-                    50,
-                    49,
-                    48,
-                    47,
-                    46,
-                    45,
-                    44,
-                    43,
-                    42,
-                    41,
-                    40,
-                    39,
-                    38,
-                    37,
-                    36,
-                    35,
-                    34,
-                    33,
-                    32,
-                    31,
-                    30,
-                    29,
-                    28,
-                    27,
-                    26,
-                    25,
-                    24,
-                    23,
                     22,
                     21,
                     20,
@@ -15014,8 +16049,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
-                    0,
+                    1
                   ],
                   [
                     51,
@@ -15069,9 +16103,63 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
-                ],
+                  [
+                    51,
+                    50,
+                    49,
+                    48,
+                    47,
+                    46,
+                    45,
+                    44,
+                    43,
+                    42,
+                    41,
+                    40,
+                    39,
+                    38,
+                    37,
+                    36,
+                    35,
+                    34,
+                    33,
+                    32,
+                    31,
+                    30,
+                    29,
+                    28,
+                    27,
+                    26,
+                    25,
+                    24,
+                    23,
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1,
+                    0
+                  ]
+                ]
               },
               listenNum: 1256710,
               totalNum: 100,
@@ -15088,7 +16176,7 @@ module.exports = {
                   singerName: "SawanoHiroyuki[nZk] (泽野弘之)/瑞葵 (mizuki)",
                   singerMid: "004femAh43yIZG",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15102,7 +16190,7 @@ module.exports = {
                   singerName: "平井大 (ひらい だい)",
                   singerMid: "002Acw2D0Z5k0g",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -15113,16 +16201,21 @@ module.exports = {
                   vid: "",
                   albumMid: "0015PVHV0foY25",
                   title: "You & I",
-                  singerName: "GENERATIONS from EXILE TRIBE (放浪新世代 from 放浪一族)",
+                  singerName:
+                    "GENERATIONS from EXILE TRIBE (放浪新世代 from 放浪一族)",
                   singerMid: "0003MDLK0AdFfz",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001imPYd2hJhxS.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001P2Llt0xO9iH.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001P2Llt0xO9iH.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001imPYd2hJhxS.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001imPYd2hJhxS.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001P2Llt0xO9iH.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001P2Llt0xO9iH.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001imPYd2hJhxS.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -15141,10 +16234,11 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "日本榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000003N9t5k2L8bZ3.jpg",
-            },
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000003N9t5k2L8bZ3.jpg"
+            }
           ],
-          type: 1,
+          type: 1
         },
         {
           groupId: 2,
@@ -15159,14 +16253,38 @@ module.exports = {
               titleDetail: "抖音排行榜 第22周",
               titleShare: "抖音排行榜 2020年第22周",
               titleSub: "",
-              intro: "汇集当下流行的抖音热歌，呈现具热度的网络流行<br><br>更新时间：每周四<br>排名数量：100首",
+              intro:
+                "汇集当下流行的抖音热歌，呈现具热度的网络流行<br><br>更新时间：每周四<br>排名数量：100首",
               cornerMark: 0,
               period: "2020_22",
               updateTime: "2020-05-28",
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -15206,9 +16324,9 @@ module.exports = {
                     16,
                     15,
                     14,
-                    13,
-                  ],
-                ],
+                    13
+                  ]
+                ]
               },
               listenNum: 19200000,
               totalNum: 100,
@@ -15225,7 +16343,7 @@ module.exports = {
                   singerName: "阿悠悠",
                   singerMid: "002oKQfI4E0PBk",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15239,7 +16357,7 @@ module.exports = {
                   singerName: "任然",
                   singerMid: "00067r4p0wBDDN",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -15253,13 +16371,17 @@ module.exports = {
                   singerName: "尚士达",
                   singerMid: "002pBrXg1l7ozA",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001Oja1e0oALyg.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001cM5e520zQ1Y.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001cM5e520zQ1Y.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001Oja1e0oALyg.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001Oja1e0oALyg.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001cM5e520zQ1Y.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001cM5e520zQ1Y.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001Oja1e0oALyg.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -15278,7 +16400,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "抖音排行榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg"
             },
             {
               topId: 28,
@@ -15297,7 +16420,30 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -15349,7 +16495,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    0,
+                    0
                   ],
                   [
                     51,
@@ -15403,9 +16549,9 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
-                  ],
-                ],
+                    0
+                  ]
+                ]
               },
               listenNum: 9300000,
               totalNum: 100,
@@ -15422,7 +16568,7 @@ module.exports = {
                   singerName: "阿悠悠",
                   singerMid: "002oKQfI4E0PBk",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15436,7 +16582,7 @@ module.exports = {
                   singerName: "傲叔",
                   singerMid: "001pyoEV3QrEJ3",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -15450,13 +16596,17 @@ module.exports = {
                   singerName: "孟梓",
                   singerMid: "000TdUy30nvIrT",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000030etSx3Fo3PT.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001YumJk2nonaY.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001YumJk2nonaY.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000030etSx3Fo3PT.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000030etSx3Fo3PT.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001YumJk2nonaY.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001YumJk2nonaY.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000030etSx3Fo3PT.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -15475,7 +16625,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "网络歌曲榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg"
             },
             {
               topId: 57,
@@ -15494,7 +16645,30 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -15547,10 +16721,10 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
-                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40],
-                ],
+                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40]
+                ]
               },
               listenNum: 2481360,
               totalNum: 50,
@@ -15567,7 +16741,7 @@ module.exports = {
                   singerName: "Ava Max",
                   singerMid: "0015UgkM2WB8Go",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15581,7 +16755,7 @@ module.exports = {
                   singerName: "Steve Aoki/张艺兴/will.i.am",
                   singerMid: "003ihUzC1icy0O",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -15595,13 +16769,17 @@ module.exports = {
                   singerName: "Alan Walker/Hans Zimmer",
                   singerMid: "0020PeOh4ZaCw1",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002cp4cn0UccE8.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002oIbMq3wGfiY.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002oIbMq3wGfiY.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002cp4cn0UccE8.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002cp4cn0UccE8.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002oIbMq3wGfiY.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002oIbMq3wGfiY.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002cp4cn0UccE8.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -15620,7 +16798,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "电音榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000004GbsF64WfNUz.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000004GbsF64WfNUz.jpg"
             },
             {
               topId: 58,
@@ -15639,7 +16818,30 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -15692,10 +16894,10 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
-                  [51, 50, 49, 48, 47, 46, 45, 44, 43],
-                ],
+                  [51, 50, 49, 48, 47, 46, 45, 44, 43]
+                ]
               },
               listenNum: 1786050,
               totalNum: 50,
@@ -15709,10 +16911,11 @@ module.exports = {
                   vid: "",
                   albumMid: "001MvFaU1EVoeK",
                   title: "招牌动作 (纯享版)",
-                  singerName: "李梦琦/李紫梦/华承妍 (Chiyo)/王柯/刘些宁/徐艺洋/曾淑岩",
+                  singerName:
+                    "李梦琦/李紫梦/华承妍 (Chiyo)/王柯/刘些宁/徐艺洋/曾淑岩",
                   singerMid: "0026tfS433kvYU",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15726,7 +16929,7 @@ module.exports = {
                   singerName: "艾福杰尼",
                   singerMid: "0027W3Jw0PYnHt",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -15740,13 +16943,17 @@ module.exports = {
                   singerName: "莫凝/小右（陈柯右）",
                   singerMid: "001SSUed15xKV7",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003QkgDT2f2M1d.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001Dtq302O3R52.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001Dtq302O3R52.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003QkgDT2f2M1d.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003QkgDT2f2M1d.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001Dtq302O3R52.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001Dtq302O3R52.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003QkgDT2f2M1d.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -15765,7 +16972,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "说唱榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001MvFaU1EVoeK.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001MvFaU1EVoeK.jpg"
             },
             {
               topId: 66,
@@ -15784,9 +16992,32 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37],
-                ],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
+                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37]
+                ]
               },
               listenNum: 380088,
               totalNum: 100,
@@ -15803,7 +17034,7 @@ module.exports = {
                   singerName: "张韶涵",
                   singerMid: "002raUWw3PXdkT",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15817,7 +17048,7 @@ module.exports = {
                   singerName: "王者荣耀/Jennifer Sumire",
                   singerMid: "002KASw53FQbTK",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -15831,13 +17062,17 @@ module.exports = {
                   singerName: "张碧晨",
                   singerMid: "0003ZpE43ypssl",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003KE1dX0WRXra.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000003u0o7R4535OK.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000003u0o7R4535OK.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003KE1dX0WRXra.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003KE1dX0WRXra.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000003u0o7R4535OK.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000003u0o7R4535OK.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003KE1dX0WRXra.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -15856,7 +17091,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "ACG新歌榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001gTzQA1I61B3.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001gTzQA1I61B3.jpg"
             },
             {
               topId: 65,
@@ -15875,9 +17111,32 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37],
-                ],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
+                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37]
+                ]
               },
               listenNum: 1697130,
               totalNum: 100,
@@ -15894,7 +17153,7 @@ module.exports = {
                   singerName: "陆虎/周深",
                   singerMid: "004gbMvP356XaI",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15908,7 +17167,7 @@ module.exports = {
                   singerName: "赵露思",
                   singerMid: "000EWJi92tUdlr",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -15922,13 +17181,17 @@ module.exports = {
                   singerName: "皮卡丘多多",
                   singerMid: "002NRZHw2y2Mmz",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002S5g6R4DhNJU.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000004HmM33Ya327.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000004HmM33Ya327.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002S5g6R4DhNJU.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002S5g6R4DhNJU.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000004HmM33Ya327.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000004HmM33Ya327.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002S5g6R4DhNJU.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -15947,7 +17210,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "国风热歌榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000002ph0tT0YOdR2.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000002ph0tT0YOdR2.jpg"
             },
             {
               topId: 64,
@@ -15966,9 +17230,32 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37],
-                ],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
+                  [51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37]
+                ]
               },
               listenNum: 733180,
               totalNum: 100,
@@ -15982,10 +17269,11 @@ module.exports = {
                   vid: "",
                   albumMid: "004cVNhE08qBBs",
                   title: "情人 (Live)",
-                  singerName: "蔡徐坤/安崎/葛鑫怡/刘令姿/许佳琪/许馨文/许杨玉琢",
+                  singerName:
+                    "蔡徐坤/安崎/葛鑫怡/刘令姿/许佳琪/许馨文/许杨玉琢",
                   singerMid: "002nXp292LIOGV",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -15999,7 +17287,7 @@ module.exports = {
                   singerName: "张艺兴",
                   singerMid: "002MfEld3FWp0R",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -16013,13 +17301,17 @@ module.exports = {
                   singerName: "希林娜依·高",
                   singerMid: "000PJRig3WnHYX",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002CLph04Lfjfg.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fx0PZ0tEg0A.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fx0PZ0tEg0A.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002CLph04Lfjfg.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002CLph04Lfjfg.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fx0PZ0tEg0A.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fx0PZ0tEg0A.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002CLph04Lfjfg.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -16038,7 +17330,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "综艺新歌榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000004cVNhE08qBBs.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000004cVNhE08qBBs.jpg"
             },
             {
               topId: 29,
@@ -16057,7 +17350,29 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -16107,7 +17422,7 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
                   [
                     51,
@@ -16157,9 +17472,9 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
-                  ],
-                ],
+                    0
+                  ]
+                ]
               },
               listenNum: 1401015,
               totalNum: 100,
@@ -16176,7 +17491,7 @@ module.exports = {
                   singerName: "陆虎/周深",
                   singerMid: "004gbMvP356XaI",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -16190,7 +17505,7 @@ module.exports = {
                   singerName: "双笙/妖扬",
                   singerMid: "001t94rh4OpQn0",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -16204,13 +17519,17 @@ module.exports = {
                   singerName: "林彦俊",
                   singerMid: "0021rE0d46NhIt",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000044bKsA2nfq1h.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000003kgDvt2jzuQl.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000003kgDvt2jzuQl.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000044bKsA2nfq1h.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000044bKsA2nfq1h.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000003kgDvt2jzuQl.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000003kgDvt2jzuQl.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000044bKsA2nfq1h.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -16229,7 +17548,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "影视金曲榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000002ph0tT0YOdR2.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000002ph0tT0YOdR2.jpg"
             },
             {
               topId: 70,
@@ -16247,7 +17567,32 @@ module.exports = {
               updateTime: "2020-05-28",
               history: {
                 year: [2020],
-                subPeriod: [[22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]],
+                subPeriod: [
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ]
+                ]
               },
               listenNum: 250259,
               totalNum: 100,
@@ -16264,7 +17609,7 @@ module.exports = {
                   singerName: "多多poi",
                   singerMid: "000k0mUB3rZ2w3",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -16278,7 +17623,7 @@ module.exports = {
                   singerName: "黎洛洛",
                   singerMid: "000XeHB02Izw4C",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -16292,13 +17637,17 @@ module.exports = {
                   singerName: "你还好吗",
                   singerMid: "002JRKc73ORIJj",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000tRjXV0jmEj0.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000004gHZHW0QpcjU.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000004gHZHW0QpcjU.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000tRjXV0jmEj0.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000tRjXV0jmEj0.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000004gHZHW0QpcjU.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000004gHZHW0QpcjU.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000tRjXV0jmEj0.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -16317,7 +17666,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "达人音乐榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000004KQB6T3n1HZX.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000004KQB6T3n1HZX.jpg"
             },
             {
               topId: 52,
@@ -16336,7 +17686,30 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -16388,7 +17761,7 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
+                    0
                   ],
                   [
                     51,
@@ -16442,9 +17815,9 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
-                  ],
-                ],
+                    0
+                  ]
+                ]
               },
               listenNum: 124678,
               totalNum: 100,
@@ -16461,7 +17834,7 @@ module.exports = {
                   singerName: "张钰",
                   singerMid: "000TZR5V2CudfO",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -16475,7 +17848,7 @@ module.exports = {
                   singerName: "萧忆情Alex",
                   singerMid: "0040z4ka3pubEV",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -16489,13 +17862,17 @@ module.exports = {
                   singerName: "泥鳅Niko",
                   singerMid: "000pLwpw25Og4A",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000004YMd2T4AM20K.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002lqVQ31SHXIL.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000002lqVQ31SHXIL.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000004YMd2T4AM20K.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000004YMd2T4AM20K.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002lqVQ31SHXIL.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000002lqVQ31SHXIL.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000004YMd2T4AM20K.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -16514,7 +17891,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "腾讯音乐人原创榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000u7lhQ0yRvWZ.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000u7lhQ0yRvWZ.jpg"
             },
             {
               topId: 36,
@@ -16533,7 +17911,30 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -16582,7 +17983,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
                   [
                     52,
@@ -16623,9 +18024,9 @@ module.exports = {
                     3,
                     2,
                     1,
-                    0,
-                  ],
-                ],
+                    0
+                  ]
+                ]
               },
               listenNum: 1960000,
               totalNum: 55,
@@ -16642,7 +18043,7 @@ module.exports = {
                   singerName: "程响",
                   singerMid: "003iPzNg35cWzp",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -16656,7 +18057,7 @@ module.exports = {
                   singerName: "傅如乔",
                   singerMid: "0014X2tu05PYbH",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -16670,13 +18071,17 @@ module.exports = {
                   singerName: "海伦",
                   singerMid: "0041vdG63lbLge",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000045RhOv2V8tl9.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fOJol4MoTYK.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fOJol4MoTYK.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000045RhOv2V8tl9.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000045RhOv2V8tl9.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fOJol4MoTYK.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000fOJol4MoTYK.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000045RhOv2V8tl9.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -16695,7 +18100,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "K歌金曲榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000003Ls5Jo4EFBIH.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000003Ls5Jo4EFBIH.jpg"
             },
             {
               topId: 63,
@@ -16706,13 +18112,14 @@ module.exports = {
               titleDetail: "DJ舞曲榜 第22周",
               titleShare: "DJ舞曲榜 2020年第22周",
               titleSub: "",
-              intro: "汇集当下流行热门的DJ舞曲，呈现具热度的网络流行<br><br>更新时间：每周四<br>排名数量：100首",
+              intro:
+                "汇集当下流行热门的DJ舞曲，呈现具热度的网络流行<br><br>更新时间：每周四<br>排名数量：100首",
               cornerMark: 0,
               period: "2020_22",
               updateTime: "2020-05-28",
               history: {
                 year: [2020],
-                subPeriod: [[22, 21, 20, 19, 18, 17, 16]],
+                subPeriod: [[22, 21, 20, 19, 18, 17, 16]]
               },
               listenNum: 9900000,
               totalNum: 100,
@@ -16729,7 +18136,7 @@ module.exports = {
                   singerName: "阿悠悠",
                   singerMid: "002oKQfI4E0PBk",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -16743,7 +18150,7 @@ module.exports = {
                   singerName: "魏新雨",
                   singerMid: "000LsFo136kIv4",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -16757,13 +18164,17 @@ module.exports = {
                   singerName: "黄静美",
                   singerMid: "002uUjpF2FIVZ9",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000004fWr9a3PF1CL.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000024k3No3PaGMl.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000024k3No3PaGMl.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000004fWr9a3PF1CL.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000004fWr9a3PF1CL.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000024k3No3PaGMl.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000024k3No3PaGMl.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000004fWr9a3PF1CL.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -16782,10 +18193,11 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "DJ舞曲榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg",
-            },
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001ooeyd1kAh9w.jpg"
+            }
           ],
-          type: 1,
+          type: 1
         },
         {
           groupId: 3,
@@ -16808,7 +18220,29 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     53,
                     52,
@@ -16861,7 +18295,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
                   [
                     53,
@@ -16915,9 +18349,9 @@ module.exports = {
                     5,
                     4,
                     3,
-                    2,
-                  ],
-                ],
+                    2
+                  ]
+                ]
               },
               listenNum: 3794980,
               totalNum: 100,
@@ -16934,7 +18368,7 @@ module.exports = {
                   singerName: "Megan Thee Stallion/Beyoncé",
                   singerMid: "002HeUXZ0qWn23",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -16948,7 +18382,7 @@ module.exports = {
                   singerName: "Doja Cat/Nicki Minaj",
                   singerMid: "000wOH7L3UPfa2",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -16962,13 +18396,17 @@ module.exports = {
                   singerName: "The Weeknd",
                   singerMid: "004YnseG2vQN7h",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000004Rc1DB3LZqcI.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000003nOfs2XBrRv.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000003nOfs2XBrRv.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000004Rc1DB3LZqcI.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000004Rc1DB3LZqcI.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000003nOfs2XBrRv.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000003nOfs2XBrRv.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000004Rc1DB3LZqcI.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -16987,7 +18425,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "美国公告牌榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001BHbuD0oC100.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001BHbuD0oC100.jpg"
             },
             {
               topId: 123,
@@ -16998,14 +18437,38 @@ module.exports = {
               titleDetail: "美国iTunes榜 第22周",
               titleShare: "美国iTunes榜 2020年第22周",
               titleSub: "",
-              intro: "iTunes是美国苹果公司开发的音乐下载软件，iTunes单曲榜是结合了下载、收听和销售数据，进行的全美流行音乐综合排名，于每周一更新。",
+              intro:
+                "iTunes是美国苹果公司开发的音乐下载软件，iTunes单曲榜是结合了下载、收听和销售数据，进行的全美流行音乐综合排名，于每周一更新。",
               cornerMark: 0,
               period: "2020_22",
               updateTime: "2020-05-31",
               history: {
                 year: [2020, 2019, 2018, 2017],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     45,
                     44,
@@ -17045,7 +18508,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
                   [
                     49,
@@ -17095,10 +18558,10 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
-                  [52],
-                ],
+                  [52]
+                ]
               },
               listenNum: 1037085,
               totalNum: 97,
@@ -17115,7 +18578,7 @@ module.exports = {
                   singerName: "Lady Gaga/Ariana Grande",
                   singerMid: "001D3C3T2wxP74",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -17129,7 +18592,7 @@ module.exports = {
                   singerName: "Britney Spears",
                   singerMid: "002EYdg22Ts0BV",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -17143,13 +18606,17 @@ module.exports = {
                   singerName: "Luke Bryan",
                   singerMid: "000EeXRE0SMQw8",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000MX7g834FZmI.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001TUwig2HZ3wt.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001TUwig2HZ3wt.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000MX7g834FZmI.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000MX7g834FZmI.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001TUwig2HZ3wt.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001TUwig2HZ3wt.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000MX7g834FZmI.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -17168,7 +18635,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "美国iTunes榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg"
             },
             {
               topId: 129,
@@ -17186,9 +18654,32 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-                  [52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41],
-                ],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
+                  [52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41]
+                ]
               },
               listenNum: 1050875,
               totalNum: 100,
@@ -17205,7 +18696,7 @@ module.exports = {
                   singerName: "IU (아이유)/SUGA (슈가)",
                   singerMid: "004Bjyj52RTYOj",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -17219,7 +18710,7 @@ module.exports = {
                   singerName: "田美都 (전미도)",
                   singerMid: "001HX70v0PVgcA",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -17233,13 +18724,17 @@ module.exports = {
                   singerName: "조정석 (CHO JEONG SEOK|조정석)",
                   singerMid: "0044NpBJ1Z2FNe",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001CQPBH1ql99F.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000002o8vs0TpSDQ.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M0000002o8vs0TpSDQ.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001CQPBH1ql99F.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001CQPBH1ql99F.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000002o8vs0TpSDQ.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M0000002o8vs0TpSDQ.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001CQPBH1ql99F.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -17258,7 +18753,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "韩国Melon榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M00000202FLH1w1l7L.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M00000202FLH1w1l7L.jpg"
             },
             {
               topId: 107,
@@ -17277,7 +18773,30 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018, 2017],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -17329,7 +18848,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
                   [
                     53,
@@ -17384,10 +18903,10 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
-                  [52],
-                ],
+                  [52]
+                ]
               },
               listenNum: 740565,
               totalNum: 40,
@@ -17404,7 +18923,7 @@ module.exports = {
                   singerName: "Lady Gaga/Ariana Grande",
                   singerMid: "001D3C3T2wxP74",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -17418,7 +18937,7 @@ module.exports = {
                   singerName: "DaBaby/Roddy Ricch",
                   singerMid: "004ZSxGJ4OqRFt",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -17432,13 +18951,17 @@ module.exports = {
                   singerName: "S1mba/DTG",
                   singerMid: "002VygHc461KyC",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000025of3u2TmbO4.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000003qzxM20PC1LW.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000003qzxM20PC1LW.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M0000025of3u2TmbO4.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000025of3u2TmbO4.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000003qzxM20PC1LW.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000003qzxM20PC1LW.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M0000025of3u2TmbO4.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -17457,7 +18980,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "英国UK榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000XcLpO2aYB2I.jpg"
             },
             {
               topId: 105,
@@ -17476,7 +19000,29 @@ module.exports = {
               history: {
                 year: [2020, 2019, 2018, 2017],
                 subPeriod: [
-                  [21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     52,
                     51,
@@ -17528,7 +19074,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
                   [
                     52,
@@ -17582,10 +19128,10 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
-                  [52],
-                ],
+                  [52]
+                ]
               },
               listenNum: 340618,
               totalNum: 20,
@@ -17602,7 +19148,7 @@ module.exports = {
                   singerName: "LiSA (織部里沙)",
                   singerMid: "002QnBvg3hfrW1",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -17616,7 +19162,7 @@ module.exports = {
                   singerName: "YOASOBI (ヨアソビ)",
                   singerMid: "001Erp1x1jDOoQ",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -17630,13 +19176,17 @@ module.exports = {
                   singerName: "GReeeeN (グリーン)",
                   singerMid: "0042dND736sTEr",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000kzlQj33T99A.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000RXCq60wuhpa.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000000RXCq60wuhpa.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000000kzlQj33T99A.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000kzlQj33T99A.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000RXCq60wuhpa.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000000RXCq60wuhpa.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000000kzlQj33T99A.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -17655,7 +19205,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "日本公信榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000UWQza1jUw3L.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000UWQza1jUw3L.jpg"
             },
             {
               topId: 126,
@@ -17673,7 +19224,27 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 6, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    6,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -17710,9 +19281,9 @@ module.exports = {
                     19,
                     18,
                     17,
-                    16,
-                  ],
-                ],
+                    16
+                  ]
+                ]
               },
               listenNum: 143006,
               totalNum: 96,
@@ -17729,7 +19300,7 @@ module.exports = {
                   singerName: "林家谦",
                   singerMid: "002DXsT748GAQv",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -17743,7 +19314,7 @@ module.exports = {
                   singerName: "卫兰",
                   singerMid: "0018IojC2R0SZW",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -17757,13 +19328,17 @@ module.exports = {
                   singerName: "JC陈泳彤",
                   singerMid: "000quag73Rfu0i",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003LWZQG37ndEM.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M00000241CGq1eiCVr.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M00000241CGq1eiCVr.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000003LWZQG37ndEM.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003LWZQG37ndEM.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M00000241CGq1eiCVr.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M00000241CGq1eiCVr.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000003LWZQG37ndEM.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -17782,7 +19357,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "JOOX本地热播榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000000EYjXo3eo22K.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000000EYjXo3eo22K.jpg"
             },
             {
               topId: 114,
@@ -17793,14 +19369,38 @@ module.exports = {
               titleDetail: "香港商台榜 第22周",
               titleShare: "香港商台榜 2020年第22周",
               titleSub: "",
-              intro: "香港商业电台是香港的一家商业广播电台，其榜单搜罗港台最新流行单曲。",
+              intro:
+                "香港商业电台是香港的一家商业广播电台，其榜单搜罗港台最新流行单曲。",
               cornerMark: 0,
               period: "2020_22",
               updateTime: "2020-05-30",
               history: {
                 year: [2020, 2019, 2018],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -17851,7 +19451,7 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
+                    1
                   ],
                   [
                     53,
@@ -17906,9 +19506,9 @@ module.exports = {
                     4,
                     3,
                     2,
-                    1,
-                  ],
-                ],
+                    1
+                  ]
+                ]
               },
               listenNum: 433405,
               totalNum: 19,
@@ -17925,7 +19525,7 @@ module.exports = {
                   singerName: "Dear Jane",
                   singerMid: "0009Sxdz11sr24",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -17939,7 +19539,7 @@ module.exports = {
                   singerName: "Dusty Bottle",
                   singerMid: "002zEt3t2j4bqk",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -17953,13 +19553,17 @@ module.exports = {
                   singerName: "许廷铿",
                   singerMid: "00367xza48QUVv",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002D9P1J1Ts8hH.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001HIOmv2FfjzF.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001HIOmv2FfjzF.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002D9P1J1Ts8hH.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002D9P1J1Ts8hH.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001HIOmv2FfjzF.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001HIOmv2FfjzF.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002D9P1J1Ts8hH.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -17978,7 +19582,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "香港商台榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000003Y6RQh4PjlLP.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000003Y6RQh4PjlLP.jpg"
             },
             {
               topId: 127,
@@ -17996,7 +19601,26 @@ module.exports = {
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 2],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    2
+                  ],
                   [
                     51,
                     50,
@@ -18034,9 +19658,9 @@ module.exports = {
                     18,
                     17,
                     16,
-                    1,
-                  ],
-                ],
+                    1
+                  ]
+                ]
               },
               listenNum: 337608,
               totalNum: 48,
@@ -18053,7 +19677,7 @@ module.exports = {
                   singerName: "瘦子E.SO",
                   singerMid: "004IJpRZ2oS9pP",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -18067,7 +19691,7 @@ module.exports = {
                   singerName: "瘦子E.SO",
                   singerMid: "004IJpRZ2oS9pP",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -18081,13 +19705,17 @@ module.exports = {
                   singerName: "梁静茹/艾怡良",
                   singerMid: "000GGDys0yA0Nk",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002Pe5CS2FlXQ3.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001idCX81gfo0H.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001idCX81gfo0H.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000002Pe5CS2FlXQ3.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002Pe5CS2FlXQ3.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001idCX81gfo0H.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001idCX81gfo0H.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000002Pe5CS2FlXQ3.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -18106,7 +19734,8 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "台湾KKBOX榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M0000026vTIC4eK9LD.jpg",
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M0000026vTIC4eK9LD.jpg"
             },
             {
               topId: 128,
@@ -18117,14 +19746,38 @@ module.exports = {
               titleDetail: "YouTube音乐排行榜 第22周",
               titleShare: "YouTube音乐排行榜 2020年第22周",
               titleSub: "",
-              intro: "YouTube是一个视频网站，YouTube热门音乐榜是根据歌曲每周在YouTube播放次数进行排名，每周一更新。",
+              intro:
+                "YouTube是一个视频网站，YouTube热门音乐榜是根据歌曲每周在YouTube播放次数进行排名，每周一更新。",
               cornerMark: 0,
               period: "2020_22",
               updateTime: "2020-06-01",
               history: {
                 year: [2020, 2019],
                 subPeriod: [
-                  [22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                  [
+                    22,
+                    21,
+                    20,
+                    19,
+                    18,
+                    17,
+                    16,
+                    15,
+                    14,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    8,
+                    7,
+                    6,
+                    5,
+                    4,
+                    3,
+                    2,
+                    1
+                  ],
                   [
                     51,
                     50,
@@ -18162,9 +19815,9 @@ module.exports = {
                     18,
                     17,
                     16,
-                    15,
-                  ],
-                ],
+                    15
+                  ]
+                ]
               },
               listenNum: 362203,
               totalNum: 100,
@@ -18181,7 +19834,7 @@ module.exports = {
                   singerName: "6ix9ine",
                   singerMid: "0024aNCF0YZ7HN",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 2,
@@ -18195,7 +19848,7 @@ module.exports = {
                   singerName: "Future/Drake",
                   singerMid: "003rLetL0AcGNH",
                   songType: 0,
-                  uuidCnt: 0,
+                  uuidCnt: 0
                 },
                 {
                   rank: 3,
@@ -18209,13 +19862,17 @@ module.exports = {
                   singerName: "Lady Gaga/Ariana Grande",
                   singerMid: "001D3C3T2wxP74",
                   songType: 0,
-                  uuidCnt: 0,
-                },
+                  uuidCnt: 0
+                }
               ],
-              headPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001iCEQQ2Zqdm4.jpg",
-              frontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001UVhfe0jYmeH.jpg",
-              mbFrontPicUrl: "http://y.gtimg.cn/music/photo_new/T003R300x300M000001UVhfe0jYmeH.jpg",
-              mbHeadPicUrl: "http://y.gtimg.cn/music/photo_new/T003R500x500M000001iCEQQ2Zqdm4.jpg",
+              headPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001iCEQQ2Zqdm4.jpg",
+              frontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001UVhfe0jYmeH.jpg",
+              mbFrontPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R300x300M000001UVhfe0jYmeH.jpg",
+              mbHeadPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T003R500x500M000001iCEQQ2Zqdm4.jpg",
               pcSubTopIds: [],
               pcSubTopTitles: [],
               subTopIds: [],
@@ -18234,15 +19891,16 @@ module.exports = {
               sinceCV: 0,
               musichallTitle: "YouTube音乐排行榜",
               musichallSubtitle: "",
-              musichallPicUrl: "http://y.gtimg.cn/music/photo_new/T002R300x300M000001eNYGo0CA4FX.jpg",
-            },
+              musichallPicUrl:
+                "http://y.gtimg.cn/music/photo_new/T002R300x300M000001eNYGo0CA4FX.jpg"
+            }
           ],
-          type: 1,
-        },
+          type: 1
+        }
       ],
       refreshInterval: 600,
-      abt: "",
-    },
+      abt: ""
+    }
   },
   focus: {
     code: 0,
@@ -18261,7 +19919,7 @@ module.exports = {
           pingpong: "",
           extra_info: null,
           scheme: "",
-          title: "",
+          title: ""
         },
         feedback_opt: 0,
         v_niche: [
@@ -18279,7 +19937,7 @@ module.exports = {
               pingpong: "",
               extra_info: null,
               scheme: "",
-              title: "",
+              title: ""
             },
             v_card: [
               {
@@ -18290,7 +19948,8 @@ module.exports = {
                 subid: "0044pHVi0PVhTH",
                 title: "PC&YQQ NUEST《Best summer》",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2506319.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2506319.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18298,12 +19957,13 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28138",
+                  CfgID: "28138"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212848060%22%7D",
-                style: 0,
+                scheme:
+                  "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212848060%22%7D",
+                style: 0
               },
               {
                 type: 0,
@@ -18313,7 +19973,8 @@ module.exports = {
                 subid: "004FXeFH4QkWpR",
                 title: "邓典果ty",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2501422.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2501422.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18321,12 +19982,13 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28136",
+                  CfgID: "28136"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212796201%22%7D",
-                style: 0,
+                scheme:
+                  "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212796201%22%7D",
+                style: 0
               },
               {
                 type: 0,
@@ -18336,7 +19998,8 @@ module.exports = {
                 subid: "002ut5P73V63mS",
                 title: "PCYQQ王晰弦子《相思》",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2504376.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2504376.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18344,12 +20007,13 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28129",
+                  CfgID: "28129"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212834903%22%7D",
-                style: 0,
+                scheme:
+                  "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212834903%22%7D",
+                style: 0
               },
               {
                 type: 0,
@@ -18359,7 +20023,8 @@ module.exports = {
                 subid: "001Pysmq3rk57j",
                 title: "PCYQQ王广允《别找我麻烦》",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2502391.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2502391.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18367,22 +20032,25 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28130",
+                  CfgID: "28130"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212833026%22%7D",
-                style: 0,
+                scheme:
+                  "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212833026%22%7D",
+                style: 0
               },
               {
                 type: 0,
                 subtype: 0,
                 jumptype: 3001,
-                id: "https://y.qq.com/m/digitalbumv3/gold/index.html?openinqqmusic=1&_video=true&mid=003XzNlG3eSgRq&g_f=yqqjiaodian",
+                id:
+                  "https://y.qq.com/m/digitalbumv3/gold/index.html?openinqqmusic=1&_video=true&mid=003XzNlG3eSgRq&g_f=yqqjiaodian",
                 subid: "",
                 title: "YQQ：张艺兴数专正售",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2482762.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2482762.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18390,12 +20058,12 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28052",
+                  CfgID: "28052"
                 },
                 pingpong: "",
                 extra_info: null,
                 scheme: "qqmusic://qq.com/ui/openUrl",
-                style: 0,
+                style: 0
               },
               {
                 type: 0,
@@ -18405,7 +20073,8 @@ module.exports = {
                 subid: "000irMM51V6yt9",
                 title: "PC&YQQ 金请夏xZION.T《Promise Me》",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2505087.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2505087.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18413,22 +20082,25 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28088",
+                  CfgID: "28088"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212846341%22%7D",
-                style: 0,
+                scheme:
+                  "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212846341%22%7D",
+                style: 0
               },
               {
                 type: 0,
                 subtype: 0,
                 jumptype: 3002,
-                id: "https://y.qq.com/m/digitalbumv3/gold/index.html?mid=003ehyNg2jOrKT&_video=true&g_f=yqqjiaodian",
+                id:
+                  "https://y.qq.com/m/digitalbumv3/gold/index.html?mid=003ehyNg2jOrKT&_video=true&g_f=yqqjiaodian",
                 subid: "",
                 title: "YQQ：陈立农数专正售",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2482926.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2482926.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18436,12 +20108,12 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "27943",
+                  CfgID: "27943"
                 },
                 pingpong: "",
                 extra_info: null,
                 scheme: "qqmusic://qq.com/ui/album",
-                style: 0,
+                style: 0
               },
               {
                 type: 0,
@@ -18451,7 +20123,8 @@ module.exports = {
                 subid: "",
                 title: "PC/YQQ：我是唱作人2第7期",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2485709.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2485709.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18459,12 +20132,13 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28041",
+                  CfgID: "28041"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/gedan?p=%7B%22id%22%3A%227525027231%22%2C%22type%22%3A%220%22%7D",
-                style: 0,
+                scheme:
+                  "qqmusic://qq.com/ui/gedan?p=%7B%22id%22%3A%227525027231%22%2C%22type%22%3A%220%22%7D",
+                style: 0
               },
               {
                 type: 0,
@@ -18474,7 +20148,8 @@ module.exports = {
                 subid: "0046vMjV0I6lBT",
                 title: "Kygo专辑《Golden Hour》",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2482690.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2482690.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18482,12 +20157,13 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28025",
+                  CfgID: "28025"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212446261%22%7D",
-                style: 0,
+                scheme:
+                  "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212446261%22%7D",
+                style: 0
               },
               {
                 type: 0,
@@ -18497,7 +20173,8 @@ module.exports = {
                 subid: "000OyhgY3KEnX9",
                 title: "GAI唱作人",
                 subtitle: "",
-                cover: "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2501406.jpg",
+                cover:
+                  "https://y.gtimg.cn/music/common/upload/MUSIC_FOCUS/2501406.jpg",
                 cnt: 0,
                 time: 0,
                 v_user: null,
@@ -18505,13 +20182,14 @@ module.exports = {
                 trace: "",
                 abt: "",
                 miscellany: {
-                  CfgID: "28134",
+                  CfgID: "28134"
                 },
                 pingpong: "",
                 extra_info: null,
-                scheme: "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212720597%22%7D",
-                style: 0,
-              },
+                scheme:
+                  "qqmusic://qq.com/ui/album?p=%7B%22id%22%3A%2212720597%22%7D",
+                style: 0
+              }
             ],
             bgpic: "",
             tjreport: "",
@@ -18519,8 +20197,8 @@ module.exports = {
             abt: "",
             miscellany: null,
             pingpong: "",
-            extra_info: null,
-          },
+            extra_info: null
+          }
         ],
         expire: 0,
         tjreport: "",
@@ -18531,8 +20209,8 @@ module.exports = {
         extra_info: null,
         replaceOpt: 0,
         group: 0,
-        group_top: 0,
-      },
-    },
-  },
-}
+        group_top: 0
+      }
+    }
+  }
+};

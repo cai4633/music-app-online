@@ -4,8 +4,14 @@
       <div>
         <div class="banner" v-if="slideList.length">
           <slider>
-            <div class="swiper-slide" v-for="(item, index) in slideList" :key="'slider' + index">
-              <a :href="item.linkUrl"><img @load="imgLoad" :src="item.picUrl" alt="" /></a>
+            <div
+              class="swiper-slide"
+              v-for="(item, index) in slideList"
+              :key="'slider' + index"
+            >
+              <a :href="item.linkUrl"
+                ><img @load="imgLoad" :src="item.picUrl" alt=""
+              /></a>
             </div>
           </slider>
         </div>
@@ -15,11 +21,18 @@
           <ul class="descLists-wrap">
             <li v-for="desc in descList" :key="desc.contend_id">
               <div class="desc-icon">
-                <img v-lazy="desc.cover" alt="desc-icon" width="60" height="60" />
+                <img
+                  v-lazy="desc.cover"
+                  alt="desc-icon"
+                  width="60"
+                  height="60"
+                />
               </div>
               <div class="text">
                 <h3 class="desc-name">{{ desc.title }}</h3>
-                <p class="listen-number">播放量：{{ getListenNum(desc.listen_num) }}万</p>
+                <p class="listen-number">
+                  播放量：{{ getListenNum(desc.listen_num) }}万
+                </p>
               </div>
             </li>
           </ul>
@@ -33,48 +46,48 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Provide } from "vue-property-decorator"
-import { getRecommend, getDescLists } from "api/recommend"
-import { ERR_OK } from "api/config"
-import Slider from "components/slider/slider.vue"
-import Scroll from "base/scroll/scroll.vue"
-import Loading from "base/loading/loading.vue"
+import { Component, Vue, Provide } from "vue-property-decorator";
+import { getRecommend, getDescLists } from "api/recommend";
+import { ERR_OK } from "api/config";
+import Slider from "components/slider/slider.vue";
+import Scroll from "base/scroll/scroll.vue";
+import Loading from "base/loading/loading.vue";
 
 @Component({
-  components: { Slider, Scroll, Loading },
+  components: { Slider, Scroll, Loading }
 })
 export default class Recommend extends Vue {
-  slideList = []
-  descList = []
-  timer = 0
+  slideList = [];
+  descList = [];
+  timer = 0;
   created() {
     this.timer = setTimeout(() => {
-      this.__getRecommend()
-      this.__getDescLists()
-    }, 20) //instead of nextTick(),浏览器刷新时间一般是17ms
+      this.__getRecommend();
+      this.__getDescLists();
+    }, 20); //instead of nextTick(),浏览器刷新时间一般是17ms
   }
   destroyed() {
-    window.clearTimeout(this.timer)
+    window.clearTimeout(this.timer);
   }
 
   __getRecommend() {
     getRecommend().then((response: any): void => {
-      this.slideList = response.data.slider
-    })
+      this.slideList = response.data.slider;
+    });
   }
   __getDescLists() {
-    getDescLists().then((res) => {
+    getDescLists().then(res => {
       if (res.code === ERR_OK) {
-        this.descList = Array.from(res["recomPlaylist"].data.v_hot)
+        this.descList = Array.from(res["recomPlaylist"].data.v_hot);
       }
-    })
+    });
   }
   getListenNum(number: string) {
-    return (parseFloat(number) / 10000).toFixed(1)
+    return (parseFloat(number) / 10000).toFixed(1);
   }
   imgLoad() {
-    const el = this.$refs.recommend as any
-    el.refresh()
+    const el = this.$refs.recommend as any;
+    el.refresh();
   }
 }
 </script>

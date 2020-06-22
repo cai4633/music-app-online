@@ -5,16 +5,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import IconSvg from "base/icon-svg/icon-svg"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import IconSvg from "base/icon-svg/icon-svg";
 @Component({
   components: {
-    IconSvg,
-  },
+    IconSvg
+  }
 })
-export default class GoBack extends Vue {
-
-}
+export default class GoBack extends Vue {}
 </script>
 
 <style lang="stylus" scoped>

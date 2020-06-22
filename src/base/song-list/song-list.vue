@@ -1,7 +1,11 @@
 <template>
   <div class="songlist" ref="songList">
     <ul>
-      <li v-for="(item,index) in songs" :key="item.id" @click="selectItem(item, index)">
+      <li
+        v-for="(item, index) in songs"
+        :key="item.id"
+        @click="selectItem(item, index)"
+      >
         <h2>{{ item.name }}</h2>
         <p>{{ getDesc(item) }}</p>
       </li>
@@ -10,22 +14,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator"
-import { mapGetters, mapMutatios, mapMutations } from "vuex"
+import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator";
+import { mapGetters, mapMutatios, mapMutations } from "vuex";
 
 @Component({
-  components: {},
+  components: {}
 })
 export default class SongList extends Vue {
   @Prop()
-  private songs!: object[]
+  private songs!: object[];
 
   getDesc(item) {
-    return item.singer + "·" + item.album
+    return item.singer + "·" + item.album;
   }
 
-  selectItem(item,index) {
-    this.$emit("select", item, index)
+  selectItem(item, index) {
+    this.$emit("select", item, index);
   }
 }
 </script>

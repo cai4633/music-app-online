@@ -13,6 +13,7 @@ function parseUrl(url: string, data: { [key: string]: any }) {
 
 export default function(url: string, data: object, opt: object) {
   url = parseUrl(url, data);
+
   return new Promise((resolve, reject) => {
     jsonp0(url, opt, (err, data) => {
       if (!err) {
