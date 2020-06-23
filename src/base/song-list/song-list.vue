@@ -1,11 +1,7 @@
 <template>
   <div class="songlist" ref="songList">
     <ul>
-      <li
-        v-for="(item, index) in songs"
-        :key="item.id"
-        @click="selectItem(item, index)"
-      >
+      <li v-for="(item, index) in songs" :key="item.id" @click="selectItem(item, index)" >
         <h2>{{ item.name }}</h2>
         <p>{{ getDesc(item) }}</p>
       </li>

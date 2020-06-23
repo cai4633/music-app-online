@@ -15,15 +15,7 @@
           </div>
           <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines">
             <div class="lyric" ref="lyric">
-              <p
-                class="txt"
-                v-for="(item, index) in lyrics.lines"
-                v-html="item.txt"
-                :key="'lyric' + index"
-                :id="'line-' + index"
-                :class="{ current: currentLine === index }"
-                ref="lyricTxt"
-              ></p>
+              <p class="txt" v-for="(item, index) in lyrics.lines" v-html="item.txt" :key="'lyric' + index" :id="'line-' + index" :class="{ current: currentLine === index }" ref="lyricTxt" ></p>
             </div>
           </scroll>
         </div>
@@ -72,7 +64,6 @@
                 <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
               </div>
             </progress-circle>
-
             <div class="list">
               <icon-svg icon="#el-icon-list"></icon-svg>
             </div>
@@ -139,6 +130,8 @@ export default class Player extends Vue {
       return
     })
   }
+
+
   changeSrc() {
     this.$refs.diskImg.src = disc_default
   }
@@ -191,7 +184,7 @@ export default class Player extends Vue {
     return
   }
   lyricMove(e) {
-    if (!this.touch.init) { 
+    if (!this.touch.init) {
       return
     }
     const dx = e.touches[0].pageX - this.touch.startX
@@ -297,7 +290,7 @@ export default class Player extends Vue {
   }
   @Watch("currentSong")
   watchCurrentSong(newSong, oldSong) {
-    newSong &&
+    newSong._getLyric &&
       newSong._getLyric().then((res) => {
         this.lyrics = lyricParser(newSong.lyric)
         return
@@ -326,7 +319,6 @@ export default class Player extends Vue {
     transform rotate(0deg)
   100%
     transform rotate(360deg)
-
 
 .player
   .back
@@ -403,7 +395,7 @@ export default class Player extends Vue {
               opacity 0
         .current-lyric
           margin-top 20px
-          color $text-highlight-color
+          color $text-color
       .lyric-wrap
         position: absolute
         overflow hidden
@@ -417,7 +409,7 @@ export default class Player extends Vue {
           p
             line-height 1.5
             &.current
-              color $text-highlight-color
+              color #fff
     .control-wrap
         position absolute
         width 100%
@@ -438,7 +430,7 @@ export default class Player extends Vue {
           fill $text-highlight-color
   .mini-player
     position fixed
-    z-index 100
+    z-index 1000
     bottom 0px
     height 60px
     background-color #333

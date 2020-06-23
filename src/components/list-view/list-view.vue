@@ -1,23 +1,11 @@
 <template>
-  <scroll
-    class="list-view"
-    :data="singerlist"
-    :probeType="3"
-    @scroll="getPosY"
-    ref="listView"
-    @scrollEnd="scrollEnd"
-  >
+  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY" ref="listView" @scrollEnd="scrollEnd">
     <div class="singer-wrap">
       <ul class="singer-content">
         <li v-for="item in singerlist" :key="item.id" ref="listgroup">
           <ul class="singer-inner">
             <h3 ref="title">{{ item.title }}</h3>
-            <li
-              v-for="singer in item.items"
-              :key="singer.id"
-              class="clearfix"
-              @click="selectItem(singer)"
-            >
+            <li v-for="singer in item.items" :key="singer.id" class="clearfix" @click="selectItem(singer)">
               <div class="avatar">
                 <img v-lazy="webp2jpg(singer.singer_pic)" />
               </div>
@@ -48,69 +36,78 @@
 </template>
 
 <script lang="ts">
-import Scroll from "base/scroll/scroll.vue";
-import Loading from "base/loading/loading.vue";
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-
+import Scroll from "base/scroll/scroll.vue"
+import Loading from "base/loading/loading.vue"
+import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
+import { mapGetters } from "vuex"
+import { PlaylistMixin } from "common/js/playlistMixin"
 @Component({
-  components: { Scroll, Loading }
+  components: { Scroll, Loading },
+  computed: {
+    ...mapGetters(["playlist", "fullScreen"]),
+  },
 })
-export default class ListView extends Vue {
-  shotcutList: string[] = [];
-  heightlist: any[] = [];
-  titleList: string[] = [];
-  currentIndex = 0;
-  titleHeight = 0;
-  isClick = false;
+export default class ListView extends Mixins(PlaylistMixin) {
+  shotcutList: string[] = []
+  heightlist: any[] = []
+  titleList: string[] = []
+  currentIndex = 0
+  titleHeight = 0
+  isClick = false
 
   @Prop()
-  private singerlist!: object[];
+  private singerlist!: object[]
 
   mounted() {
     this.$nextTick(() => {
-      this.init();
-    });
+      this.init()
+    })
+  }
+
+  handlePlaylist() {
+    const BOTTOM = this.playlist.length ? 45 : 0
+    if (this.$refs.listView) {
+      this.$refs.listView.$el.style.bottom = `${BOTTOM}px`
+      this.$refs.listView.refresh()
+    }
   }
 
   init() {
-    this.calHeight();
-    this._getShortcutList();
+    this.calHeight()
+    this._getShortcutList()
   }
 
   webp2jpg(img) {
-    return img.replace(/webp$/, "jpg");
+    return img.replace(/webp$/, "jpg")
   }
   scrollEnd() {
-    this.isClick = false;
+    this.isClick = false
   }
   shortcutClick(e: any) {
-    this.currentIndex = parseInt(e.currentTarget.dataset.index);
-    this._scrollTo(this.currentIndex);
-    this.isClick = true;
+    this.currentIndex = parseInt(e.currentTarget.dataset.index)
+    this._scrollTo(this.currentIndex)
+    this.isClick = true
   }
 
   // 计算热门,[a-z] li的高度
   calHeight() {
     this.$nextTick(() => {
-      const listgroup: Element[] = (this.$refs.listgroup as Element[]) || [];
-      let height = 0;
+      const listgroup: Element[] = (this.$refs.listgroup as Element[]) || []
+      let height = 0
       if (listgroup.length) {
-        this.titleHeight = (this.$refs.title as HTMLElement[])[0].offsetHeight;
-        this.heightlist = Array.prototype.map.call(
-          listgroup,
-          (li: { [key: string]: number }): number => {
-            height += li.offsetHeight;
-            return height;
-          }
-        );
+        this.titleHeight = (this.$refs.title as HTMLElement[])[0].offsetHeight
+        this.heightlist = Array.prototype.map.call(listgroup, (li: { [key: string]: number }): number => {
+          height += li.offsetHeight
+          return height
+        })
       }
-    });
+    })
   }
 
   _scrollTo(index: number) {
     if (this.heightlist.length) {
-      const y: number = index >= 1 ? -this.heightlist[index - 1] : 0;
-      (this.$refs.listView as Scroll).scrollTo(0, y);
+      const y: number = index >= 1 ? -this.heightlist[index - 1] : 0
+      ;(this.$refs.listView as Scroll).scrollTo(0, y)
     }
   }
 
@@ -119,43 +116,40 @@ export default class ListView extends Vue {
     if (this.heightlist.length && !this.isClick) {
       for (let i = 0; i < this.heightlist.length; i++) {
         if (this.heightlist[i] >= -y) {
-          this.currentIndex = i;
-          break;
+          this.currentIndex = i
+          break
         }
       }
     }
-    this.diff(y);
+    this.diff(y)
   }
 
   //fixed bar 滚动切换效果
   diff(y: number) {
-    let distance = this.heightlist.length
-      ? this.heightlist[this.currentIndex] + y - this.titleHeight
-      : 0;
-    distance = distance > 0 ? 0 : distance;
-    this.fixedTransfrom(distance);
+    let distance = this.heightlist.length ? this.heightlist[this.currentIndex] + y - this.titleHeight : 0
+    distance = distance > 0 ? 0 : distance
+    this.fixedTransfrom(distance)
   }
 
   fixedTransfrom(distance: number) {
-    (this.$refs
-      .fixed as HTMLElement).style.transform = `translateY(${distance}px)`;
+    ;(this.$refs.fixed as HTMLElement).style.transform = `translateY(${distance}px)`
   }
 
   //获取list-shortcut的content
   _getShortcutList() {
     this.singerlist.forEach((item: any) => {
-      this.shotcutList.push(item.title[0]);
-      this.titleList.push(item.title);
-    });
+      this.shotcutList.push(item.title[0])
+      this.titleList.push(item.title)
+    })
   }
 
   selectItem(item: object) {
-    this.$emit("select", item);
+    this.$emit("select", item)
   }
 
   @Watch("singerlist")
   watchSingerlist() {
-    this.init();
+    this.init()
   }
 }
 </script>
@@ -175,10 +169,13 @@ header-style()
 
 .list-view
   background-color $background-color
-  height 100%
   color $text-color
   overflow hidden
-  position relative
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
 
   h2.fixed-title
     header-style()
