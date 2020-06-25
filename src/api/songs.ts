@@ -1,33 +1,35 @@
-import axios from "axios";
-import { ERR_OK, xhrOptions, jsonpOptions, options } from "./config";
-import jsonp from "common/js/jsonp";
+import axios from "axios"
+import { ERR_OK, xhrOptions, jsonpOptions, options } from "./config"
+import jsonp from "common/js/jsonp"
 
-function formatData(data: any) {
-  const keys = ["id", "mid"];
-  return data.map((item: any) => {
-    const ret: { [key: string]: any } = {};
+function formatData(songs: any) {
+  const keys = ["id", "mid"]
+  return songs.map((song: any) => {
+    const ret: { [key: string]: any } = {}
+    const obj = song.songInfo || song
     keys.forEach((key: string) => {
-      ret[key] = item.songInfo[key];
-    });
-    return ret;
-  });
+      ret[key] = obj[key]
+    })
+    return ret
+  })
 }
 
 function mergeData(songs: object[], res: any) {
-  const data = res.data.req_0.data.midurlinfo;
+  const data = res.data.req_0.data.midurlinfo
   return songs.map((song: any) => {
     for (let i = 0; i < data.length; i++) {
-      if (data[i].songmid === song.songInfo.mid) {
-        return Object.assign(song.songInfo, data[i]);
-        break;
+      const obj = song.songInfo || song
+      if (data[i].songmid === obj.mid) {
+        return Object.assign(obj, data[i])
+        break
       }
     }
-  });
+  })
 }
 
 export function getSongUrl(songs: any) {
-  const ret = formatData(songs);
-  const mids = ret.map((song: any) => song.mid);
+  const ret = formatData(songs)
+  const mids = ret.map((song: any) => song.mid)
   return axios
     .get("/api/getSongUrl", {
       params: {
@@ -42,34 +44,34 @@ export function getSongUrl(songs: any) {
               songtype: [0],
               uin: "1443481947",
               loginflag: 1,
-              platform: "20"
-            }
+              platform: "20",
+            },
           },
-          comm: { uin: "0", format: "json", ct: 24, cv: 0 }
-        }
+          comm: { uin: "0", format: "json", ct: 24, cv: 0 },
+        },
+      },
+    })
+    .then((res) => {
+      if (res.data.code === ERR_OK) {
+        return Promise.resolve(mergeData(songs, res))
       }
     })
-    .then(res => {
-      if (res.data.code === ERR_OK) {
-        return Promise.resolve(mergeData(songs, res));
-      }
-    });
 }
 
 export function getLyric(musicid: string) {
   const option = Object.assign(jsonpOptions, {
     "-": +new Date(),
-    musicid: musicid
-  });
-  return axios.get("/api/getLyric", { params: option }).then(res => {
-    const str = res.data;
+    musicid: musicid,
+  })
+  return axios.get("/api/getLyric", { params: option }).then((res) => {
+    const str = res.data
     if (str.match(/^jsonp1\(.*\)$/)) {
-      const data = eval(str);
-      return Promise.resolve(JSON.parse(JSON.stringify(data)));
+      const data = eval(str)
+      return Promise.resolve(JSON.parse(JSON.stringify(data)))
     }
-  });
+  })
 }
 
 function jsonp1(data: { lyric: string }) {
-  return data;
+  return data
 }

@@ -13,7 +13,7 @@
         <div class="descLists">
           <h2>热门歌单推荐</h2>
           <ul class="descLists-wrap">
-            <li v-for="desc in descList" :key="desc.contend_id">
+            <li v-for="(desc, index) in descList" :key="desc.contend_id" @click="selectItem(desc, index)">
               <div class="desc-icon">
                 <img v-lazy="desc.cover" alt="desc-icon" width="60" height="60" />
               </div>
@@ -29,6 +29,7 @@
         </div>
       </div>
     </scroll>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -40,9 +41,15 @@ import Slider from "components/slider/slider.vue"
 import Scroll from "base/scroll/scroll.vue"
 import Loading from "base/loading/loading.vue"
 import { PlaylistMixin } from "common/js/playlistMixin"
+import { mapGetters, mapMutations } from "vuex"
 
 @Component({
   components: { Slider, Scroll, Loading },
+  methods: {
+    ...mapMutations({
+      setDisc: "SET_DISC",
+    }),
+  },
 })
 export default class Recommend extends Mixins(PlaylistMixin) {
   slideList = []
@@ -58,6 +65,10 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     window.clearTimeout(this.timer)
   }
 
+  selectItem(item, index) {
+    this.setDisc(item)
+    this.$router.push({ path: `/recommend/${item.content_id}` })
+  }
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
     if (this.$refs.recommend) {

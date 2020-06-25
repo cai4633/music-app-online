@@ -21,13 +21,7 @@
     </div>
     <div class="list-shortcut">
       <ul>
-        <li
-          v-for="(item, index) in shotcutList"
-          :key="item + Math.random() * 100"
-          :class="{ active: currentIndex === index }"
-          :data-index="index"
-          @click="shortcutClick"
-        >
+        <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }" :data-index="index" @click="shortcutClick" >
           {{ item }}
         </li>
       </ul>

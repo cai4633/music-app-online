@@ -177,6 +177,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
     box-sizing border-box
     z-index 15
     overflow visiable
+    background-color $background-color
 
   .bg-layer
     position relative

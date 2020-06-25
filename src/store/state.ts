@@ -1,4 +1,4 @@
-import { playMode } from "@/common/js/config";
+import { playMode } from "@/common/js/config"
 const state: any = {
   singer: {},
   playing: false,
@@ -6,6 +6,7 @@ const state: any = {
   playlist: [],
   sequencelist: [],
   mode: playMode.sequence,
-  currentIndex: -1
-};
-export default state;
+  currentIndex: -1,
+  disc: {},
+}
+export default state
