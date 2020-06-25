@@ -15,7 +15,15 @@
           </div>
           <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines">
             <div class="lyric" ref="lyric">
-              <p class="txt" v-for="(item, index) in lyrics.lines" v-html="item.txt" :key="'lyric' + index" :id="'line-' + index" :class="{ current: currentLine === index }" ref="lyricTxt" ></p>
+              <p
+                class="txt"
+                v-for="(item, index) in lyrics.lines"
+                v-html="item.txt"
+                :key="'lyric' + index"
+                :id="'line-' + index"
+                :class="{ current: currentLine === index }"
+                ref="lyricTxt"
+              ></p>
             </div>
           </scroll>
         </div>
@@ -52,7 +60,7 @@
     <transition name="mini">
       <div class="mini-player" v-show="!fullScreen" @click="toFullScreen">
         <div class="content">
-          <div class="avatar" ref="avatar"></div>
+          <div class="avatar" ref="avatar"><img :src="currentSong.image" alt=""></div>
           <div class="text">
             <h2>{{ currentSong.name }}</h2>
             <h3>{{ currentSong.singer }}</h3>
@@ -130,7 +138,6 @@ export default class Player extends Vue {
       return
     })
   }
-
 
   changeSrc() {
     this.$refs.diskImg.src = disc_default
@@ -295,9 +302,10 @@ export default class Player extends Vue {
         this.lyrics = lyricParser(newSong.lyric)
         return
       })
-
     if (newSong.id === oldSong.id) return
-    this.$refs.audio.play()
+    this.$nextTick(() => {
+      this.$refs.audio.play()
+    })
   }
 }
 </script>

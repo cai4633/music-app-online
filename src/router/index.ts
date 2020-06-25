@@ -6,6 +6,7 @@ import search from "@/views/search/search.vue"
 import singer from "@/views/singer/singer.vue"
 import singerDetails from "@/views/singer-details/singer-details.vue"
 import RecommendDetails from "@/views/recommend-details/recommend-details.vue"
+import Toplist from "@/views/toplist/toplist.vue"
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
@@ -26,6 +27,12 @@ const routes: Array<RouteConfig> = [
   {
     path: "/rank",
     component: rank,
+    children: [
+      {
+        path: ":id",
+        component: Toplist,
+      },
+    ],
   },
   {
     path: "/search",

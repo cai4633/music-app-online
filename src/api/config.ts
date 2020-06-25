@@ -20,7 +20,6 @@ const jsonpOptions = {
   songtype: 0,
   needNewCode: 1,
   g_tk_new_20200303: 5381,
-  jsonpCallback: "jsonp1"
 };
 const options = {
   param: "jsonpCallback",

@@ -8,7 +8,7 @@ function formatData(songs: any) {
     const ret: { [key: string]: any } = {}
     const obj = song.songInfo || song
     keys.forEach((key: string) => {
-      ret[key] = obj[key]
+      ret[key] = obj[key] || obj.data[`song${key}`]
     })
     return ret
   })
@@ -16,15 +16,16 @@ function formatData(songs: any) {
 
 function mergeData(songs: object[], res: any) {
   const data = res.data.req_0.data.midurlinfo
-  return songs.map((song: any) => {
+  const ret = songs.map((song: any) => {
     for (let i = 0; i < data.length; i++) {
-      const obj = song.songInfo || song
-      if (data[i].songmid === obj.mid) {
+      const obj = song.songInfo || song.data || song
+      if (data[i].songmid === (obj.mid || obj.songmid)) {
         return Object.assign(obj, data[i])
         break
       }
     }
   })
+  return ret.filter((item) => item && item.songid)
 }
 
 export function getSongUrl(songs: any) {
@@ -65,13 +66,13 @@ export function getLyric(musicid: string) {
   })
   return axios.get("/api/getLyric", { params: option }).then((res) => {
     const str = res.data
-    if (str.match(/^jsonp1\(.*\)$/)) {
+    if (str.match(/^MusicJsonCallback\(.*\)$/)) {
       const data = eval(str)
       return Promise.resolve(JSON.parse(JSON.stringify(data)))
     }
   })
 }
 
-function jsonp1(data: { lyric: string }) {
+function MusicJsonCallback(data: { lyric: string }) {
   return data
 }

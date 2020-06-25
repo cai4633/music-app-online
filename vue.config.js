@@ -93,7 +93,7 @@ module.exports = {
       app.get("/api/getLyric", (req, res) => {
         axios
           .get(lyricUrl, {
-            headers: { referer: "https://c.y.qq.com/" },
+            headers: { referer: "https://y.qq.com/" },
             params: req.query,
           })
           .then((response) => {

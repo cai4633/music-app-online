@@ -5,7 +5,7 @@
         <div class="banner" v-if="slideList.length">
           <slider>
             <div class="swiper-slide" v-for="(item, index) in slideList" :key="'slider' + index">
-              <a :href="item.linkUrl"><img @load="imgLoad" :src="item.picUrl" alt="" /></a>
+              <a :href="item.linkUrl"><img @load="imgLoad" v-lazy="item.picUrl" alt="" /></a>
             </div>
           </slider>
         </div>
@@ -92,8 +92,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     return (parseFloat(number) / 10000).toFixed(1)
   }
   imgLoad() {
-    const el = this.$refs.recommend as any
-    el.refresh()
+    this.$refs.recommend.refresh()
   }
 }
 </script>

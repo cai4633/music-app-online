@@ -27,13 +27,14 @@ function getSinger(singers) {
 }
 
 export function createSong(song) {
+  const image = song.album ? song.album.pmid : song.albummid
   return new Song({
-    id: song.id,
-    mid: song.mid,
-    name: song.name,
-    album: song.album.name,
-    image: song.album.pmid && `http://y.gtimg.cn/music/photo_new/T002R300x300M000${song.album.pmid}.jpg?max_age=2592000`,
-    singer: song.singer ? getSinger(song.singer) : "",
+    id: song.id || song.songid,
+    mid: song.mid || song.songmid,
+    name: song.name || song.songname,
+    album: song.album ? song.album.name : song.albumname,
+    image: `http://y.gtimg.cn/music/photo_new/T002R300x300M000${image}.jpg?max_age=2592000`,
+    singer: Array.isArray(song.singer) ? getSinger(song.singer) : "",
     url: song.purl && `http://ws.stream.qqmusic.qq.com/${song.purl}`,
   })
 }
