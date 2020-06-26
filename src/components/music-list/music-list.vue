@@ -9,7 +9,7 @@
     </div>
     <div class="bg-layer" ref="layer"></div>
     <scroll class="list" :data="songs" ref="list" @scroll="getY" :probeType="3">
-      <song-list :songs="songs" ref="songList" @select="playlistInit"></song-list>
+      <song-list :songs="songs" ref="songList" @select="playlistInit" :rank="rank"></song-list>
     </scroll>
     <div class="loading-wrap" v-show="!songs.length">
       <loading></loading>
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Provide, Mixins} from "vue-property-decorator"
+import { Component, Prop, Vue, Watch, Provide, Mixins } from "vue-property-decorator"
 import SongList from "base/song-list/song-list"
 import Scroll from "base/scroll/scroll"
 import Loading from "../../base/loading/loading"
@@ -27,7 +27,7 @@ import IconSvg from "base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
 import { mapMutations, mapGetters, mapActions } from "vuex"
 import { selectPlay } from "../../store/actions"
-import {PlaylistMixin} from 'common/js/playlistMixin'
+import { PlaylistMixin } from "common/js/playlistMixin"
 
 @Component({
   components: { SongList, Scroll, Loading, IconSvg, GoBack },
@@ -52,6 +52,8 @@ export default class MusicList extends Mixins(PlaylistMixin) {
   private title!: string
   @Prop()
   private bgImg!: string
+  @Prop({ default: false })
+  private rank!: boolean
 
   mounted() {
     this.$nextTick(() => {
@@ -104,6 +106,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
+@import '~common/stylus/mixin.styl';
 
 .music-list
   position relative
@@ -112,12 +115,13 @@ export default class MusicList extends Mixins(PlaylistMixin) {
   h1
     position fixed
     top 10px
-    left 50%
-    transform translateX(-50%)
+    left 55px
+    right 40px
     font-size 18px
     color #fff
     font-weight 500
     z-index 60
+    no-wrap()
   .banner
       position relative
       transform-origin top center

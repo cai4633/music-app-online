@@ -1,6 +1,6 @@
 <template>
   <div class="toplist">
-    <music-list :bgImg="toplist.picUrl" :songs="songs" :title="toplist.topTitle"></music-list>
+    <music-list :bgImg="toplist.picUrl" :songs="songs" :title="toplist.topTitle" :rank='rank'></music-list>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ import { getSongUrl } from "../../api/songs"
 })
 export default class Toplist extends Vue {
   songs = []
+  rank = true
   mounted() {
     if (!this.toplist.id) {
       this.$router.push({ path: "/rank" })

@@ -21,6 +21,10 @@ import { getSongUrl } from "api/songs"
 export default class RecommendDetails extends Vue {
   songs = []
   mounted() {
+    if (!this.disc.content_id) {
+      this.$router.push({ path: "/recommend" })
+      return
+    }
     this._getCdInfoById(this.disc.content_id)
   }
   _getCdInfoById(id) {
@@ -28,7 +32,7 @@ export default class RecommendDetails extends Vue {
       if (response.code === ERR_OK) {
         const songlist = response.cdlist[0].songlist
         getSongUrl(songlist).then((response) => {
-          this.songs = response.map((item)=>{
+          this.songs = response.map((item) => {
             return createSong(item)
           })
         })

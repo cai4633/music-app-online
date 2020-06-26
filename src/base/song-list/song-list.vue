@@ -1,36 +1,53 @@
 <template>
   <div class="songlist" ref="songList">
     <ul>
-      <li v-for="(item, index) in songs" :key="item.id" @click="selectItem(item, index)" >
-        <h2>{{ item.name }}</h2>
-        <p>{{ getDesc(item) }}</p>
+      <li v-for="(item, index) in songs" :key="item.id" @click="selectItem(item, index)">
+        <div class="rank" v-show="rank">
+          <span :class="getRankCls(index)">{{ getRankText(index) }}</span>
+        </div>
+        <div class="content">
+          <h2>{{ item.name }}</h2>
+          <p>{{ getDesc(item) }}</p>
+        </div>
       </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator";
-import { mapGetters, mapMutatios, mapMutations } from "vuex";
+import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator"
+import { mapGetters, mapMutatios, mapMutations } from "vuex"
 
 @Component({
-  components: {}
+  components: {},
 })
 export default class SongList extends Vue {
   @Prop()
-  private songs!: object[];
+  private songs!: object[]
+
+  @Prop({ default: false })
+  private rank!: boolean
 
   getDesc(item) {
-    return item.singer + "·" + item.album;
+    return item.singer + "·" + item.album
+  }
+  getRankCls(index) {
+    return index <= 2 ? `icon-${index + 1}` : "txt"
   }
 
+  getRankText(index) {
+    return index <= 2 ? "" : index + 1
+  }
   selectItem(item, index) {
-    this.$emit("select", item, index);
+    this.$emit("select", item, index)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+@import '~common/stylus/variable.styl'
+@import '~common/stylus/mixin.styl';
+
 .songlist
   padding  5px  30px  15px 30px
   ul
@@ -38,13 +55,38 @@ export default class SongList extends Vue {
       text-align left
       padding  10px 0
       line-height 1.6
-      h2
-       font-weight normal
-       color #fff
-      p
-       margin-top 2px
-       color rgba(255,255,255,.3)
-       white-space nowrap
-       text-overflow ellipsis
-       overflow hidden
+      display flex
+      .rank
+        flex 0 0 25px
+        display flex
+        justify-content center
+        align-items center
+        width 25px
+        margin-right 25px
+        span
+          display block
+          width 25px
+          height 24px
+          text-align center
+          line-height 24px
+          &.icon-1
+            bg-url('first')
+          &.icon-2
+            bg-url('second')
+          &.icon-3
+            bg-url('third')
+          &.txt
+            font-size 16px
+            color $text-highlight-color
+
+      .content
+        flex 1
+        min-width 0
+        h2
+          font-weight normal
+          color #fff
+        p
+          margin-top 2px
+          color rgba(255,255,255,.3)
+          no-wrap()
 </style>

@@ -1,10 +1,10 @@
 <template>
   <scroll class="rank" ref="rank" :data="lists">
     <ul class="content-inner">
-      <li v-for="list in lists" @click="selectItem(list)">
+      <li v-for="list in lists" @click="selectItem(list)" :key="'rank' + list.id">
         <div class="topIcon"><img @load="imgLoad" v-lazy="list.picUrl" width="100" /></div>
         <ul class="songlist">
-          <li v-for="(song, songIndex) in list.songList">
+          <li v-for="(song, songIndex) in list.songList" :key="song.songname + ((Math.random() * 10000) | 0)">
             <span>{{ songIndex + 1 }}</span>
             <span class="txt">{{ song.songname }} - {{ song.singername }}</span>
           </li>
@@ -16,20 +16,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
 import { getRank } from "api/rank.ts"
 import { ERR_OK } from "../../api/config"
 import Scroll from "base/scroll/scroll"
-import { mapMutations } from "vuex"
+import { mapMutations, mapGetters } from "vuex"
+import { PlaylistMixin } from "@/common/js/playlistMixin"
 @Component({
   components: { Scroll },
+  computed: {
+    ...mapGetters(["playlist"]),
+  },
   methods: {
     ...mapMutations({
       setToplist: "SET_TOPLIST",
     }),
   },
 })
-export default class Rank extends Vue {
+export default class Rank extends Mixins(PlaylistMixin) {
   lists: any[] = []
   mounted() {
     this._getRank()
@@ -39,9 +43,14 @@ export default class Rank extends Vue {
   }
   selectItem(item) {
     this.setToplist(item)
-    this.$router.push({
-      path: `/rank/${item.id}`,
-    })
+    this.$router.push({ path: `/rank/${item.id}`, })
+  }
+  handlePlaylist() {
+    const BOTTOM = this.playlist.length ? 60 : 0
+    if (this.$refs.rank) {
+      this.$refs.rank.$el.style.bottom = `${BOTTOM}px`
+      this.$refs.rank.refresh()
+    }
   }
   _getRank() {
     this.$nextTick(() => {

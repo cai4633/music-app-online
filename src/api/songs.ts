@@ -25,10 +25,13 @@ function mergeData(songs: object[], res: any) {
       }
     }
   })
-  return ret.filter((item) => item && item.songid)
+  return ret.filter((item) => item && (item.id || item.songid))
 }
 
 export function getSongUrl(songs: any) {
+  if (Array.isArray(songs)) {
+    songs.length = Math.min(100, songs.length)      //length limited 100
+  }
   const ret = formatData(songs)
   const mids = ret.map((song: any) => song.mid)
   return axios

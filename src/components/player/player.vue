@@ -10,7 +10,8 @@
               <div class="disk" ref="disk"><img :src="currentSong.image" alt="" ref="diskImg" @error="changeSrc" /></div>
             </div>
             <div class="current-lyric">
-              <p class="txt" v-html="currentLyric"></p>
+              <p class="txt" v-html="currentLyric" v-show="!songError"></p>
+              <p class="noSong" v-show="songError">无法获取播放链接，{{ autoJumpTime }}秒后自动切换到下一首</p>
             </div>
           </div>
           <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines">
@@ -60,7 +61,7 @@
     <transition name="mini">
       <div class="mini-player" v-show="!fullScreen" @click="toFullScreen">
         <div class="content">
-          <div class="avatar" ref="avatar"><img :src="currentSong.image" alt=""></div>
+          <div class="avatar" ref="avatar"><img :src="currentSong.image" alt="" /></div>
           <div class="text">
             <h2>{{ currentSong.name }}</h2>
             <h3>{{ currentSong.singer }}</h3>
@@ -114,7 +115,9 @@ import disc_default from "@/common/images/disc_default.png"
   },
 })
 export default class Player extends Vue {
+  autoJumpTime = 3 //歌曲播放出错自动跳转时间
   songReady = false
+  songError = false
   currentTime = 0
   currentShow = "cd" //'cd' or 'lyric'
   totalTime = 0
@@ -172,6 +175,7 @@ export default class Player extends Vue {
     this.setCurrentIndex(index)
     this.nextOrPreToPlay()
     this.songReady = false
+    this.songError = false
   }
   nextOrPreToPlay() {
     const audio = this.$refs.audio
@@ -231,9 +235,18 @@ export default class Player extends Vue {
   ready(e) {
     this.totalTime = e.target.duration
     this.songReady = true
+    this.songError = false
   }
   error() {
     this.songReady = true
+    this.autoJump(this.autoJumpTime * 1000)
+  }
+  autoJump(ms: number) {
+    this.songError = true
+    this.songReady = true
+    setTimeout(() => {
+      this.next()
+    }, ms)
   }
   end() {
     if (this.mode === playMode.loop) {
@@ -303,6 +316,11 @@ export default class Player extends Vue {
         return
       })
     if (newSong.id === oldSong.id) return
+
+    if (!newSong.url) {
+      this.autoJump(this.autoJumpTime * 1000)
+      return
+    }
     this.$nextTick(() => {
       this.$refs.audio.play()
     })
@@ -312,6 +330,7 @@ export default class Player extends Vue {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl'
+@import '~common/stylus/mixin.styl'
 
 .normal-enter-active,.normal-leave-to-active,.mini-enter-active,.mini-leave-active
   transition all 0.4s cubic-bezier(.51,.77,.62,1.42)
@@ -369,10 +388,12 @@ export default class Player extends Vue {
     h1
       margin 10px 0px
       font-size 18px
+      padding 0px 45px
+      no-wrap()
     h2
-
       font-size 14px
-
+      padding 0px 30px
+      no-wrap()
     .main
       position absolute
       left 0
