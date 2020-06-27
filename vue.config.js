@@ -113,6 +113,18 @@ module.exports = {
             res.json(response.data)
           })
       })
+      app.get("/api/getSearchInfo", (req, res) => {
+        axios
+          .get("https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp", {
+            params: req.query,
+            headers: {
+              referer: "https://y.qq.com/",
+            },
+          })
+          .then((response) => {
+            res.json(response.data)
+          })
+      })
     },
   },
 }
