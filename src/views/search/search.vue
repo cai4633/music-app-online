@@ -3,6 +3,7 @@
     <div class="search-box-wrap">
       <search-box ref="searchBox" @query="onQueryChange"></search-box>
     </div>
+    <div class="search-result" v-show="query"><suggest :query="query"></suggest></div>
     <div class="hotkey-wrap">
       <h1>热门搜索</h1>
       <div class="hotkey">
@@ -17,12 +18,13 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import SearchBox from "base/search-box/search-box"
 import { getHotKey, getSearchInfo } from "api/search"
 import { ERR_OK } from "../../api/config"
+import Suggest from "@/components/suggest/suggest"
 @Component({
-  components: { SearchBox },
+  components: { SearchBox, Suggest },
 })
 export default class Search extends Vue {
   hotkeys = []
-  queryWord = ""
+  query = ""
   created() {
     this._getHotKey()
   }
@@ -30,8 +32,7 @@ export default class Search extends Vue {
     this.$refs.searchBox.setQuery(key)
   }
   onQueryChange(newQuery) {
-    console.log(1111, newQuery)
-    this._getSearchInfo(newQuery)
+    this.query = newQuery
   }
   _getHotKey() {
     getHotKey().then((response) => {
@@ -39,11 +40,6 @@ export default class Search extends Vue {
         this.hotkeys = response.data.hotkey.slice(0, 10)
       }
       console.log(this.hotkeys)
-    })
-  }
-  _getSearchInfo(key) {
-    getSearchInfo(key).then((response) => {
-      console.log(response)
     })
   }
 }
@@ -61,6 +57,18 @@ export default class Search extends Vue {
   padding 0px 20px
   .search-box-wrap
     margin-top 20px
+    position relative
+
+  .search-result
+    position fixed
+    top 143px
+    bottom 0px
+    left 0
+    right 0
+    z-index 100
+    background-color $background-color
+    padding 10px 20px 0px 20px
+
   .hotkey-wrap
     color $text-color
     margin-top 20px
