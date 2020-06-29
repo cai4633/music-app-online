@@ -1,7 +1,7 @@
 <template>
   <scroll class="suggest" :data="lists" :pullup="true" @scrollToEnd="searchMore()">
     <ul class="suggest-list">
-      <li class="suggest-item" v-for="item in lists" :key="item.id || item.singerid">
+      <li class="suggest-item" v-for="item in lists" :key="(item.name || item.singername) + Math.random()" @click="selectItem(item)">
         <i><icon-svg :icon="getIconCls(item)"></icon-svg></i>
         <p class="text">{{ getDisplayText(item) }}</p>
       </li>
@@ -41,6 +41,9 @@ export default class Suggest extends Vue {
     this.page++
     this._getSearchInfo()
   }
+  selectItem(item) {
+    this.$emit("select", item)
+  }
   getIconCls(item) {
     return item.type === TYPE_SINGER ? "#el-icon-person" : "#el-icon-music"
   }
@@ -78,11 +81,20 @@ export default class Suggest extends Vue {
     return ret
   }
 
+  initRequest() {
+    this.lists = []
+    this.zhida = 1
+    this.page = 1
+    this.hasMore = true
+  }
+  
   @Watch("query")
   watchQuery(newQuery) {
     if (!newQuery) {
       this.lists = []
+      return
     }
+    this.initRequest()
     this._getSearchInfo()
   }
 }

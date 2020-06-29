@@ -3,13 +3,14 @@
     <div class="search-box-wrap">
       <search-box ref="searchBox" @query="onQueryChange"></search-box>
     </div>
-    <div class="search-result" v-show="query"><suggest :query="query"></suggest></div>
+    <div class="search-result" v-show="query"><suggest :query="query" @select="gotoMusic"></suggest></div>
     <div class="hotkey-wrap">
       <h1>热门搜索</h1>
       <div class="hotkey">
         <span class="key" v-for="key in hotkeys" :key="key.k + key.n" @click="selectItem(key.k)">{{ key.k }}</span>
       </div>
     </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -19,8 +20,14 @@ import SearchBox from "base/search-box/search-box"
 import { getHotKey, getSearchInfo } from "api/search"
 import { ERR_OK } from "../../api/config"
 import Suggest from "@/components/suggest/suggest"
+import { mapMutations } from "vuex"
+
+const TYPE_SINGER = "singer"
 @Component({
   components: { SearchBox, Suggest },
+  methods: {
+    ...mapMutations({ setSinger: "SET_SINGER" }),
+  },
 })
 export default class Search extends Vue {
   hotkeys = []
@@ -34,12 +41,20 @@ export default class Search extends Vue {
   onQueryChange(newQuery) {
     this.query = newQuery
   }
+  gotoMusic(item) {
+    console.log(item, "item")
+    if (item.type === TYPE_SINGER) {
+      this.setSinger(item)
+      this.$router.push({
+        path: `/search/${item.singermid}`,
+      })
+    }
+  }
   _getHotKey() {
     getHotKey().then((response) => {
       if (response.code === ERR_OK) {
         this.hotkeys = response.data.hotkey.slice(0, 10)
       }
-      console.log(this.hotkeys)
     })
   }
 }

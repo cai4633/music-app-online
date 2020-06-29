@@ -37,6 +37,12 @@ const routes: Array<RouteConfig> = [
   {
     path: "/search",
     component: search,
+    children: [
+      {
+        path: ":id",
+        component: singerDetails,
+      },
+    ],
   },
   {
     path: "/singer",

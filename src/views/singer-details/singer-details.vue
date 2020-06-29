@@ -1,6 +1,6 @@
 <template>
   <div class="singer-details">
-    <music-list :songs="songs" ref="musicList" :title="singer.singer_name" :bgImg="bgImg"></music-list>
+    <music-list :songs="songs" ref="musicList" :title="singer.singer_name || singer.singername" :bgImg="bgImg"></music-list>
   </div>
 </template>
 
@@ -21,7 +21,8 @@ import MusicList from "components/music-list/music-list"
   computed: {
     ...mapGetters(["singer"]),
     bgImg() {
-      return `https://y.gtimg.cn/music/photo_new/T001R300x300M000${this.singer.singer_mid}.jpg?max_age=2592000`
+      const mid = this.singer.singer_mid || this.singer.singermid
+      return `https://y.gtimg.cn/music/photo_new/T001R300x300M000${mid}.jpg?max_age=2592000`
     },
   },
 })
@@ -30,10 +31,11 @@ export default class SingerDetails extends Vue {
 
   mounted() {
     this.$nextTick(() => {
-      if (!this.singer.singer_mid) {
+      const mid = this.singer.singer_mid || this.singer.singermid
+      if (!mid) {
         this.$router.push({ path: "/singer" })
       }
-      this._getSingerSongs(this.singer.singer_mid)
+      this._getSingerSongs(mid)
     })
   }
 
@@ -75,5 +77,5 @@ export default class SingerDetails extends Vue {
   bottom 0
   left 0
   right 0
-  z-index 20
+  z-index 2000
 </style>
