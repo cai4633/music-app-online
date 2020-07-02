@@ -21,6 +21,7 @@ import { getHotKey, getSearchInfo } from "api/search"
 import { ERR_OK } from "../../api/config"
 import Suggest from "@/components/suggest/suggest"
 import { mapMutations } from "vuex"
+import Singer from "common/js/singer"
 
 const TYPE_SINGER = "singer"
 @Component({
@@ -42,9 +43,8 @@ export default class Search extends Vue {
     this.query = newQuery
   }
   gotoMusic(item) {
-    console.log(item, "item")
     if (item.type === TYPE_SINGER) {
-      this.setSinger(item)
+      this.setSinger(new Singer({ id: item.singerid, name: item.singername, mid: item.singermid }))
       this.$router.push({
         path: `/search/${item.singermid}`,
       })

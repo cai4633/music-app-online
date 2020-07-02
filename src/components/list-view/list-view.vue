@@ -21,7 +21,13 @@
     </div>
     <div class="list-shortcut">
       <ul>
-        <li v-for="(item, index) in shotcutList" :key="item + Math.random() * 100" :class="{ active: currentIndex === index }" :data-index="index" @click="shortcutClick" >
+        <li
+          v-for="(item, index) in shotcutList"
+          :key="item + Math.random() * 100"
+          :class="{ active: currentIndex === index }"
+          :data-index="index"
+          @click="shortcutClick"
+        >
           {{ item }}
         </li>
       </ul>
@@ -35,6 +41,7 @@ import Loading from "base/loading/loading.vue"
 import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
 import { mapGetters } from "vuex"
 import { PlaylistMixin } from "common/js/playlistMixin"
+import Singer from "common/js/singer"
 @Component({
   components: { Scroll, Loading },
   computed: {
@@ -138,7 +145,8 @@ export default class ListView extends Mixins(PlaylistMixin) {
   }
 
   selectItem(item: object) {
-    this.$emit("select", item)
+    const singer = new Singer({ id: item.singer_id, name: item.singer_name, mid: item.singer_mid })
+    this.$emit("select", singer)
   }
 
   @Watch("singerlist")

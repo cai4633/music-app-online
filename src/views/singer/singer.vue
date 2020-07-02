@@ -14,6 +14,7 @@ import { ERR_OK } from "api/config"
 import Scroll from "base/scroll/scroll.vue"
 import ListView from "@/components/list-view/list-view.vue"
 import { mapMutations } from "vuex"
+
 const HOT_NAME = "热门"
 const HOT_SONG_LENGTH = 10
 @Component({
@@ -77,8 +78,8 @@ export default class Singer extends Vue {
     return hot.concat(ret)
   }
 
-  gotoDetails(singer: { singerMid: string }) {
-    this.$router.push({ path: `/singer/${singer.singer_mid}` })
+  gotoDetails(singer) {
+    this.$router.push({ path: `/singer/${singer.mid}` })
     this.setSinger(singer)
   }
 
