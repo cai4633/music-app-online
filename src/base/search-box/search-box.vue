@@ -13,6 +13,7 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import IconSvg from "base/icon-svg/icon-svg"
+import { debounce } from "../../common/js/util"
 @Component({
   components: { IconSvg },
 })
@@ -22,18 +23,17 @@ export default class SearchBox extends Vue {
   @Prop({ default: "搜索歌曲、歌手" })
   private placeholder!: string
 
+  created() {
+    this.$watch( "query", debounce((newQuery) => {
+        this.$emit("query", newQuery)
+      }, 200)
+    )
+  }
   clearQuery() {
     this.query = ""
   }
   setQuery(newQuery) {
     this.query = newQuery
-  }
-
-  @Watch("query")
-  watchQuery(newQuery) {
-    this.$nextTick(() => {
-      this.$emit("query", newQuery)
-    })
   }
 }
 </script>

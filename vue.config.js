@@ -6,13 +6,13 @@ function resolve(dir) {
 const axios = require("axios")
 const express = require("express")
 const app = express()
-const apiRoutes = express.Router()
 const bodyParser = require("body-parser")
+const apiRoutes = express.Router()
 const singerlistMock = require("./src/common/mock/singerlist.ts")
-// const recommendListMock = require("./src/common/mock/recommendList.ts")
-app.use(bodyParser.urlencoded({ extended: true }))
-
+const recommendListMock = require("./src/common/mock/recommendList.ts")
 app.use(bodyParser.json()) // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: false }))
+
 app.use("/api", apiRoutes)
 
 module.exports = {
@@ -27,10 +27,20 @@ module.exports = {
       .set("public", resolve("public"))
   },
   devServer: {
+    // before(app) {
+    //   app.get("/api/ss/reg/login",function(req,res){
+    //     axios.post('http://192.168.0.234:9033/',{})
+    //   })
+    // }
+
     before(app) {
       const url = "https://u.y.qq.com/cgi-bin/musics.fcg"
       const songUrl = "https://u.y.qq.com/cgi-bin/musicu.fcg"
       const lyricUrl = "https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric.fcg"
+
+      app.post("/api/test", (req, res) => {
+        console.log(req.body)
+      })
       app.get("/api/getDiscLists", function(req, res) {
         axios({
           url,

@@ -88,7 +88,7 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { mapGetters, mapMutations } from "vuex"
-import IconSvg from "base/icon-svg/icon-svg"
+import IconSvg from "@/base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
 import animations from "create-keyframe-animation"
 import ProgressBar from "base/progress-bar/progress-bar"
@@ -162,6 +162,23 @@ export default class Player extends Vue {
     this.setPlaylist(newList)
     this.setCurrentIndex(index)
   }
+  ready(e) {
+    this.totalTime = e.target.duration
+    this.songReady = true
+    this.songError = false
+  }
+  error() {
+    this.songReady = true
+    this.autoJump(this.autoJumpTime * 1000)
+  }
+  autoJump(ms: number) {
+    // TODO:连续跳转bug
+    this.songError = true
+    this.songReady = true
+    setTimeout(() => {
+      this.next()
+    }, ms)
+  }
   previous() {
     if (!this.songReady) return
     const index = this.currentIndex - 1 < 0 ? this.playlist.length - 1 : this.currentIndex - 1
@@ -232,22 +249,7 @@ export default class Player extends Vue {
     this.touch.init = false
     return
   }
-  ready(e) {
-    this.totalTime = e.target.duration
-    this.songReady = true
-    this.songError = false
-  }
-  error() {
-    this.songReady = true
-    this.autoJump(this.autoJumpTime * 1000)
-  }
-  autoJump(ms: number) {
-    this.songError = true
-    this.songReady = true
-    setTimeout(() => {
-      this.next()
-    }, ms)
-  }
+
   end() {
     if (this.mode === playMode.loop) {
       this.loop()
@@ -310,11 +312,13 @@ export default class Player extends Vue {
   }
   @Watch("currentSong")
   watchCurrentSong(newSong, oldSong) {
-    newSong._getLyric &&
-      newSong._getLyric().then((res) => {
+    const copy = JSON.parse(JSON.stringify(newSong))
+    if (newSong._getLyric) {
+      newSong._getLyric().then(() => {
         this.lyrics = lyricParser(newSong.lyric)
-        return
       })
+    }
+
     if (newSong.id === oldSong.id) return
 
     if (!newSong.url) {

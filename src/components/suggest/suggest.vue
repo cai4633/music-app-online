@@ -1,11 +1,14 @@
 <template>
   <scroll class="suggest" :data="lists" :pullup="true" @scrollToEnd="searchMore()">
-    <ul class="suggest-list">
+    <ul class="suggest-list" v-show="hasMore">
       <li class="suggest-item" v-for="item in lists" :key="(item.name || item.singername) + Math.random()" @click="selectItem(item)">
         <i><icon-svg :icon="getIconCls(item)"></icon-svg></i>
         <p class="text">{{ getDisplayText(item) }}</p>
       </li>
     </ul>
+    <div class="no-result-wrap" v-show="!hasMore && lists.length === 0">
+      <no-result text="无搜索结果"></no-result>
+    </div>
   </scroll>
 </template>
 
@@ -13,14 +16,16 @@
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import { getSearchInfo } from "api/search.ts"
 import { ERR_OK } from "../../api/config"
-import { createSong } from "@/common/js/song"
+import { createSong } from "@/common/js/song.ts"
+import { getSongUrl } from "../../api/songs"
 import IconSvg from "base/icon-svg/icon-svg"
 import Scroll from "base/scroll/scroll"
+import NoResult from "base/no-result/no-result"
 
 const TYPE_SINGER = "singer"
 const perpage = 30
 @Component({
-  components: { IconSvg, Scroll },
+  components: { IconSvg, Scroll, NoResult },
 })
 export default class Suggest extends Vue {
   lists = []
@@ -54,7 +59,7 @@ export default class Suggest extends Vue {
   _getSearchInfo() {
     getSearchInfo(this.query, this.page, this.zhida, perpage).then((response) => {
       if (response.code === ERR_OK) {
-        this.lists = this.lists.concat(this.getResult(response.data))
+        this.getResult(response.data)
         this.checkMore(response.data)
       }
     })
@@ -73,12 +78,17 @@ export default class Suggest extends Vue {
       ret.push({ ...zhida, type: TYPE_SINGER })
     }
     if (list) {
-      const songs = list.map((item) => {
-        return createSong(item)
+      const list_copy = list.map((item) => {
+        return { mid: item.songmid, id: item.songid, name: item.songname, album: item.albumname, albummid: item.albummid }
       })
-      ret = ret.concat(songs)
+      return getSongUrl(list_copy).then((res) => {
+        const songs = res.map((item) => {
+          return createSong(item)
+        })
+        ret = ret.concat(songs)
+        this.lists = this.lists.concat(ret)
+      })
     }
-    return ret
   }
 
   initRequest() {
@@ -87,7 +97,7 @@ export default class Suggest extends Vue {
     this.page = 1
     this.hasMore = true
   }
-  
+
   @Watch("query")
   watchQuery(newQuery) {
     if (!newQuery) {
@@ -109,6 +119,7 @@ export default class Suggest extends Vue {
   overflow hidden
   padding 5px
   box-sizing border-box
+  position relative
   ul
     text-align left
     li.suggest-item
@@ -123,4 +134,9 @@ export default class Suggest extends Vue {
         flex 1
         min-width 0
         no-wrap()
+  .no-result-wrap
+    width 100%
+    position absolute
+    top 40%
+    transform translateY(-50%)
 </style>

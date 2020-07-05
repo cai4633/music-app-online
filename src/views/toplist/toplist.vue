@@ -11,7 +11,7 @@ import MusicList from "components/music-list/music-list.vue"
 import { toplist } from "../../store/getter"
 import { getSongsByTopid } from "../../api/rank"
 import { ERR_OK } from "../../api/config"
-import { createSong } from "common/js/song.js"
+import { createSong } from "common/js/song.ts"
 import { getSongUrl } from "../../api/songs"
 @Component({
   components: { MusicList },

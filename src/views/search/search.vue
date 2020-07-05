@@ -16,18 +16,20 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import SearchBox from "base/search-box/search-box"
+import SearchBox from "@/base/search-box/search-box"
 import { getHotKey, getSearchInfo } from "api/search"
 import { ERR_OK } from "../../api/config"
 import Suggest from "@/components/suggest/suggest"
-import { mapMutations } from "vuex"
+import { mapMutations, mapActions } from "vuex"
 import Singer from "common/js/singer"
+import axios from "axios"
 
 const TYPE_SINGER = "singer"
 @Component({
   components: { SearchBox, Suggest },
   methods: {
     ...mapMutations({ setSinger: "SET_SINGER" }),
+    ...mapActions(["suggestToPlay"]),
   },
 })
 export default class Search extends Vue {
@@ -48,6 +50,8 @@ export default class Search extends Vue {
       this.$router.push({
         path: `/search/${item.singermid}`,
       })
+    } else {
+      this.suggestToPlay(item)
     }
   }
   _getHotKey() {

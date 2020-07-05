@@ -2,6 +2,7 @@
 bg-url($name) {
   background-image: url($name + '@2x.png');
   background-size: contain;
+  background-repeat: no-repeat;
 
   @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
     background-image: url($name + '@3x.png');
@@ -35,16 +36,18 @@ extend-click() {
 position-center($position, $direction) {
   position: $position;
   transform: translate3d($direction == 'x' ? -50% : 0, $direction == 'y' ? -50% : 0, 0);
+
   if ($direction == 'y') {
     top: 50%;
-  } 
+  }
+
   if ($direction == 'x') {
     left: 50%;
   }
+
   if ($direction == 'both') {
     left: 50%;
     top: 50%;
-    transform translate3d(-50%, -50%, 0)
+    transform: translate3d(-50%, -50%, 0);
   }
 }
-

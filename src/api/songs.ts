@@ -20,17 +20,19 @@ function mergeData(songs: object[], res: any) {
     for (let i = 0; i < data.length; i++) {
       const obj = song.songInfo || song.data || song
       if (data[i].songmid === (obj.mid || obj.songmid)) {
-        return Object.assign(obj, data[i])
+        return Object.assign({}, obj, data[i])
         break
       }
     }
   })
-  return ret.filter((item) => item && (item.id || item.songid))
+  console.log(ret)
+
+  return ret.filter((item) => item.id || item.songid)
 }
 
 export function getSongUrl(songs: any) {
   if (Array.isArray(songs)) {
-    songs.length = Math.min(100, songs.length)      //length limited 100
+    songs.length = Math.min(100, songs.length) //length limited 100
   }
   const ret = formatData(songs)
   const mids = ret.map((song: any) => song.mid)
@@ -62,7 +64,7 @@ export function getSongUrl(songs: any) {
     })
 }
 
-export function getLyric(musicid: string) {
+export function getLyric(musicid: number) {
   const option = Object.assign(jsonpOptions, {
     "-": +new Date(),
     musicid: musicid,
