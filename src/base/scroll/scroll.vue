@@ -85,7 +85,7 @@ export default class Scroll extends Vue {
   }
 
   @Watch("data")
-  getData() {
+  getData(newVal) {
     this.$nextTick(() => {
       this.refresh()
     })

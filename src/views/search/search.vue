@@ -3,38 +3,62 @@
     <div class="search-box-wrap">
       <search-box ref="searchBox" @query="onQueryChange"></search-box>
     </div>
-    <div class="search-result" v-show="query"><suggest :query="query" @select="gotoMusic"></suggest></div>
-    <div class="hotkey-wrap">
-      <h1>热门搜索</h1>
-      <div class="hotkey">
-        <span class="key" v-for="key in hotkeys" :key="key.k + key.n" @click="selectItem(key.k)">{{ key.k }}</span>
+    <div class="search-result" v-show="query" ref="suggest"><suggest :query="query" @select="onSelectEvent"></suggest></div>
+    <scroll :data="shortcutList" class="shortcut" ref="shortcut">
+      <div class="shortcut-inner">
+        <div class="hotkey-wrap">
+          <h1>热门搜索</h1>
+          <div class="hotkey">
+            <span class="key" v-for="key in hotkeys" :key="key.k + key.n" @click="selectItem(key.k)">{{ key.k }}</span>
+          </div>
+        </div>
+        <div class="search-history" v-show="searchHistory.length">
+          <h1 class="clearfix">
+            <span>搜索历史</span>
+            <i @click="showConfirm"><icon-svg icon="#el-icon-clearAll"></icon-svg></i>
+          </h1>
+          <history-list :list="searchHistory" @delete="removeSearchHistory" @select="selectItem"></history-list>
+        </div>
       </div>
-    </div>
+    </scroll>
+    <confirm @enter="clearSearchHistory" ref="confirm" enterBtnText='清除'></confirm>
     <router-view></router-view>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
 import SearchBox from "@/base/search-box/search-box"
 import { getHotKey, getSearchInfo } from "api/search"
 import { ERR_OK } from "../../api/config"
 import Suggest from "@/components/suggest/suggest"
-import { mapMutations, mapActions } from "vuex"
+import { mapMutations, mapActions, mapGetters } from "vuex"
 import Singer from "common/js/singer"
 import axios from "axios"
+import HistoryList from '@/base/history-list/history-list'
+import IconSvg from 'base/icon-svg/icon-svg'
+import Scroll  from "base/scroll/scroll";
+import {PlaylistMixin} from 'common/js/playlistMixin'
+import Confirm from 'base/confirm/confirm'
 
 const TYPE_SINGER = "singer"
 @Component({
-  components: { SearchBox, Suggest },
+  components: { SearchBox, Suggest, HistoryList, IconSvg, Scroll, Confirm },
+  computed:{
+    ...mapGetters(['searchHistory','playlist'])
+  }
   methods: {
     ...mapMutations({ setSinger: "SET_SINGER" }),
-    ...mapActions(["suggestToPlay"]),
+    ...mapActions(["suggestToPlay", "saveSearchHistory", "removeSearchHistory", 'clearSearchHistory']),
   },
 })
-export default class Search extends Vue {
+export default class Search extends Mixins(PlaylistMixin) {
   hotkeys = []
   query = ""
+
+  get shortcutList(){
+    return this.hotkeys.concat(this.searchHistory)
+  }
   created() {
     this._getHotKey()
   }
@@ -44,15 +68,25 @@ export default class Search extends Vue {
   onQueryChange(newQuery) {
     this.query = newQuery
   }
+  onSelectEvent(item) {
+    this.gotoMusic(item)
+    this.saveSearchHistory(this.query)
+  }
   gotoMusic(item) {
     if (item.type === TYPE_SINGER) {
       this.setSinger(new Singer({ id: item.singerid, name: item.singername, mid: item.singermid }))
-      this.$router.push({
-        path: `/search/${item.singermid}`,
-      })
+      this.$router.push({ path: `/search/${item.singermid}` })
     } else {
       this.suggestToPlay(item)
     }
+  }
+  handlePlaylist(){
+    const bottom = this.playlist.length ? 60 : 0
+    this.$refs.shortcut.$el.style.bottom = `${bottom}px`
+    this.$refs.suggest.style.bottom = `${bottom}px`
+  }
+  showConfirm(){
+    this.$refs.confirm.show()
   }
   _getHotKey() {
     getHotKey().then((response) => {
@@ -87,22 +121,39 @@ export default class Search extends Vue {
     z-index 100
     background-color $background-color
     padding 10px 20px 0px 20px
-
-  .hotkey-wrap
-    color $text-color
-    margin-top 20px
-    h1
-      text-align left
-      font-weight normal
-    .hotkey
+  .shortcut
+    position fixed
+    top 155 px
+    bottom 0px
+    left 0
+    right 0
+    padding 0px 20px
+    overflow hidden
+    .hotkey-wrap
+      color $text-color
+      h1
+        text-align left
+        font-weight normal
+      .hotkey
+        margin-top 5px
+        display flex
+        flex-wrap wrap
+        .key
+          margin 6px 20px 6px 0px
+          background-color $background-light-color
+          line-height 1em
+          padding 5px
+          border-radius 5px
+          color $text-dark-color
+    .search-history
+      color $text-color
       margin-top 10px
-      display flex
-      flex-wrap wrap
-      .key
-        margin 10px 20px 10px 0px
-        background-color $background-light-color
-        line-height 1em
-        padding 5px
-        border-radius 5px
-        color $text-dark-color
+      h1
+        font-weight normal
+        text-align left
+        i
+          float right
+          svg
+            width 16px
+            height @width
 </style>

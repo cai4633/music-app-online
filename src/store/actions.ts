@@ -2,8 +2,8 @@ import * as types from "./mutation-types"
 import { playMode } from "@/common/js/config"
 import { shuffle } from "@/common/js/util.ts"
 import { findIndex } from "@/common/js/player.ts"
-import { ActionContext } from "vuex"
-// import Song from '@/common/js/'
+import { saveSearch, removeSearch, clearSearch } from "common/js/cache"
+import { State } from "./config"
 
 export const selectPlay = ({ commit, state }: any, { list, index }: any) => {
   commit(types.SET_SEQUENCELIST, list)
@@ -37,4 +37,15 @@ export const suggestToPlay = ({ commit, state }: any, song: any) => {
   commit(types.SET_FULLSCREEN, true)
   commit(types.SET_PLAYLIST, playlist)
   commit(types.SET_CURRENTINDEX, index)
+}
+
+export const saveSearchHistory = ({ commit, state }: any, query: string) => {
+  commit(types.SET_SEARCH_HISTORY, saveSearch(query))
+}
+
+export const removeSearchHistory = ({ commit, state }: any, query: string) => {
+  commit(types.SET_SEARCH_HISTORY, removeSearch(query))
+}
+export const clearSearchHistory = ({ commit, state }: any) => {
+  commit(types.SET_SEARCH_HISTORY, clearSearch())
 }

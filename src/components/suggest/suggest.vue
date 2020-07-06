@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
 import { getSearchInfo } from "api/search.ts"
 import { ERR_OK } from "../../api/config"
 import { createSong } from "@/common/js/song.ts"
@@ -55,6 +55,8 @@ export default class Suggest extends Vue {
   getDisplayText(item) {
     return item.type === TYPE_SINGER ? item.singername : `${item.name}-${item.singer}`
   }
+
+
 
   _getSearchInfo() {
     getSearchInfo(this.query, this.page, this.zhida, perpage).then((response) => {

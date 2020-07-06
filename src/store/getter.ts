@@ -8,6 +8,7 @@ interface State {
   currentIndex: number
   disc: any
   toplist: any
+  searchHistory: string[]
 }
 
 export const singer = (state: State) => state.singer
@@ -22,3 +23,4 @@ export const disc = (state: State) => state.disc
 export const currentSong = (state: State) => {
   return state.playlist[state.currentIndex] || {}
 }
+export const searchHistory = (state: State) => state.searchHistory

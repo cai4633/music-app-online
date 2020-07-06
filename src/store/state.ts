@@ -1,4 +1,6 @@
 import { playMode } from "@/common/js/config"
+import { loadSearch } from "common/js/cache"
+
 const state: any = {
   singer: {},
   playing: false,
@@ -9,5 +11,6 @@ const state: any = {
   currentIndex: -1,
   disc: {},
   toplist: {},
+  searchHistory: loadSearch(),
 }
 export default state
