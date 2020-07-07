@@ -25,8 +25,6 @@ function mergeData(songs: object[], res: any) {
       }
     }
   })
-  console.log(ret)
-
   return ret.filter((item) => item.id || item.songid)
 }
 

@@ -40,7 +40,7 @@ import Scroll from "base/scroll/scroll.vue"
 import Loading from "base/loading/loading.vue"
 import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
 import { mapGetters } from "vuex"
-import { PlaylistMixin } from "common/js/playlistMixin"
+import { PlaylistMixin } from "common/js/mixins"
 import Singer from "common/js/singer"
 @Component({
   components: { Scroll, Loading },

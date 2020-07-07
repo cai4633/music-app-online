@@ -21,7 +21,7 @@ import { getRank } from "api/rank.ts"
 import { ERR_OK } from "../../api/config"
 import Scroll from "base/scroll/scroll"
 import { mapMutations, mapGetters } from "vuex"
-import { PlaylistMixin } from "@/common/js/playlistMixin"
+import { PlaylistMixin } from "@/common/js/mixins"
 @Component({
   components: { Scroll },
   computed: {

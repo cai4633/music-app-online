@@ -38,7 +38,7 @@ import axios from "axios"
 import HistoryList from '@/base/history-list/history-list'
 import IconSvg from 'base/icon-svg/icon-svg'
 import Scroll  from "base/scroll/scroll";
-import {PlaylistMixin} from 'common/js/playlistMixin'
+import {PlaylistMixin} from 'common/js/mixins'
 import Confirm from 'base/confirm/confirm'
 
 const TYPE_SINGER = "singer"

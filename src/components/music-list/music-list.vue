@@ -27,7 +27,7 @@ import IconSvg from "base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
 import { mapMutations, mapGetters, mapActions } from "vuex"
 import { selectPlay } from "../../store/actions"
-import { PlaylistMixin } from "common/js/playlistMixin"
+import { PlaylistMixin } from "common/js/mixins"
 
 @Component({
   components: { SongList, Scroll, Loading, IconSvg, GoBack },

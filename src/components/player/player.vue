@@ -14,7 +14,7 @@
               <p class="noSong" v-show="songError">无法获取播放链接，{{ autoJumpTime }}秒后自动切换到下一首</p>
             </div>
           </div>
-          <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines">
+          <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines" v-show="lyrics.lines.length">
             <div class="lyric" ref="lyric">
               <p
                 class="txt"
@@ -73,11 +73,12 @@
                 <icon-svg icon="#el-icon-Pause" v-show="playing"></icon-svg>
               </div>
             </progress-circle>
-            <div class="list">
+            <div class="list" @click.stop="showPlaylist">
               <icon-svg icon="#el-icon-list"></icon-svg>
             </div>
           </div>
         </div>
+        <playlist ref="playlist" @click.stop.native @delete-one="deleteOne" @favorite="addToFavorite"></playlist>
       </div>
     </transition>
 
@@ -86,8 +87,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import { mapGetters, mapMutations } from "vuex"
+import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
+import { mapGetters, mapMutations, mapActions } from "vuex"
 import IconSvg from "@/base/icon-svg/icon-svg"
 import GoBack from "base/go-back/go-back"
 import animations from "create-keyframe-animation"
@@ -99,8 +100,11 @@ import { findIndex } from "common/js/player.ts"
 import { Base64 } from "js-base64"
 import Scroll from "@/base/scroll/scroll.vue"
 import disc_default from "@/common/images/disc_default.png"
+import Playlist from "@/components/playlist/playlist"
+import { PlayerMixin } from "common/js/mixins"
+
 @Component({
-  components: { Scroll, GoBack, IconSvg, ProgressBar, ProgressCircle },
+  components: { Scroll, GoBack, IconSvg, ProgressBar, ProgressCircle, Playlist },
   computed: {
     ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode", "sequencelist"]),
   },
@@ -112,16 +116,17 @@ import disc_default from "@/common/images/disc_default.png"
       setMode: "SET_MODE",
       setPlaylist: "SET_PLAYLIST",
     }),
+    ...mapActions(["removeSongFromList"]),
   },
 })
-export default class Player extends Vue {
+export default class Player extends Mixins(PlayerMixin) {
   autoJumpTime = 3 //歌曲播放出错自动跳转时间
   songReady = false
   songError = false
   currentTime = 0
   currentShow = "cd" //'cd' or 'lyric'
   totalTime = 0
-  lyrics: { [key: string]: any } = {}
+  lyrics: { [key: string]: any } = { lines: [] }
   touch: { [key: string]: any } = { startX: 0, startY: 0, endY: 0, endX: 0, init: false, percent: 0, moved: false }
   get diskAnimation() {
     return this.playing ? "play" : "play pause"
@@ -133,7 +138,7 @@ export default class Player extends Vue {
     return this.lyrics ? this.lyrics.curline : 0
   }
   get currentLyric() {
-    return this.lyrics && this.currentLine >= 0 ? this.lyrics.lines[this.currentLine].txt : ""
+    return this.lyrics.lines.length && this.currentLine >= 0 ? this.lyrics.lines[this.currentLine].txt : ""
   }
 
   mounted() {
@@ -142,6 +147,16 @@ export default class Player extends Vue {
     })
   }
 
+  addToFavorite(song) {
+    return
+  }
+  deleteOne(song) {
+    this.removeSongFromList(song)
+    return
+  }
+  showPlaylist() {
+    this.$refs.playlist.show()
+  }
   changeSrc() {
     this.$refs.diskImg.src = disc_default
   }
@@ -153,14 +168,6 @@ export default class Player extends Vue {
   }
   togglePlaying() {
     this.setPlayingState(!this.playing)
-  }
-  toggleMode() {
-    this.setMode((this.mode + 1) % 3)
-    const originList = JSON.parse(JSON.stringify(this.sequencelist))
-    const newList = this.mode === playMode.random ? shuffle(originList) : originList
-    const index = findIndex(newList, this.currentSong)
-    this.setPlaylist(newList)
-    this.setCurrentIndex(index)
   }
   ready(e) {
     this.totalTime = e.target.duration
@@ -366,7 +373,7 @@ export default class Player extends Vue {
     left 0
     bottom 0
     right 0
-    z-index 100
+    z-index $player-zindex
     background-color $background-color
     color #fff
     .bg
@@ -463,7 +470,7 @@ export default class Player extends Vue {
           fill $text-highlight-color
   .mini-player
     position fixed
-    z-index 1000
+    z-index $mini-player-zindex
     bottom 0px
     height 60px
     background-color #333

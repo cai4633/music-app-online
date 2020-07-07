@@ -1,7 +1,7 @@
 import * as types from "./mutation-types"
-import { playMode } from "@/common/js/config"
+import { playMode, Songs } from "@/common/js/config"
 import { shuffle } from "@/common/js/util.ts"
-import { findIndex } from "@/common/js/player.ts"
+import { findIndex, removeSong } from "@/common/js/player.ts"
 import { saveSearch, removeSearch, clearSearch } from "common/js/cache"
 import { State } from "./config"
 
@@ -46,6 +46,18 @@ export const saveSearchHistory = ({ commit, state }: any, query: string) => {
 export const removeSearchHistory = ({ commit, state }: any, query: string) => {
   commit(types.SET_SEARCH_HISTORY, removeSearch(query))
 }
+
 export const clearSearchHistory = ({ commit, state }: any) => {
   commit(types.SET_SEARCH_HISTORY, clearSearch())
+}
+
+export const removeSongFromList = ({ commit, state }: any, song: Songs) => {
+  const { list: sequencelist, flag } = removeSong(state.sequencelist, song)
+  const playlist = removeSong(state.playlist, song).list
+  const index = flag ? state.currentIndex - 1 : state.currentIndex
+
+  commit(types.SET_PLAYLIST, playlist)
+  commit(types.SET_SEQUENCELIST, sequencelist)
+  commit(types.SET_CURRENTINDEX, index)
+  return
 }

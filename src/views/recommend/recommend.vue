@@ -40,7 +40,7 @@ import { ERR_OK } from "api/config"
 import Slider from "components/slider/slider.vue"
 import Scroll from "base/scroll/scroll.vue"
 import Loading from "base/loading/loading.vue"
-import { PlaylistMixin } from "common/js/playlistMixin"
+import { PlaylistMixin } from "common/js/mixins"
 import { mapGetters, mapMutations } from "vuex"
 
 @Component({

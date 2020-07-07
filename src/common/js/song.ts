@@ -1,17 +1,8 @@
 import { getLyric } from "@/api/songs.ts"
 import { ERR_OK } from "@/api/config.ts"
+import { Songs } from "./config"
 
-interface Songs {
-  id: number
-  mid: string
-  singer: any
-  name: string
-  album: any
-  image: string
-  url: string
-}
-
-export default class Song {
+export default class Song  {
   id: number
   mid: string
   singer: any
