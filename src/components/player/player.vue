@@ -78,7 +78,7 @@
             </div>
           </div>
         </div>
-        <playlist ref="playlist" @click.stop.native @delete-one="deleteOne" @favorite="addToFavorite"></playlist>
+        <playlist ref="playlist" @click.stop.native></playlist>
       </div>
     </transition>
 
@@ -116,7 +116,6 @@ import { PlayerMixin } from "common/js/mixins"
       setMode: "SET_MODE",
       setPlaylist: "SET_PLAYLIST",
     }),
-    ...mapActions(["removeSongFromList"]),
   },
 })
 export default class Player extends Mixins(PlayerMixin) {
@@ -147,13 +146,6 @@ export default class Player extends Mixins(PlayerMixin) {
     })
   }
 
-  addToFavorite(song) {
-    return
-  }
-  deleteOne(song) {
-    this.removeSongFromList(song)
-    return
-  }
   showPlaylist() {
     this.$refs.playlist.show()
   }
@@ -319,16 +311,14 @@ export default class Player extends Mixins(PlayerMixin) {
   }
   @Watch("currentSong")
   watchCurrentSong(newSong, oldSong) {
-    const copy = JSON.parse(JSON.stringify(newSong))
     if (newSong._getLyric) {
       newSong._getLyric().then(() => {
         this.lyrics = lyricParser(newSong.lyric)
       })
     }
 
-    if (newSong.id === oldSong.id) return
-
-    if (!newSong.url) {
+    if (newSong.id === oldSong.id || !this.playlist.length) return
+    if (!newSong.url && this.playing) {
       this.autoJump(this.autoJumpTime * 1000)
       return
     }

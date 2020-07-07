@@ -1,5 +1,5 @@
 <template>
-  <div class="playlist" v-show="showFlag" @click.stop.self='hide'>
+  <div class="playlist" v-show="showFlag" @click.stop.self="hide">
     <div class="playlist-inner">
       <h1>
         <div class="play-mode" @click.stop="toggleMode">
@@ -8,20 +8,29 @@
           <icon-svg icon="#el-icon-random" v-show="mode === 2"></icon-svg>
         </div>
         <span class="play-mode-text">{{ playModeText }}</span>
-        <span class="clear"><icon-svg icon="#el-icon-clearAll"></icon-svg></span>
+        <span class="clear" @click.stop="showConfirm"><icon-svg icon="#el-icon-clearAll"></icon-svg></span>
       </h1>
       <scroll class="mini-songlist" :data="sequencelist" ref="miniSonglist">
         <ul>
-          <li v-for="song in sequencelist" :key="song.id">
+          <li v-for="(song, index) in sequencelist" :key="song.id" @click.stop="toPlay(song)">
+            <icon-svg icon="#el-icon-play" class="playIcon" :class="showPlayIcon(index)"></icon-svg>
             <div class="text">
-              <span class="name">{{ song.name }}</span> - <span class="singer">{{ song.singer }}</span>
+              <span class="name">{{ song.name }}</span>
+              -
+              <span class="singer">{{ song.singer }}</span>
             </div>
-            <icon-svg class='favorite' icon='#el-icon-favorites' @click.stop.native='addFavorite(song)'></icon-svg>
-            <icon-svg class='delete' icon='#el-icon-clear' @click.stop.native='deleteOne(song)'></icon-svg>
+            <icon-svg class="favorite" icon="#el-icon-favorites" @click.stop.native="addFavorite(song)"></icon-svg>
+            <icon-svg class="delete" icon="#el-icon-clear" @click.stop.native="deleteOne(song)"></icon-svg>
           </li>
-          <div class="addsong"><span class="text"><icon-svg icon='#el-icon-add' class="add"></icon-svg>添加歌曲到队列</span></div>
+          <div class="addsong">
+            <span class="text">
+              <icon-svg icon="#el-icon-add" class="add"></icon-svg>
+              添加歌曲到队列
+            </span>
+          </div>
         </ul>
       </scroll>
+      <confirm title="是否全部删除播放列表" ref="playlistConfirm" @enter="clearList"></confirm>
       <footer @click.stop="hide">关闭</footer>
     </div>
   </div>
@@ -33,8 +42,21 @@ import IconSvg from "base/icon-svg/icon-svg"
 import { playMode } from "common/js/config"
 import { PlayerMixin } from "common/js/mixins"
 import Scroll from "base/scroll/scroll"
+import Confirm from "base/confirm/confirm"
+import { mapGetters, mapMutations, mapActions } from "vuex"
+import { findIndex } from "common/js/player"
+
 @Component({
-  components: { IconSvg, Scroll },
+  components: { IconSvg, Scroll, Confirm },
+  computed: {
+    ...mapGetters(["playlist"]),
+  },
+  methods: {
+    ...mapActions(["clearSongList", "removeSongFromList"]),
+    ...mapMutations({
+      setCurrentIndex: "SET_CURRENTINDEX",
+    }),
+  },
 })
 export default class Playlist extends Mixins(PlayerMixin) {
   showFlag = false
@@ -44,13 +66,30 @@ export default class Playlist extends Mixins(PlayerMixin) {
     return text[this.mode]
   }
 
-  deleteOne(song){
-    this.$emit('delete-one',song)
+  toPlay(song) {
+    const index = findIndex(this.playlist, song)
+    this.setCurrentIndex(index)
+  }
+  clearList() {
+    this.clearSongList()
+    this.hide()
+  }
+  showPlayIcon(index) {
+    return index === findIndex(this.sequencelist, this.currentSong) ? "playing" : "pause"
+  }
+
+  deleteOne(song) {
+    this.removeSongFromList(song)
+    if (!this.playlist.length) {
+      this.hide()
+    }
+  }
+  addFavorite(song) {
+    this.$emit("favorite", song)
     return
   }
-  addFavorite(song){
-    this.$emit('favorite',song)
-    return
+  showConfirm() {
+    this.$refs.playlistConfirm.show()
   }
   show() {
     this.showFlag = true
@@ -66,6 +105,7 @@ export default class Playlist extends Mixins(PlayerMixin) {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl'
+@import '~common/stylus/mixin.styl'
 $padding-x = 20px
 
 .playlist
@@ -123,8 +163,17 @@ $padding-x = 20px
         line-height 2
         display flex
         align-items center
+        .playIcon
+          width 12px
+          height  @width
+          margin-right 10px
+          &.playing
+            fill $text-highlight-color
+          &.pause
+            fill transparent
         .text
           flex 1
+          no-wrap()
           .name
             font-size 14px
           .singer
