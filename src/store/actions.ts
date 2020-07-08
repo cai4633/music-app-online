@@ -2,7 +2,7 @@ import * as types from "./mutation-types"
 import { playMode, Songs } from "@/common/js/config"
 import { shuffle } from "@/common/js/util.ts"
 import { findIndex } from "@/common/js/player.ts"
-import { saveSearch, removeSearch, clearSearch } from "common/js/cache"
+import { saveSearch, removeSearch, clearSearch, PlayedHistory } from "common/js/cache"
 import { State } from "./config"
 
 export const selectPlay = ({ commit, state }: any, { list, index }: any) => {
@@ -28,14 +28,17 @@ export const clearSongList = ({ commit, state }: any) => {
 export const randomPlay = ({ commit }: any, { list }: any) => {
   commit()
 }
-export const suggestToPlay = ({ commit, state }: any, song: any) => {
+export const suggestToPlay = ({ commit, state }: any, song: Songs) => {
   const playlist = state.playlist.slice()
   const sequencelist = state.sequencelist.slice()
+  const currentSong = playlist[state.currentIndex]
   playlist.splice(Math.max(0, state.currentIndex), 0, song)
+  sequencelist.splice(Math.max(0, findIndex(sequencelist, currentSong)), 0, song)
   const index = findIndex(playlist, song)
   commit(types.SET_PLAYING_STATE, true)
   commit(types.SET_FULLSCREEN, true)
   commit(types.SET_PLAYLIST, playlist)
+  commit(types.SET_SEQUENCELIST, sequencelist)
   commit(types.SET_CURRENTINDEX, index)
 }
 
@@ -66,4 +69,8 @@ export const removeSongFromList = ({ commit, state }: any, song: Songs) => {
   commit(types.SET_SEQUENCELIST, sequencelist)
   commit(types.SET_CURRENTINDEX, cIndex)
   commit(types.SET_PLAYING_STATE, !!playlist.length)
+}
+
+export const savePlayHistory = ({ commit, state }: any, song: Songs) => {
+  commit(types.SET_PLAY_HISTORY, PlayedHistory.savePlay(song))
 }

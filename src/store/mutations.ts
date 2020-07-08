@@ -1,5 +1,6 @@
 import * as types from "./mutation-types"
 import { State } from "./config"
+
 const mutations = {
   [types.SET_SINGER](state: any, singer: any) {
     state.singer = singer
@@ -30,6 +31,9 @@ const mutations = {
   },
   [types.SET_SEARCH_HISTORY](state: State, list: string[]) {
     state.searchHistory = list
+  },
+  [types.SET_PLAY_HISTORY](state: State, list: string[]) {
+    state.playHistory = list
   },
 }
 

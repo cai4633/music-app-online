@@ -16,15 +16,7 @@
           </div>
           <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines" v-show="lyrics.lines.length">
             <div class="lyric" ref="lyric">
-              <p
-                class="txt"
-                v-for="(item, index) in lyrics.lines"
-                v-html="item.txt"
-                :key="'lyric' + index"
-                :id="'line-' + index"
-                :class="{ current: currentLine === index }"
-                ref="lyricTxt"
-              ></p>
+              <p class="txt" v-for="(item, index) in lyrics.lines" v-html="item.txt" :key="'lyric' + index" :id="'line-' + index" :class="{ current: currentLine === index }" ref="lyricTxt"    ></p>
             </div>
           </scroll>
         </div>
@@ -116,6 +108,7 @@ import { PlayerMixin } from "common/js/mixins"
       setMode: "SET_MODE",
       setPlaylist: "SET_PLAYLIST",
     }),
+    ...mapActions(["savePlayHistory"]),
   },
 })
 export default class Player extends Mixins(PlayerMixin) {
@@ -311,17 +304,19 @@ export default class Player extends Mixins(PlayerMixin) {
   }
   @Watch("currentSong")
   watchCurrentSong(newSong, oldSong) {
+    if (newSong.id === oldSong.id || !this.playlist.length) return
+
     if (newSong._getLyric) {
       newSong._getLyric().then(() => {
         this.lyrics = lyricParser(newSong.lyric)
       })
     }
 
-    if (newSong.id === oldSong.id || !this.playlist.length) return
     if (!newSong.url && this.playing) {
       this.autoJump(this.autoJumpTime * 1000)
       return
     }
+    this.savePlayHistory(newSong)
     this.$nextTick(() => {
       this.$refs.audio.play()
     })

@@ -14,16 +14,12 @@
         <ul>
           <li v-for="(song, index) in sequencelist" :key="song.id" @click.stop="toPlay(song)">
             <icon-svg icon="#el-icon-play" class="playIcon" :class="showPlayIcon(index)"></icon-svg>
-            <div class="text">
-              <span class="name">{{ song.name }}</span>
-              -
-              <span class="singer">{{ song.singer }}</span>
-            </div>
+            <div class="text"><span class="name">{{ song.name }}</span> - <span class="singer">{{ song.singer }}</span> </div>
             <icon-svg class="favorite" icon="#el-icon-favorites" @click.stop.native="addFavorite(song)"></icon-svg>
             <icon-svg class="delete" icon="#el-icon-clear" @click.stop.native="deleteOne(song)"></icon-svg>
           </li>
           <div class="addsong">
-            <span class="text">
+            <span class="text" @click.stop="showAddSongs">
               <icon-svg icon="#el-icon-add" class="add"></icon-svg>
               添加歌曲到队列
             </span>
@@ -33,6 +29,7 @@
       <confirm title="是否全部删除播放列表" ref="playlistConfirm" @enter="clearList"></confirm>
       <footer @click.stop="hide">关闭</footer>
     </div>
+    <add-songs ref="addsongs" @hide="hide"></add-songs>
   </div>
 </template>
 
@@ -45,9 +42,10 @@ import Scroll from "base/scroll/scroll"
 import Confirm from "base/confirm/confirm"
 import { mapGetters, mapMutations, mapActions } from "vuex"
 import { findIndex } from "common/js/player"
+import AddSongs from "components/add-songs/add-songs"
 
 @Component({
-  components: { IconSvg, Scroll, Confirm },
+  components: { IconSvg, Scroll, Confirm, AddSongs },
   computed: {
     ...mapGetters(["playlist"]),
   },
@@ -65,7 +63,9 @@ export default class Playlist extends Mixins(PlayerMixin) {
     const text = ["顺序播放", "单曲循环", "随机播放"]
     return text[this.mode]
   }
-
+  showAddSongs() {
+    this.$refs.addsongs.show()
+  }
   toPlay(song) {
     const index = findIndex(this.playlist, song)
     this.setCurrentIndex(index)

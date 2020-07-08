@@ -44,7 +44,7 @@ export default class SearchBox extends Vue {
 
 .search-box
   position relative
-  background-color $background-light-color
+  background-color $background-color-l
   border-radius 10px
   padding 8px 12px
   $left = 16px
@@ -62,7 +62,7 @@ export default class SearchBox extends Vue {
       fill $text-dark-color
 
   input[type='text']
-    background-color $background-light-color
+    background-color $background-color-l
     display block
     height 1.8em
     line-height @height

@@ -1,15 +1,4 @@
-interface State {
-  singer: any
-  playing: boolean
-  fullScreen: boolean
-  playlist: any[]
-  sequencelist: any[]
-  mode: number
-  currentIndex: number
-  disc: any
-  toplist: any
-  searchHistory: string[]
-}
+import {State} from './config'
 
 export const singer = (state: State) => state.singer
 export const playing = (state: State) => state.playing
@@ -24,3 +13,5 @@ export const currentSong = (state: State) => {
   return state.playlist[state.currentIndex] || {}
 }
 export const searchHistory = (state: State) => state.searchHistory
+export const playHistory = (state: State) => state.playHistory
+

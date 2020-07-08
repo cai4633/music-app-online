@@ -21,7 +21,7 @@
         </div>
       </div>
     </scroll>
-    <confirm @enter="clearSearchHistory" ref="confirm" enterBtnText='清除'></confirm>
+    <confirm @enter="clearSearchHistory" ref="confirm" enterBtnText="清除"></confirm>
     <router-view></router-view>
   </div>
 </template>
@@ -35,28 +35,28 @@ import Suggest from "@/components/suggest/suggest"
 import { mapMutations, mapActions, mapGetters } from "vuex"
 import Singer from "common/js/singer"
 import axios from "axios"
-import HistoryList from '@/base/history-list/history-list'
-import IconSvg from 'base/icon-svg/icon-svg'
-import Scroll  from "base/scroll/scroll";
-import {PlaylistMixin} from 'common/js/mixins'
-import Confirm from 'base/confirm/confirm'
+import HistoryList from "@/base/history-list/history-list"
+import IconSvg from "base/icon-svg/icon-svg"
+import Scroll from "base/scroll/scroll"
+import { PlaylistMixin, SearchMixin } from "common/js/mixins"
+import Confirm from "base/confirm/confirm"
 
 const TYPE_SINGER = "singer"
 @Component({
   components: { SearchBox, Suggest, HistoryList, IconSvg, Scroll, Confirm },
-  computed:{
-    ...mapGetters(['searchHistory','playlist'])
-  }
+  computed: {
+    ...mapGetters(["searchHistory", "playlist"]),
+  },
   methods: {
     ...mapMutations({ setSinger: "SET_SINGER" }),
-    ...mapActions(["suggestToPlay", "saveSearchHistory", "removeSearchHistory", 'clearSearchHistory']),
+    ...mapActions(["suggestToPlay", "saveSearchHistory", "removeSearchHistory", "clearSearchHistory"]),
   },
 })
-export default class Search extends Mixins(PlaylistMixin) {
+export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
   hotkeys = []
   query = ""
 
-  get shortcutList(){
+  get shortcutList() {
     return this.hotkeys.concat(this.searchHistory)
   }
   created() {
@@ -65,27 +65,12 @@ export default class Search extends Mixins(PlaylistMixin) {
   selectItem(key) {
     this.$refs.searchBox.setQuery(key)
   }
-  onQueryChange(newQuery) {
-    this.query = newQuery
-  }
-  onSelectEvent(item) {
-    this.gotoMusic(item)
-    this.saveSearchHistory(this.query)
-  }
-  gotoMusic(item) {
-    if (item.type === TYPE_SINGER) {
-      this.setSinger(new Singer({ id: item.singerid, name: item.singername, mid: item.singermid }))
-      this.$router.push({ path: `/search/${item.singermid}` })
-    } else {
-      this.suggestToPlay(item)
-    }
-  }
-  handlePlaylist(){
+  handlePlaylist() {
     const bottom = this.playlist.length ? 60 : 0
     this.$refs.shortcut.$el.style.bottom = `${bottom}px`
     this.$refs.suggest.style.bottom = `${bottom}px`
   }
-  showConfirm(){
+  showConfirm() {
     this.$refs.confirm.show()
   }
   _getHotKey() {
@@ -140,7 +125,7 @@ export default class Search extends Mixins(PlaylistMixin) {
         flex-wrap wrap
         .key
           margin 6px 20px 6px 0px
-          background-color $background-light-color
+          background-color $background-color-l
           line-height 1em
           padding 5px
           border-radius 5px

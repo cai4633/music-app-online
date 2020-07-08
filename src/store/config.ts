@@ -9,4 +9,5 @@ export interface State {
   disc: any
   toplist: any
   searchHistory: string[]
+  playHistory: any[]
 }

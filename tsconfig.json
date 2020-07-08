@@ -41,7 +41,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/store/state.js"
+    "src/store/state.js", "src/common/js/playerMixin.js", "src/common/js/playerMixin.js"
   ],
   "exclude": [
     "node_modules"
