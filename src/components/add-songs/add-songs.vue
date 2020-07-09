@@ -1,30 +1,38 @@
 <template>
-  <div class="add-songs" v-show="showFlag">
-    <div class="header">
-      <h1>添加歌曲到列表</h1>
-      <span class="close" @click.stop="hide"><icon-svg icon="#el-icon-clear"></icon-svg></span>
-    </div>
-    <div class="search-box-wrap">
-      <search-box ref="searchBox" @query="onQueryChange"></search-box>
-    </div>
-    <div class="search-result" v-show="query" ref="suggest"><suggest :query="query" @select="onSelectEvent"></suggest></div>
-    <ul class="tab">
-      <li :class="{ active: showHistory }" @click.stop="toPlayHistory">最近播放</li>
-      <li :class="{ active: !showHistory }" @click.stop="toSearchHistory">搜索历史</li>
-    </ul>
-    <scroll class="history-wrap" :data="history" ref="historyWrap">
-      <div class="history-inner">
-        <div class="playHistory" v-show="showHistory">
-          <ul>
-            <li v-for="(song, index) in playHistory" :key="index + Math.random() * 10000000" v-html="parser(song)" @click.stop="suggestToPlay(song)"></li>
-          </ul>
-        </div>
-        <div class="searchHistory" v-show="!showHistory">
-          <history-list :list="searchHistory" @delete="removeSearchHistory" @select="selectItem"></history-list>
-        </div>
+  <transition name="slide">
+    <div class="add-songs" v-show="showFlag">
+      <div class="header">
+        <h1>添加歌曲到列表</h1>
+        <span class="close" @click.stop="hide"><icon-svg icon="#el-icon-clear"></icon-svg></span>
       </div>
-    </scroll>
-  </div>
+      <div class="search-box-wrap">
+        <search-box ref="searchBox" @query="onQueryChange"></search-box>
+      </div>
+      <div class="search-result" v-show="query" ref="suggest"><suggest :query="query" @select="onSelectEvent"></suggest></div>
+      <ul class="tab">
+        <li :class="{ active: showHistory }" @click.stop="toPlayHistory">最近播放</li>
+        <li :class="{ active: !showHistory }" @click.stop="toSearchHistory">搜索历史</li>
+      </ul>
+      <scroll class="history-wrap" :data="history" ref="historyWrap">
+        <div class="history-inner">
+          <div class="playHistory" v-show="showHistory">
+            <ul>
+              <li
+                ref="historyLi"
+                v-for="(song, index) in playHistory"
+                :key="index + Math.random() * 10000000"
+                v-html="song.name"
+                @click.stop="playRecently(song)"
+              ></li>
+            </ul>
+          </div>
+          <div class="searchHistory" v-show="!showHistory">
+            <history-list :list="searchHistory" @delete="removeSearchHistory" @select="selectItem"></history-list>
+          </div>
+        </div>
+      </scroll>
+    </div>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -36,13 +44,14 @@ import IconSvg from "base/icon-svg/icon-svg"
 import Suggest from "@/components/suggest/suggest"
 import { SearchMixin } from "common/js/mixins"
 import Scroll from "base/scroll/scroll"
+import { findIndex } from "../../common/js/player"
 
 @Component({
   computed: {
-    ...mapGetters(["playHistory", "searchHistory"]),
+    ...mapGetters(["playHistory", "searchHistory", "currentSong", "sequencelist"]),
   },
-  methods:{
-    ...mapActions(['suggestToPlay'])
+  methods: {
+    ...mapActions(["suggestToPlay"]),
   },
   components: { Suggest, SearchBox, HistoryList, IconSvg, Scroll },
 })
@@ -53,10 +62,12 @@ export default class AddSongs extends Mixins(SearchMixin) {
   get history() {
     return this.playHistory ? this.playHistory.concat(this.searchHistory) : []
   }
-  parser(song){
-    console.log(song.length);
-    
+  playRecently(song) {
+    this.suggestToPlay(song)
+    this.hide()
+    this.$emit("hide")
   }
+
   selectItem(key) {
     this.$refs.searchBox.setQuery(key)
   }
@@ -65,6 +76,13 @@ export default class AddSongs extends Mixins(SearchMixin) {
   }
   toSearchHistory() {
     this.showHistory = false
+  }
+  scrollToCurrent() {
+    if (!this.currentSong) {
+      return
+    }
+    const index = findIndex(this.sequencelist, this.currentSong)
+    this.$refs.historyWrap.scrollToElement(this.$refs.historyLi[index], 20)
   }
   show() {
     this.showFlag = true
@@ -84,11 +102,22 @@ export default class AddSongs extends Mixins(SearchMixin) {
       this.$refs.historyWrap.refresh()
     })
   }
+  @Watch("currentSong")
+  __currentSong(newsong) {
+    this.$nextTick(() => {
+      this.scrollToCurrent()
+    })
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
+
+.slide-enter-active, .slide-leave-active
+  transition transform .4s
+.slide-enter, .slide-leave-to
+  transform translateX(100%)
 
 .add-songs
   position fixed

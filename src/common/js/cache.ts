@@ -5,14 +5,20 @@ export const PLAY_KEY = "__play__"
 
 class Storage {
   get(key: string, value: any = undefined) {
-    const ret = localStorage.getItem(key)
-    if (ret) {
-      return ret.split(",")
+    const local = localStorage.getItem(key)
+    let ret = value
+    if (local) {
+      ret = JSON.parse(local)
     }
-    return value
+    return ret
   }
+
   set(key: string, value: any) {
-    localStorage.setItem(key, value)
+    let ret = value
+    if (typeof value !== "string") {
+      ret = JSON.stringify(ret)
+    }
+    localStorage.setItem(key, ret)
   }
   remove(key: string) {
     localStorage.removeItem(key)
@@ -31,7 +37,7 @@ function insertArray(array: any[], item: string | Songs, func: any) {
   if (index > 0) {
     array.splice(index, 1)
   }
-  array.unshift(JSON.stringify(item))
+  array.unshift(item)
 }
 
 function deleteOne(array: any[], item: string, func: any) {
@@ -76,8 +82,6 @@ export class PlayedHistory {
     const history = storage.get(PLAY_KEY, []).slice()
     insertArray(history, song, (item: Songs) => item.id === song.id)
     storage.set(PLAY_KEY, history)
-    console.log(history);
-    
     return history
   }
 }
