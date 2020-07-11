@@ -29,7 +29,7 @@ export default class SongList extends Vue {
   private rank!: boolean
 
   getDesc(item) {
-    return item.singer + "·" + item.album
+    return item.singer ? item.singer + "·" + item.album : "未知歌手"
   }
   getRankCls(index) {
     return index <= 2 ? `icon-${index + 1}` : "txt"
@@ -53,7 +53,7 @@ export default class SongList extends Vue {
   ul
     li
       text-align left
-      padding  10px 0
+      padding  8px 0
       line-height 1.6
       display flex
       .rank
@@ -87,6 +87,7 @@ export default class SongList extends Vue {
           color #fff
         p
           margin-top 2px
-          color rgba(255,255,255,.3)
+          color $text-dark-color
+          font-size 0.9em
           no-wrap()
 </style>

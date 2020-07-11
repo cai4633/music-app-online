@@ -1,6 +1,4 @@
-function getRandomInt(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
+import { Songs } from "./config"
 
 function getTime(time: string, offset = 0) {
   const regexp = time.match(/^(\d{0,2}):(\d{0,2}\.\d{0,2})$/)
@@ -10,14 +8,29 @@ function getTime(time: string, offset = 0) {
   return +minute * 60 + +second - dt
 }
 
-export function shuffle(arr: any[]) {
+export function insertArray(array: any[], item: string | Songs, func: any) {
+  const index = array.findIndex(func)
+  if (index === 0) {
+    return
+  }
+  if (index > 0) {
+    array.splice(index, 1)
+  }
+  array.unshift(item)
+}
+
+function getRandomInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+export function shuffle(arr: any[]) { //数组每个元素都与另外一个随机元素互换位置
   const _arr = arr.slice()
   const length = _arr.length - 1
   _arr.forEach((item: any, index: number, array: any[]) => {
     const temp = getRandomInt(0, length)
     const t = array[index]
     array[index] = array[temp]
-    _arr[temp] = t
+    array[temp] = t
   })
   return _arr
 }

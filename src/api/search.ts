@@ -8,7 +8,7 @@ export function getHotKey() {
   return jsonp0(url, data, options)
 }
 
-export function getSearchInfo(key = "", page = 1, zhida = 1, perpage = 20) {
+export function getSearchInfo(key = "", page = 1, zhida = true, perpage = 20) {
   // const url = "https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp"
   const url = "/api/getSearchInfo"
   const data = Object.assign({}, jsonpOptions, {
@@ -17,7 +17,7 @@ export function getSearchInfo(key = "", page = 1, zhida = 1, perpage = 20) {
     p: page,
     perpage,
     n: perpage,
-    catZhida: zhida,
+    catZhida: zhida ? 1 : 0,
     zhidaqu: 1,
     t: 0,
     flag: 1,

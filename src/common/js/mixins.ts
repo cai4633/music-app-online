@@ -22,7 +22,7 @@ export const PlayerMixin = Vue.extend({
     }),
     toggleMode() {
       this.setMode((this.mode + 1) % 3)
-      const originList = JSON.parse(JSON.stringify(this.sequencelist))
+      const originList = this.sequencelist.slice()
       const newList = this.mode === playMode.random ? shuffle(originList) : originList
       const index = findIndex(newList, this.currentSong)
       this.setPlaylist(newList)

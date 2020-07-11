@@ -1,11 +1,11 @@
 <template>
   <div class="history-list">
-    <ul>
-      <li v-for="item in list" class="clearfix" @click="seleteItem(item)">
+    <transition-group tag="ul" name='history'>
+      <li v-for="item in list" class="clearfix" @click="seleteItem(item)" :key='item'>
         <span>{{ item }}</span>
         <i @click.stop="selectOne(item)"><icon-svg icon="#el-icon-clear"></icon-svg></i>
       </li>
-    </ul>
+    </transition-group>
   </div>
 </template>
 
@@ -30,8 +30,15 @@ export default class HistoryList extends Vue {
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
 .history-list
+  .history-leave-active
+    transition transform .4s
+  .history-leave-to
+    transform translatex(100%)
+    
   ul
     margin-top 10px
+    position relative
+    z-index 0
     li
       color $text-dark-color
       padding 3px 0px

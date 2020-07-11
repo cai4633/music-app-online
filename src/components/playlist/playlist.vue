@@ -11,26 +11,31 @@
           <span class="play-mode-text">{{ playModeText }}</span>
           <span class="clear" @click.stop="showConfirm"><icon-svg icon="#el-icon-clearAll"></icon-svg></span>
         </h1>
-        <scroll class="mini-songlist" :data="sequencelist" ref="miniSonglist">
-          <ul>
-            <li v-for="(song, index) in sequencelist" :key="'' + song.id + Math.random() * 100000" @click.stop="toPlay(song)" ref="mini">
-              <icon-svg icon="#el-icon-play" class="playIcon" :class="showPlayIcon(index)"></icon-svg>
-              <div class="text">
-                <span class="name">{{ song.name }}</span>
-                -
-                <span class="singer">{{ song.singer }}</span>
-              </div>
-              <icon-svg class="favorite" icon="#el-icon-favorites" @click.stop.native="addFavorite(song)"></icon-svg>
-              <icon-svg class="delete" icon="#el-icon-clear" @click.stop.native="deleteOne(song)"></icon-svg>
-            </li>
-            <div class="addsong">
-              <span class="text" @click.stop="showAddSongs">
-                <icon-svg icon="#el-icon-add" class="add"></icon-svg>
-                添加歌曲到队列
-              </span>
+        <div class="mini-songlist-wrap">
+          <scroll class="mini-songlist" :data="sequencelist" ref="miniSonglist">
+            <div class="scroll-inner">
+              <transition-group name="slide" tag="ul" ref="slideOut">
+                <li v-for="(song, index) in sequencelist" :key="song.id" @click.stop="toPlay(song)" ref="mini">
+                  <icon-svg icon="#el-icon-play" class="playIcon" :class="showPlayIcon(index)"></icon-svg>
+                  <div class="text">
+                    <span class="name">{{ song.name }}</span>
+                    -
+                    <span class="singer">{{ song.singer }}</span>
+                  </div>
+                  <icon-svg class="favorite" icon="#el-icon-favorites" @click.stop.native="addFavorite(song)"></icon-svg>
+                  <icon-svg class="delete" icon="#el-icon-clear" @click.stop.native="deleteOne(song)"></icon-svg>
+                </li>
+              </transition-group>
             </div>
-          </ul>
-        </scroll>
+          </scroll>
+          <div class="addsong">
+            <span class="text" @click.stop="showAddSongs">
+              <icon-svg icon="#el-icon-add" class="add"></icon-svg>
+              添加歌曲到队列
+            </span>
+          </div>
+        </div>
+
         <confirm title="是否全部删除播放列表" ref="playlistConfirm" @enter="clearList"></confirm>
         <footer @click.stop="hide">关闭</footer>
       </div>
@@ -86,6 +91,9 @@ export default class Playlist extends Mixins(PlayerMixin) {
 
   deleteOne(song) {
     this.removeSongFromList(song)
+    setTimeout(() => {
+      this.$refs.miniSonglist.refresh()
+    }, 100)
     if (!this.playlist.length) {
       this.hide()
     }
@@ -99,10 +107,10 @@ export default class Playlist extends Mixins(PlayerMixin) {
   }
   show() {
     this.showFlag = true
-    this.$nextTick(() => {
+    setTimeout(() => {
       this.$refs.miniSonglist.refresh()
-      this.scrollToCurrent(100)
-    })
+      this.scrollToCurrent(200)
+    }, 100) // 延迟滚动
   }
   hide() {
     this.showFlag = false
@@ -112,17 +120,18 @@ export default class Playlist extends Mixins(PlayerMixin) {
       return
     }
     const index = findIndex(this.sequencelist, this.currentSong)
-    this.$refs.miniSonglist.scrollToElement(this.$refs.mini[index], delay)
+    this.$refs.miniSonglist.scrollToElement(this.$refs.slideOut.$el.children[index], delay)
   }
 
   @Watch("currentSong")
   __currentSong(newsong, oldsong) {
-    if (newsong.id === oldsong || !this.showFlag) {
+    if (!newsong.id || newsong.id === oldsong || !this.showFlag) {
       return
     }
-    this.$nextTick(() => {
+    setTimeout(() => {
+      this.$refs.miniSonglist.refresh()
       this.scrollToCurrent()
-    })
+    }, 150)
   }
 }
 </script>
@@ -141,7 +150,6 @@ $padding-x = 20px
   .playlist-inner
     transition all  0.4s
 
-
 .playlist
   position fixed
   top 0
@@ -150,13 +158,13 @@ $padding-x = 20px
   bottom 0
   background-color $background-color-a
   z-index $playlist-zindex
+  color $text-color
   .playlist-inner
     position absolute
     bottom 0
     left 0
     right 0
-    top 40%
-    // border 1px solid red
+    top 35%
     background-color $background-color
     h1
       display flex
@@ -181,50 +189,63 @@ $padding-x = 20px
           vertical-align middle
           width 16px
           height @width
-    .mini-songlist
-      // border 1px solid blue
+    .mini-songlist-wrap
       position absolute
       top 35px
       left 0
       right 0
       bottom 3em
-      overflow hidden
       padding 0px $padding-x
       color $text-color
-      li
-        text-align left
-        margin 5px 0
-        line-height 2
-        display flex
-        align-items center
-        .playIcon
-          width 12px
-          height  @width
-          margin-right 10px
-          &.playing
-            fill $text-highlight-color
-          &.pause
-            fill transparent
-        .text
-          flex 1
-          no-wrap()
-          .name
-            font-size 14px
-          .singer
-            font-size 14px
-        .delete
-          fill $text-highlight-color
-        .favorite
-          fill $text-highlight-color
-          margin 0 15px
+      .mini-songlist
+        overflow hidden
+        position absolute
+        padding 0 20px
+        top 0
+        left 0
+        right 0
+        bottom 55px
+        .slide-leave-to
+          opacity 0
+        .slide-leave-active
+          transition all .1s
+        ul
+          li
+            text-align left
+            margin 5px 0
+            line-height 2
+            display flex
+            align-items center
+            .playIcon
+              width 12px
+              height  @width
+              margin-right 10px
+              &.playing
+                fill $text-highlight-color
+              &.pause
+                fill transparent
+            .text
+              flex 1
+              no-wrap()
+              .name
+                font-size 14px
+              .singer
+                font-size 14px
+            .delete
+              fill $text-highlight-color
+            .favorite
+              fill $text-highlight-color
+              margin 0 15px
       .addsong
-        padding 10px 0
-        margin-top -5px
+        position-center(absolute, x)
+        bottom 8px
+        padding 5px 0
         .text
           line-height 2
           border-radius 40px
           padding 0 1.5em
           display inline-block
+          white-space nowrap
           border 1px solid $text-color
           .add
             margin-right 8px

@@ -16,7 +16,15 @@
           </div>
           <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines" v-show="lyrics.lines.length">
             <div class="lyric" ref="lyric">
-              <p class="txt" v-for="(item, index) in lyrics.lines" v-html="item.txt" :key="'lyric' + index" :id="'line-' + index" :class="{ current: currentLine === index }" ref="lyricTxt"    ></p>
+              <p
+                class="txt"
+                v-for="(item, index) in lyrics.lines"
+                v-html="item.txt"
+                :key="item.txt + index"
+                :id="'line-' + index"
+                :class="{ current: currentLine === index }"
+                ref="lyricTxt"
+              ></p>
             </div>
           </scroll>
         </div>
@@ -70,9 +78,9 @@
             </div>
           </div>
         </div>
-        <playlist ref="playlist" @click.stop.native></playlist>
       </div>
     </transition>
+    <playlist ref="playlist" @click.stop.native></playlist>
 
     <audio :src="currentSong.url" ref="audio" @error="error" @canplay="ready" @ended="end" @timeupdate="updataTime"></audio>
   </div>
@@ -131,12 +139,6 @@ export default class Player extends Mixins(PlayerMixin) {
   }
   get currentLyric() {
     return this.lyrics.lines.length && this.currentLine >= 0 ? this.lyrics.lines[this.currentLine].txt : ""
-  }
-
-  mounted() {
-    this.$nextTick(() => {
-      return
-    })
   }
 
   showPlaylist() {
@@ -304,8 +306,8 @@ export default class Player extends Mixins(PlayerMixin) {
   }
   @Watch("currentSong")
   watchCurrentSong(newSong, oldSong) {
-    if (newSong.id === oldSong.id || !this.playlist.length) return
-
+    if (!newSong.id || newSong.id === oldSong.id || !this.playlist.length) return
+    
     if (newSong._getLyric) {
       newSong._getLyric().then(() => {
         this.lyrics = lyricParser(newSong.lyric)
@@ -475,17 +477,21 @@ export default class Player extends Mixins(PlayerMixin) {
           display block
       .text
         margin 0 10px
+        flex 1
+        min-width 0
         h2
           font-size 12px
           font-weight normal
           text-align left
+          line-height: 1.2
+          no-wrap()
         h3
           font-size 12px
           font-weight normal
           color #777
           text-align left
       .control
-        flex 1 1 auto
+        flex 0
         display flex
         justify-content flex-end
         align-items center

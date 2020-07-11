@@ -29,12 +29,14 @@ const perpage = 30
 })
 export default class Suggest extends Vue {
   lists = []
-  zhida = 1
   page = 1
   hasMore = true
 
   @Prop({ default: "" })
   query!: string
+
+  @Prop({ default: true })
+  showSinger!: boolean
 
   created() {
     return
@@ -56,10 +58,8 @@ export default class Suggest extends Vue {
     return item.type === TYPE_SINGER ? item.singername : `${item.name}-${item.singer}`
   }
 
-
-
   _getSearchInfo() {
-    getSearchInfo(this.query, this.page, this.zhida, perpage).then((response) => {
+    getSearchInfo(this.query, this.page, this.showSinger, perpage).then((response) => {
       if (response.code === ERR_OK) {
         this.getResult(response.data)
         this.checkMore(response.data)
@@ -128,7 +128,7 @@ export default class Suggest extends Vue {
       margin 10px 0px
       line-height 1.5
       display flex
-      color darken($text-color,40)
+      color $text-dark-color
       i
         flex 0
         margin-right 20px

@@ -6,31 +6,28 @@
         <span class="close" @click.stop="hide"><icon-svg icon="#el-icon-clear"></icon-svg></span>
       </div>
       <div class="search-box-wrap">
-        <search-box ref="searchBox" @query="onQueryChange"></search-box>
+        <search-box ref="searchBox" @query="onQueryChange" placeholder="搜索歌曲"></search-box>
       </div>
-      <div class="search-result" v-show="query" ref="suggest"><suggest :query="query" @select="onSelectEvent"></suggest></div>
-      <ul class="tab">
-        <li :class="{ active: showHistory }" @click.stop="toPlayHistory">最近播放</li>
-        <li :class="{ active: !showHistory }" @click.stop="toSearchHistory">搜索历史</li>
+      <div class="search-result" v-show="query" ref="suggest"><suggest :query="query" @select="onSelectEvent" :showSinger="false"></suggest></div>
+      <ul class="switch-wrap">
+        <switches :currentIndex="currentindex" :switches="switches" @select="switchTab"></switches>
       </ul>
       <scroll class="history-wrap" :data="history" ref="historyWrap">
         <div class="history-inner">
-          <div class="playHistory" v-show="showHistory">
-            <ul>
-              <li
-                ref="historyLi"
-                v-for="(song, index) in playHistory"
-                :key="index + Math.random() * 10000000"
-                v-html="song.name"
-                @click.stop="playRecently(song)"
-              ></li>
-            </ul>
+          <div class="playHistory" v-if="currentindex === 0">
+            <song-list :songs="playHistory" @select="playRecently"></song-list>
           </div>
-          <div class="searchHistory" v-show="!showHistory">
+          <div class="searchHistory" v-if="currentindex === 1">
             <history-list :list="searchHistory" @delete="removeSearchHistory" @select="selectItem"></history-list>
           </div>
         </div>
       </scroll>
+      <top-tip ref="toptip">
+        <div class="tip">
+          <span class="icon-ok"><icon-svg icon='#el-icon-ok'></icon-svg></span>
+          <span>歌曲添加成功</span>
+        </div>
+      </top-tip>
     </div>
   </transition>
 </template>
@@ -45,44 +42,49 @@ import Suggest from "@/components/suggest/suggest"
 import { SearchMixin } from "common/js/mixins"
 import Scroll from "base/scroll/scroll"
 import { findIndex } from "../../common/js/player"
+import Switches from "base/switches/switches"
+import SongList from "base/song-list/song-list"
+import TopTip from "base/top-tip/top-tip"
 
 @Component({
   computed: {
     ...mapGetters(["playHistory", "searchHistory", "currentSong", "sequencelist"]),
   },
   methods: {
-    ...mapActions(["suggestToPlay"]),
+    ...mapActions(["suggestToPlay", "insertSong"]),
   },
-  components: { Suggest, SearchBox, HistoryList, IconSvg, Scroll },
+  components: { Suggest, SearchBox, HistoryList, IconSvg, Scroll, Switches, SongList, TopTip },
 })
 export default class AddSongs extends Mixins(SearchMixin) {
   showFlag = false
-  showHistory = true
   query = ""
+  switches = ["最近播放", "搜索历史"]
+  currentindex = 0
+
   get history() {
     return this.playHistory ? this.playHistory.concat(this.searchHistory) : []
   }
-  playRecently(song) {
-    this.suggestToPlay(song)
-    this.hide()
-    this.$emit("hide")
-  }
 
+  switchTab(index) {
+    this.currentindex = index
+  }
+  playRecently(song, index) {
+    if (index !== 0) {
+      this.insertSong(song)
+      this.$refs.toptip.show()
+      // this.hide()
+      // this.$emit("hide")
+    }
+  }
+  onSelectEvent(item: any) {
+    this.insertSong(item)
+    this.saveSearchHistory(this.query)
+    this.$refs.toptip.show()
+    // this.hide()
+    // this.$emit("hide", item)
+  }
   selectItem(key) {
     this.$refs.searchBox.setQuery(key)
-  }
-  toPlayHistory() {
-    this.showHistory = true
-  }
-  toSearchHistory() {
-    this.showHistory = false
-  }
-  scrollToCurrent() {
-    if (!this.currentSong) {
-      return
-    }
-    const index = findIndex(this.sequencelist, this.currentSong)
-    this.$refs.historyWrap.scrollToElement(this.$refs.historyLi[index], 20)
   }
   show() {
     this.showFlag = true
@@ -90,23 +92,19 @@ export default class AddSongs extends Mixins(SearchMixin) {
   hide() {
     this.showFlag = false
   }
-  @Watch("showHistory")
-  __showHistory(newflag) {
+  scrollFresh(newflag) {
     this.$nextTick(() => {
       this.$refs.historyWrap.refresh()
     })
+  }
+
+  @Watch("currentindex")
+  __showHistory(newflag) {
+    this.scrollFresh(newflag)
   }
   @Watch("showFlag")
   __showFlag(newflag) {
-    this.$nextTick(() => {
-      this.$refs.historyWrap.refresh()
-    })
-  }
-  @Watch("currentSong")
-  __currentSong(newsong) {
-    this.$nextTick(() => {
-      this.scrollToCurrent()
-    })
+    this.scrollFresh(newflag)
   }
 }
 </script>
@@ -130,7 +128,8 @@ export default class AddSongs extends Mixins(SearchMixin) {
     position relative
     h1
       margin-top 5px
-      line-height 3
+      line-height 2
+      font-size 18px
     span.close
       position absolute
       top .7em
@@ -145,7 +144,7 @@ export default class AddSongs extends Mixins(SearchMixin) {
     max-width 500px
   .search-result
     position fixed
-    top 86px
+    top 80px
     bottom 0px
     left 0
     right 0
@@ -153,16 +152,8 @@ export default class AddSongs extends Mixins(SearchMixin) {
     background-color $background-color
     padding 10px 30px 0px 30px
 
-  .tab
+  .switch-wrap
     margin-top 20px
-    display flex
-    padding 0 60px
-    li
-      flex 1
-      border 1px solid $text-color-l
-      line-height 2
-      &.active
-        background-color $background-color-l
 
   .history-wrap
       position absolute
@@ -170,7 +161,6 @@ export default class AddSongs extends Mixins(SearchMixin) {
       bottom 0
       right 0
       left 0
-      padding 0px 35px
       color $text-dark-color
       overflow hidden
     .playHistory
@@ -181,5 +171,15 @@ export default class AddSongs extends Mixins(SearchMixin) {
       line-height 2
     .searchHistory
       box-sizing border-box
+      padding 0 30px
       height 100%
+  .tip
+    line-height 4em
+    color lighten($text-color,20%)
+    background-color $background-color
+    .icon-ok
+      margin-right 8px
+      svg
+        fill $text-highlight-color
+
 </style>

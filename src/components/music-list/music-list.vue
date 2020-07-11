@@ -2,7 +2,7 @@
   <div class="music-list">
     <h1 ref="title">{{ title }}</h1>
     <div class="banner" ref="banner" :style="'background-image:url(' + bgImg + ')'">
-      <div class="playbtn" v-show="playbtn">
+      <div class="playbtn" v-show="playbtn" @click="randomPlay(songs)">
         <icon-svg icon="#el-icon-play1"></icon-svg>
         <span>随机播放全部</span>
       </div>
@@ -38,7 +38,7 @@ import { PlaylistMixin } from "common/js/mixins"
     ...mapMutations({
       setPlaylist: "SET_PLAYLIST",
     }),
-    ...mapActions(["selectPlay", "clearSongList"]),
+    ...mapActions(["selectPlay", "clearSongList", "randomPlay"]),
   },
 })
 export default class MusicList extends Mixins(PlaylistMixin) {
@@ -108,6 +108,14 @@ export default class MusicList extends Mixins(PlaylistMixin) {
 @import '~common/stylus/variable.styl';
 @import '~common/stylus/mixin.styl';
 
+$h1-zindex = 60
+$banner-zindex = 3
+$playbtn-zindex = 10
+$list-zindex = 15
+$loading-wrap-zindex = 20
+$icon-wrap-zindex = 80
+$bg-after-zindex = 5
+
 .music-list
   position relative
   width 100vw
@@ -120,7 +128,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
     font-size 18px
     color #fff
     font-weight 500
-    z-index 60
+    z-index $h1-zindex
     no-wrap()
   .banner
       position relative
@@ -129,7 +137,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
       background-position top center
       width 100vw
       height 70vw
-      z-index 3
+      z-index $banner-zindex
       height 70vw
       color $text-color
       background-color #000
@@ -149,7 +157,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
         height 100%
         width 100%
         background-color rgba(7,17,27,.4)
-        z-index 5
+        z-index $bg-after-zindex
       .playbtn
         position absolute
         bottom 20px
@@ -157,7 +165,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
         transform translateX(-50%)
         border 1px solid $text-highlight-color
         color $text-highlight-color
-        z-index 10
+        z-index $playbtn-zindex
         padding 7px 25px
         line-height 1.1
         border-radius 30px
@@ -179,7 +187,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
     left 0
     width 100%
     box-sizing border-box
-    z-index 15
+    z-index $list-zindex
     overflow visiable
     background-color $background-color
 
@@ -187,11 +195,11 @@ export default class MusicList extends Mixins(PlaylistMixin) {
     position relative
     height 100%
     background-color $background-color
-    z-index 15
+    z-index $list-zindex
 
   div.icon-wrap
     position fixed
-    z-index 80
+    z-index $icon-wrap-zindex
     top 8px
     left 15px
 
@@ -200,5 +208,5 @@ export default class MusicList extends Mixins(PlaylistMixin) {
     top 50%
     left 50%
     transform  translate3d(-50%,-50%,0)
-    z-index 20
+    z-index $loading-wrap-zindex
 </style>

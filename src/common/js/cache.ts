@@ -1,4 +1,5 @@
 import { Songs } from "./config"
+import { insertArray } from "./util"
 
 export const SEARCH_KEY = "__search__"
 export const PLAY_KEY = "__play__"
@@ -13,12 +14,14 @@ class Storage {
     return ret
   }
 
-  set(key: string, value: any) {
+  set(key: string, value: string | any[]) {
     let ret = value
     if (typeof value !== "string") {
+      //limit array.length to 50
+      (ret as any[]).length = Math.min(50, (ret as any[]).length)
       ret = JSON.stringify(ret)
     }
-    localStorage.setItem(key, ret)
+    localStorage.setItem(key, ret as string)
   }
   remove(key: string) {
     localStorage.removeItem(key)
@@ -28,17 +31,6 @@ class Storage {
   }
 }
 const storage = new Storage()
-
-function insertArray(array: any[], item: string | Songs, func: any) {
-  const index = array.findIndex(func)
-  if (index === 0) {
-    return
-  }
-  if (index > 0) {
-    array.splice(index, 1)
-  }
-  array.unshift(item)
-}
 
 function deleteOne(array: any[], item: string, func: any) {
   const index = array.findIndex(func)
