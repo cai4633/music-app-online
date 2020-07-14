@@ -11,29 +11,31 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import IconSvg from "base/icon-svg/icon-svg"
-import { debounce } from "../../common/js/util"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import IconSvg from "base/icon-svg/icon-svg.vue";
+import { debounce } from "common/js/util";
 @Component({
-  components: { IconSvg },
+  components: { IconSvg }
 })
 export default class SearchBox extends Vue {
-  query = ""
+  query = "";
 
   @Prop({ default: "搜索歌曲、歌手" })
-  private placeholder!: string
+  private placeholder!: string;
 
   created() {
-    this.$watch( "query", debounce((newQuery) => {
-        this.$emit("query", newQuery)
+    this.$watch(
+      "query",
+      debounce((newQuery: string) => {
+        this.$emit("query", newQuery);
       }, 200)
-    )
+    );
   }
   clearQuery() {
-    this.query = ""
+    this.query = "";
   }
-  setQuery(newQuery) {
-    this.query = newQuery
+  setQuery(newQuery: string) {
+    this.query = newQuery;
   }
 }
 </script>

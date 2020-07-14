@@ -1,40 +1,40 @@
-import * as types from "./mutation-types"
-import { State } from "./config"
+import * as types from "./mutation-types";
+import { State } from "./config";
 
 const mutations = {
   [types.SET_SINGER](state: any, singer: any) {
-    state.singer = singer
+    state.singer = singer;
   },
   [types.SET_PLAYING_STATE](state: any, flag: boolean) {
-    state.playing = flag
+    state.playing = flag;
   },
   [types.SET_FULLSCREEN](state: any, flag: boolean) {
-    state.fullScreen = flag
+    state.fullScreen = flag;
   },
   [types.SET_PLAYLIST](state: any, list: any) {
-    state.playlist = list
+    state.playlist = list;
   },
   [types.SET_SEQUENCELIST](state: any, list: any) {
-    state.sequencelist = list
+    state.sequencelist = list;
   },
   [types.SET_MODE](state: any, mode: number) {
-    state.mode = mode
+    state.mode = mode;
   },
   [types.SET_CURRENTINDEX](state: any, index: number) {
-    state.currentIndex = index
+    state.currentIndex = index;
   },
   [types.SET_DISC](state: any, cd: any) {
-    state.disc = cd
+    state.disc = cd;
   },
   [types.SET_TOPLIST](state: any, toplist: any) {
-    state.toplist = toplist
+    state.toplist = toplist;
   },
   [types.SET_SEARCH_HISTORY](state: State, list: string[]) {
-    state.searchHistory = list
+    state.searchHistory = list;
   },
   [types.SET_PLAY_HISTORY](state: State, list: string[]) {
-    state.playHistory = list
-  },
-}
+    state.playHistory = list;
+  }
+};
 
-export default mutations
+export default mutations;

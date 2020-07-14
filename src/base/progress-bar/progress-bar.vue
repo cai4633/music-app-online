@@ -1,7 +1,7 @@
 <template>
   <div class="progress-bar">
     <span class="ct">{{ formatTime(currentTime) }}</span>
-    <div class="bar" ref="bar" @click="click">
+    <div class="bar" ref="bar" @click.stop="click">
       <div class="bar-inner" ref="barInner">
         <div class="progress"></div>
         <div
@@ -9,6 +9,7 @@
           @touchstart.prevent="touchstart"
           @touchmove.prevent="touchmove"
           @touchend="touchend"
+          @click.stop
         >
           <div class="progress-btn" ref="progressBar"></div>
         </div>
@@ -34,38 +35,35 @@ export default class ProgressBar extends Vue {
     return `${min}:${second < 10 ? "0" + second : second}`;
   }
 
-  click(e) {
-    if (
-      e.target === this.$refs.progressBar ||
-      e.target === this.$refs.progressBar.parentNode
-    )
-      return;
-    const bar = this.$refs.bar;
+  click(e: MouseEvent) {
+    //点到progress-btn-wrap,阻止冒泡@click.stop
+    // if (e.target === this.$refs.progressBar || e.target === this.$refs.progressBar.parentNode) return
+    const bar = this.$refs.bar as any;
     const ct = (e.offsetX / bar.offsetWidth) * this.totalTime;
     this.$emit("drag-bar", Math.max(0, Math.min(ct, this.totalTime)));
   }
-  touchstart(e) {
+  touchstart(e: TouchEvent) {
     this.touch.startX = e.touches[0].pageX;
-    this.touch.currentWidth = this.$refs.barInner.offsetWidth;
+    this.touch.currentWidth = (this.$refs.barInner as any).offsetWidth;
     this.touch.init = true;
   }
-  touchmove(e) {
+  touchmove(e: TouchEvent) {
     this.touch.moved = true;
-    const width = this.$refs.bar.offsetWidth;
+    const width = (this.$refs.bar as HTMLElement).offsetWidth;
     this.touch.endX = e.touches[0].pageX;
     const newWidth = Math.min(
       this.touch.currentWidth + this.touch.endX - this.touch.startX,
       width
-    );
-    this.$refs.barInner.style.width = `${(newWidth / width) * 100}%`;
+    ) as number;
+    (this.$refs.barInner as HTMLElement).style.width = `${(newWidth / width) *
+      100}%`;
   }
-  touchend(e) {
+  touchend(e: TouchEvent) {
     // touchend e.touches.length === 0
     if (this.touch.moved) {
-      const width = this.$refs.bar.offsetWidth;
+      const width = (this.$refs.bar as HTMLElement).offsetWidth;
       const dx = this.touch.endX - this.touch.startX;
       let newCurrentTime = this.currentTime + (this.totalTime * dx) / width;
-      console.log("ended", newCurrentTime);
       newCurrentTime =
         newCurrentTime >= 0 && newCurrentTime < this.totalTime
           ? newCurrentTime
@@ -78,9 +76,10 @@ export default class ProgressBar extends Vue {
   }
 
   @Watch("currentTime")
-  watchCurrentTime(newCurrentTime) {
+  watchCurrentTime(newTime: number) {
     if (!this.touch.init) {
-      this.$refs.barInner.style.width = `${(this.currentTime / this.totalTime) *
+      (this.$refs.barInner as HTMLElement).style.width = `${(this.currentTime /
+        this.totalTime) *
         100}%`;
     }
   }

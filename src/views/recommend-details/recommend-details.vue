@@ -1,43 +1,49 @@
 <template>
   <div class="recommend-details">
-    <music-list :songs="songs" :title="disc.title" :bgImg="disc.cover"></music-list>
+    <music-list
+      :songs="songs"
+      :title="disc.title"
+      :bgImg="disc.cover"
+    ></music-list>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import MusicList from "@/components/music-list/music-list"
-import { mapGetters } from "vuex"
-import { getCdInfoById } from "api/recommend.ts"
-import { ERR_OK } from "api/config"
-import { createSong } from "../../common/js/song"
-import { getSongUrl } from "api/songs"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import MusicList from "@/components/music-list/music-list.vue";
+import { createSong } from "common/js/song";
+import { Songs } from "common/js/config";
+import { getCdInfoById } from "api/recommend.ts";
+import { getSongUrl } from "api/songs";
+import { ERR_OK } from "api/config";
+import { mapGetters } from "vuex";
+import { Getter } from "vuex-class";
+
 @Component({
-  components: { MusicList },
-  computed: {
-    ...mapGetters(["disc"]),
-  },
+  components: { MusicList }
 })
 export default class RecommendDetails extends Vue {
-  songs = []
+  songs: Songs[] = [];
+
+  @Getter("disc") disc!: any;
+
   mounted() {
     if (!this.disc.content_id) {
-      this.$router.push({ path: "/recommend" })
-      return
+      this.$router.push({ path: "/recommend" });
     }
-    this._getCdInfoById(this.disc.content_id)
+    this._getCdInfoById(this.disc.content_id);
   }
-  _getCdInfoById(id) {
-    return getCdInfoById(id).then((response) => {
+  _getCdInfoById(id: number) {
+    return getCdInfoById(id).then((response: any) => {
       if (response.code === ERR_OK) {
-        const songlist = response.cdlist[0].songlist
-        getSongUrl(songlist).then((response) => {
-          this.songs = response.map((item) => {
-            return createSong(item)
-          })
-        })
+        const songlist = response.cdlist[0].songlist;
+        getSongUrl(songlist).then((response: any) => {
+          this.songs = response.map((item: any) => {
+            return createSong(item);
+          });
+        });
       }
-    })
+    });
   }
 }
 </script>

@@ -11,11 +11,12 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-import MHeader from "./components/m-header/m-header.vue";
-import Tab from "./components/tab/tab.vue";
-import Player from '@/components/player/player'
+import MHeader from "components/m-header/m-header.vue";
+import Tab from "components/tab/tab.vue";
+import Player from "components/player/player.vue";
+
 @Component({
-  components: { MHeader, Tab, Player}
+  components: { MHeader, Tab, Player }
 })
 export default class App extends Vue {}
 </script>

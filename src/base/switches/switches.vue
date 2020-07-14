@@ -1,22 +1,29 @@
 <template>
   <div class="switches">
     <ul class="tab">
-      <li v-for="(item, index) in switches" :key="item" @click.stop="selectItem(index)" :class="{ active: index === currentIndex }">{{item}}</li>
+      <li
+        v-for="(item, index) in switches"
+        :key="item"
+        @click.stop="selectItem(index)"
+        :class="{ active: index === currentIndex }"
+      >
+        {{ item }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 @Component
 export default class Switches extends Vue {
   @Prop({ default: () => [] })
-  switches!: stirng[]
+  switches!: string[];
   @Prop({ default: 0 })
-  currentIndex!: number
+  currentIndex!: number;
 
-  selectItem(index) {
-    this.$emit("select", index)
+  selectItem(index: number) {
+    this.$emit("select", index);
   }
 }
 </script>

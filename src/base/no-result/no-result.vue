@@ -6,11 +6,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 @Component
 export default class NoResult extends Vue {
   @Prop({ default: "暂时没有搜素结果" })
-  text!: string
+  text!: string;
 }
 </script>
 

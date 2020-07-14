@@ -68,8 +68,8 @@ export default class ListView extends Mixins(PlaylistMixin) {
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
     if (this.$refs.listView) {
-      this.$refs.listView.$el.style.bottom = `${BOTTOM}px`
-      this.$refs.listView.refresh()
+      ;(<Scroll>this.$refs.listView).$el.style.bottom = `${BOTTOM}px`
+      ;(<Scroll>this.$refs.listView).refresh()
     }
   }
 
@@ -78,16 +78,19 @@ export default class ListView extends Mixins(PlaylistMixin) {
     this._getShortcutList()
   }
 
-  webp2jpg(img) {
+  webp2jpg(img: string) {
     return img.replace(/webp$/, "jpg")
   }
   scrollEnd() {
     this.isClick = false
   }
-  shortcutClick(e: any) {
-    this.currentIndex = parseInt(e.currentTarget.dataset.index)
-    this._scrollTo(this.currentIndex)
-    this.isClick = true
+  shortcutClick(e: MouseEvent) {
+    const index = (e.currentTarget as HTMLElement).dataset.index
+    if (index) {
+      this.currentIndex = parseInt(index)
+      this._scrollTo(this.currentIndex)
+      this.isClick = true
+    }
   }
 
   // 计算热门,[a-z] li的高度
@@ -144,7 +147,7 @@ export default class ListView extends Mixins(PlaylistMixin) {
     })
   }
 
-  selectItem(item: object) {
+  selectItem(item: any) {
     const singer = new Singer({ id: item.singer_id, name: item.singer_name, mid: item.singer_mid })
     this.$emit("select", singer)
   }

@@ -3,14 +3,30 @@
     <div class="add-songs" v-show="showFlag">
       <div class="header">
         <h1>添加歌曲到列表</h1>
-        <span class="close" @click.stop="hide"><icon-svg icon="#el-icon-clear"></icon-svg></span>
+        <span class="close" @click.stop="hide"
+          ><icon-svg icon="#el-icon-clear"></icon-svg
+        ></span>
       </div>
       <div class="search-box-wrap">
-        <search-box ref="searchBox" @query="onQueryChange" placeholder="搜索歌曲"></search-box>
+        <search-box
+          ref="searchBox"
+          @query="onQueryChange"
+          placeholder="搜索歌曲"
+        ></search-box>
       </div>
-      <div class="search-result" v-show="query" ref="suggest"><suggest :query="query" @select="onSelectEvent" :showSinger="false"></suggest></div>
+      <div class="search-result" v-show="query" ref="suggest">
+        <suggest
+          :query="query"
+          @select="onSelectEvent"
+          :showSinger="false"
+        ></suggest>
+      </div>
       <ul class="switch-wrap">
-        <switches :currentIndex="currentindex" :switches="switches" @select="switchTab"></switches>
+        <switches
+          :currentIndex="currentindex"
+          :switches="switches"
+          @select="switchTab"
+        ></switches>
       </ul>
       <scroll class="history-wrap" :data="history" ref="historyWrap">
         <div class="history-inner">
@@ -18,13 +34,17 @@
             <song-list :songs="playHistory" @select="playRecently"></song-list>
           </div>
           <div class="searchHistory" v-if="currentindex === 1">
-            <history-list :list="searchHistory" @delete="removeSearchHistory" @select="selectItem"></history-list>
+            <history-list
+              :list="searchHistory"
+              @delete="removeSearchHistory"
+              @select="selectItem"
+            ></history-list>
           </div>
         </div>
       </scroll>
       <top-tip ref="toptip">
         <div class="tip">
-          <span class="icon-ok"><icon-svg icon='#el-icon-ok'></icon-svg></span>
+          <span class="icon-ok"><icon-svg icon="#el-icon-ok"></icon-svg></span>
           <span>歌曲添加成功</span>
         </div>
       </top-tip>
@@ -33,78 +53,89 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
-import SearchBox from "base/search-box/search-box"
-import { mapGetters, mapActions } from "vuex"
-import HistoryList from "base/history-list/history-list"
-import IconSvg from "base/icon-svg/icon-svg"
-import Suggest from "@/components/suggest/suggest"
-import { SearchMixin } from "common/js/mixins"
-import Scroll from "base/scroll/scroll"
-import { findIndex } from "../../common/js/player"
-import Switches from "base/switches/switches"
-import SongList from "base/song-list/song-list"
-import TopTip from "base/top-tip/top-tip"
+import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator";
+import HistoryList from "base/history-list/history-list.vue";
+import Suggest from "@/components/suggest/suggest.vue";
+import SearchBox from "base/search-box/search-box.vue";
+import SongList from "base/song-list/song-list.vue";
+import Switches from "base/switches/switches.vue";
+import IconSvg from "base/icon-svg/icon-svg.vue";
+import Scroll from "base/scroll/scroll.vue";
+import TopTip from "base/top-tip/top-tip.vue";
+import { mapGetters, mapActions } from "vuex";
+import { SearchMixin } from "common/js/mixins";
+import { findIndex } from "../../common/js/player";
+import { Songs } from "common/js/config";
 
 @Component({
   computed: {
-    ...mapGetters(["playHistory", "searchHistory", "currentSong", "sequencelist"]),
+    ...mapGetters([
+      "playHistory",
+      "searchHistory",
+      "currentSong",
+      "sequencelist"
+    ])
   },
   methods: {
-    ...mapActions(["suggestToPlay", "insertSong"]),
+    ...mapActions(["suggestToPlay", "insertSong"])
   },
-  components: { Suggest, SearchBox, HistoryList, IconSvg, Scroll, Switches, SongList, TopTip },
+  components: {
+    Suggest,
+    SearchBox,
+    HistoryList,
+    IconSvg,
+    Scroll,
+    Switches,
+    SongList,
+    TopTip
+  }
 })
 export default class AddSongs extends Mixins(SearchMixin) {
-  showFlag = false
-  query = ""
-  switches = ["最近播放", "搜索历史"]
-  currentindex = 0
+  showFlag = false;
+  query = "";
+  switches = ["最近播放", "搜索历史"];
+  currentindex = 0;
 
   get history() {
-    return this.playHistory ? this.playHistory.concat(this.searchHistory) : []
+    return this.playHistory ? this.playHistory.concat(this.searchHistory) : [];
   }
 
-  switchTab(index) {
-    this.currentindex = index
+  switchTab(index: number) {
+    this.currentindex = index;
   }
-  playRecently(song, index) {
+  playRecently(song: Songs, index: number) {
     if (index !== 0) {
-      this.insertSong(song)
-      this.$refs.toptip.show()
-      // this.hide()
-      // this.$emit("hide")
+      this.insertSong(song);
+      (this.$refs.toptip as TopTip).show();
     }
   }
-  onSelectEvent(item: any) {
-    this.insertSong(item)
-    this.saveSearchHistory(this.query)
-    this.$refs.toptip.show()
-    // this.hide()
-    // this.$emit("hide", item)
+  onSelectEvent(item: Songs) {
+    this.insertSong(item);
+    this.saveSearchHistory(this.query);
+    (this.$refs.toptip as TopTip).show();
   }
-  selectItem(key) {
-    this.$refs.searchBox.setQuery(key)
+  selectItem(key: string) {
+    (this.$refs.searchBox as SearchBox).setQuery(key);
   }
   show() {
-    this.showFlag = true
+    this.showFlag = true;
   }
   hide() {
-    this.showFlag = false
+    this.showFlag = false;
   }
-  scrollFresh(newflag) {
+  scrollFresh(newflag: boolean) {
     this.$nextTick(() => {
-      this.$refs.historyWrap.refresh()
-    })
+      (this.$refs.historyWrap as Scroll).refresh();
+    });
   }
 
   @Watch("currentindex")
-  __showHistory(newflag) {
-    this.scrollFresh(newflag)
+  __showHistory(newflag: boolean) {
+    this.scrollFresh(newflag);
   }
   @Watch("showFlag")
-  __showFlag(newflag) {
-    this.scrollFresh(newflag)
+  __showFlag(newflag: boolean) {
+    this.scrollFresh(newflag);
   }
 }
 </script>
@@ -181,5 +212,4 @@ export default class AddSongs extends Mixins(SearchMixin) {
       margin-right 8px
       svg
         fill $text-highlight-color
-
 </style>

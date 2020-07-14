@@ -1,5 +1,5 @@
 <template>
-  <transition name='top-slide'>
+  <transition name="top-slide">
     <div class="top-tip" v-show="showflag" @click.stop="hide">
       <slot></slot>
     </div>
@@ -7,20 +7,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-@Component()
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+@Component({})
 export default class TopTip extends Vue {
-  showflag = false
-  timer = 0
-  show(){
-    this.showflag = true
-    clearTimeout(this.timer)
-    this.timer = setTimeout(() => {
-      this.hide()
+  showflag = false;
+  timer = 0;
+  show() {
+    this.showflag = true;
+    window.clearTimeout(this.timer);
+    this.timer = window.setTimeout(() => {
+      this.hide();
     }, 1000);
   }
-  hide(){
-    this.showflag = false
+  hide() {
+    this.showflag = false;
   }
 }
 </script>

@@ -17,44 +17,42 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
-import { getRank } from "api/rank.ts"
-import { ERR_OK } from "../../api/config"
-import Scroll from "base/scroll/scroll"
-import { mapMutations, mapGetters } from "vuex"
 import { PlaylistMixin } from "@/common/js/mixins"
+import { MutationMethod, mapGetters } from "vuex"
+import Scroll from "base/scroll/scroll.vue"
+import { getRank } from "api/rank.ts"
+import { ERR_OK } from "api/config"
+import { Mutation, Getter } from "vuex-class"
+
 @Component({
   components: { Scroll },
-  computed: {
-    ...mapGetters(["playlist"]),
-  },
-  methods: {
-    ...mapMutations({
-      setToplist: "SET_TOPLIST",
-    }),
-  },
 })
 export default class Rank extends Mixins(PlaylistMixin) {
   lists: any[] = []
+
+  @Getter("playlist") playlist!: any[]
+  @Mutation("SET_TOPLIST") setToplist!: MutationMethod
+
   mounted() {
     this._getRank()
   }
   imgLoad() {
-    this.$refs.rank.refresh()
+    ;(this.$refs.rank as Scroll).refresh()
   }
-  selectItem(item) {
+  selectItem(item: any) {
     this.setToplist(item)
-    this.$router.push({ path: `/rank/${item.id}`, })
+    this.$router.push({ path: `/rank/${item.id}` })
   }
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 60 : 0
     if (this.$refs.rank) {
-      this.$refs.rank.$el.style.bottom = `${BOTTOM}px`
-      this.$refs.rank.refresh()
+      ;(<Scroll>this.$refs.rank).$el.style.bottom = `${BOTTOM}px`
+      ;(this.$refs.rank as Scroll).refresh()
     }
   }
   _getRank() {
     this.$nextTick(() => {
-      return getRank().then((response) => {
+      return getRank().then((response: any) => {
         if (response.code === ERR_OK) {
           this.lists = response.data.topList
         }

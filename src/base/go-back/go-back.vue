@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-import IconSvg from "base/icon-svg/icon-svg";
+import IconSvg from "base/icon-svg/icon-svg.vue";
 @Component({
   components: {
     IconSvg

@@ -1,9 +1,9 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import state from "./state";
-import * as actions from "./actions";
 import mutations from "./mutations";
-import * as getters from "./getter";
+import * as actions from "./actions";
+import * as getters from "./getters";
 import createLogger from "vuex/dist/logger";
 Vue.use(Vuex);
 

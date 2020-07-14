@@ -41,22 +41,22 @@ import Slider from "components/slider/slider.vue"
 import Scroll from "base/scroll/scroll.vue"
 import Loading from "base/loading/loading.vue"
 import { PlaylistMixin } from "common/js/mixins"
-import { mapGetters, mapMutations } from "vuex"
+import { Mutation } from "vuex-class"
+import { mapGetters, MutationMethod } from "vuex"
 
 @Component({
   components: { Slider, Scroll, Loading },
-  methods: {
-    ...mapMutations({
-      setDisc: "SET_DISC",
-    }),
-  },
 })
+
 export default class Recommend extends Mixins(PlaylistMixin) {
   slideList = []
   descList = []
   timer = 0
+
+  @Mutation("SET_DISC") setDisc!: MutationMethod
+  
   created() {
-    this.timer = setTimeout(() => {
+    this.timer = window.setTimeout(() => {
       this.__getRecommend()
       this.__getDescLists()
     }, 20) //instead of nextTick(),浏览器刷新时间一般是17ms
@@ -65,15 +65,15 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     window.clearTimeout(this.timer)
   }
 
-  selectItem(item, index) {
+  selectItem(item: any, index: string) {
     this.setDisc(item)
     this.$router.push({ path: `/recommend/${item.content_id}` })
   }
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
     if (this.$refs.recommend) {
-      this.$refs.recommend.$el.style.bottom = `${BOTTOM}px`
-      this.$refs.recommend.refresh()
+      ;(<Scroll>this.$refs.recommend).$el.style.bottom = `${BOTTOM}px`
+      ;(this.$refs.recommend as Scroll).refresh()
     }
   }
   __getRecommend() {
@@ -82,7 +82,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     })
   }
   __getDescLists() {
-    getDescLists().then((res) => {
+    getDescLists().then((res: any) => {
       if (res.code === ERR_OK) {
         this.descList = Array.from(res["recomPlaylist"].data.v_hot)
       }
@@ -92,7 +92,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     return (parseFloat(number) / 10000).toFixed(1)
   }
   imgLoad() {
-    this.$refs.recommend.refresh()
+    ;(this.$refs.recommend as Scroll).refresh()
   }
 }
 </script>

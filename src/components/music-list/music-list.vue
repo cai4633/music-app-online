@@ -20,86 +20,81 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Provide, Mixins } from "vue-property-decorator"
-import SongList from "base/song-list/song-list"
-import Scroll from "base/scroll/scroll"
-import Loading from "../../base/loading/loading"
-import IconSvg from "base/icon-svg/icon-svg"
-import GoBack from "base/go-back/go-back"
-import { mapMutations, mapGetters, mapActions } from "vuex"
+import SongList from "base/song-list/song-list.vue"
+import Scroll from "base/scroll/scroll.vue"
+import Loading from "base/loading/loading.vue"
+import IconSvg from "base/icon-svg/icon-svg.vue"
+import GoBack from "base/go-back/go-back.vue"
+import { mapMutations, mapGetters, mapActions, MutationMethod } from "vuex"
 import { selectPlay } from "../../store/actions"
 import { PlaylistMixin } from "common/js/mixins"
+import { Songs } from "common/js/config"
+import { Getter, Mutation, Action } from "vuex-class"
 
 @Component({
   components: { SongList, Scroll, Loading, IconSvg, GoBack },
-  computed: {
-    ...mapGetters(["playlist", "fullScreen"]),
-  },
-  methods: {
-    ...mapMutations({
-      setPlaylist: "SET_PLAYLIST",
-    }),
-    ...mapActions(["selectPlay", "clearSongList", "randomPlay"]),
-  },
 })
 export default class MusicList extends Mixins(PlaylistMixin) {
-  @Provide()
   top = 0
   playbtn = true
+  layerTop = 0
+  bgHeight = 0
 
-  @Prop()
-  private songs!: object[]
-  @Prop()
-  private title!: string
-  @Prop()
-  private bgImg!: string
-  @Prop({ default: false })
-  private rank!: boolean
+  @Prop() private songs!: object[]
+  @Prop() private title!: string
+  @Prop() private bgImg!: string
+  @Prop({ default: false }) private rank!: boolean
+
+  @Mutation("SET_PLAYLIST") setPlaylist!: MutationMethod
+  @Action("selectPlay") selectPlay!: MutationMethod
+  @Action("clearSongList") clearSongList!: MutationMethod
+  @Action("randomPlay") randomPlay!: MutationMethod
 
   mounted() {
     this.$nextTick(() => {
-      this.layerTop = this.$refs.layer.offsetTop
-      this.bgHeight = this.$refs.banner.offsetHeight
+      this.layerTop = (<HTMLElement>this.$refs.layer).offsetTop
+      this.bgHeight = (<HTMLElement>this.$refs.banner).offsetHeight
     })
   }
 
-  playlistInit(song, index) {
+  playlistInit(song: Songs, index: number) {
     this.selectPlay({ list: this.songs, index: index })
   }
 
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
-    if (this.$refs.list) {
-      this.$refs.list.$el.style.bottom = `${BOTTOM}px`
-      this.$refs.list.refresh()
+    const list = this.$refs.list as Scroll
+    if (list) {
+      list.$el.style.bottom = `${BOTTOM}px`
+      list.refresh()
     }
   }
 
-  getY(pos) {
+  getY(pos: number) {
     const MIN_GAP = 10 //10px
     const newTop = this.layerTop + pos //layer与顶部的距离
-    const minTop = this.$refs.title.offsetTop + this.$refs.title.offsetHeight + MIN_GAP //距离top最小高度
-    const banner = this.$refs.banner.style //banner引用
+    const minTop = (this.$refs.title as HTMLElement).offsetTop + (this.$refs.title as HTMLElement).offsetHeight + MIN_GAP //距离top最小高度
+    const banner = (this.$refs.banner as HTMLElement).style //banner引用
 
     if (newTop >= minTop) {
-      this.$refs.layer.style.transform = `translateY(${pos}px)`
+      ;(this.$refs.layer as HTMLElement).style.transform = `translateY(${pos}px)`
       this.playbtn = true
       banner.height = `${this.bgHeight}px`
-      banner.zIndex = 3
+      banner.zIndex = "3"
       if (pos > 0) {
         banner.transform = `scale(${1 + pos / this.bgHeight})`
       }
     } else {
       this.playbtn = false
       banner.height = minTop + "px"
-      banner.zIndex = 50
+      banner.zIndex = "50"
     }
   }
   back() {
     this.$router.back()
-    // this.clearSongList();
   }
   _refresh() {
-    this.$refs.list.refresh()
+    ;(this.$refs.list as Scroll).refresh()
   }
 }
 </script>

@@ -88,36 +88,24 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
-import { mapGetters, mapMutations, mapActions } from "vuex"
-import IconSvg from "@/base/icon-svg/icon-svg"
-import GoBack from "base/go-back/go-back"
+import { mapGetters, MutationMethod, mapActions } from "vuex"
+import IconSvg from "base/icon-svg/icon-svg.vue"
+import GoBack from "base/go-back/go-back.vue"
 import animations from "create-keyframe-animation"
-import ProgressBar from "base/progress-bar/progress-bar"
-import ProgressCircle from "base/progress-circle/progress-circle"
-import { playMode } from "common/js/config.ts"
+import ProgressBar from "base/progress-bar/progress-bar.vue"
+import ProgressCircle from "base/progress-circle/progress-circle.vue"
+import { playMode, Songs } from "common/js/config.ts"
 import { shuffle, lyricParser } from "common/js/util.ts"
 import { findIndex } from "common/js/player.ts"
 import { Base64 } from "js-base64"
 import Scroll from "@/base/scroll/scroll.vue"
-import disc_default from "@/common/images/disc_default.png"
-import Playlist from "@/components/playlist/playlist"
+import disc_default from "common/images/disc_default.png"
+import Playlist from "@/components/playlist/playlist.vue"
 import { PlayerMixin } from "common/js/mixins"
+import { Mutation, Action } from "vuex-class"
 
 @Component({
   components: { Scroll, GoBack, IconSvg, ProgressBar, ProgressCircle, Playlist },
-  computed: {
-    ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode", "sequencelist"]),
-  },
-  methods: {
-    ...mapMutations({
-      setFullScreen: "SET_FULLSCREEN",
-      setPlayingState: "SET_PLAYING_STATE",
-      setCurrentIndex: "SET_CURRENTINDEX",
-      setMode: "SET_MODE",
-      setPlaylist: "SET_PLAYLIST",
-    }),
-    ...mapActions(["savePlayHistory"]),
-  },
 })
 export default class Player extends Mixins(PlayerMixin) {
   autoJumpTime = 3 //歌曲播放出错自动跳转时间
@@ -141,11 +129,19 @@ export default class Player extends Mixins(PlayerMixin) {
     return this.lyrics.lines.length && this.currentLine >= 0 ? this.lyrics.lines[this.currentLine].txt : ""
   }
 
+  @Mutation("SET_FULLSCREEN") setFullScreen!: MutationMethod
+  @Mutation("SET_PLAYING_STATE") setPlayingState!: MutationMethod
+  @Mutation("SET_CURRENTINDEX") setCurrentIndex!: MutationMethod
+  @Mutation("SET_MODE") setMode!: MutationMethod
+  @Mutation("SET_PLAYLIST") setPlaylist!: MutationMethod
+
+  @Action("savePlayHistory") savePlayHistory!: MutationMethod
+
   showPlaylist() {
-    this.$refs.playlist.show()
+    ;(this.$refs.playlist as Playlist).show()
   }
   changeSrc() {
-    this.$refs.diskImg.src = disc_default
+    ;(<HTMLMediaElement>this.$refs.diskImg).src = disc_default
   }
   minimize() {
     this.setFullScreen(false)
@@ -156,8 +152,8 @@ export default class Player extends Mixins(PlayerMixin) {
   togglePlaying() {
     this.setPlayingState(!this.playing)
   }
-  ready(e) {
-    this.totalTime = e.target.duration
+  ready(e: Event) {
+    this.totalTime = (<HTMLMediaElement>e.target).duration
     this.songReady = true
     this.songError = false
   }
@@ -189,23 +185,22 @@ export default class Player extends Mixins(PlayerMixin) {
     this.songError = false
   }
   nextOrPreToPlay() {
-    const audio = this.$refs.audio
     this.$nextTick(() => {
-      this.playing ? audio.play() : this.togglePlaying()
+      this.playing ? (this.$refs.audio as HTMLMediaElement).play() : this.togglePlaying()
     })
   }
-  updataTime(e) {
-    this.currentTime = e.target.currentTime
+  updataTime(e: Event) {
+    this.currentTime = (<HTMLMediaElement>e.target).currentTime
     this.lyrics.play && this.lyrics.play(this.currentTime)
     this.lyricScroll(this.currentLine)
   }
-  lyricStart(e) {
+  lyricStart(e: TouchEvent) {
     this.touch.init = true
     this.touch.startX = e.touches[0].pageX
     this.touch.startY = e.touches[0].pageY
     return
   }
-  lyricMove(e) {
+  lyricMove(e: TouchEvent) {
     if (!this.touch.init) {
       return
     }
@@ -219,7 +214,7 @@ export default class Player extends Mixins(PlayerMixin) {
     const left = this.currentShow === "cd" ? 0 : -width
     const offsetWidth = Math.min(0, Math.max(-width, left + dx))
     this.touch.percent = Math.abs(offsetWidth / width)
-    this.$refs.lyrics.$el.style["transform"] = `translateX(${offsetWidth}px)`
+    ;(<Scroll>this.$refs.lyrics).$el.style["transform"] = `translateX(${offsetWidth}px)`
     return
   }
   lyricEnd() {
@@ -227,21 +222,20 @@ export default class Player extends Mixins(PlayerMixin) {
     if (this.currentShow === "cd") {
       //cd
       if (this.touch.percent > 0.05 && this.touch.moved) {
-        this.$refs.lyrics.$el.style["transform"] = `translateX(${-width}px)`
-        this.$refs.mainDiskWrap.style.opacity = 0
+        ;(<Scroll>this.$refs.lyrics).$el.style["transform"] = `translateX(${-width}px)`
+        ;(<HTMLElement>this.$refs.mainDiskWrap).style.opacity = "0"
         this.currentShow = "lyric"
       }
     } else {
       //lyric
       if (this.touch.percent < 0.95 && this.touch.moved) {
-        this.$refs.lyrics.$el.style["transform"] = `translateX(0px)`
-        this.$refs.mainDiskWrap.style.opacity = 1
+        ;(this.$refs.lyrics as Scroll).$el.style["transform"] = `translateX(0px)`
+        ;(<HTMLElement>this.$refs.mainDiskWrap).style.opacity = "1"
         this.currentShow = "cd"
       }
     }
     this.touch.moved = false
     this.touch.init = false
-    return
   }
 
   end() {
@@ -252,13 +246,13 @@ export default class Player extends Mixins(PlayerMixin) {
     }
   }
   loop() {
-    this.$refs.audio.currentTime = 0
-    this.$refs.audio.play()
+    ;(this.$refs.audio as HTMLMediaElement).currentTime = 0
+    ;(this.$refs.audio as HTMLMediaElement).play()
   }
-  enter(el, done) {
+  enter(el: HTMLElement, done: Function) {
     this.$nextTick(() => {
-      const disk = this.$refs.disk
-      const avatar = this.$refs.avatar
+      const disk = this.$refs.disk as HTMLElement
+      const avatar = this.$refs.avatar as HTMLElement
       const { x, y, scale } = this._getPos(avatar, disk)
       const animation = {
         "0%": { transform: `translate3d(${x}px,${y}px,0) scale(${scale})` },
@@ -276,20 +270,20 @@ export default class Player extends Mixins(PlayerMixin) {
       animations.runAnimation(disk, "move", done)
     })
   }
-  dragBar(newCurrentTime) {
-    this.$refs.audio.currentTime = newCurrentTime
+  dragBar(newCurrentTime: number) {
+    ;(this.$refs.audio as HTMLMediaElement).currentTime = newCurrentTime
     !this.playing && this.togglePlaying()
   }
 
-  lyricScroll(lineNum) {
+  lyricScroll(lineNum: number) {
     const GAP = 5
     if (lineNum > GAP) {
-      this.$refs.lyrics && this.$refs.lyrics.scrollToElement(this.$refs.lyricTxt[lineNum - 5], 1000)
+      this.$refs.lyrics && (this.$refs.lyrics as Scroll).scrollToElement((this.$refs.lyricTxt as HTMLElement[])[lineNum - 5], 1000)
     }
     return
   }
 
-  _getPos(target, el) {
+  _getPos(target: HTMLElement, el: HTMLElement) {
     const targetWidth = target.offsetWidth
     const elWidth = el.offsetWidth
     const x = -(document.body.clientWidth / 2 - 40 - targetWidth / 2)
@@ -299,15 +293,15 @@ export default class Player extends Mixins(PlayerMixin) {
   }
 
   @Watch("playing")
-  watchPlaying(newPlaying) {
+  watchPlaying(newPlaying: boolean) {
     this.$nextTick(() => {
-      newPlaying ? this.$refs.audio.play() : this.$refs.audio.pause()
+      newPlaying ? (this.$refs.audio as HTMLMediaElement).play() : (this.$refs.audio as HTMLMediaElement).pause()
     })
   }
   @Watch("currentSong")
-  watchCurrentSong(newSong, oldSong) {
+  watchCurrentSong(newSong: Songs, oldSong: Songs) {
     if (!newSong.id || newSong.id === oldSong.id || !this.playlist.length) return
-    
+
     if (newSong._getLyric) {
       newSong._getLyric().then(() => {
         this.lyrics = lyricParser(newSong.lyric)
@@ -320,7 +314,7 @@ export default class Player extends Mixins(PlayerMixin) {
     }
     this.savePlayHistory(newSong)
     this.$nextTick(() => {
-      this.$refs.audio.play()
+      ;(this.$refs.audio as HTMLMediaElement).play()
     })
   }
 }

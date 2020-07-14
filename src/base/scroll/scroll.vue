@@ -5,38 +5,38 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-import BScroll from "@better-scroll/core"
-import MouseWheel from "@better-scroll/mouse-wheel"
-BScroll.use(MouseWheel)
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import BScroll from "@better-scroll/core";
+import MouseWheel from "@better-scroll/mouse-wheel";
+BScroll.use(MouseWheel);
 @Component({})
 export default class Scroll extends Vue {
-  scroll: any = null
+  scroll: any = null;
 
   @Prop({
-    default: null,
+    default: null
   })
-  private data!: any[]
+  private data!: any[];
 
   @Prop({
-    default: 1,
+    default: 1
   })
-  private probeType!: number
+  private probeType!: number;
 
   @Prop({
-    default: false,
+    default: false
   })
-  private pullup!: boolean
+  private pullup!: boolean;
 
   @Prop({
-    default: true,
+    default: true
   })
-  private click!: boolean
+  private click!: boolean;
 
   mounted() {
     this.$nextTick(() => {
-      this.init()
-    })
+      this.init();
+    });
   }
 
   init() {
@@ -46,49 +46,49 @@ export default class Scroll extends Vue {
       mouseWheel: {
         speed: 20,
         invert: false,
-        easeTime: 300,
-      },
-    }
+        easeTime: 300
+      }
+    };
     if (this.$refs.scroll) {
-      this.scroll = new BScroll(this.$refs.scroll, options)
-      this.bindEvents()
+      this.scroll = new BScroll(this.$refs.scroll as HTMLElement, options);
+      this.bindEvents();
     }
   }
 
   scrollTo(x: number, y: number, duaring = 300) {
-    this.scroll.scrollTo(x, y, duaring)
+    this.scroll.scrollTo(x, y, duaring);
   }
 
   bindEvents() {
     this.scroll.on("scroll", (pos: { y: number }) => {
-      this.$emit("scroll", pos.y)
-    })
+      this.$emit("scroll", pos.y);
+    });
     this.scroll.on("scrollEnd", (pos: { y: number }) => {
-      this.$emit("scrollEnd", pos.y)
+      this.$emit("scrollEnd", pos.y);
       if (this.pullup && pos.y <= this.scroll.maxScrollY + 10) {
-        this.$emit("scrollToEnd")
+        this.$emit("scrollToEnd");
       }
-    })
+    });
   }
 
   refresh() {
-    this.scroll && this.scroll.refresh()
+    this.scroll && this.scroll.refresh();
   }
   enable() {
-    this.scroll && this.scroll.enable()
+    this.scroll && this.scroll.enable();
   }
   disable() {
-    this.scroll && this.scroll.disable()
+    this.scroll && this.scroll.disable();
   }
-  scrollToElement(el, duration) {
-    this.scroll && this.scroll.scrollToElement(el, duration)
+  scrollToElement(el: Element, duration: number) {
+    this.scroll && this.scroll.scrollToElement(el, duration);
   }
 
   @Watch("data")
-  getData(newVal) {
+  getData(newVal: any) {
     this.$nextTick(() => {
-      this.refresh()
-    })
+      this.refresh();
+    });
   }
 }
 </script>

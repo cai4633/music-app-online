@@ -28,18 +28,18 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
-import SearchBox from "@/base/search-box/search-box"
+import HistoryList from "base/history-list/history-list.vue"
+import SearchBox from "base/search-box/search-box.vue"
+import Suggest from "components/suggest/suggest.vue"
+import IconSvg from "base/icon-svg/icon-svg.vue"
+import Confirm from "base/confirm/confirm.vue"
+import Scroll from "base/scroll/scroll.vue"
+import Singer from "common/js/singer.vue"
 import { getHotKey, getSearchInfo } from "api/search"
-import { ERR_OK } from "../../api/config"
-import Suggest from "@/components/suggest/suggest"
+import { ERR_OK } from "api/config"
 import { mapMutations, mapActions, mapGetters } from "vuex"
-import Singer from "common/js/singer"
 import axios from "axios"
-import HistoryList from "@/base/history-list/history-list"
-import IconSvg from "base/icon-svg/icon-svg"
-import Scroll from "base/scroll/scroll"
 import { PlaylistMixin, SearchMixin } from "common/js/mixins"
-import Confirm from "base/confirm/confirm"
 
 const TYPE_SINGER = "singer"
 @Component({
@@ -53,7 +53,7 @@ const TYPE_SINGER = "singer"
   },
 })
 export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
-  hotkeys = []
+  hotkeys: any[] = []
   query = ""
 
   get shortcutList() {
@@ -62,19 +62,19 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
   created() {
     this._getHotKey()
   }
-  selectItem(key) {
-    this.$refs.searchBox.setQuery(key)
+  selectItem(key: string) {
+    ;(<SearchBox>this.$refs.searchBox).setQuery(key)
   }
   handlePlaylist() {
     const bottom = this.playlist.length ? 60 : 0
-    this.$refs.shortcut.$el.style.bottom = `${bottom}px`
-    this.$refs.suggest.style.bottom = `${bottom}px`
+    ;(<Scroll>this.$refs.shortcut).$el.style.bottom = `${bottom}px`
+    ;(<HTMLElement>this.$refs.suggest).style.bottom = `${bottom}px`
   }
   showConfirm() {
-    this.$refs.confirm.show()
+    ;(this.$refs.confirm as Confirm).show()
   }
   _getHotKey() {
-    getHotKey().then((response) => {
+    getHotKey().then((response: any) => {
       if (response.code === ERR_OK) {
         this.hotkeys = response.data.hotkey.slice(0, 10)
       }

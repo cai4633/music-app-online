@@ -11,31 +11,31 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator"
-@Component()
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+@Component({})
 export default class Confirm extends Vue {
-  showflag = false
+  showflag = false;
 
   @Prop({ default: "是否全部删除？" })
-  title!: string
+  title!: string;
   @Prop({ default: "取消" })
-  cancleBtnText!: string
+  cancleBtnText!: string;
   @Prop({ default: "确定" })
-  enterBtnText!: string
+  enterBtnText!: string;
 
   show() {
-    this.showflag = true
+    this.showflag = true;
   }
   hide() {
-    this.showflag = false
+    this.showflag = false;
   }
   clickCancleBtn() {
-    this.$emit("cancle")
-    this.hide()
+    this.$emit("cancle");
+    this.hide();
   }
   clickEnterBtn() {
-    this.$emit("enter")
-    this.hide()
+    this.$emit("enter");
+    this.hide();
   }
 }
 </script>
