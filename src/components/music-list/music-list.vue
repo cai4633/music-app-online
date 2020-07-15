@@ -2,7 +2,7 @@
   <div class="music-list">
     <h1 ref="title">{{ title }}</h1>
     <div class="banner" ref="banner" :style="'background-image:url(' + bgImg + ')'">
-      <div class="playbtn" v-show="playbtn" @click="randomPlay(songs)">
+      <div class="playbtn" v-show="playbtn" @click="random">
         <icon-svg icon="#el-icon-play1"></icon-svg>
         <span>随机播放全部</span>
       </div>
@@ -39,6 +39,12 @@ export default class MusicList extends Mixins(PlaylistMixin) {
   playbtn = true
   layerTop = 0
   bgHeight = 0
+  $refs!: {
+    layer: HTMLElement
+    title: HTMLElement
+    banner: HTMLElement
+    list: Scroll
+  }
 
   @Prop() private songs!: object[]
   @Prop() private title!: string
@@ -52,9 +58,16 @@ export default class MusicList extends Mixins(PlaylistMixin) {
 
   mounted() {
     this.$nextTick(() => {
-      this.layerTop = (<HTMLElement>this.$refs.layer).offsetTop
-      this.bgHeight = (<HTMLElement>this.$refs.banner).offsetHeight
+      this.layerTop = this.$refs.layer.offsetTop
+      this.bgHeight = this.$refs.banner.offsetHeight
     })
+  }
+
+  random() {
+    if (!this.songs.length) {
+      return
+    }
+    this.randomPlay(this.songs)
   }
 
   playlistInit(song: Songs, index: number) {
@@ -63,21 +76,20 @@ export default class MusicList extends Mixins(PlaylistMixin) {
 
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
-    const list = this.$refs.list as Scroll
-    if (list) {
-      list.$el.style.bottom = `${BOTTOM}px`
-      list.refresh()
+    if (this.$refs.list) {
+      this.$refs.list.$el.style.bottom = `${BOTTOM}px`
+      this.$refs.list.refresh()
     }
   }
 
   getY(pos: number) {
     const MIN_GAP = 10 //10px
     const newTop = this.layerTop + pos //layer与顶部的距离
-    const minTop = (this.$refs.title as HTMLElement).offsetTop + (this.$refs.title as HTMLElement).offsetHeight + MIN_GAP //距离top最小高度
-    const banner = (this.$refs.banner as HTMLElement).style //banner引用
+    const minTop = this.$refs.title.offsetTop + this.$refs.title.offsetHeight + MIN_GAP //距离top最小高度
+    const banner = this.$refs.banner.style //banner引用
 
     if (newTop >= minTop) {
-      ;(this.$refs.layer as HTMLElement).style.transform = `translateY(${pos}px)`
+      this.$refs.layer.style.transform = `translateY(${pos}px)`
       this.playbtn = true
       banner.height = `${this.bgHeight}px`
       banner.zIndex = "3"
@@ -94,7 +106,7 @@ export default class MusicList extends Mixins(PlaylistMixin) {
     this.$router.back()
   }
   _refresh() {
-    ;(this.$refs.list as Scroll).refresh()
+    this.$refs.list.refresh()
   }
 }
 </script>

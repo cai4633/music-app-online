@@ -1,35 +1,29 @@
 <template>
   <div class="history-list">
     <transition-group tag="ul" name="history">
-      <li
-        v-for="item in list"
-        class="clearfix"
-        @click="seleteItem(item)"
-        :key="item"
-      >
+      <li v-for="item in list" class="clearfix" @click="seleteItem(item)" :key="item">
         <span>{{ item }}</span>
-        <i @click.stop="selectOne(item)"
-          ><icon-svg icon="#el-icon-clear"></icon-svg
-        ></i>
+        <i @click.stop="deleteOne(item)"><icon-svg icon="#el-icon-clear"></icon-svg></i>
       </li>
     </transition-group>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-import IconSvg from "base/icon-svg/icon-svg.vue";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import IconSvg from "base/icon-svg/icon-svg.vue"
 @Component({
-  components: { IconSvg }
+  components: { IconSvg },
 })
 export default class HistoryList extends Vue {
   @Prop({ default: () => [] })
-  list!: string[];
+  list!: string[]
+
   seleteItem(item: string) {
-    this.$emit("select", item);
+    this.$emit("select", item)
   }
-  selectOne(item: string) {
-    this.$emit("delete", item);
+  deleteOne(item: string) {
+    this.$emit("delete", item)
   }
 }
 </script>
@@ -43,7 +37,7 @@ export default class HistoryList extends Vue {
     transform translatex(100%)
 
   ul
-    margin-top 10px
+    padding-top 10px
     position relative
     z-index 0
     li

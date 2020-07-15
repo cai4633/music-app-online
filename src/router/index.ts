@@ -1,18 +1,28 @@
-import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
-import recommend from "@/views/recommend/recommend.vue";
-import rank from "@/views/rank/rank.vue";
-import search from "@/views/search/search.vue";
-import singer from "@/views/singer/singer.vue";
-import singerDetails from "@/views/singer-details/singer-details.vue";
-import RecommendDetails from "@/views/recommend-details/recommend-details.vue";
-import Toplist from "@/views/toplist/toplist.vue";
-Vue.use(VueRouter);
+import Vue from "vue"
+import VueRouter, { RouteConfig } from "vue-router"
+Vue.use(VueRouter)
+
+// import rank from "@/views/rank/rank.vue"
+// import search from "@/views/search/search.vue"
+// import singer from "@/views/singer/singer.vue"
+// import singerDetails from "@/views/singer-details/singer-details.vue"
+// import RecommendDetails from "@/views/recommend-details/recommend-details.vue"
+// import Toplist from "@/views/toplist/toplist.vue"
+
+// 路由懒加载
+const recommend = () => import("@/views/recommend/recommend.vue")
+const rank = () => import("@/views/rank/rank.vue")
+const search = () => import("@/views/search/search.vue")
+const singer = () => import("@/views/singer/singer.vue")
+const singerDetails = () => import("@/views/singer-details/singer-details.vue")
+const RecommendDetails = () => import("@/views/recommend-details/recommend-details.vue")
+const Toplist = () => import("@/views/toplist/toplist.vue")
+const UserCenter = () => import("@/views/user-center/user-center.vue")
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    redirect: "/recommend"
+    redirect: "/recommend",
   },
   {
     path: "/recommend",
@@ -20,9 +30,9 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: ":id",
-        component: RecommendDetails
-      }
-    ]
+        component: RecommendDetails,
+      },
+    ],
   },
   {
     path: "/rank",
@@ -30,9 +40,9 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: ":id",
-        component: Toplist
-      }
-    ]
+        component: Toplist,
+      },
+    ],
   },
   {
     path: "/search",
@@ -40,9 +50,9 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: ":id",
-        component: singerDetails
-      }
-    ]
+        component: singerDetails,
+      },
+    ],
   },
   {
     path: "/singer",
@@ -50,22 +60,23 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: ":id",
-        component: singerDetails
-      }
-    ]
+        component: singerDetails,
+      },
+    ],
+  },
+  {
+    path: "/user-center",
+    component: UserCenter,
   },
   {
     path: "/home",
     name: "Home",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ "../views/Home.vue")
-  }
-];
+    component: () => import(/* webpackChunkName: "about" */ "../views/Home.vue"),
+  },
+]
 
 const router = new VueRouter({
-  routes
-});
+  routes,
+})
 
-export default router;
+export default router

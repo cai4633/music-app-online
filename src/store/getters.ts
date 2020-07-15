@@ -13,3 +13,4 @@ export const currentSong = (state: State) =>
   state.playlist[state.currentIndex] || {};
 export const searchHistory = (state: State) => state.searchHistory;
 export const playHistory = (state: State) => state.playHistory;
+export const favorite = (state: State) => state.favorite;

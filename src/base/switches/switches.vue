@@ -1,12 +1,7 @@
 <template>
   <div class="switches">
     <ul class="tab">
-      <li
-        v-for="(item, index) in switches"
-        :key="item"
-        @click.stop="selectItem(index)"
-        :class="{ active: index === currentIndex }"
-      >
+      <li v-for="(item, index) in switches" :key="item" @click.stop="selectItem(index)" :class="{ active: index === currentIndex }" >
         {{ item }}
       </li>
     </ul>

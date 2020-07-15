@@ -1,5 +1,6 @@
 import * as types from "./mutation-types";
 import { State } from "./config";
+import { Songs } from '@/common/js/config';
 
 const mutations = {
   [types.SET_SINGER](state: any, singer: any) {
@@ -32,9 +33,12 @@ const mutations = {
   [types.SET_SEARCH_HISTORY](state: State, list: string[]) {
     state.searchHistory = list;
   },
-  [types.SET_PLAY_HISTORY](state: State, list: string[]) {
+  [types.SET_PLAY_HISTORY](state: State, list: Songs[]) {
     state.playHistory = list;
-  }
+  },
+  [types.SET_FAVORITE](state: State, list: Songs[]) {
+    state.favorite = list;
+  },
 };
 
 export default mutations;

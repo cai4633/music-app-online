@@ -29,6 +29,9 @@ import { Mutation, Getter } from "vuex-class"
 })
 export default class Rank extends Mixins(PlaylistMixin) {
   lists: any[] = []
+  $refs!: {
+    rank: Scroll
+  }
 
   @Getter("playlist") playlist!: any[]
   @Mutation("SET_TOPLIST") setToplist!: MutationMethod
@@ -46,8 +49,8 @@ export default class Rank extends Mixins(PlaylistMixin) {
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 60 : 0
     if (this.$refs.rank) {
-      ;(<Scroll>this.$refs.rank).$el.style.bottom = `${BOTTOM}px`
-      ;(this.$refs.rank as Scroll).refresh()
+      this.$refs.rank.$el.style.bottom = `${BOTTOM}px`
+      this.$refs.rank.refresh()
     }
   }
   _getRank() {

@@ -55,6 +55,12 @@ const TYPE_SINGER = "singer"
 export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
   hotkeys: any[] = []
   query = ""
+  $refs!: {
+    shortcut: Scroll
+    suggest: HTMLElement
+    confirm: Confirm
+    searchBox: SearchBox
+  }
 
   get shortcutList() {
     return this.hotkeys.concat(this.searchHistory)
@@ -63,15 +69,15 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
     this._getHotKey()
   }
   selectItem(key: string) {
-    ;(<SearchBox>this.$refs.searchBox).setQuery(key)
+    this.$refs.searchBox.setQuery(key)
   }
   handlePlaylist() {
     const bottom = this.playlist.length ? 60 : 0
-    ;(<Scroll>this.$refs.shortcut).$el.style.bottom = `${bottom}px`
-    ;(<HTMLElement>this.$refs.suggest).style.bottom = `${bottom}px`
+    this.$refs.shortcut.$el.style.bottom = `${bottom}px`
+    this.$refs.suggest.style.bottom = `${bottom}px`
   }
   showConfirm() {
-    ;(this.$refs.confirm as Confirm).show()
+    this.$refs.confirm.show()
   }
   _getHotKey() {
     getHotKey().then((response: any) => {

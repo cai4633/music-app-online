@@ -1,14 +1,22 @@
 <template>
   <div class="m-header">
     <div class="banner">
-      <img src="./logo@2x.png" alt="banner" /><span>Music APP</span>
+      <img src="./logo@2x.png" alt="banner" />
+      <span>Music APP</span>
     </div>
+    <router-link class="user" title="用户中心" to="/user-center" tag="span">
+      <icon-svg icon="#el-icon-user"></icon-svg>
+    </router-link>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-@Component
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import IconSvg from "base/icon-svg/icon-svg.vue"
+
+@Component({
+  components: { IconSvg },
+})
 export default class MHeader extends Vue {}
 </script>
 
@@ -18,6 +26,7 @@ export default class MHeader extends Vue {}
 div.m-header
     height 46px
     flex 0 0 auto
+    position relative
 
     .banner
         display flex
@@ -37,4 +46,13 @@ div.m-header
 
             margin-left 0.5em
             font-size 1.3em
+    .user
+      position absolute
+      right 25px
+      top 50%
+      transform translateY(-50%)
+      svg
+        fill $text-highlight-color
+        width 24px
+        height @width
 </style>

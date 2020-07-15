@@ -16,15 +16,7 @@
           </div>
           <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines" v-show="lyrics.lines.length">
             <div class="lyric" ref="lyric">
-              <p
-                class="txt"
-                v-for="(item, index) in lyrics.lines"
-                v-html="item.txt"
-                :key="item.txt + index"
-                :id="'line-' + index"
-                :class="{ current: currentLine === index }"
-                ref="lyricTxt"
-              ></p>
+              <p class="txt" v-for="(item, index) in lyrics.lines" v-html="item.txt" :key="item.txt + index" :id="'line-' + index" :class="{ current: currentLine === index }" ref="lyricTxt" ></p>
             </div>
           </scroll>
         </div>
@@ -48,8 +40,8 @@
             <div class="next" @click="next">
               <icon-svg icon="#el-icon-next"></icon-svg>
             </div>
-            <div class="favorites">
-              <icon-svg icon="#el-icon-favorites"></icon-svg>
+            <div class="favorites" @click.stop="toggleFavorite(currentSong)">
+              <icon-svg :icon="getIcon(currentSong)"></icon-svg>
             </div>
           </div>
         </div>
@@ -88,7 +80,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
-import { mapGetters, MutationMethod, mapActions } from "vuex"
+import { mapGetters, MutationMethod, mapActions, ActionMethod } from "vuex"
 import IconSvg from "base/icon-svg/icon-svg.vue"
 import GoBack from "base/go-back/go-back.vue"
 import animations from "create-keyframe-animation"
@@ -116,6 +108,16 @@ export default class Player extends Mixins(PlayerMixin) {
   totalTime = 0
   lyrics: { [key: string]: any } = { lines: [] }
   touch: { [key: string]: any } = { startX: 0, startY: 0, endY: 0, endX: 0, init: false, percent: 0, moved: false }
+  $refs!: {
+    diskImg: HTMLMediaElement
+    audio: HTMLMediaElement
+    mainDiskWrap: HTMLElement
+    avatar: HTMLElement
+    disk: HTMLElement
+    playlist: Playlist
+    lyrics: Scroll
+    lyricTxt: HTMLElement[]
+  }
   get diskAnimation() {
     return this.playing ? "play" : "play pause"
   }
@@ -135,13 +137,21 @@ export default class Player extends Mixins(PlayerMixin) {
   @Mutation("SET_MODE") setMode!: MutationMethod
   @Mutation("SET_PLAYLIST") setPlaylist!: MutationMethod
 
-  @Action("savePlayHistory") savePlayHistory!: MutationMethod
+  @Action("savePlayHistory") savePlayHistory!: ActionMethod
+  @Action("saveFavoriteList") saveFavoriteList!: ActionMethod
 
+  addFavorite(song: Songs | Event) {
+    if ((<Songs>song).id) {
+      this.saveFavoriteList(song)
+    } else if (this.currentSong) {
+      this.saveFavoriteList(this.currentSong)
+    }
+  }
   showPlaylist() {
-    ;(this.$refs.playlist as Playlist).show()
+    this.$refs.playlist.show()
   }
   changeSrc() {
-    ;(<HTMLMediaElement>this.$refs.diskImg).src = disc_default
+    this.$refs.diskImg.src = disc_default
   }
   minimize() {
     this.setFullScreen(false)
@@ -186,7 +196,7 @@ export default class Player extends Mixins(PlayerMixin) {
   }
   nextOrPreToPlay() {
     this.$nextTick(() => {
-      this.playing ? (this.$refs.audio as HTMLMediaElement).play() : this.togglePlaying()
+      this.playing ? this.$refs.audio.play() : this.togglePlaying()
     })
   }
   updataTime(e: Event) {
@@ -214,7 +224,7 @@ export default class Player extends Mixins(PlayerMixin) {
     const left = this.currentShow === "cd" ? 0 : -width
     const offsetWidth = Math.min(0, Math.max(-width, left + dx))
     this.touch.percent = Math.abs(offsetWidth / width)
-    ;(<Scroll>this.$refs.lyrics).$el.style["transform"] = `translateX(${offsetWidth}px)`
+    this.$refs.lyrics.$el.style["transform"] = `translateX(${offsetWidth}px)`
     return
   }
   lyricEnd() {
@@ -222,15 +232,15 @@ export default class Player extends Mixins(PlayerMixin) {
     if (this.currentShow === "cd") {
       //cd
       if (this.touch.percent > 0.05 && this.touch.moved) {
-        ;(<Scroll>this.$refs.lyrics).$el.style["transform"] = `translateX(${-width}px)`
-        ;(<HTMLElement>this.$refs.mainDiskWrap).style.opacity = "0"
+        this.$refs.lyrics.$el.style["transform"] = `translateX(${-width}px)`
+        this.$refs.mainDiskWrap.style.opacity = "0"
         this.currentShow = "lyric"
       }
     } else {
       //lyric
       if (this.touch.percent < 0.95 && this.touch.moved) {
-        ;(this.$refs.lyrics as Scroll).$el.style["transform"] = `translateX(0px)`
-        ;(<HTMLElement>this.$refs.mainDiskWrap).style.opacity = "1"
+        this.$refs.lyrics.$el.style["transform"] = `translateX(0px)`
+        this.$refs.mainDiskWrap.style.opacity = "1"
         this.currentShow = "cd"
       }
     }
@@ -246,13 +256,13 @@ export default class Player extends Mixins(PlayerMixin) {
     }
   }
   loop() {
-    ;(this.$refs.audio as HTMLMediaElement).currentTime = 0
-    ;(this.$refs.audio as HTMLMediaElement).play()
+    this.$refs.audio.currentTime = 0
+    this.$refs.audio.play()
   }
   enter(el: HTMLElement, done: Function) {
     this.$nextTick(() => {
-      const disk = this.$refs.disk as HTMLElement
-      const avatar = this.$refs.avatar as HTMLElement
+      const disk = this.$refs.disk
+      const avatar = this.$refs.avatar
       const { x, y, scale } = this._getPos(avatar, disk)
       const animation = {
         "0%": { transform: `translate3d(${x}px,${y}px,0) scale(${scale})` },
@@ -271,14 +281,14 @@ export default class Player extends Mixins(PlayerMixin) {
     })
   }
   dragBar(newCurrentTime: number) {
-    ;(this.$refs.audio as HTMLMediaElement).currentTime = newCurrentTime
+    this.$refs.audio.currentTime = newCurrentTime
     !this.playing && this.togglePlaying()
   }
 
   lyricScroll(lineNum: number) {
     const GAP = 5
     if (lineNum > GAP) {
-      this.$refs.lyrics && (this.$refs.lyrics as Scroll).scrollToElement((this.$refs.lyricTxt as HTMLElement[])[lineNum - 5], 1000)
+      this.$refs.lyrics && (this.$refs.lyrics as Scroll).scrollToElement(this.$refs.lyricTxt[lineNum - 5], 1000)
     }
     return
   }
@@ -295,26 +305,24 @@ export default class Player extends Mixins(PlayerMixin) {
   @Watch("playing")
   watchPlaying(newPlaying: boolean) {
     this.$nextTick(() => {
-      newPlaying ? (this.$refs.audio as HTMLMediaElement).play() : (this.$refs.audio as HTMLMediaElement).pause()
+      newPlaying ? this.$refs.audio.play() : this.$refs.audio.pause()
     })
   }
   @Watch("currentSong")
   watchCurrentSong(newSong: Songs, oldSong: Songs) {
     if (!newSong.id || newSong.id === oldSong.id || !this.playlist.length) return
-
     if (newSong._getLyric) {
       newSong._getLyric().then(() => {
         this.lyrics = lyricParser(newSong.lyric)
       })
     }
-
     if (!newSong.url && this.playing) {
       this.autoJump(this.autoJumpTime * 1000)
       return
     }
     this.savePlayHistory(newSong)
     this.$nextTick(() => {
-      ;(this.$refs.audio as HTMLMediaElement).play()
+      this.$refs.audio.play()
     })
   }
 }

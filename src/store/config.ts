@@ -10,4 +10,5 @@ export interface State {
   toplist: any;
   searchHistory: string[];
   playHistory: any[];
+  favorite: any[];
 }
