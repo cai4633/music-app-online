@@ -3,7 +3,9 @@
     <div class="search-box-wrap">
       <search-box ref="searchBox" @query="onQueryChange"></search-box>
     </div>
-    <div class="search-result" v-show="query" ref="suggest"><suggest :query="query" @select="onSelectEvent"></suggest></div>
+    <div class="search-result" v-show="query" ref="suggestWrap">
+      <suggest :query="query" @select="onSelectEvent" ref="suggest"></suggest>
+    </div>
     <scroll :data="shortcutList" class="shortcut" ref="shortcut">
       <div class="shortcut-inner">
         <div class="hotkey-wrap">
@@ -57,9 +59,10 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
   query = ""
   $refs!: {
     shortcut: Scroll
-    suggest: HTMLElement
+    suggestWrap: HTMLElement
     confirm: Confirm
     searchBox: SearchBox
+    suggest: Suggest
   }
 
   get shortcutList() {
@@ -74,7 +77,9 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
   handlePlaylist() {
     const bottom = this.playlist.length ? 60 : 0
     this.$refs.shortcut.$el.style.bottom = `${bottom}px`
-    this.$refs.suggest.style.bottom = `${bottom}px`
+    this.$refs.suggestWrap.style.bottom = `${bottom}px`
+    this.$refs.shortcut.refresh()
+    this.$refs.suggest.$refs.suggest.refresh()
   }
   showConfirm() {
     this.$refs.confirm.show()

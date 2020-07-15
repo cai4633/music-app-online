@@ -1,14 +1,16 @@
 <template>
   <div class="loading">
     <img src="./loading.gif" alt="loading" width="24" height="24" />
-    <p class="desc">正在加载...</p>
+    <p class="desc">{{ title }}</p>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 @Component
-export default class Loading extends Vue {}
+export default class Loading extends Vue {
+  @Prop({ default: "正在加载..." }) title!: string
+}
 </script>
 
 <style lang="stylus" scoped>

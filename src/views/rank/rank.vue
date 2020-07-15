@@ -1,16 +1,19 @@
 <template>
   <scroll class="rank" ref="rank" :data="lists">
-    <ul class="content-inner">
-      <li v-for="list in lists" @click="selectItem(list)" :key="'rank' + list.id">
-        <div class="topIcon"><img @load="imgLoad" v-lazy="list.picUrl" width="100" /></div>
-        <ul class="songlist">
-          <li v-for="(song, songIndex) in list.songList" :key="song.songname + ((Math.random() * 10000) | 0)">
-            <span>{{ songIndex + 1 }}</span>
-            <span class="txt">{{ song.songname }} - {{ song.singername }}</span>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <div class="rank-inner">
+      <ul class="content-inner">
+        <li v-for="list in lists" @click="selectItem(list)" :key="'rank' + list.id">
+          <div class="topIcon"><img @load="imgLoad" v-lazy="list.picUrl" width="100" /></div>
+          <ul class="songlist">
+            <li v-for="(song, songIndex) in list.songList" :key="song.songname + ((Math.random() * 10000) | 0)">
+              <span>{{ songIndex + 1 }}</span>
+              <span class="txt">{{ song.songname }} - {{ song.singername }}</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="loading-wrap" v-show="!lists.length"><loading></loading></div>
+    </div>
     <router-view></router-view>
   </scroll>
 </template>
@@ -23,9 +26,10 @@ import Scroll from "base/scroll/scroll.vue"
 import { getRank } from "api/rank.ts"
 import { ERR_OK } from "api/config"
 import { Mutation, Getter } from "vuex-class"
+import Loading from "base/loading/loading.vue"
 
 @Component({
-  components: { Scroll },
+  components: { Scroll, Loading },
 })
 export default class Rank extends Mixins(PlaylistMixin) {
   lists: any[] = []
@@ -67,6 +71,7 @@ export default class Rank extends Mixins(PlaylistMixin) {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
+@import '~common/stylus/mixin.styl';
 .rank
   position fixed
   top 81px
@@ -77,6 +82,9 @@ export default class Rank extends Mixins(PlaylistMixin) {
   background-color $background-color
   color $text-color
   overflow hidden
+  .loading-wrap
+    position-center(fixed, x)
+    top 45%
   ul.content-inner
     &>li
       display flex

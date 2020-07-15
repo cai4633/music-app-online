@@ -40,7 +40,6 @@ import Song from "common/js/song"
 import Scroll from "base/scroll/scroll.vue"
 import { PlaylistMixin } from "common/js/mixins"
 import IconSvg from "base/icon-svg/icon-svg.vue"
-import { Song } from "common/js/song"
 import NoResult from "base/no-result/no-result.vue"
 import HistoryList from "../../base/history-list/history-list.vue"
 

@@ -1,97 +1,88 @@
 <template>
-  <scroll
-    class="suggest"
-    :data="lists"
-    :pullup="true"
-    @scrollToEnd="searchMore()"
-  >
-    <ul class="suggest-list" v-show="hasMore">
-      <li
-        class="suggest-item"
-        v-for="item in lists"
-        :key="(item.name || item.singername) + Math.random()"
-        @click="selectItem(item)"
-      >
-        <i><icon-svg :icon="getIconCls(item)"></icon-svg></i>
-        <p class="text">{{ getDisplayText(item) }}</p>
-      </li>
-    </ul>
-    <div class="no-result-wrap" v-show="!hasMore && lists.length === 0">
-      <no-result text="无搜索结果"></no-result>
+  <scroll class="suggest" :data="lists" :pullup="true" @scrollToEnd="searchMore()" ref="suggest">
+    <div class="scroll-inner">
+      <ul class="suggest-list" v-show="hasMore">
+        <li class="suggest-item" v-for="item in lists" :key="(item.name || item.singername) + Math.random()" @click="selectItem(item)">
+          <i><icon-svg :icon="getIconCls(item)"></icon-svg></i>
+          <p class="text">{{ getDisplayText(item) }}</p>
+        </li>
+      </ul>
+      <div class="loading-wrap" v-show="hasMore"><loading></loading></div>
+      <div class="no-result-wrap" v-show="!hasMore && lists.length === 0">
+        <no-result text="无搜索结果"></no-result>
+      </div>
     </div>
   </scroll>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator";
-import NoResult from "base/no-result/no-result.vue";
-import IconSvg from "base/icon-svg/icon-svg.vue";
-import Scroll from "base/scroll/scroll.vue";
-import { getSearchInfo } from "api/search.ts";
-import { ERR_OK } from "api/config";
-import { createSong } from "@/common/js/song.ts";
-import { getSongUrl } from "api/songs";
+import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
+import NoResult from "base/no-result/no-result.vue"
+import IconSvg from "base/icon-svg/icon-svg.vue"
+import Loading from "base/loading/loading.vue"
+import Scroll from "base/scroll/scroll.vue"
+import { getSearchInfo } from "api/search.ts"
+import { ERR_OK } from "api/config"
+import { createSong } from "common/js/song.ts"
+import { getSongUrl } from "api/songs"
 
-const TYPE_SINGER = "singer";
-const perpage = 30;
+const TYPE_SINGER = "singer"
+const perpage = 30
 
 @Component({
-  components: { IconSvg, Scroll, NoResult }
+  components: { IconSvg, Scroll, NoResult, Loading },
 })
 export default class Suggest extends Vue {
-  lists: any[] = [];
-  page = 1;
-  hasMore = true;
+  lists: any[] = []
+  page = 1
+  hasMore = true
+  $refs!: {
+    suggest: Scroll
+  }
+
   @Prop({ default: "" })
-  query!: string;
+  query!: string
 
   @Prop({ default: true })
-  showSinger!: boolean;
+  showSinger!: boolean
 
   searchMore() {
     if (!this.hasMore) {
-      return;
+      return
     }
-    this.page++;
-    this._getSearchInfo();
+    this.page++
+    this._getSearchInfo()
   }
   selectItem(item: any) {
-    this.$emit("select", item);
+    this.$emit("select", item)
   }
   getIconCls(item: any) {
-    return item.type === TYPE_SINGER ? "#el-icon-person" : "#el-icon-music";
+    return item.type === TYPE_SINGER ? "#el-icon-person" : "#el-icon-music"
   }
   getDisplayText(item: any) {
-    return item.type === TYPE_SINGER
-      ? item.singername
-      : `${item.name}-${item.singer}`;
+    return item.type === TYPE_SINGER ? item.singername : `${item.name}-${item.singer}`
   }
 
   _getSearchInfo() {
-    getSearchInfo(this.query, this.page, this.showSinger, perpage).then(
-      (response: any) => {
-        if (response.code === ERR_OK) {
-          this.getResult(response.data);
-          this.checkMore(response.data);
-        }
+    getSearchInfo(this.query, this.page, this.showSinger, perpage).then((response: any) => {
+      if (response.code === ERR_OK) {
+        this.getResult(response.data)
+        this.checkMore(response.data)
       }
-    );
+    })
   }
 
   checkMore(data: any) {
     if (data.song) {
-      const { list, curnum, curpage, totalnum } = data.song;
-      this.hasMore =
-        list.length && curnum + (curpage - 1) * perpage < totalnum
-          ? true
-          : false;
+      const { list, curnum, curpage, totalnum } = data.song
+      this.hasMore = list.length && curnum + (curpage - 1) * perpage < totalnum ? true : false
     }
   }
 
   getResult({ song: { list }, zhida }: any) {
-    let ret: any[] = [];
+    let ret: any[] = []
     if (zhida && zhida.singerid) {
-      ret.push({ ...zhida, type: TYPE_SINGER });
+      ret.push({ ...zhida, type: TYPE_SINGER })
     }
     if (list) {
       const list_copy = list.map((item: any) => {
@@ -100,33 +91,33 @@ export default class Suggest extends Vue {
           id: item.songid,
           name: item.songname,
           album: item.albumname,
-          albummid: item.albummid
-        };
-      });
+          albummid: item.albummid,
+        }
+      })
       return getSongUrl(list_copy).then((res: any) => {
         const songs = res.map((item: any) => {
-          return createSong(item);
-        });
-        ret = ret.concat(songs);
-        this.lists = this.lists.concat(ret);
-      });
+          return createSong(item)
+        })
+        ret = ret.concat(songs)
+        this.lists = this.lists.concat(ret)
+      })
     }
   }
 
   initRequest() {
-    this.lists = [];
-    this.page = 1;
-    this.hasMore = true;
+    this.lists = []
+    this.page = 1
+    this.hasMore = true
   }
 
   @Watch("query")
   watchQuery(newQuery: string) {
     if (!newQuery) {
-      this.lists = [];
-      return;
+      this.lists = []
+      return
     }
-    this.initRequest();
-    this._getSearchInfo();
+    this.initRequest()
+    this._getSearchInfo()
   }
 }
 </script>
@@ -156,8 +147,10 @@ export default class Suggest extends Vue {
         min-width 0
         no-wrap()
   .no-result-wrap
-    width 100%
     position absolute
+    width 100%
     top 40%
     transform translateY(-50%)
+  .loading-wrap
+    margin-top 10px
 </style>
