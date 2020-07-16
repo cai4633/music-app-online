@@ -105,6 +105,7 @@ const singerQuery = {
     }
   }
 };
+
 export {
   ERR_OK,
   queryData,

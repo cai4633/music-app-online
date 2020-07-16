@@ -34,8 +34,7 @@ export function getSongUrl(songs: any) {
   }
   const ret = formatData(songs);
   const mids = ret.map((song: any) => song.mid);
-  return axios
-    .get("/api/getSongUrl", {
+  return axios.get("/cgi-bin/musicu.fcg", {
       params: {
         format: "json",
         data: {
@@ -67,7 +66,7 @@ export function getLyric(musicid: number) {
     "-": +new Date(),
     musicid: musicid
   });
-  return axios.get("/api/getLyric", { params: option }).then(res => {
+  return axios.get("/lyric/fcgi-bin/fcg_query_lyric.fcg", { params: option }).then(res => {
     const str = res.data;
     if (str.match(/^MusicJsonCallback\(.*\)$/)) {
       const data = eval(str);

@@ -1,7 +1,11 @@
 <template>
   <div class="music-list">
     <h1 ref="title">{{ title }}</h1>
-    <div class="banner" ref="banner" :style="'background-image:url(' + bgImg + ')'">
+    <div
+      class="banner"
+      ref="banner"
+      :style="'background-image:url(' + bgImg + ')'"
+    >
       <div class="playbtn" v-show="playbtn" @click="random">
         <icon-svg icon="#el-icon-play1"></icon-svg>
         <span>随机播放全部</span>
@@ -9,7 +13,12 @@
     </div>
     <div class="bg-layer" ref="layer"></div>
     <scroll class="list" :data="songs" ref="list" @scroll="getY" :probeType="3">
-      <song-list :songs="songs" ref="songList" @select="playlistInit" :rank="rank"></song-list>
+      <song-list
+        :songs="songs"
+        ref="songList"
+        @select="playlistInit"
+        :rank="rank"
+      ></song-list>
     </scroll>
     <div class="loading-wrap" v-show="!songs.length">
       <loading></loading>
@@ -19,7 +28,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Provide, Mixins } from "vue-property-decorator"
+import {
+  Component,
+  Prop,
+  Vue,
+  Watch,
+  Provide,
+  Mixins
+} from "vue-property-decorator"
 import SongList from "base/song-list/song-list.vue"
 import Scroll from "base/scroll/scroll.vue"
 import Loading from "base/loading/loading.vue"
@@ -32,7 +48,7 @@ import { Songs } from "common/js/config"
 import { Getter, Mutation, Action } from "vuex-class"
 
 @Component({
-  components: { SongList, Scroll, Loading, IconSvg, GoBack },
+  components: { SongList, Scroll, Loading, IconSvg, GoBack }
 })
 export default class MusicList extends Mixins(PlaylistMixin) {
   top = 0
@@ -58,6 +74,9 @@ export default class MusicList extends Mixins(PlaylistMixin) {
 
   mounted() {
     this.$nextTick(() => {
+      if (!this.$refs.layer || !this.$refs.banner) {
+        return
+      }
       this.layerTop = this.$refs.layer.offsetTop
       this.bgHeight = this.$refs.banner.offsetHeight
     })
@@ -85,7 +104,8 @@ export default class MusicList extends Mixins(PlaylistMixin) {
   getY(pos: number) {
     const MIN_GAP = 10 //10px
     const newTop = this.layerTop + pos //layer与顶部的距离
-    const minTop = this.$refs.title.offsetTop + this.$refs.title.offsetHeight + MIN_GAP //距离top最小高度
+    const minTop =
+      this.$refs.title.offsetTop + this.$refs.title.offsetHeight + MIN_GAP //距离top最小高度
     const banner = this.$refs.banner.style //banner引用
 
     if (newTop >= minTop) {

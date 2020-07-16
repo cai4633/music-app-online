@@ -10,42 +10,42 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-import MusicList from "components/music-list/music-list.vue";
-import { getSongsByTopid } from "../../api/rank";
-import { ERR_OK } from "../../api/config";
-import { Songs } from "common/js/config";
-import { createSong } from "common/js/song.ts";
-import { getSongUrl } from "../../api/songs";
-import { mapGetters, MutationMethod } from "vuex";
-import { Getter } from "vuex-class";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import MusicList from "components/music-list/music-list.vue"
+import { getSongsByTopid } from "../../api/rank"
+import { ERR_OK } from "../../api/config"
+import { Songs } from "common/js/config"
+import { createSong } from "common/js/song.ts"
+import { getSongUrl } from "../../api/songs"
+import { mapGetters, MutationMethod } from "vuex"
+import { Getter } from "vuex-class"
 
 @Component({
   components: { MusicList }
 })
 export default class Toplist extends Vue {
-  songs: Songs[] = [];
-  rank = true;
+  songs: Songs[] = []
+  rank = true
 
-  @Getter("toplist") toplist!: any;
+  @Getter("toplist") toplist!: any
 
   mounted() {
     if (!this.toplist.id) {
-      this.$router.push({ path: "/rank" });
+      this.$router.push({ path: "/rank" })
     }
-    this._getSongsByTopid(this.toplist.id);
+    this._getSongsByTopid(this.toplist.id)
   }
   _getSongsByTopid(id: number) {
     return getSongsByTopid(id).then((res: any) => {
       if (res.code === ERR_OK) {
-        const ret = res.songlist;
+        const ret = res.songlist
         getSongUrl(ret).then((response: any) => {
           this.songs = response.map((song: any) => {
-            return createSong(song);
-          });
-        });
+            return createSong(song)
+          })
+        })
       }
-    });
+    })
   }
 }
 </script>

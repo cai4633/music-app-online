@@ -10,7 +10,6 @@ export function getHotKey() {
 
 export function getSearchInfo(key = "", page = 1, zhida = true, perpage = 20) {
   // const url = "https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp"
-  const url = "/api/getSearchInfo";
   const data = Object.assign({}, jsonpOptions, {
     g_tk: +new Date(),
     w: key,
@@ -26,7 +25,7 @@ export function getSearchInfo(key = "", page = 1, zhida = true, perpage = 20) {
     aggr: 0,
     remoteplace: "txt.mqq.all"
   });
-  return axios.get(url, { params: data }).then(res => {
+  return axios.get("/soso/fcgi-bin/search_for_qq_cp", { params: data }).then(res => {
     return Promise.resolve(res.data);
   });
 }

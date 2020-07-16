@@ -4,22 +4,39 @@
       <div>
         <div class="banner" v-if="slideList.length">
           <slider>
-            <div class="swiper-slide" v-for="(item, index) in slideList" :key="'slider' + index">
-              <a :href="item.linkUrl"><img @load="imgLoad" v-lazy="item.picUrl" alt="" /></a>
-            </div>
+            <li
+              class="swiper-slide"
+              v-for="(item, index) in slideList"
+              :key="item.content_id"
+            >
+              <a :href="item.linkUrl"
+                ><img @load="imgLoad" v-lazy="item.picUrl"
+              /></a>
+            </li>
           </slider>
         </div>
 
         <div class="descLists">
           <h2>热门歌单推荐</h2>
           <ul class="descLists-wrap">
-            <li v-for="(desc, index) in descList" :key="desc.contend_id" @click="selectItem(desc, index)">
+            <li
+              v-for="(desc, index) in descList"
+              :key="desc.contend_id"
+              @click="selectItem(desc, index)"
+            >
               <div class="desc-icon">
-                <img v-lazy="desc.cover" alt="desc-icon" width="60" height="60" />
+                <img
+                  v-lazy="desc.cover"
+                  alt="desc-icon"
+                  width="60"
+                  height="60"
+                />
               </div>
               <div class="text">
                 <h3 class="desc-name">{{ desc.title }}</h3>
-                <p class="listen-number">播放量：{{ getListenNum(desc.listen_num) }}万</p>
+                <p class="listen-number">
+                  播放量：{{ getListenNum(desc.listen_num) }}万
+                </p>
               </div>
             </li>
           </ul>
@@ -45,16 +62,18 @@ import { Mutation } from "vuex-class"
 import { mapGetters, MutationMethod } from "vuex"
 
 @Component({
-  components: { Slider, Scroll, Loading },
+  components: { Slider, Scroll, Loading }
 })
-
 export default class Recommend extends Mixins(PlaylistMixin) {
   slideList = []
   descList = []
   timer = 0
+  $refs!: {
+    recommend: Scroll
+  }
 
   @Mutation("SET_DISC") setDisc!: MutationMethod
-  
+
   created() {
     this.timer = window.setTimeout(() => {
       this.__getRecommend()
@@ -72,8 +91,8 @@ export default class Recommend extends Mixins(PlaylistMixin) {
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
     if (this.$refs.recommend) {
-      ;(<Scroll>this.$refs.recommend).$el.style.bottom = `${BOTTOM}px`
-      ;(this.$refs.recommend as Scroll).refresh()
+      this.$refs.recommend.$el.style.bottom = `${BOTTOM}px`
+      this.$refs.recommend.refresh()
     }
   }
   __getRecommend() {
@@ -92,7 +111,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     return (parseFloat(number) / 10000).toFixed(1)
   }
   imgLoad() {
-    ;(this.$refs.recommend as Scroll).refresh()
+    this.$refs.recommend.refresh()
   }
 }
 </script>

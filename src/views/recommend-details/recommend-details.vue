@@ -9,41 +9,42 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-import MusicList from "@/components/music-list/music-list.vue";
-import { createSong } from "common/js/song";
-import { Songs } from "common/js/config";
-import { getCdInfoById } from "api/recommend.ts";
-import { getSongUrl } from "api/songs";
-import { ERR_OK } from "api/config";
-import { mapGetters } from "vuex";
-import { Getter } from "vuex-class";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import MusicList from "@/components/music-list/music-list.vue"
+import { createSong } from "common/js/song"
+import { Songs } from "common/js/config"
+import { getCdInfoById } from "api/recommend.ts"
+import { getSongUrl } from "api/songs"
+import { ERR_OK } from "api/config"
+import { mapGetters } from "vuex"
+import { Getter } from "vuex-class"
+import { ResponseType, AxiosResponse } from 'axios'
 
 @Component({
   components: { MusicList }
 })
 export default class RecommendDetails extends Vue {
-  songs: Songs[] = [];
+  songs: Songs[] = []
 
-  @Getter("disc") disc!: any;
+  @Getter("disc") disc!: any
 
   mounted() {
     if (!this.disc.content_id) {
-      this.$router.push({ path: "/recommend" });
+      this.$router.push({ path: "/recommend" })
     }
-    this._getCdInfoById(this.disc.content_id);
+    this._getCdInfoById(this.disc.content_id)
   }
   _getCdInfoById(id: number) {
     return getCdInfoById(id).then((response: any) => {
       if (response.code === ERR_OK) {
-        const songlist = response.cdlist[0].songlist;
+        const songlist = response.cdlist[0].songlist
         getSongUrl(songlist).then((response: any) => {
           this.songs = response.map((item: any) => {
-            return createSong(item);
-          });
-        });
+            return createSong(item)
+          })
+        })
       }
-    });
+    })
   }
 }
 </script>

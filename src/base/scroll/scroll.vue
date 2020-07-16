@@ -75,7 +75,7 @@ export default class Scroll extends Vue {
   refresh(delay = 10) {
     window.clearTimeout(this.timer)
     this.timer = window.setTimeout(() => {
-      this.scroll.refresh()
+      this.scroll && this.scroll.refresh()
     }, delay)
   }
 

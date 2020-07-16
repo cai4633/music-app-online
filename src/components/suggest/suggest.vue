@@ -1,8 +1,19 @@
 <template>
-  <scroll class="suggest" :data="lists" :pullup="true" @scrollToEnd="searchMore()" ref="suggest">
+  <scroll
+    class="suggest"
+    :data="lists"
+    :pullup="true"
+    @scrollToEnd="searchMore()"
+    ref="suggest"
+  >
     <div class="scroll-inner">
       <ul class="suggest-list" v-show="hasMore">
-        <li class="suggest-item" v-for="item in lists" :key="(item.name || item.singername) + Math.random()" @click="selectItem(item)">
+        <li
+          class="suggest-item"
+          v-for="item in lists"
+          :key="(item.name || item.singername) + Math.random()"
+          @click="selectItem(item)"
+        >
           <i><icon-svg :icon="getIconCls(item)"></icon-svg></i>
           <p class="text">{{ getDisplayText(item) }}</p>
         </li>
@@ -30,7 +41,7 @@ const TYPE_SINGER = "singer"
 const perpage = 30
 
 @Component({
-  components: { IconSvg, Scroll, NoResult, Loading },
+  components: { IconSvg, Scroll, NoResult, Loading }
 })
 export default class Suggest extends Vue {
   lists: any[] = []
@@ -60,16 +71,20 @@ export default class Suggest extends Vue {
     return item.type === TYPE_SINGER ? "#el-icon-person" : "#el-icon-music"
   }
   getDisplayText(item: any) {
-    return item.type === TYPE_SINGER ? item.singername : `${item.name}-${item.singer}`
+    return item.type === TYPE_SINGER
+      ? item.singername
+      : `${item.name}-${item.singer}`
   }
 
   _getSearchInfo() {
-    getSearchInfo(this.query, this.page, this.showSinger, perpage).then((response: any) => {
-      if (response.code === ERR_OK) {
-        this.getResult(response.data)
-        this.checkMore(response.data)
+    getSearchInfo(this.query, this.page, this.showSinger, perpage).then(
+      (response: any) => {
+        if (response.code === ERR_OK) {
+          this.getResult(response.data)
+          this.checkMore(response.data)
+        }
       }
-    })
+    )
   }
 
   checkMore(data: any) {
@@ -91,7 +106,7 @@ export default class Suggest extends Vue {
           id: item.songid,
           name: item.songname,
           album: item.albumname,
-          albummid: item.albummid,
+          albummid: item.albummid
         }
       })
       return getSongUrl(list_copy).then((res: any) => {
