@@ -21,6 +21,7 @@
     "fastclick": "^1.0.6",
     "js-base64": "^2.5.2",
     "jsonp": "^0.2.1",
+    "mockjs": "^1.1.0",
     "swiper": "^5.4.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",

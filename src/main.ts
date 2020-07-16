@@ -7,6 +7,7 @@ import "./common/stylus/index.styl"
 import VueLazyload from "vue-lazyload"
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 const singerlistMock = require("./common/mock/singerlist.ts")
+// const Mock = require("mockjs")
 
 const fastclick = FastClick as any
 fastclick.attach(document.body)
@@ -38,16 +39,20 @@ axios.interceptors.request.use(
 
 // axios拦截器mock数据
 axios.interceptors.response.use(
-  response => {
-    // singerlists
+  response => { // singerlists
     if ( response.config.url === "/cgi-bin/musics.fcg" && response.config.params["-"] === "getUCGI6834091127869455" ) {
-      response.data = singerlistMock
-      return response.data
+      return singerlistMock
     }
     return response
   },
   error => {
     console.log(error)
-    return Promise.reject(error)
+    return Promise.resolve(singerlistMock)
   }
 )
+
+// Mockjs 拦截并mock数据
+// Mock.mock("<带查询参数的path或者正则表达式>", "get/post", (config: any) => {
+//   console.log(config)
+//   return "<数据>"
+// })

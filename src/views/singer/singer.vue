@@ -85,6 +85,8 @@ export default class Singer extends Vue {
 
   _getSingerLists() {
     getSingerLists().then(response => {
+      console.log(response);
+      
       if (response.code === ERR_OK) {
         this.singerlist = this.normalizeSinger(response.data.singerlist)
       }

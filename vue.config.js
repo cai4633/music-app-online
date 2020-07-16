@@ -14,6 +14,7 @@ app.use(bodyParser.json()) // for parsing application/json
 app.use("/api", apiRoutes)
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "./" : "/",             //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
   lintOnSave: true,
   chainWebpack: config => {
     config.resolve.alias
@@ -28,11 +29,13 @@ module.exports = {
   devServer: {
     //axios + proxy + interceptors 实现跨域拦截mock功能，偏前端
     proxy: {
-      "/cgi-bin": { //推荐歌单 + 获取歌曲播放链接 + getSingerSongs(获取歌手的歌曲) + getSingerList
+      "/cgi-bin": {
+        //推荐歌单 + 获取歌曲播放链接 + getSingerSongs(获取歌手的歌曲) + getSingerList
         target: "https://u.y.qq.com",
         changeOrigin: true
       },
-      "/qzone": { //歌单详情
+      "/qzone": {
+        //歌单详情
         target: "https://c.y.qq.com",
         changeOrigin: true,
         headers: { referer: "https://y.qq.com/" }
@@ -43,7 +46,8 @@ module.exports = {
         changeOrigin: true,
         headers: { referer: "https://y.qq.com/" }
       },
-      "/lyric": { //歌词
+      "/lyric": {
+        //歌词
         target: "https://c.y.qq.com",
         changeOrigin: true,
         headers: { referer: "https://y.qq.com/" }
