@@ -102,12 +102,12 @@ export const SearchMixin = Vue.extend({
       if (item.type === TYPE_SINGER) {
         this.setSinger(
           new Singer({
-            id: item.singerid,
-            name: item.singername,
-            mid: item.singermid,
+            id: item.singerID,
+            name: item.singerName,
+            mid: item.singerMID,
           })
         )
-        this.$router.push({ path: `/search/${item.singermid}` })
+        this.$router.push({ path: `/search/${item.singerId}` })
       } else {
         this.suggestToPlay(item)
       }

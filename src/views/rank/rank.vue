@@ -86,11 +86,13 @@ export default class Rank extends Mixins(PlaylistMixin) {
     position-center(fixed, x)
     top 45%
   ul.content-inner
+    padding-bottom 2px
     &>li
       display flex
       align-items  center
       justify-content flex-start
-      padding-bottom 15px
+      margin-bottom 15px
+      background-color lighten($background-color, 10%)
       div.topIcon
         flex 0 0 auto
         img
@@ -107,6 +109,7 @@ export default class Rank extends Mixins(PlaylistMixin) {
         flex-direction column
         justify-content center
         min-width 0px
+        
         li
           white-space nowrap
           text-align left

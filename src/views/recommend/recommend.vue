@@ -1,46 +1,27 @@
 <template>
   <div class="recommend">
-    <scroll class="recommend-wrap" :data="descList" ref="recommend">
+    <scroll class="recommend-wrap" :data="albums" ref="recommend">
       <div>
         <div class="banner" v-if="slideList.length">
           <slider>
-            <li
-              class="swiper-slide"
-              v-for="(item, index) in slideList"
-              :key="item.content_id"
-            >
-              <a :href="item.linkUrl"
-                ><img @load="imgLoad" v-lazy="item.picUrl"
-              /></a>
-            </li>
+            <li class="swiper-slide" v-for="(item, index) in slideList" :key="item.content_id" > <a :href="item.linkUrl" ><img @load="imgLoad" v-lazy="item.picUrl" /></a> </li>
           </slider>
         </div>
 
         <div class="descLists">
-          <h2>热门歌单推荐</h2>
+          <h2>首发专辑推荐</h2>
           <ul class="descLists-wrap">
-            <li
-              v-for="(desc, index) in descList"
-              :key="desc.contend_id"
-              @click="selectItem(desc, index)"
-            >
+            <li v-for="(album, index) in albums" :key="album.id" @click="selectItem(album, index)" >
               <div class="desc-icon">
-                <img
-                  v-lazy="desc.cover"
-                  alt="desc-icon"
-                  width="60"
-                  height="60"
-                />
+                <img v-lazy="album.photo" alt="desc-icon" width="60" height="60" />
               </div>
               <div class="text">
-                <h3 class="desc-name">{{ desc.title }}</h3>
-                <p class="listen-number">
-                  播放量：{{ getListenNum(desc.listen_num) }}万
-                </p>
+                <h3 class="desc-name">{{ album.name }}</h3>
+                <p class="listen-number">{{ album.singer }}</p>
               </div>
             </li>
           </ul>
-          <div class="loading-wrap" v-show="!descList.length">
+          <div class="loading-wrap" v-show="!albums.length">
             <loading></loading>
           </div>
         </div>
@@ -52,21 +33,23 @@
 
 <script lang="ts">
 import { Component, Vue, Provide, Mixins } from "vue-property-decorator"
-import { getRecommend, getDescLists } from "api/recommend"
+import { getRecommend, getAlbums } from "api/recommend"
 import { ERR_OK } from "api/config"
 import Slider from "components/slider/slider.vue"
 import Scroll from "base/scroll/scroll.vue"
 import Loading from "base/loading/loading.vue"
 import { PlaylistMixin } from "common/js/mixins"
+import { createAlbum } from "common/js/recommend"
 import { Mutation } from "vuex-class"
 import { mapGetters, MutationMethod } from "vuex"
+import jsonp from "common/js/jsonp"
 
 @Component({
   components: { Slider, Scroll, Loading }
 })
 export default class Recommend extends Mixins(PlaylistMixin) {
   slideList = []
-  descList = []
+  albums = []
   timer = 0
   $refs!: {
     recommend: Scroll
@@ -86,7 +69,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
 
   selectItem(item: any, index: string) {
     this.setDisc(item)
-    this.$router.push({ path: `/recommend/${item.content_id}` })
+    this.$router.push({ path: `/recommend/${item.mid}` })
   }
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
@@ -101,9 +84,11 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     })
   }
   __getDescLists() {
-    getDescLists().then((res: any) => {
+    getAlbums().then((res: any) => {
       if (res.code === ERR_OK) {
-        this.descList = Array.from(res["recomPlaylist"].data.v_hot)
+        this.albums = res.new_album.data.albums.map((album: any) => {
+          return createAlbum(album)
+        })
       }
     })
   }

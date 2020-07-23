@@ -33,7 +33,7 @@ export default class Song {
   }
 }
 
-function getSinger(singers: any) {
+export function getSinger(singers: any) {
   const ret = singers.map((singer: any) => {
     return singer.name;
   });

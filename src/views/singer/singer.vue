@@ -16,6 +16,8 @@ import Scroll from "base/scroll/scroll.vue"
 import ListView from "@/components/list-view/list-view.vue"
 import { mapMutations, MutationMethod } from "vuex"
 import { Mutation } from "vuex-class"
+import { AxiosResponse } from "axios"
+import jsonp0 from "common/js/jsonp"
 
 const HOT_NAME = "热门"
 const HOT_SONG_LENGTH = 10
@@ -85,8 +87,6 @@ export default class Singer extends Vue {
 
   _getSingerLists() {
     getSingerLists().then(response => {
-      console.log(response);
-      
       if (response.code === ERR_OK) {
         this.singerlist = this.normalizeSinger(response.data.singerlist)
       }

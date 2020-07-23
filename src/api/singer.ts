@@ -1,15 +1,16 @@
-import { singerQuery, xhrOptions } from "./config"
+import { xhrOptions, options2 } from "./config"
 import { sign_generator } from "common/js/xhr"
 import axios from "axios"
+import jsonp from "common/js/jsonp"
 // const url = "https://u.y.qq.com/cgi-bin/musics.fcg"
 
 const path = "/cgi-bin/musics.fcg"
 export function getSingerLists() {
-  const param = Object.assign({}, xhrOptions, singerQuery)
-  return axios.get(path, { params: param }).then(
-    response => Promise.resolve(response.data)
-    // return Promise.resolve(response.data.singerList)  //正常后台数据解析
-  )
+  return axios
+    .get(
+      "https://www.fastmock.site/mock/352dcbb7ac339fe1b7ed02bbfa3c073b/mock/getsingerlists"
+    )
+    .then(response => Promise.resolve(response.data.data))
 }
 
 export function getSingerSongs(mid: string) {
@@ -25,10 +26,9 @@ export function getSingerSongs(mid: string) {
   const query = Object.assign({}, xhrOptions, {
     "-": "getSingerSong09973278224209037",
     sign: sign_generator(data),
-    data: data
+    data: data,
+    format: "jsonp"
   })
 
-  return axios
-    .get(path, { params: query })
-    .then(response => Promise.resolve(response.data.singerSongList))
+  return jsonp( "https://u.y.qq.com/cgi-bin/musics.fcg", query, options2 ).then((response: any) => Promise.resolve(response.singerSongList))
 }

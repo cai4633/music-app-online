@@ -3,7 +3,7 @@
     <music-list
       :songs="songs"
       :title="disc.title"
-      :bgImg="disc.cover"
+      :bgImg="disc.photo"
     ></music-list>
   </div>
 </template>
@@ -18,7 +18,7 @@ import { getSongUrl } from "api/songs"
 import { ERR_OK } from "api/config"
 import { mapGetters } from "vuex"
 import { Getter } from "vuex-class"
-import { ResponseType, AxiosResponse } from 'axios'
+import { ResponseType, AxiosResponse } from "axios"
 
 @Component({
   components: { MusicList }
@@ -29,15 +29,15 @@ export default class RecommendDetails extends Vue {
   @Getter("disc") disc!: any
 
   mounted() {
-    if (!this.disc.content_id) {
+    if (!this.disc.mid) {
       this.$router.push({ path: "/recommend" })
     }
-    this._getCdInfoById(this.disc.content_id)
+    this._getCdInfoById(this.disc.mid)
   }
-  _getCdInfoById(id: number) {
-    return getCdInfoById(id).then((response: any) => {
+  _getCdInfoById(mid: string) {
+    return getCdInfoById(mid).then((response: any) => {
       if (response.code === ERR_OK) {
-        const songlist = response.cdlist[0].songlist
+        const songlist = response.data.songList
         getSongUrl(songlist).then((response: any) => {
           this.songs = response.map((item: any) => {
             return createSong(item)

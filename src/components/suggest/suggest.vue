@@ -1,19 +1,8 @@
 <template>
-  <scroll
-    class="suggest"
-    :data="lists"
-    :pullup="true"
-    @scrollToEnd="searchMore()"
-    ref="suggest"
-  >
+  <scroll class="suggest" :data="lists" :pullup="true" @scrollToEnd="searchMore()" ref="suggest">
     <div class="scroll-inner">
       <ul class="suggest-list" v-show="hasMore">
-        <li
-          class="suggest-item"
-          v-for="item in lists"
-          :key="(item.name || item.singername) + Math.random()"
-          @click="selectItem(item)"
-        >
+        <li class="suggest-item" v-for="item in lists" :key="item.id" @click="selectItem(item)" >
           <i><icon-svg :icon="getIconCls(item)"></icon-svg></i>
           <p class="text">{{ getDisplayText(item) }}</p>
         </li>
@@ -72,7 +61,7 @@ export default class Suggest extends Vue {
   }
   getDisplayText(item: any) {
     return item.type === TYPE_SINGER
-      ? item.singername
+      ? item.singerName
       : `${item.name}-${item.singer}`
   }
 
@@ -90,26 +79,29 @@ export default class Suggest extends Vue {
   checkMore(data: any) {
     if (data.song) {
       const { list, curnum, curpage, totalnum } = data.song
-      this.hasMore = list.length && curnum + (curpage - 1) * perpage < totalnum ? true : false
+      this.hasMore =
+        list.length && curnum + (curpage - 1) * perpage < totalnum
+          ? true
+          : false
     }
   }
 
   getResult({ song: { list }, zhida }: any) {
     let ret: any[] = []
-    if (zhida && zhida.singerid) {
-      ret.push({ ...zhida, type: TYPE_SINGER })
+    if (zhida.type === 1 && !this.lists.length) {
+      ret.push({ ...zhida.zhida_singer, type: TYPE_SINGER })
     }
     if (list) {
-      const list_copy = list.map((item: any) => {
+      const listFormat = list.map((item: any) => {
         return {
-          mid: item.songmid,
-          id: item.songid,
-          name: item.songname,
-          album: item.albumname,
-          albummid: item.albummid
+          mid: item.mid,
+          id: item.id,
+          name: item.name,
+          album: item.album.name,
+          albummid: item.album.mid
         }
       })
-      return getSongUrl(list_copy).then((res: any) => {
+      return getSongUrl(listFormat).then((res: any) => {
         const songs = res.map((item: any) => {
           return createSong(item)
         })
