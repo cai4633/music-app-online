@@ -85,6 +85,9 @@ export default class Scroll extends Vue {
   disable() {
     this.scroll && this.scroll.disable()
   }
+  stop() {
+    this.scroll && this.scroll.stop()
+  }
   scrollToElement(el: Element, duration: number) {
     this.scroll && this.scroll.scrollToElement(el, duration)
   }

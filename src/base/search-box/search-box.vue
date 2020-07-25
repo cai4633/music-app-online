@@ -3,7 +3,7 @@
     <i class="icon-search">
       <icon-svg icon="#el-icon-search"></icon-svg>
     </i>
-    <input v-model="query" type="text" :placeholder="placeholder" />
+    <input v-model="query" type="text" :placeholder="placeholder" ref="input" />
     <i class="icon-clear" v-show="query" @click="clearQuery">
       <icon-svg icon="#el-icon-clear"></icon-svg>
     </i>
@@ -11,31 +11,36 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from "vue-property-decorator";
-import IconSvg from "base/icon-svg/icon-svg.vue";
-import { debounce } from "common/js/util";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator"
+import IconSvg from "base/icon-svg/icon-svg.vue"
+import { debounce } from "common/js/util"
 @Component({
   components: { IconSvg }
 })
 export default class SearchBox extends Vue {
-  query = "";
-
+  query = ""
+  $refs!: {
+    input: HTMLElement
+  }
   @Prop({ default: "搜索歌曲、歌手" })
-  private placeholder!: string;
+  private placeholder!: string
 
   created() {
     this.$watch(
       "query",
       debounce((newQuery: string) => {
-        this.$emit("query", newQuery);
+        this.$emit("query", newQuery)
       }, 200)
-    );
+    )
   }
   clearQuery() {
-    this.query = "";
+    this.query = ""
+  }
+  blur() {
+    this.$refs.input.blur()
   }
   setQuery(newQuery: string) {
-    this.query = newQuery;
+    this.query = newQuery
   }
 }
 </script>

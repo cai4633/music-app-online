@@ -65,6 +65,17 @@ export default class ListView extends Mixins(PlaylistMixin) {
       this.init()
     })
   }
+  
+  deactivated() {
+    this.$nextTick(()=>{
+      this.$refs.singerWrap.disable()
+    })
+  }
+  activated() {
+    this.$nextTick(()=>{
+      this.$refs.singerWrap.enable()
+    })
+  }
 
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0

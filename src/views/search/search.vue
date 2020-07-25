@@ -11,19 +11,35 @@
         <div class="hotkey-wrap">
           <h1>热门搜索</h1>
           <div class="hotkey">
-            <span class="key" v-for="key in hotkeys" :key="key.k + key.n" @click="selectItem(key.k)">{{ key.k }}</span>
+            <span
+              class="key"
+              v-for="key in hotkeys"
+              :key="key.k + key.n"
+              @click="selectItem(key.k)"
+              >{{ key.k }}</span
+            >
           </div>
         </div>
         <div class="search-history" v-show="searchHistory.length">
           <h1 class="clearfix">
             <span>搜索历史</span>
-            <i @click="showConfirm"><icon-svg icon="#el-icon-clearAll"></icon-svg></i>
+            <i @click="showConfirm"
+              ><icon-svg icon="#el-icon-clearAll"></icon-svg
+            ></i>
           </h1>
-          <history-list :list="searchHistory" @delete="removeSearchHistory" @select="selectItem"></history-list>
+          <history-list
+            :list="searchHistory"
+            @delete="removeSearchHistory"
+            @select="selectItem"
+          ></history-list>
         </div>
       </div>
     </scroll>
-    <confirm @enter="clearSearchHistory" ref="confirm" enterBtnText="清除"></confirm>
+    <confirm
+      @enter="clearSearchHistory"
+      ref="confirm"
+      enterBtnText="清除"
+    ></confirm>
     <router-view></router-view>
   </div>
 </template>
@@ -47,12 +63,17 @@ const TYPE_SINGER = "singer"
 @Component({
   components: { SearchBox, Suggest, HistoryList, IconSvg, Scroll, Confirm },
   computed: {
-    ...mapGetters(["searchHistory", "playlist"]),
+    ...mapGetters(["searchHistory", "playlist"])
   },
   methods: {
     ...mapMutations({ setSinger: "SET_SINGER" }),
-    ...mapActions(["suggestToPlay", "saveSearchHistory", "removeSearchHistory", "clearSearchHistory"]),
-  },
+    ...mapActions([
+      "suggestToPlay",
+      "saveSearchHistory",
+      "removeSearchHistory",
+      "clearSearchHistory"
+    ])
+  }
 })
 export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
   hotkeys: any[] = []
@@ -73,6 +94,9 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
   }
   selectItem(key: string) {
     this.$refs.searchBox.setQuery(key)
+  }
+  inputBlur() {
+    this.$refs.searchBox.blur()
   }
   handlePlaylist() {
     const bottom = this.playlist.length ? 60 : 0
@@ -114,7 +138,7 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
     right 0
     z-index 100
     background-color $background-color
-    padding 10px 20px 0px 20px
+    padding 5px 20px 
   .shortcut
     position fixed
     top 155px

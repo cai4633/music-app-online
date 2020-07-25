@@ -1,14 +1,24 @@
 import { Component, Vue, Mixins, Watch } from "vue-property-decorator"
 import { mapGetters, mapMutations, mapActions } from "vuex"
 import { playMode, Songs } from "common/js/config"
-import { shuffle, lyricParser } from "common/js/util.ts"
-import { findIndex } from "common/js/player.ts"
+import { shuffle, lyricParser } from "common/js/util"
+import { findIndex } from "common/js/player"
 import Singer from "common/js/singer"
+
 const TYPE_SINGER = "singer"
 
 export const PlayerMixin = Vue.extend({
   computed: {
-    ...mapGetters(["playlist", "fullScreen", "playing", "currentSong", "currentIndex", "mode", "sequencelist", "favorite"]),
+    ...mapGetters([
+      "playlist",
+      "fullScreen",
+      "playing",
+      "currentSong",
+      "currentIndex",
+      "mode",
+      "sequencelist",
+      "favorite"
+    ])
   },
 
   methods: {
@@ -17,14 +27,15 @@ export const PlayerMixin = Vue.extend({
       setPlayingState: "SET_PLAYING_STATE",
       setCurrentIndex: "SET_CURRENTINDEX",
       setMode: "SET_MODE",
-      setPlaylist: "SET_PLAYLIST",
+      setPlaylist: "SET_PLAYLIST"
     }),
 
     ...mapActions(["saveFavoriteList", "deleteFromFavoriteList"]),
     toggleMode() {
       this.setMode((this.mode + 1) % 3)
       const originList = this.sequencelist.slice()
-      const newList = this.mode === playMode.random ? shuffle(originList) : originList
+      const newList =
+        this.mode === playMode.random ? shuffle(originList) : originList
       const index = findIndex(newList, this.currentSong)
       this.setPlaylist(newList)
       this.setCurrentIndex(index)
@@ -37,18 +48,20 @@ export const PlayerMixin = Vue.extend({
       }
     },
     getIcon(song: Songs): string {
-      return this.isFavorite(song) ? "#el-icon-favorite-red" : "#el-icon-favorites"
+      return this.isFavorite(song)
+        ? "#el-icon-favorite-red"
+        : "#el-icon-favorites"
     },
 
     isFavorite(song: Songs) {
       return findIndex(this.favorite.slice(), song) > -1
-    },
-  },
+    }
+  }
 })
 
 export const PlaylistMixin = Vue.extend({
   computed: {
-    ...mapGetters(["playlist", "fullScreen", "playing"]),
+    ...mapGetters(["playlist", "fullScreen", "playing"])
   },
   mounted() {
     this.handlePlaylist()
@@ -61,28 +74,34 @@ export const PlaylistMixin = Vue.extend({
   methods: {
     handlePlaylist() {
       console.log("It must implement handlePlaylist method")
-    },
+    }
   },
 
   watch: {
     playlist() {
       this.handlePlaylist()
-    },
-  },
+    }
+  }
 })
 
 export const SearchMixin = Vue.extend({
   data() {
     return {
-      query: "",
+      query: ""
     }
   },
   computed: {
-    ...mapGetters(["searchHistory", "playlist", "playHistory"]),
+    ...mapGetters(["searchHistory", "playlist", "playHistory"])
   },
   methods: {
     ...mapMutations({ setSinger: "SET_SINGER" }),
-    ...mapActions(["suggestToPlay", "saveSearchHistory", "removeSearchHistory", "clearSearchHistory", "insertSong"]),
+    ...mapActions([
+      "suggestToPlay",
+      "saveSearchHistory",
+      "removeSearchHistory",
+      "clearSearchHistory",
+      "insertSong"
+    ]),
     onQueryChange(newQuery: string) {
       this.query = newQuery
     },
@@ -104,13 +123,13 @@ export const SearchMixin = Vue.extend({
           new Singer({
             id: item.singerID,
             name: item.singerName,
-            mid: item.singerMID,
+            mid: item.singerMID
           })
         )
         this.$router.push({ path: `/search/${item.singerId}` })
       } else {
         this.suggestToPlay(item)
       }
-    },
-  },
+    }
+  }
 })

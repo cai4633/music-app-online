@@ -1,7 +1,7 @@
 <template>
-  <scroll class="suggest" :data="lists" :pullup="true" @scrollToEnd="searchMore()" ref="suggest">
+  <scroll class="suggest" :data="lists" :pullup="true" @scrollToEnd="searchMore()" ref="suggest" @scroll="scrollEvent">
     <div class="scroll-inner">
-      <ul class="suggest-list" v-show="hasMore">
+      <ul class="suggest-list">
         <li class="suggest-item" v-for="item in lists" :key="item.id" @click="selectItem(item)" >
           <i><icon-svg :icon="getIconCls(item)"></icon-svg></i>
           <p class="text">{{ getDisplayText(item) }}</p>
@@ -46,6 +46,10 @@ export default class Suggest extends Vue {
   @Prop({ default: true })
   showSinger!: boolean
 
+  scrollEvent(pos: number){
+    this.$emit('scroll', pos)
+  }
+  
   searchMore() {
     if (!this.hasMore) {
       return
@@ -60,9 +64,7 @@ export default class Suggest extends Vue {
     return item.type === TYPE_SINGER ? "#el-icon-person" : "#el-icon-music"
   }
   getDisplayText(item: any) {
-    return item.type === TYPE_SINGER
-      ? item.singerName
-      : `${item.name}-${item.singer}`
+    return item.type === TYPE_SINGER ? item.singerName : `${item.name}-${item.singer}`
   }
 
   _getSearchInfo() {
@@ -79,11 +81,7 @@ export default class Suggest extends Vue {
   checkMore(data: any) {
     if (data.song) {
       const { list, curnum, curpage, totalnum } = data.song
-      this.hasMore =
-        list.length && curnum + (curpage - 1) * perpage < totalnum
-          ? true
-          : false
-    }
+      this.hasMore = list.length && curnum + (curpage - 1) * perpage < totalnum ? true : false }
   }
 
   getResult({ song: { list }, zhida }: any) {
@@ -136,28 +134,28 @@ export default class Suggest extends Vue {
 .suggest
   height 100%
   overflow hidden
-  padding 5px
   box-sizing border-box
   position relative
-  ul
-    text-align left
-    li.suggest-item
-      margin 10px 0px
-      line-height 1.5
-      display flex
-      color $text-dark-color
-      i
-        flex 0
-        margin-right 20px
-      .text
-        flex 1
-        min-width 0
-        no-wrap()
-  .no-result-wrap
-    position absolute
-    width 100%
-    top 40%
-    transform translateY(-50%)
-  .loading-wrap
-    margin-top 10px
+  .scroll-inner
+    ul.suggest-list
+      text-align left
+      li.suggest-item
+        padding 5px 0px
+        line-height 1.5
+        display flex
+        color $text-dark-color
+        i
+          flex 0
+          margin-right 20px
+        .text
+          flex 1
+          min-width 0
+          no-wrap()
+    .no-result-wrap
+      position absolute
+      width 100%
+      top 40%
+      transform translateY(-50%)
+    .loading-wrap
+      margin-top 10px
 </style>
