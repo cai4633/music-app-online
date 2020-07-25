@@ -1,4 +1,5 @@
 const ERR_OK = 0
+
 const queryData = {
   format: "jsonp",
   inCharset: "utf-8",

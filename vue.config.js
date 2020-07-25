@@ -15,6 +15,8 @@ app.use("/api", apiRoutes)
 
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "./" : "/",             //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
+  outputDir: "docs",
+  assetsDir: "static",
   lintOnSave: true,
   chainWebpack: config => {
     config.resolve.alias
