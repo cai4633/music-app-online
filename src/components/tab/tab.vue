@@ -1,14 +1,7 @@
 <template>
   <div class="tab">
     <ul>
-      <router-link
-        v-for="item in items"
-        :key="item.id"
-        :to="item.path"
-        tag="li"
-        :class="item.class"
-        ><span>{{ item.content }}</span></router-link
-      >
+      <router-link v-for="item in items" :key="item.id" :to="item.path" tag="li" :class="item.class" ><span>{{ item.content }}</span></router-link >
     </ul>
   </div>
 </template>
@@ -30,11 +23,10 @@ export default class Tab extends Vue {
 div.tab
     height 35px
     flex 0 0 auto
-    color #fff
-
+    color $text-color
+    background-color $background-color
     ul
         display flex
-
         li
             flex 1
             background-color $background-color
@@ -43,17 +35,18 @@ div.tab
             line-height @height
             vertical-align top
             span
+              position relative
+              color $text-color
+              display inline-flex
             &.router-link-active
-                color $text-highlight-color
                 span
-                    position relative
-                    display inline-flex
-                    &::after
-                        position absolute
-                        bottom 0
-                        left 0
-                        content ''
-                        display inline-block
-                        width 100%
-                        border-bottom 3px solid $text-highlight-color
+                  color $text-highlight-color
+                  &::after
+                      position absolute
+                      bottom 0.3em
+                      left 0
+                      content ''
+                      display inline-block
+                      width 100%
+                      border-bottom 2px solid $text-highlight-color
 </style>

@@ -1,33 +1,40 @@
 <template>
   <div class="recommend">
-    <scroll class="recommend-wrap" :data="albums" ref="recommend">
+    <div class="recommend-wrap">
       <div>
         <div class="banner" v-if="slideList.length">
           <slider>
-            <li class="swiper-slide" v-for="(item, index) in slideList" :key="item.content_id" > <a :href="item.linkUrl" ><img @load="imgLoad" v-lazy="item.picUrl" /></a> </li>
+            <li class="swiper-slide" v-for="item in slideList" :key="item.id">
+              <a :href="item.linkUrl">
+                <img @load="imgLoad" :src="item.picUrl" />
+              </a>
+            </li>
           </slider>
         </div>
-
         <div class="descLists">
           <h2>首发专辑推荐</h2>
-          <ul class="descLists-wrap">
-            <li v-for="(album, index) in albums" :key="album.id" @click="selectItem(album, index)" >
-              <div class="desc-icon">
-                <img v-lazy="album.photo" alt="desc-icon" width="60" height="60" />
-              </div>
-              <div class="text">
-                <h3 class="desc-name">{{ album.name }}</h3>
-                <p class="listen-number">{{ album.singer }}</p>
-              </div>
-            </li>
-          </ul>
+          <scroll class="descLists-wrap" :data="albums" ref="recommend">
+            <ul class="desc-content">
+              <li v-for="(album, index) in albums" :key="album.id" @click="selectItem(album, index)" >
+                <div class="li-inner">
+                  <div class="desc-icon"> <img v-lazy="album.photo" alt="desc-icon" width="60" height="60" /> </div>
+                  <div class="text">
+                    <h3 class="album-name">{{ album.name }}</h3>
+                    <p class="album-singer">{{ album.singer }}</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </scroll>
           <div class="loading-wrap" v-show="!albums.length">
             <loading></loading>
           </div>
         </div>
       </div>
-    </scroll>
-    <router-view></router-view>
+    </div>
+    <transition name='slide-in'>
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -72,7 +79,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     this.$router.push({ path: `/recommend/${item.mid}` })
   }
   handlePlaylist() {
-    const BOTTOM = this.playlist.length ? 45 : 0
+    const BOTTOM = this.playlist.length ? 65 : 0
     if (this.$refs.recommend) {
       this.$refs.recommend.$el.style.bottom = `${BOTTOM}px`
       this.$refs.recommend.refresh()
@@ -102,23 +109,18 @@ export default class Recommend extends Mixins(PlaylistMixin) {
 </script>
 
 <style lang="stylus" scoped>
-@import '../../common/stylus/variable.styl'
+@import '~common/stylus/variable.styl'
+@import '~common/stylus/mixin.styl';
 
 .recommend
-  overflow hidden
-  background-color #272727
-  position fixed
-  top 81px
-  bottom 0px
-  width 100%
+  content-position()
+  // 详情进入动画
+  slide-in()
 
   .recommend-wrap
-    overflow hidden
-    position absolute
-    top 0
-    bottom 0
-    right 0
-    left 0
+    height 100%
+    box-sizing border-box
+    position relative
     .banner
       position relative
       box-sizing border-box
@@ -145,54 +147,58 @@ export default class Recommend extends Mixins(PlaylistMixin) {
           display block
 
     .descLists
-      padding-bottom 10px
+      position absolute
+      top 128px
+      bottom 0px
+      left 0
+      right 0
+      box-sizing border-box
       h2
         color $text-highlight-color
         font-weight normal
-        padding-top 20px
+        padding-top 15px
 
-      ul.descLists-wrap
-        li
-          font-size 12px
-          margin 20px 0
-          display flex
-          box-sizing border-box
-          padding 0px 20px
-
-          .desc-icon
-            flex 0 0 auto
-
-            img
-              width 60px
-              display block
-              border-radius 50%
-
-          .text
-            width 50vw
-            display flex
-            flex-direction column
-            justify-content space-between
-            color #fff
-            margin-left 20px
-            flex 1 0 50vw
-            text-align left
+      div.descLists-wrap
+        position absolute
+        top calc(15px + 2em)
+        bottom 0
+        right 0
+        left 0
+        overflow hidden
+        .desc-content
+          li
             font-size 12px
-            padding 2px 0
+            box-sizing border-box
+            padding 10px 25px
+            .li-inner
+              display flex
+              .desc-icon
+                flex 0 0 auto
+                img
+                  width 60px
+                  display block
 
-            .desc-name
-              font-size 12px
-              font-weight normal
+              .text
+                width 50vw
+                display flex
+                flex-direction column
+                justify-content space-around
+                color #fff
+                margin-left 20px
+                flex 1 0 50vw
+                text-align left
+                font-size 12px
+                padding 2px 0
 
-            .listen-number
-              font-size 12px
-              color #928d8d
-              display -webkit-box
-              -webkit-box-orient vertical
-              -webkit-line-clamp 2
-              line-height 1.2
-              height 2.4em
-              text-overflow ellipsis
-              overflow hidden
+                .album-name
+                  font-size 12px
+                  font-weight normal
+                  no-wrap()
+
+                .album-singer
+                  font-size 12px
+                  color #928d8d
+                  no-wrap()
 
       .loading-wrap
         position fixed

@@ -1,11 +1,7 @@
 <template>
   <div class="music-list">
     <h1 ref="title">{{ title }}</h1>
-    <div
-      class="banner"
-      ref="banner"
-      :style="'background-image:url(' + bgImg + ')'"
-    >
+    <div class="banner" ref="banner" :style="'background-image:url(' + bgImg + ')'" >
       <div class="playbtn" v-show="playbtn" @click="random">
         <icon-svg icon="#el-icon-play1"></icon-svg>
         <span>随机播放全部</span>
@@ -13,12 +9,7 @@
     </div>
     <div class="bg-layer" ref="layer"></div>
     <scroll class="list" :data="songs" ref="list" @scroll="getY" :probeType="3">
-      <song-list
-        :songs="songs"
-        ref="songList"
-        @select="playlistInit"
-        :rank="rank"
-      ></song-list>
+      <song-list :songs="songs" ref="songList" @select="playlistInit" :rank="rank" ></song-list>
     </scroll>
     <div class="loading-wrap" v-show="!songs.length">
       <loading></loading>

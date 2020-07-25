@@ -95,17 +95,15 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
 </script>
 
 <style lang="stylus" scoped>
-@import '~common/stylus/variable.styl';
+@import '~common/stylus/variable.styl'
+@import '~common/stylus/mixin.styl'
+
 .search
-  background-color $background-color
-  position fixed
-  top 81px
-  bottom 0px
-  left 0px
-  right 0px
+  content-position()
   padding 0px 20px
+
   .search-box-wrap
-    margin-top 20px
+    margin-top 10px
     position relative
 
   .search-result
@@ -119,7 +117,7 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
     padding 10px 20px 0px 20px
   .shortcut
     position fixed
-    top 155 px
+    top 155px
     bottom 0px
     left 0
     right 0

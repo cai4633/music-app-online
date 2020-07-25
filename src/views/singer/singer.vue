@@ -1,7 +1,7 @@
 <template>
   <div class="singer">
     <list-view :singerlist="singerlist" @select="gotoDetails"></list-view>
-    <transition name="come">
+    <transition name="slide-in">
       <router-view></router-view>
     </transition>
   </div>
@@ -96,18 +96,12 @@ export default class Singer extends Vue {
 </script>
 
 <style lang="stylus" scoped>
-.come-enter,.come-leave-to
-  transform translateX(-100%)
-.come-enter-to,.come-leave
-  transform translateX(0)
-.come-enter-active,.come-leave-active
-  transition all 0.5s
-
+@import '~common/stylus/variable.styl'
+@import '~common/stylus/mixin.styl';
 
 .singer
-  background-color #272727
-  position fixed
-  top 81px
-  bottom 0px
-  width 100%
+  content-position()
+
+  // 详情进入动画
+  slide-in()
 </style>

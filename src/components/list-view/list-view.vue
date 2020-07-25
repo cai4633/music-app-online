@@ -1,11 +1,11 @@
 <template>
-  <scroll class="list-view" :data="singerlist" :probeType="3" @scroll="getPosY" ref="listView" @scrollEnd="scrollEnd">
-    <div class="singer-wrap">
+  <div class="list-view" ref="listView">
+    <scroll class="singer-wrap" :data="singerlist" :probeType="3" @scroll="getPosY" ref="singerWrap" @scrollEnd="scrollEnd" >
       <ul class="singer-content">
         <li v-for="item in singerlist" :key="item.id" ref="listgroup">
           <ul class="singer-inner">
             <h3 ref="title">{{ item.title }}</h3>
-            <li v-for="singer in item.items" :key="singer.id" class="clearfix" @click="selectItem(singer)">
+            <li v-for="singer in item.items" :key="singer.id" class="clearfix" @click="selectItem(singer)" >
               <div class="avatar">
                 <img v-lazy="webp2jpg(singer.singer_pic)" />
               </div>
@@ -14,25 +14,19 @@
           </ul>
         </li>
       </ul>
-    </div>
+    </scroll>
     <h2 class="fixed-title" ref="fixed">{{ titleList[currentIndex] }}</h2>
     <div class="loading-wrap" v-show="!singerlist.length">
       <loading></loading>
     </div>
     <div class="list-shortcut">
       <ul>
-        <li
-          v-for="(item, index) in shotcutList"
-          :key="item + Math.random() * 100"
-          :class="{ active: currentIndex === index }"
-          :data-index="index"
-          @click="shortcutClick"
-        >
+        <li v-for="(item, index) in shotcutList" :key="item" :class="{ active: currentIndex === index }" :data-index="index" @click="shortcutClick" >
           {{ item }}
         </li>
       </ul>
     </div>
-  </scroll>
+  </div>
 </template>
 
 <script lang="ts">
@@ -45,8 +39,8 @@ import Singer from "common/js/singer"
 @Component({
   components: { Scroll, Loading },
   computed: {
-    ...mapGetters(["playlist", "fullScreen"]),
-  },
+    ...mapGetters(["playlist", "fullScreen"])
+  }
 })
 export default class ListView extends Mixins(PlaylistMixin) {
   shotcutList: string[] = []
@@ -55,6 +49,13 @@ export default class ListView extends Mixins(PlaylistMixin) {
   currentIndex = 0
   titleHeight = 0
   isClick = false
+  $refs!: {
+    listView: HTMLElement
+    singerWrap: Scroll
+    fixed: HTMLElement
+    listgroup: Element[]
+    title: HTMLElement[]
+  }
 
   @Prop()
   private singerlist!: object[]
@@ -67,9 +68,9 @@ export default class ListView extends Mixins(PlaylistMixin) {
 
   handlePlaylist() {
     const BOTTOM = this.playlist.length ? 45 : 0
-    if (this.$refs.listView) {
-      ;(<Scroll>this.$refs.listView).$el.style.bottom = `${BOTTOM}px`
-      ;(<Scroll>this.$refs.listView).refresh()
+    if (this.$refs.singerWrap) {
+      this.$refs.listView.style.bottom = `${BOTTOM}px`
+      this.$refs.singerWrap.refresh()
     }
   }
 
@@ -96,14 +97,15 @@ export default class ListView extends Mixins(PlaylistMixin) {
   // 计算热门,[a-z] li的高度
   calHeight() {
     this.$nextTick(() => {
-      const listgroup: Element[] = (this.$refs.listgroup as Element[]) || []
+      const listgroup = this.$refs.listgroup || []
       let height = 0
       if (listgroup.length) {
-        this.titleHeight = (this.$refs.title as HTMLElement[])[0].offsetHeight
-        this.heightlist = Array.prototype.map.call(listgroup, (li: { [key: string]: number }): number => {
-          height += li.offsetHeight
-          return height
-        })
+        this.titleHeight = this.$refs.title[0].offsetHeight
+        this.heightlist = Array.prototype.map.call( listgroup, (li: { [key: string]: number }): number => {
+            height += li.offsetHeight
+            return height
+          }
+        )
       }
     })
   }
@@ -111,7 +113,7 @@ export default class ListView extends Mixins(PlaylistMixin) {
   _scrollTo(index: number) {
     if (this.heightlist.length) {
       const y: number = index >= 1 ? -this.heightlist[index - 1] : 0
-      ;(this.$refs.listView as Scroll).scrollTo(0, y)
+      this.$refs.singerWrap.scrollTo(0, y)
     }
   }
 
@@ -136,7 +138,7 @@ export default class ListView extends Mixins(PlaylistMixin) {
   }
 
   fixedTransfrom(distance: number) {
-    ;(this.$refs.fixed as HTMLElement).style.transform = `translateY(${distance}px)`
+    this.$refs.fixed.style.transform = `translateY(${distance}px)`
   }
 
   //获取list-shortcut的content
@@ -148,7 +150,11 @@ export default class ListView extends Mixins(PlaylistMixin) {
   }
 
   selectItem(item: any) {
-    const singer = new Singer({ id: item.singer_id, name: item.singer_name, mid: item.singer_mid })
+    const singer = new Singer({
+      id: item.singer_id,
+      name: item.singer_name,
+      mid: item.singer_mid
+    })
     this.$emit("select", singer)
   }
 
@@ -192,7 +198,12 @@ header-style()
 
   .singer-wrap
     padding-bottom 1px
-    position relative
+    overflow hidden
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
     ul.singer-content
       li
         padding-bottom 18px
@@ -204,7 +215,6 @@ header-style()
             padding 20px 0 0px 30px
             .avatar
               float left
-
               img
                 width $line-height
                 height $line-height
@@ -223,18 +233,20 @@ header-style()
     transform translateY(-50%)
     right 8px
     color red
+    z-index $list-shortcut-zindex
     font-size 12px
-    z-index 16
-
     ul
-      background-color $list-shortcut-bc
+      background-color darken($background-color, 70%)
       padding 10px 2px
       border-radius 2em
 
       li
         color $text-color
-        padding 2px 0
-
+        font-size 12px
+        line-height 1.2
+        vertical-align top
+        padding 2px
+        text-transform uppercase
         &.active
           color $text-highlight-color
 

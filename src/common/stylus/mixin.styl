@@ -17,14 +17,14 @@ no-wrap() {
   white-space: nowrap;
 }
 
-no-wrap2(){ // 两行显示省略号
-  line-height: 1.2em
-  height 2.4em
-  display -webkit-box
-  -webkit-box-orient vertical
-  -webkit-line-clamp 2
-  overflow hidden
-  text-overflow ellipsis
+no-wrap2() { // 两行显示省略号
+  line-height: 1.2em;
+  height: 2.4em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // 扩展点击区域
@@ -61,3 +61,33 @@ position-center($position, $direction) {
     transform: translate3d(-50%, -50%, 0);
   }
 }
+
+// 详情进入动画
+slide-in() {
+  .slide-in-enter-active, .slide-in-leave-active {
+    transition: all 0.4s;
+  }
+  .slide-in-enter, .slide-in-leave-to {
+    transform: translateX(-100%);
+  }
+}
+
+// tab切换动画
+fade-in() {
+  .fade-in-enter-active, .fade-in-leave-active {
+    transition: all 0.2s;
+  }
+  .fade-in-enter, .fade-in-leave-to {
+    opacity 0
+  }
+}
+
+// rank recommend singer search 定位
+content-position()
+  position fixed
+  top 81px
+  bottom 0
+  left 0
+  right 0
+  background-color $background-color
+  overflow hidden

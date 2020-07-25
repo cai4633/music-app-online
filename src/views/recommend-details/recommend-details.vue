@@ -1,11 +1,7 @@
 <template>
-  <div class="recommend-details">
-    <music-list
-      :songs="songs"
-      :title="disc.title"
-      :bgImg="disc.photo"
-    ></music-list>
-  </div>
+    <div class="recommend-details">
+      <music-list :songs="songs" :title="disc.name" :bgImg="disc.photo" ></music-list>
+    </div>
 </template>
 
 <script lang="ts">

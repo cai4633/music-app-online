@@ -1,11 +1,6 @@
 <template>
   <div class="singer-details">
-    <music-list
-      :songs="songs"
-      ref="musicList"
-      :title="singer.name"
-      :bgImg="singer.avatar"
-    ></music-list>
+    <music-list :songs="songs" ref="musicList" :title="singer.name" :bgImg="singer.avatar" ></music-list>
   </div>
 </template>
 
