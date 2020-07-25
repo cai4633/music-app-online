@@ -33,7 +33,8 @@ export function getSongUrl(songs: any) {
   }
   const ret = formatData(songs)
   const mids = ret.map((song: any) => song.mid)
-  return jsonp( "https://u.y.qq.com/cgi-bin/musicu.fcg",
+  return jsonp(
+    "https://u.y.qq.com/cgi-bin/musicu.fcg",
     {
       format: "jsonp",
       data: {
@@ -65,14 +66,20 @@ export function getLyric(musicid: number) {
     "-": +new Date(),
     musicid: musicid
   })
-  return axios
-    .get("/lyric/fcgi-bin/fcg_query_lyric.fcg", { params: option })
+
+  if (process.env.NODE_ENV === "production") {
+    return Promise.resolve({})
+  }
+  return axios.get("/lyric/fcgi-bin/fcg_query_lyric.fcg", { params: option })
     .then(res => {
       const str = res.data
       if (str.match(/^MusicJsonCallback\(.*\)$/)) {
         const data = eval(str)
         return Promise.resolve(JSON.parse(JSON.stringify(data)))
       }
+    })
+    .catch(err => {
+      console.log(err)
     })
 }
 

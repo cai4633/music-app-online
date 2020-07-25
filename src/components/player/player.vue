@@ -4,17 +4,21 @@
       <div class="normal-player" v-show="fullScreen">
         <h1>{{ currentSong.name }}</h1>
         <h2>{{ currentSong.singer }}</h2>
-        <div class="main" @touchstart="lyricStart" @touchmove="lyricMove" @touchend="lyricEnd" ref="main">
+        <div class="main" @touchstart="lyricStart" @touchmove="lyricMove" @touchend="lyricEnd" ref="main" >
           <div class="main-disk-wrap" ref="mainDiskWrap">
-            <div class="disk-wrap" @click="togglePlaying" :class="diskAnimation">
-              <div class="disk" ref="disk"><img :src="currentSong.image" alt="" ref="diskImg" @error="changeSrc" /></div>
+            <div class="disk-wrap" @click="togglePlaying" :class="diskAnimation" >
+              <div class="disk" ref="disk">
+                <img :src="currentSong.image" alt="" ref="diskImg" @error="changeSrc" />
+              </div>
             </div>
             <div class="current-lyric">
               <p class="txt" v-html="currentLyric" v-show="!songError"></p>
-              <p class="noSong" v-show="songError">无法获取播放链接，{{ autoJumpTime }}秒后自动切换到下一首</p>
+              <p class="noSong" v-show="songError">
+                无法获取播放链接，{{ autoJumpTime }}秒后自动切换到下一首
+              </p>
             </div>
           </div>
-          <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines" v-show="lyrics.lines.length">
+          <scroll class="lyric-wrap" ref="lyrics" :data="lyrics && lyrics.lines" v-show="lyrics.lines.length" >
             <div class="lyric" ref="lyric">
               <p class="txt" v-for="(item, index) in lyrics.lines" v-html="item.txt" :key="item.txt + index" :id="'line-' + index" :class="{ current: currentLine === index }" ref="lyricTxt" ></p>
             </div>
@@ -23,11 +27,14 @@
         <div class="control-wrap">
           <div class="control">
             <div class="progress-bar-wrap">
-              <progress-bar :currentTime="currentTime" :totalTime="totalTime" @drag-bar="dragBar"></progress-bar>
+              <progress-bar :currentTime="currentTime" :totalTime="totalTime" @drag-bar="dragBar" ></progress-bar>
             </div>
             <div class="play-mode" @click="toggleMode">
               <icon-svg icon="#el-icon-loop" v-show="mode === 0"></icon-svg>
-              <icon-svg icon="#el-icon-single-cycle" v-show="mode === 1"></icon-svg>
+              <icon-svg
+                icon="#el-icon-single-cycle"
+                v-show="mode === 1"
+              ></icon-svg>
               <icon-svg icon="#el-icon-random" v-show="mode === 2"></icon-svg>
             </div>
             <div class="previous" @click="previous">
@@ -53,7 +60,9 @@
     <transition name="mini">
       <div class="mini-player" v-show="!fullScreen" @click="toFullScreen">
         <div class="content">
-          <div class="avatar" ref="avatar"><img :src="currentSong.image" alt="" /></div>
+          <div class="avatar" ref="avatar">
+            <img :src="currentSong.image" alt="" />
+          </div>
           <div class="text">
             <h2>{{ currentSong.name }}</h2>
             <h3>{{ currentSong.singer }}</h3>
@@ -74,7 +83,7 @@
     </transition>
     <playlist ref="playlist" @click.stop.native></playlist>
 
-    <audio :src="currentSong.url" ref="audio" @error="error" @canplay="ready" @ended="end" @timeupdate="updataTime"></audio>
+    <audio :src="currentSong.url" ref="audio" @error="error" @canplay="ready" @ended="end" @timeupdate="updataTime" ></audio>
   </div>
 </template>
 
@@ -95,9 +104,10 @@ import disc_default from "common/images/disc_default.png"
 import Playlist from "@/components/playlist/playlist.vue"
 import { PlayerMixin } from "common/js/mixins"
 import { Mutation, Action } from "vuex-class"
+import { debounce, throttle } from "common/js/util"
 
 @Component({
-  components: { Scroll, GoBack, IconSvg, ProgressBar, ProgressCircle, Playlist },
+  components: { Scroll, GoBack, IconSvg, ProgressBar, ProgressCircle, Playlist }
 })
 export default class Player extends Mixins(PlayerMixin) {
   autoJumpTime = 3 //歌曲播放出错自动跳转时间
@@ -107,7 +117,15 @@ export default class Player extends Mixins(PlayerMixin) {
   currentShow = "cd" //'cd' or 'lyric'
   totalTime = 0
   lyrics: { [key: string]: any } = { lines: [] }
-  touch: { [key: string]: any } = { startX: 0, startY: 0, endY: 0, endX: 0, init: false, percent: 0, moved: false }
+  touch: { [key: string]: any } = {
+    startX: 0,
+    startY: 0,
+    endY: 0,
+    endX: 0,
+    init: false,
+    percent: 0,
+    moved: false
+  }
   $refs!: {
     diskImg: HTMLMediaElement
     audio: HTMLMediaElement
@@ -128,7 +146,9 @@ export default class Player extends Mixins(PlayerMixin) {
     return this.lyrics ? this.lyrics.curline : 0
   }
   get currentLyric() {
-    return this.lyrics.lines.length && this.currentLine >= 0 ? this.lyrics.lines[this.currentLine].txt : ""
+    return this.lyrics.lines.length && this.currentLine >= 0
+      ? this.lyrics.lines[this.currentLine].txt
+      : ""
   }
 
   @Mutation("SET_FULLSCREEN") setFullScreen!: MutationMethod
@@ -168,20 +188,21 @@ export default class Player extends Mixins(PlayerMixin) {
     this.songError = false
   }
   error() {
+    !this.songError && this.autoJump(this.autoJumpTime * 1000)
     this.songReady = true
-    this.autoJump(this.autoJumpTime * 1000)
   }
   autoJump(ms: number) {
     // TODO:连续跳转bug
     this.songError = true
     this.songReady = true
-    setTimeout(() => {
-      this.next()
-    }, ms)
+    setTimeout(this.next, ms)
   }
   previous() {
     if (!this.songReady) return
-    const index = this.currentIndex - 1 < 0 ? this.playlist.length - 1 : this.currentIndex - 1
+    const index =
+      this.currentIndex - 1 < 0
+        ? this.playlist.length - 1
+        : this.currentIndex - 1
     this.setCurrentIndex(index)
     this.nextOrPreToPlay()
     this.songReady = false
@@ -208,7 +229,6 @@ export default class Player extends Mixins(PlayerMixin) {
     this.touch.init = true
     this.touch.startX = e.touches[0].pageX
     this.touch.startY = e.touches[0].pageY
-    return
   }
   lyricMove(e: TouchEvent) {
     if (!this.touch.init) {
@@ -225,7 +245,6 @@ export default class Player extends Mixins(PlayerMixin) {
     const offsetWidth = Math.min(0, Math.max(-width, left + dx))
     this.touch.percent = Math.abs(offsetWidth / width)
     this.$refs.lyrics.$el.style["transform"] = `translateX(${offsetWidth}px)`
-    return
   }
   lyricEnd() {
     const width = document.documentElement.clientWidth
@@ -267,15 +286,15 @@ export default class Player extends Mixins(PlayerMixin) {
       const animation = {
         "0%": { transform: `translate3d(${x}px,${y}px,0) scale(${scale})` },
         "70%": { transform: `translate3d(0,0,0) scale(1.2)` },
-        "100%": { transform: `translate3d(0,0,0) scale(1)` },
+        "100%": { transform: `translate3d(0,0,0) scale(1)` }
       }
       animations.registerAnimation({
         name: "move",
         animation: animation,
         presets: {
           duration: 400,
-          delay: 10,
-        },
+          delay: 10
+        }
       })
       animations.runAnimation(disk, "move", done)
     })
@@ -288,7 +307,8 @@ export default class Player extends Mixins(PlayerMixin) {
   lyricScroll(lineNum: number) {
     const GAP = 5
     if (lineNum > GAP) {
-      this.$refs.lyrics && (this.$refs.lyrics as Scroll).scrollToElement(this.$refs.lyricTxt[lineNum - 5], 1000)
+      this.$refs.lyrics &&
+        this.$refs.lyrics.scrollToElement( this.$refs.lyricTxt[lineNum - 5], 1000)
     }
     return
   }
@@ -310,14 +330,16 @@ export default class Player extends Mixins(PlayerMixin) {
   }
   @Watch("currentSong")
   watchCurrentSong(newSong: Songs, oldSong: Songs) {
-    if (!newSong.id || newSong.id === oldSong.id || !this.playlist.length) return
+    if (!newSong.id || newSong.id === oldSong.id || !this.playlist.length)
+      return
     if (newSong._getLyric) {
       newSong._getLyric().then(() => {
         this.lyrics = lyricParser(newSong.lyric)
       })
     }
     if (!newSong.url && this.playing) {
-      this.autoJump(this.autoJumpTime * 1000)
+      !this.songError && this.autoJump(this.autoJumpTime * 1000)
+      this.songError = true
       return
     }
     this.savePlayHistory(newSong)

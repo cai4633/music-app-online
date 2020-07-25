@@ -36,7 +36,7 @@ export function shuffle(arr: any[]) {
   return _arr
 }
 
-export function debounce(func: any, delay: number) {
+export function debounce(func: Function, delay: number) {
   let timer: number | undefined
   return function(this: void, ...args: any) {
     if (timer) {
@@ -48,6 +48,19 @@ export function debounce(func: any, delay: number) {
       clearTimeout(timer)
       timer = undefined
     }, delay)
+  }
+}
+
+export function throttle(fn: Function, delay: number) {
+  let timer: number | undefined
+  return function (this: void, ...arg:any[]){
+    if(!timer){
+      fn.apply(this, arg)
+      timer = window.setTimeout(()=>{
+        window.clearTimeout(timer)
+        timer = undefined
+      })
+    }
   }
 }
 

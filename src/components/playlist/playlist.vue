@@ -5,27 +5,44 @@
         <h1>
           <div class="play-mode" @click.stop="toggleMode">
             <icon-svg icon="#el-icon-loop" v-show="mode === 0"></icon-svg>
-            <icon-svg icon="#el-icon-single-cycle" v-show="mode === 1"></icon-svg>
+            <icon-svg
+              icon="#el-icon-single-cycle"
+              v-show="mode === 1"
+            ></icon-svg>
             <icon-svg icon="#el-icon-random" v-show="mode === 2"></icon-svg>
           </div>
           <span class="play-mode-text">{{ playModeText }}</span>
-          <span class="clear" @click.stop="showConfirm"><icon-svg icon="#el-icon-clearAll"></icon-svg></span>
+          <span class="clear" @click.stop="showConfirm"
+            ><icon-svg icon="#el-icon-clearAll"></icon-svg
+          ></span>
         </h1>
         <div class="mini-songlist-wrap">
           <scroll class="mini-songlist" :data="sequencelist" ref="miniSonglist">
             <div class="scroll-inner">
               <transition-group name="slide" tag="ul" ref="slideOut">
-                <li v-for="(song, index) in sequencelist" :key="song.id" @click.stop="toPlay(song)" ref="mini">
-                  <icon-svg icon="#el-icon-play" class="playIcon" :class="showPlayIcon(index)"></icon-svg>
+                <li
+                  v-for="(song, index) in sequencelist"
+                  :key="song.id"
+                  @click.stop="toPlay(song)"
+                  ref="mini"
+                >
+                  <icon-svg
+                    icon="#el-icon-play"
+                    class="playIcon"
+                    :class="showPlayIcon(index)"
+                  ></icon-svg>
                   <div class="text">
-                    <span class="name">{{ song.name }}</span>
-                    -
+                    <span class="name">{{ song.name }}</span> -
                     <span class="singer">{{ song.singer }}</span>
                   </div>
                   <span class="favorite" @click.stop="toggleFavorite(song)">
                     <icon-svg :icon="getIcon(song)"></icon-svg>
                   </span>
-                  <icon-svg class="delete" icon="#el-icon-clear" @click.stop.native="deleteOne(song)"></icon-svg>
+                  <icon-svg
+                    class="delete"
+                    icon="#el-icon-clear"
+                    @click.stop.native="deleteOne(song)"
+                  ></icon-svg>
                 </li>
               </transition-group>
             </div>
@@ -37,8 +54,11 @@
             </span>
           </div>
         </div>
-
-        <confirm title="是否全部删除播放列表" ref="playlistConfirm" @enter="clearList"></confirm>
+        <confirm
+          title="是否全部删除播放列表"
+          ref="playlistConfirm"
+          @enter="clearList"
+        ></confirm>
         <footer @click.stop="hide">关闭</footer>
       </div>
       <add-songs ref="addsongs" @hide="hide"></add-songs>
@@ -59,7 +79,7 @@ import AddSongs from "components/add-songs/add-songs.vue"
 import { Action, Mutation, Getter } from "vuex-class"
 
 @Component({
-  components: { IconSvg, Scroll, Confirm, AddSongs },
+  components: { IconSvg, Scroll, Confirm, AddSongs }
 })
 export default class Playlist extends Mixins(PlayerMixin) {
   showFlag = false
@@ -75,6 +95,7 @@ export default class Playlist extends Mixins(PlayerMixin) {
   }
 
   @Getter("playlist") playlist!: any
+  @Getter("currentIndex") currentIndex!: number
   @Action("removeSongFromList") removeSongFromList!: MutationMethod
   @Action("clearSongList") clearSongList!: MutationMethod
   @Mutation("SET_CURRENTINDEX") setCurrentIndex!: MutationMethod
@@ -96,7 +117,9 @@ export default class Playlist extends Mixins(PlayerMixin) {
     this.hide()
   }
   showPlayIcon(index: number) {
-    return index === findIndex(this.sequencelist, this.currentSong) ? "playing" : "pause"
+    return index === findIndex(this.sequencelist, this.currentSong)
+      ? "playing"
+      : "pause"
   }
 
   deleteOne(song: Songs) {
@@ -116,7 +139,7 @@ export default class Playlist extends Mixins(PlayerMixin) {
     window.setTimeout(() => {
       this.$refs.miniSonglist.refresh()
       this.scrollToCurrent(200)
-    }, 100) // 延迟滚动
+    }, 120) // 延迟滚动
   }
   hide() {
     this.showFlag = false
@@ -126,17 +149,26 @@ export default class Playlist extends Mixins(PlayerMixin) {
       return
     }
     const index = findIndex(this.sequencelist, this.currentSong)
-    this.$refs.miniSonglist.scrollToElement(this.$refs.slideOut.$el.children[index], delay)
+    if (this.$refs.miniSonglist && this.$refs.slideOut) {
+      this.$refs.miniSonglist.scrollToElement( this.$refs.slideOut.$el.children[index], delay )
+    }
   }
 
   @Watch("currentSong")
-  __currentSong(newsong: Songs, oldsong: Songs) {
+  currentSongChange(newsong: Songs, oldsong: Songs) {
     if (!newsong.id || newsong.id === oldsong.id || !this.showFlag) {
       return
     }
     window.setTimeout(() => {
       this.$refs.miniSonglist.refresh()
     }, 150)
+  }
+  @Watch("currentIndex")
+  currentIndexChange(newIndex: number) {
+    this.$nextTick(()=>{
+      this.scrollToCurrent(200)
+    })
+    return
   }
 }
 </script>
