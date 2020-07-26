@@ -3,10 +3,10 @@ import App from "./App.vue"
 import router from "./router"
 import store from "./store"
 import FastClick from "fastclick"
-import "./common/stylus/index.styl"
 import VueLazyload from "vue-lazyload"
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 import VueAxios from "vue-axios"
+import "./common/stylus/index.styl"
 // const singerlist = require("@/common/mock/singerlist.ts")
 // const Mock = require("mockjs")
 

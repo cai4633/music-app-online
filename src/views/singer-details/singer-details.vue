@@ -72,5 +72,9 @@ export default class SingerDetails extends Vue {
   bottom 0
   left 0
   right 0
-  z-index 2000
+  @media screen and (min-width: 720px) {
+    left calc(50% - 360px)
+    width 720px
+  }
+  z-index $singer-detail-zindex 
 </style>

@@ -131,17 +131,17 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
     position relative
 
   .search-result
-    position fixed
-    top 143px
+    position absolute
+    top 60px
     bottom 0px
     left 0
     right 0
-    z-index 100
+    z-index $search-result-zindex
     background-color $background-color
     padding 5px 20px 
   .shortcut
-    position fixed
-    top 155px
+    position absolute
+    top 90px
     bottom 0px
     left 0
     right 0

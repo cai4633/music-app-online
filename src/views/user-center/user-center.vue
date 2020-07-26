@@ -1,5 +1,5 @@
 <template>
-  <transition name="user-slider">
+  <transition name="slide-in">
     <div class="user-center">
       <div class="back" @click.stop="back"><go-back></go-back></div>
       <div class="switches-wrap">
@@ -115,20 +115,11 @@ export default class UserCenter extends Mixins(PlaylistMixin) {
 
 <style lang="stylus" scoped>
 @import '~common/stylus/variable.styl';
+@import '~common/stylus/mixin.styl';
 
-.user-slider-enter, .user-slider-leave-to
-  transform translateX(-100%)
-.user-slider-enter-to, .user-slider-leave
-  transform translateX(0%)
-.user-slider-enter-active, .user-slider-leave-active
-  transition transform .4s
-
+slide-in()
 .user-center
-  position fixed
-  top 0
-  left 0
-  right 0
-  bottom 0
+  fixed-adapt()
   background-color $background-color
   color $text-color
   z-index $user-center-zindex

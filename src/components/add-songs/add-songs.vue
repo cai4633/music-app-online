@@ -133,7 +133,7 @@ export default class AddSongs extends Mixins(SearchMixin) {
   transform translateX(100%)
 
 .add-songs
-  position fixed
+  position absolute
   top 0
   bottom 0
   right 0

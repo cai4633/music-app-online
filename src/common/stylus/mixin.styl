@@ -67,8 +67,10 @@ slide-in() {
   .slide-in-enter-active, .slide-in-leave-active {
     transition: all 0.4s;
   }
+
   .slide-in-enter, .slide-in-leave-to {
     transform: translateX(-100%);
+    opacity: 0;
   }
 }
 
@@ -77,17 +79,33 @@ fade-in() {
   .fade-in-enter-active, .fade-in-leave-active {
     transition: all 0.2s;
   }
+
   .fade-in-enter, .fade-in-leave-to {
-    opacity 0
+    opacity: 0;
   }
 }
 
 // rank recommend singer search 定位
-content-position()
-  position fixed
-  top 81px
-  bottom 0
-  left 0
-  right 0
-  background-color $background-color
-  overflow hidden
+content-position() {
+  position: absolute;
+  top: 81px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $background-color;
+  overflow: hidden;
+}
+
+// web自适应
+fixed-adapt() {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @media screen and (min-width: 720px) {
+    left: calc(50vw - 360px);
+    width: 720px;
+  }
+}

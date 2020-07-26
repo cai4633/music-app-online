@@ -2,7 +2,7 @@
   <div class="recommend">
     <div class="recommend-wrap">
       <div>
-        <div class="banner" v-if="slideList.length">
+        <div class="banner" v-if="slideList.length" ref="banner">
           <slider>
             <li class="swiper-slide" v-for="item in slideList" :key="item.id">
               <a :href="item.linkUrl">
@@ -11,13 +11,24 @@
             </li>
           </slider>
         </div>
-        <div class="descLists">
+        <div class="descLists" ref="descLists">
           <h2>首发专辑推荐</h2>
           <scroll class="descLists-wrap" :data="albums" ref="recommend">
             <ul class="desc-content">
-              <li v-for="(album, index) in albums" :key="album.id" @click="selectItem(album, index)" >
+              <li
+                v-for="(album, index) in albums"
+                :key="album.id"
+                @click="selectItem(album, index)"
+              >
                 <div class="li-inner">
-                  <div class="desc-icon"> <img v-lazy="album.photo" alt="desc-icon" width="60" height="60" /> </div>
+                  <div class="desc-icon">
+                    <img
+                      v-lazy="album.photo"
+                      alt="desc-icon"
+                      width="60"
+                      height="60"
+                    />
+                  </div>
                   <div class="text">
                     <h3 class="album-name">{{ album.name }}</h3>
                     <p class="album-singer">{{ album.singer }}</p>
@@ -32,7 +43,7 @@
         </div>
       </div>
     </div>
-    <transition name='slide-in'>
+    <transition name="slide-in">
       <router-view></router-view>
     </transition>
   </div>
@@ -60,6 +71,8 @@ export default class Recommend extends Mixins(PlaylistMixin) {
   timer = 0
   $refs!: {
     recommend: Scroll
+    banner: HTMLElement
+    descLists: HTMLElement
   }
 
   @Mutation("SET_DISC") setDisc!: MutationMethod
@@ -70,6 +83,10 @@ export default class Recommend extends Mixins(PlaylistMixin) {
       this.__getDescLists()
     }, 20) //instead of nextTick(),浏览器刷新时间一般是17ms
   }
+  mounted() {
+    window.onresize = this.descListRefresh    //resize 更新位置
+  }
+
   destroyed() {
     window.clearTimeout(this.timer)
   }
@@ -88,8 +105,19 @@ export default class Recommend extends Mixins(PlaylistMixin) {
   __getRecommend() {
     getRecommend().then((response: any): void => {
       this.slideList = response.data.slider
+      this.$nextTick(() => {
+        //更新desclists 的top值
+        this.descListRefresh()
+      })
     })
   }
+
+  descListRefresh() {
+    if (this.$refs.banner) {
+      this.$refs.descLists.style.top = `${this.$refs.banner.offsetHeight}px`
+    }
+  }
+
   __getDescLists() {
     getAlbums().then((res: any) => {
       if (res.code === ERR_OK) {
@@ -130,7 +158,6 @@ export default class Recommend extends Mixins(PlaylistMixin) {
         box-sizing border-box
         width 100%
         overflow hidden
-
         &::after
           content ''
           display block
@@ -201,7 +228,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
                   no-wrap()
 
       .loading-wrap
-        position fixed
+        position absolute
         width 100%
         top 60%
         transform translateY(-50%)

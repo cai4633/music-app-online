@@ -262,7 +262,7 @@ header-style()
           color $text-highlight-color
 
 .loading-wrap
-  position fixed
+  position absolute
   width 100%
   top 50%
   transform translateY(-50%)

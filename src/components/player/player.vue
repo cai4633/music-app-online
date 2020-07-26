@@ -192,7 +192,6 @@ export default class Player extends Mixins(PlayerMixin) {
     this.songReady = true
   }
   autoJump(ms: number) {
-    // TODO:连续跳转bug
     this.songError = true
     this.songReady = true
     setTimeout(this.next, ms)
@@ -371,7 +370,7 @@ export default class Player extends Mixins(PlayerMixin) {
 
 .player
   .back
-    position fixed
+    position absolute
     top 10px
     left 20px
     svg
@@ -379,7 +378,7 @@ export default class Player extends Mixins(PlayerMixin) {
       height @width
       fill $text-highlight-color
   .normal-player
-    position fixed
+    position absolute
     top 0
     left 0
     bottom 0
@@ -480,7 +479,7 @@ export default class Player extends Mixins(PlayerMixin) {
           height 20px
           fill $text-highlight-color
   .mini-player
-    position fixed
+    position absolute
     z-index $mini-player-zindex
     bottom 0px
     height 60px

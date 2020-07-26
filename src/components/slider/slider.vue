@@ -53,6 +53,10 @@ export default class Slider extends Vue {
     position relative
     overflow hidden
     font-size 0px
+    @media screen and (min-width:720px) {
+      width 720px
+      height calc(720px / 2.5)
+    }
 </style>
 
 <style lang="stylus">
