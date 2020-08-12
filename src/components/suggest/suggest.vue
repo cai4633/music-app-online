@@ -28,6 +28,12 @@ import { getSongUrl } from "api/songs"
 
 const TYPE_SINGER = "singer"
 const perpage = 30
+interface Item {
+  type: string
+  singer: string
+  name: string
+  singerName: string
+}
 
 @Component({
   components: { IconSvg, Scroll, NoResult, Loading }
@@ -57,19 +63,19 @@ export default class Suggest extends Vue {
     this.page++
     this._getSearchInfo()
   }
-  selectItem(item: any) {
+  selectItem(item: Item) {
     this.$emit("select", item)
   }
-  getIconCls(item: any) {
+  getIconCls(item: Item) {
     return item.type === TYPE_SINGER ? "#el-icon-person" : "#el-icon-music"
   }
-  getDisplayText(item: any) {
+  getDisplayText(item: Item) {
     return item.type === TYPE_SINGER ? item.singerName : `${item.name}-${item.singer}`
   }
 
   _getSearchInfo() {
     getSearchInfo(this.query, this.page, this.showSinger, perpage).then(
-      (response: any) => {
+      (response: MyResponse) => {
         if (response.code === ERR_OK) {
           this.getResult(response.data)
           this.checkMore(response.data)
@@ -78,19 +84,19 @@ export default class Suggest extends Vue {
     )
   }
 
-  checkMore(data: any) {
+  checkMore(data: SongData) {
     if (data.song) {
       const { list, curnum, curpage, totalnum } = data.song
       this.hasMore = list.length && curnum + (curpage - 1) * perpage < totalnum ? true : false }
   }
 
-  getResult({ song: { list }, zhida }: any) {
+  getResult({ song: { list }, zhida }: SongData) {
     let ret: any[] = []
     if (zhida.type === 1 && !this.lists.length) {
       ret.push({ ...zhida.zhida_singer, type: TYPE_SINGER })
     }
     if (list) {
-      const listFormat = list.map((item: any) => {
+      const listFormat = list.map((item: SongItem) => {
         return {
           mid: item.mid,
           id: item.id,

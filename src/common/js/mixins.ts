@@ -1,6 +1,6 @@
 import { Component, Vue, Mixins, Watch } from "vue-property-decorator"
 import { mapGetters, mapMutations, mapActions } from "vuex"
-import { playMode, Songs } from "common/js/config"
+import { playMode } from "common/js/config"
 import { shuffle, lyricParser } from "common/js/util"
 import { findIndex } from "common/js/player"
 import Singer from "common/js/singer"

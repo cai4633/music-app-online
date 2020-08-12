@@ -1,14 +1,17 @@
 <template>
-    <div class="recommend-details">
-      <music-list :songs="songs" :title="disc.name" :bgImg="disc.photo" ></music-list>
-    </div>
+  <div class="recommend-details">
+    <music-list
+      :songs="songs"
+      :title="disc.name"
+      :bgImg="disc.photo"
+    ></music-list>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import MusicList from "@/components/music-list/music-list.vue"
 import { createSong } from "common/js/song"
-import { Songs } from "common/js/config"
 import { getCdInfoById } from "api/recommend.ts"
 import { getSongUrl } from "api/songs"
 import { ERR_OK } from "api/config"
@@ -31,13 +34,15 @@ export default class RecommendDetails extends Vue {
     this._getCdInfoById(this.disc.mid)
   }
   _getCdInfoById(mid: string) {
-    return getCdInfoById(mid).then((response: any) => {
+    return getCdInfoById(mid).then((response: MyResponse) => {
       if (response.code === ERR_OK) {
         const songlist = response.data.songList
-        getSongUrl(songlist).then((response: any) => {
-          this.songs = response.map((item: any) => {
-            return createSong(item)
-          })
+        getSongUrl(songlist).then((response?: any[]) => {
+          if (response) {
+            this.songs = response.map((item: any) => {
+              return createSong(item)
+            })
+          }
         })
       }
     })
@@ -50,8 +55,7 @@ export default class RecommendDetails extends Vue {
 @import '~common/stylus/mixin.styl'
 .recommend-details
   fixed-adapt()
-  background-color #000
-  color #FFF
-  z-index $recommend-detail-zindex 
-
+  background-color $background-color
+  color $text-color
+  z-index $recommend-detail-zindex
 </style>

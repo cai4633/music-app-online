@@ -1,5 +1,3 @@
-import { Songs } from "./config"
-
 function getTime(time:string, offset = 0) {
   const regexp = time.match(/^(\d{0,2}):(\d{0,2}\.\d{0,2})$/)
   const minute = regexp ? regexp[1] : 0

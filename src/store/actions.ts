@@ -1,5 +1,5 @@
 import * as types from "./mutation-types"
-import { playMode, Songs } from "@/common/js/config"
+import { playMode } from "@/common/js/config"
 import { shuffle } from "@/common/js/util.ts"
 import { findIndex } from "@/common/js/player.ts"
 import { saveSearch, removeSearch, clearSearch, PlayedHistory, Favorite } from "common/js/cache"

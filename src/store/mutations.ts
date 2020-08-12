@@ -1,6 +1,5 @@
 import * as types from "./mutation-types";
 import { State } from "./config";
-import { Songs } from '@/common/js/config';
 
 const mutations = {
   [types.SET_SINGER](state: any, singer: any) {

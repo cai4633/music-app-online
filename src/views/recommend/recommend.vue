@@ -67,7 +67,7 @@ import jsonp from "common/js/jsonp"
 })
 export default class Recommend extends Mixins(PlaylistMixin) {
   slideList = []
-  albums = []
+  albums:AlbumCls[] = []
   timer = 0
   $refs!: {
     recommend: Scroll
@@ -91,7 +91,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     window.clearTimeout(this.timer)
   }
 
-  selectItem(item: any, index: string) {
+  selectItem(item: AlbumCls, index: string) {
     this.setDisc(item)
     this.$router.push({ path: `/recommend/${item.mid}` })
   }
@@ -103,7 +103,7 @@ export default class Recommend extends Mixins(PlaylistMixin) {
     }
   }
   __getRecommend() {
-    getRecommend().then((response: any): void => {
+    getRecommend().then((response: MyResponse): void => {
       this.slideList = response.data.slider
       this.$nextTick(() => {
         //更新desclists 的top值
@@ -119,11 +119,12 @@ export default class Recommend extends Mixins(PlaylistMixin) {
   }
 
   __getDescLists() {
-    getAlbums().then((res: any) => {
-      if (res.code === ERR_OK) {
-        this.albums = res.new_album.data.albums.map((album: any) => {
+    getAlbums().then((res: MyResponse) => {
+      if (res.code === ERR_OK && res.new_album) {
+        this.albums = res.new_album.data.albums.map((album: AlbumCls) => {
           return createAlbum(album)
         })
+        
       }
     })
   }

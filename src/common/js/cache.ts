@@ -1,6 +1,4 @@
-import { Songs } from "./config"
 import { insertArray } from "./util"
-
 export const SEARCH_KEY = "__search__"
 export const PLAY_KEY = "__play__"
 export const FAVORITE_KEY = "__favorite__"
@@ -33,7 +31,7 @@ class Storage {
 }
 const storage = new Storage()
 
-function deleteOne(array: any[], item: string | Songs, func: any) {
+function deleteOne(array: any[], item: string | Songs, func:(item:any) => boolean) {
   const index = array.findIndex(func)
   if (index === -1) {
     return

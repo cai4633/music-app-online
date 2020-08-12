@@ -1,13 +1,5 @@
 import {getSinger} from 'common/js/song'
 
-export interface AlbumCls {
-  id: number
-  name: string
-  mid: string
-  photo: string
-  singer: string
-}
-
 export class Album {
   id: number
   name: string

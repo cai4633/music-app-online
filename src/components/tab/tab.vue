@@ -19,7 +19,7 @@ export default class Tab extends Vue {
 }
 </script>
 <style lang="stylus" scoped>
-@import '../../common/stylus/variable.styl'
+@import '~common/stylus/variable.styl'
 div.tab
     height 35px
     flex 0 0 auto

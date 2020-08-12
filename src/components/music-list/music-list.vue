@@ -35,7 +35,6 @@ import GoBack from "base/go-back/go-back.vue"
 import { mapMutations, mapGetters, mapActions, MutationMethod } from "vuex"
 import { selectPlay } from "../../store/actions"
 import { PlaylistMixin } from "common/js/mixins"
-import { Songs } from "common/js/config"
 import { Getter, Mutation, Action } from "vuex-class"
 
 @Component({

@@ -1,6 +1,5 @@
 import { getLyric } from "@/api/songs.ts"
 import { ERR_OK } from "@/api/config.ts"
-import { Songs } from "./config"
 
 export default class Song {
   id: number
@@ -43,7 +42,7 @@ export function getSinger(singers: any) {
 }
 
 export function createSong(song: any) {
-  const image = song.albummid ? song.albummid : song.album.pmid
+  const image = song.albummid || song.album.pmid
   return new Song({
     id: song.id || song.songid,
     mid: song.mid || song.songmid,

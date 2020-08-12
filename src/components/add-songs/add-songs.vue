@@ -49,7 +49,6 @@ import TopTip from "base/top-tip/top-tip.vue"
 import { mapGetters, mapActions } from "vuex"
 import { SearchMixin } from "common/js/mixins"
 import { findIndex } from "../../common/js/player"
-import { Songs } from "common/js/config"
 
 @Component({
   computed: {

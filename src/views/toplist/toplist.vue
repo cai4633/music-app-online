@@ -14,8 +14,7 @@ import { Component, Prop, Vue, Watch } from "vue-property-decorator"
 import MusicList from "components/music-list/music-list.vue"
 import { getSongsByTopid } from "../../api/rank"
 import { ERR_OK } from "../../api/config"
-import { Songs } from "common/js/config"
-import { createSong } from "common/js/song.ts"
+import { createSong } from "common/js/song"
 import { getSongUrl } from "../../api/songs"
 import { mapGetters, MutationMethod } from "vuex"
 import { Getter } from "vuex-class"
@@ -36,8 +35,8 @@ export default class Toplist extends Vue {
     this._getSongsByTopid(this.toplist.id)
   }
   _getSongsByTopid(id: number) {
-    return getSongsByTopid(id).then((res: any) => {
-      if (res.code === ERR_OK) {
+    return getSongsByTopid(id).then((res: MyResponse) => {
+      if (res.code === ERR_OK && res.songlist) {
         const ret = res.songlist
         getSongUrl(ret).then((response: any) => {
           this.songs = response.map((song: any) => {
@@ -55,5 +54,5 @@ export default class Toplist extends Vue {
 @import '~common/stylus/mixin.styl';
 .toplist
   fixed-adapt()
-  background-color #000
+  background-color $background-color
 </style>

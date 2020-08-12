@@ -69,7 +69,7 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Mixins } from "vue-property-decorator"
 import IconSvg from "base/icon-svg/icon-svg.vue"
-import { playMode, Songs } from "common/js/config"
+import { playMode } from "common/js/config"
 import { PlayerMixin } from "common/js/mixins"
 import Scroll from "base/scroll/scroll.vue"
 import Confirm from "base/confirm/confirm.vue"

@@ -2,19 +2,23 @@
   <scroll class="rank" ref="rank" :data="lists">
     <div class="rank-inner">
       <ul class="content-inner">
-        <li v-for="list in lists" @click="selectItem(list)" :key="'rank' + list.id">
-          <div class="topIcon"><img @load="imgLoad" v-lazy="list.picUrl" width="100" /></div>
+        <li v-for="list in lists" @click="selectItem(list)" :key="list.id">
+          <div class="topIcon">
+            <img @load="imgLoad" v-lazy="list.picUrl" width="100" />
+          </div>
           <ul class="songlist">
             <li v-for="(song, songIndex) in list.songList" :key="song.songname">
               <span>{{ songIndex + 1 }}</span>
-              <span class="txt">{{ song.songname }} - {{ song.singername }}</span>
+              <span class="txt"
+                >{{ song.songname }} - {{ song.singername }}</span
+              >
             </li>
           </ul>
         </li>
       </ul>
       <div class="loading-wrap" v-show="!lists.length"><loading></loading></div>
     </div>
-    <transition name='slide-in'>
+    <transition name="slide-in">
       <router-view></router-view>
     </transition>
   </scroll>
@@ -31,10 +35,10 @@ import { Mutation, Getter } from "vuex-class"
 import Loading from "base/loading/loading.vue"
 
 @Component({
-  components: { Scroll, Loading },
+  components: { Scroll, Loading }
 })
 export default class Rank extends Mixins(PlaylistMixin) {
-  lists: any[] = []
+  lists: RankItem[] = []
   $refs!: {
     rank: Scroll
   }
@@ -46,9 +50,9 @@ export default class Rank extends Mixins(PlaylistMixin) {
     this._getRank()
   }
   imgLoad() {
-    ;(this.$refs.rank as Scroll).refresh()
+    this.$refs.rank.refresh()
   }
-  selectItem(item: any) {
+  selectItem(item: RankItem) {
     this.setToplist(item)
     this.$router.push({ path: `/rank/${item.id}` })
   }
@@ -61,7 +65,7 @@ export default class Rank extends Mixins(PlaylistMixin) {
   }
   _getRank() {
     this.$nextTick(() => {
-      return getRank().then((response: any) => {
+      return getRank().then((response: MyResponse) => {
         if (response.code === ERR_OK) {
           this.lists = response.data.topList
         }
@@ -78,7 +82,6 @@ export default class Rank extends Mixins(PlaylistMixin) {
 .rank
   content-position()
   color $text-color
-
   // 详情进入动画
   slide-in()
 
@@ -111,7 +114,7 @@ export default class Rank extends Mixins(PlaylistMixin) {
           flex-direction column
           justify-content center
           min-width 0px
-          
+
           li
             white-space nowrap
             text-align left

@@ -11,13 +11,7 @@
         <div class="hotkey-wrap">
           <h1>热门搜索</h1>
           <div class="hotkey">
-            <span
-              class="key"
-              v-for="key in hotkeys"
-              :key="key.k + key.n"
-              @click="selectItem(key.k)"
-              >{{ key.k }}</span
-            >
+            <span class="key" v-for="key in hotkeys" :key="key.k" @click="selectItem(key.k)" >{{ key.k }}</span >
           </div>
         </div>
         <div class="search-history" v-show="searchHistory.length">
@@ -27,11 +21,7 @@
               ><icon-svg icon="#el-icon-clearAll"></icon-svg
             ></i>
           </h1>
-          <history-list
-            :list="searchHistory"
-            @delete="removeSearchHistory"
-            @select="selectItem"
-          ></history-list>
+          <history-list :list="searchHistory" @delete="removeSearchHistory" @select="selectItem" ></history-list>
         </div>
       </div>
     </scroll>
@@ -76,7 +66,7 @@ const TYPE_SINGER = "singer"
   }
 })
 export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
-  hotkeys: any[] = []
+  hotkeys: Array<{k:string; n:number}> = []
   query = ""
   $refs!: {
     shortcut: Scroll
@@ -109,7 +99,7 @@ export default class Search extends Mixins(PlaylistMixin, SearchMixin) {
     this.$refs.confirm.show()
   }
   _getHotKey() {
-    getHotKey().then((response: any) => {
+    getHotKey().then((response: MyResponse) => {
       if (response.code === ERR_OK) {
         this.hotkeys = response.data.hotkey.slice(0, 10)
       }

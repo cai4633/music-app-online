@@ -17,7 +17,6 @@
 <script lang="ts">
 import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator"
 import { mapGetters, mapMutations } from "vuex"
-import { Songs } from "common/js/config"
 import Song from "common/js/song"
 
 @Component({

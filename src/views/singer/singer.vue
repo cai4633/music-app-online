@@ -65,7 +65,7 @@ export default class Singer extends Vue {
 
     // 处理map.items 得到有序列表
     const hot: object[] = []
-    const ret: object[] = []
+    const ret: { title: string }[] = []
     for (const key in map) {
       if (key.match(/^[a-zA-Z]$/g)) {
         ret.push(map[key])
@@ -73,7 +73,7 @@ export default class Singer extends Vue {
         hot.push(map[key])
       }
     }
-    ret.sort((a: any, b: any): any => {
+    ret.sort((a: { title: string }, b: { title: string }): number => {
       return a.title.charCodeAt(0) - b.title.charCodeAt(0)
     })
 
