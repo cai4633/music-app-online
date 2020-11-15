@@ -13,8 +13,8 @@ import "./common/stylus/index.styl"
 (<any>FastClick).attach(document.body)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: "./common/images/default.png",
-  loading: require("./common/images/default.png"),
+  error: "./common/images/default.jpg",
+  loading: require("./common/images/default.jpg"),
   attempt: 1
 })
 

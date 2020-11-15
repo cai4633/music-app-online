@@ -1,8 +1,8 @@
 <template>
   <div class="m-header">
     <div class="banner">
-      <img src="./logo@2x.png" alt="banner" />
-      <span>Music APP</span>
+      <img src="./logo@2x.jpg" alt="banner" />
+      <span>逸辰音乐</span>
     </div>
     <router-link class="user" title="用户中心" to="/user-center" tag="span">
       <icon-svg icon="#el-icon-user"></icon-svg>
@@ -38,6 +38,7 @@ div.m-header
             width 30px
             padding .5em 0
             vertical-align top
+            border-radius 50%
 
         span
             color rgb(157, 138, 77)

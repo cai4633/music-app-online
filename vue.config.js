@@ -14,11 +14,15 @@ app.use(bodyParser.json()) // for parsing application/json
 app.use("/api", apiRoutes)
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "./" : "/",             //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
+  publicPath: process.env.NODE_ENV === "production" ? "./" : "/", //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
   outputDir: "docs",
   assetsDir: "static",
   lintOnSave: true,
   chainWebpack: config => {
+    config.plugin("html").tap(args => {
+      args[0].title = "逸辰音樂"
+      return args
+    })
     config.resolve.alias
       .set("@", resolve("src"))
       .set("assets", resolve("src/assets"))
