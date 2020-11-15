@@ -7,7 +7,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "homepage": "http://cai4633.gitee.io/my-vue-accounts-demo/",
   "dependencies": {
     "@better-scroll/mouse-wheel": "^2.0.0-beta.8",
     "@types/axios": "^0.14.0",
