@@ -1,110 +1,91 @@
 // rank背景图片
-bg-url($name) {
-  background-image: url($name + '@2x.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+bg-url($name)
+  background-image url($name + '@2x.png')
+  background-size contain
+  background-repeat no-repeat
 
-  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
-    background-image: url($name + '@3x.png');
-    background-size: contain;
-  }
-}
+  @media (-webkit-min-device-pixel-ratio 3), (min-device-pixel-ratio 3)
+    background-image url($name + '@3x.png')
+    background-size contain
 
 // 显示省略号
-no-wrap() {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+no-wrap()
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
 
-no-wrap2() { // 两行显示省略号
-  line-height: 1.2em;
-  height: 2.4em;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+no-wrap2() // 两行显示省略号
+  line-height 1.2em
+  height 2.4em
+  display -webkit-box
+  -webkit-box-orient vertical
+  -webkit-line-clamp 2
+  overflow hidden
+  text-overflow ellipsis
 
 // 扩展点击区域
-extend-click() {
-  position: relative;
+extend-click()
+  position relative
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-  }
-}
+  &:before
+    content ''
+    position absolute
+    top -10px
+    left -10px
+    right -10px
+    bottom -10px
 
 // 定位居中
-position-center($position, $direction) {
-  position: $position;
-  transform: translate3d($direction == 'x' ? -50% : 0, $direction == 'y' ? -50% : 0, 0);
+position-center($position, $direction)
+  position $position
+  transform translate3d($direction == 'x' ? -50% : 0, $direction == 'y' ? -50% : 0, 0)
 
-  if ($direction == 'y') {
-    top: 50%;
-  }
+  if ($direction == 'y')
+    top 50%
 
-  if ($direction == 'x') {
-    left: 50%;
-  }
+  if ($direction == 'x')
+    left 50%
 
-  if ($direction == 'both') {
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
+  if ($direction == 'both')
+    left 50%
+    top 50%
+    transform translate3d(-50%, -50%, 0)
 
 // 详情进入动画
-slide-in() {
-  .slide-in-enter-active, .slide-in-leave-active {
-    transition: all 0.4s;
-  }
+slide-in()
+  .slide-in-enter-active, .slide-in-leave-active
+    transition all 0.4s
 
-  .slide-in-enter, .slide-in-leave-to {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-}
+  .slide-in-enter, .slide-in-leave-to
+    transform translateX(-100%)
+    opacity 0
 
 // tab切换动画
-fade-in() {
-  .fade-in-enter-active, .fade-in-leave-active {
-    transition: all 0.2s;
-  }
+fade-in()
+  .fade-in-enter-active, .fade-in-leave-active
+    transition all 0.2s
 
-  .fade-in-enter, .fade-in-leave-to {
-    opacity: 0;
-  }
-}
+  .fade-in-enter, .fade-in-leave-to
+    opacity 0
 
 // rank recommend singer search 定位
-content-position() {
-  position: absolute;
-  top: 81px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: $background-color;
-  overflow: hidden;
-}
+content-position()
+  position absolute
+  top 81px
+  bottom 0
+  left 0
+  right 0
+  background-color $background-color
+  overflow hidden
 
 // web自适应
-fixed-adapt() {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+fixed-adapt()
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
 
-  @media screen and (min-width: 720px) {
-    left: calc(50vw - 360px);
-    width: 720px;
-  }
-}
+  @media screen and (min-width 720px)
+    left calc(50vw - 360px)
+    width 720px

@@ -150,7 +150,7 @@ export default class Playlist extends Mixins(PlayerMixin) {
     }
     const index = findIndex(this.sequencelist, this.currentSong)
     if (this.$refs.miniSonglist && this.$refs.slideOut) {
-      this.$refs.miniSonglist.scrollToElement( this.$refs.slideOut.$el.children[index], delay )
+      this.$refs.miniSonglist.scrollToElement( <HTMLElement>this.$refs.slideOut.$el.children[index], delay )
     }
   }
 

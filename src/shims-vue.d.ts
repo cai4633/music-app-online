@@ -69,4 +69,3 @@ declare interface RankItem {
   topTitle: string
   type: number
 }
-

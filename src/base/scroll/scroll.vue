@@ -92,8 +92,8 @@ export default class Scroll extends Vue {
   stop() {
     this.scroll && this.scroll.stop()
   }
-  scrollToElement(el: Element, duration: number) {
-    this.scroll && this.scroll.scrollToElement(el, duration)
+  scrollToElement(el: HTMLElement, duration: number) {
+    this.scroll && this.scroll.scrollToElement(el, duration, false, true)
   }
 
   @Watch("data")

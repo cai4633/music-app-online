@@ -19,26 +19,27 @@ import Player from "components/player/player.vue";
 @Component({
   components: { MHeader, Tab, Player }
 })
-export default class App extends Vue {}
+export default class App extends Vue { }
 </script>
 
 <style lang="stylus">
-@import '~common/stylus/mixin.styl';
-@import '~common/stylus/variable.styl';
+@import '~common/stylus/mixin.styl'
+@import '~common/stylus/variable.styl'
+
 #app
-    font-family Avenir, Helvetica, Arial, sans-serif
-    -webkit-font-smoothing antialiased
-    -moz-osx-font-smoothing grayscale
-    text-align center
-    color #2c3e50
-    height 100%
-    box-sizing border-box
-    display flex
-    flex-direction column
-    overflow hidden
-    position relative
-    max-width 720px
-    margin auto
-    background-color $background-color
+  font-family Avenir, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  height 100%
+  position relative
+  text-align center
+  color #2c3e50
+  box-sizing border-box
+  display flex
+  flex-direction column
+  overflow hidden
+  max-width 720px
+  margin auto
+  background-color $background-color
 </style>
 
