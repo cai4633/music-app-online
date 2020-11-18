@@ -11,8 +11,8 @@ import MouseWheel from "@better-scroll/mouse-wheel"
 BScroll.use(MouseWheel)
 @Component({})
 export default class Scroll extends Vue {
-  scroll: any = null
-  timer!: number
+  scroll: BScroll | null = null
+  timer = 0
 
   @Prop({
     default: null,
@@ -22,17 +22,17 @@ export default class Scroll extends Vue {
   @Prop({
     default: 1,
   })
-  private probeType!: number
+  readonly probeType!: number
 
   @Prop({
     default: false,
   })
-  private pullup!: boolean
+  readonly pullup!: boolean
 
   @Prop({
     default: true,
   })
-  private click!: boolean
+  readonly click!: boolean
 
   mounted() {
     this.$nextTick(() => {
@@ -41,7 +41,7 @@ export default class Scroll extends Vue {
   }
 
   init() {
-    const options: object = {
+    const options: Partial<BScroll['options']> = {
       click: this.click,
       probeType: this.probeType,
       mouseWheel: {
@@ -57,21 +57,25 @@ export default class Scroll extends Vue {
   }
 
   scrollTo(x: number, y: number, duaring = 300) {
-    this.scroll.scrollTo(x, y, duaring)
+    if (this.scroll) {
+      this.scroll.scrollTo(x, y, duaring)
+    }
   }
 
   bindEvents() {
-    this.scroll.on("scroll", (pos: { y: number }) => {
-      this.$emit("scroll", pos.y)
-    })
-    this.scroll.on("scrollEnd", (pos: { y: number }) => {
-      this.$emit("scrollEnd", pos.y)
-      if (this.pullup && pos.y <= this.scroll.maxScrollY + 10) {
-        this.$emit("scrollToEnd")
-      }
-    })
+    if (this.scroll) {
+      this.scroll.on("scroll", (pos: { y: number }) => {
+        this.$emit("scroll", pos.y)
+      })
+      this.scroll.on("scrollEnd", (pos: { y: number }) => {
+        this.$emit("scrollEnd", pos.y)
+        if (this.pullup && pos.y <= (this.scroll as BScroll).maxScrollY + 10) {
+          this.$emit("scrollToEnd")
+        }
+      })
+    }
   }
-  
+
   refresh(delay = 10) {
     window.clearTimeout(this.timer)
     this.timer = window.setTimeout(() => {

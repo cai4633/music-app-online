@@ -58,7 +58,7 @@ export default class ListView extends Mixins(PlaylistMixin) {
   }
 
   @Prop()
-  private singerlist!: object[]
+  readonly singerlist!: object[]
 
   mounted() {
     this.$nextTick(() => {

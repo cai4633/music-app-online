@@ -2,18 +2,18 @@ import Vue from "vue"
 import App from "./App.vue"
 import router from "./router"
 import store from "./store"
-import FastClick from "fastclick"
+import { FastClick } from "fastclick"
 import VueLazyload from "vue-lazyload"
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 import VueAxios from "vue-axios"
 import "./common/stylus/index.styl"
 // const singerlist = require("@/common/mock/singerlist.ts")
 // const Mock = require("mockjs")
+FastClick?.attach(document.body)
 
-(<any>FastClick).attach(document.body)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: "./common/images/default.jpg",
+  error: "./common/FastClickmages/default.jpg",
   loading: require("./common/images/default.jpg"),
   attempt: 1
 })
