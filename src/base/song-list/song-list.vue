@@ -1,47 +1,51 @@
 <template>
-  <div class="songlist" ref="songList">
-    <ul>
-      <li v-for="(item, index) in songs" :key="item.id" @click.stop="selectItem(item, index)">
-        <div class="rank" v-show="rank">
-          <span :class="getRankCls(index)">{{ getRankText(index) }}</span>
-        </div>
-        <div class="content">
-          <h2>{{ item.name }}</h2>
-          <p>{{ getDesc(item) }}</p>
-        </div>
-      </li>
-    </ul>
-  </div>
+	<div class="songlist" ref="songList">
+		<ul>
+			<li
+				v-for="(item, index) in songs"
+				:key="item.id"
+				@click.stop="selectItem(item, index)"
+			>
+				<div class="rank" v-show="rank">
+					<span :class="getRankCls(index)">{{ getRankText(index) }}</span>
+				</div>
+				<div class="content">
+					<h2>{{ item.name }}</h2>
+					<p>{{ getDesc(item) }}</p>
+				</div>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator"
-import { mapGetters, mapMutations } from "vuex"
-import Song from "common/js/song"
+import { Component, Prop, Vue, Watch, Provide } from "vue-property-decorator";
+import { mapGetters, mapMutations } from "vuex";
+import Song from "common/js/song";
 
 @Component({
-  components: {},
+	components: {},
 })
 export default class SongList extends Vue {
-  @Prop()
-  private songs!: object[]
+	@Prop()
+	private songs!: object[];
 
-  @Prop({ default: false })
-  private rank!: boolean
+	@Prop({ default: false })
+	private rank!: boolean;
 
-  getDesc(item: Songs) {
-    return item.singer ? item.singer + "·" + item.album : "未知歌手"
-  }
-  getRankCls(index: number) {
-    return index <= 2 ? `icon-${index + 1}` : "txt"
-  }
+	getDesc(item: Songs) {
+		return item.singer ? item.singer + "·" + item.album : "未知歌手";
+	}
+	getRankCls(index: number) {
+		return index <= 2 ? `icon-${index + 1}` : "txt";
+	}
 
-  getRankText(index: number) {
-    return index <= 2 ? "" : index + 1
-  }
-  selectItem(item: Songs, index: number) {
-    this.$emit("select", item, index)
-  }
+	getRankText(index: number) {
+		return index <= 2 ? "" : index + 1;
+	}
+	selectItem(item: Songs, index: number) {
+		this.$emit("select", item, index);
+	}
 }
 </script>
 
@@ -57,6 +61,7 @@ export default class SongList extends Vue {
       padding  8px 0
       line-height 1.6
       display flex
+      cursor pointer
       .rank
         flex 0 0 25px
         display flex

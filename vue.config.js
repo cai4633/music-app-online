@@ -17,10 +17,13 @@ app.use(bodyParser.json()) // for parsing application/json
 app.use("/api", apiRoutes)
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "./" : "/", //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
+  //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
+  publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
+
   outputDir: "docs",
   assetsDir: "static",
   lintOnSave: true,
+
   chainWebpack: config => {
     config.plugin("html").tap(args => {
       args[0].title = "逸辰音乐"
@@ -35,6 +38,7 @@ module.exports = {
       .set("base", resolve("src/base"))
       .set("public", resolve("public"))
   },
+
   devServer: {
     //axios + proxy + interceptors 实现跨域拦截mock功能，偏前端
     proxy: {
@@ -66,26 +70,18 @@ module.exports = {
       // app + apiRoutes + before(app) 实现跨域，拦截，mock等功能，偏后端
     }
   },
-  configureWebpack: config => {
-    config.plugins.push(
-      new PrerenderSPAPlugin({
-        staticDir: path.join(__dirname, "dist"),
-        // 需要进行预渲染的路由路径 我这里做的是首页
-        routes: ["/"],
-        // html文件压缩
-        minify: {
-          minifyCSS: true, // css压缩
-          removeComments: true // 移除注释
-        },
-        renderer: new Renderer({
-          // Optional - The name of the property to add to the window object with the contents of `inject`.
-          injectProperty: "__PRERENDER_INJECTED",
-          // Optional - Any values you'd like your app to have access to via `window.injectProperty`.
-          inject: {}
-          // 在 main.js 中 new Vue({ mounted () {document.dispatchEvent(new Event('render-event'))}})，两者的事件名称要对应上。
-          // renderAfterDocumentEvent: 'render-event'
-        })
-      })
-    )
-  }
+
+
+
+  // pluginOptions: {
+  //   prerenderSpa: {
+  //     registry: undefined,
+  //     renderRoutes: [
+  //       '/'
+  //     ],
+  //     useRenderEvent: true,
+  //     headless: true,
+  //     onlyProduction: true
+  //   }
+  // }
 }

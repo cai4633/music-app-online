@@ -1,21 +1,28 @@
 <template>
-  <div class="tab">
-    <ul>
-      <router-link v-for="item in items" :key="item.id" :to="item.path" tag="li" :class="item.class" ><span>{{ item.content }}</span></router-link >
-    </ul>
-  </div>
+	<div class="tab">
+		<ul>
+			<router-link
+				v-for="item in items"
+				:key="item.id"
+				:to="item.path"
+				tag="li"
+				:class="item.class"
+				><span>{{ item.content }}</span></router-link
+			>
+		</ul>
+	</div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 @Component
 export default class Tab extends Vue {
-  items = [
-    { id: "nav-1", content: "推荐", path: "/recommend", class: "" },
-    { id: "nav-2", content: "歌手", path: "/singer", class: "" },
-    { id: "nav-3", content: "排行", path: "/rank", class: "" },
-    { id: "nav-4", content: "搜索", path: "/search", class: "" }
-  ];
+	items = [
+		{ id: "nav-1", content: "推荐", path: "/recommend", class: "" },
+		{ id: "nav-2", content: "歌手", path: "/singer", class: "" },
+		{ id: "nav-3", content: "排行", path: "/rank", class: "" },
+		{ id: "nav-4", content: "搜索", path: "/search", class: "" },
+	];
 }
 </script>
 <style lang="stylus" scoped>
@@ -35,6 +42,7 @@ div.tab
             line-height @height
             vertical-align top
             span
+              cursor pointer
               position relative
               color $text-color
               display inline-flex
