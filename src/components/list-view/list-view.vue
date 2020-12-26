@@ -16,7 +16,7 @@
 							v-for="singer in item.items"
 							:key="singer.id"
 							class="clearfix"
-							@click="selectItem(singer)"
+							@click.stop="selectItem(singer)"
 						>
 							<div class="avatar">
 								<img v-lazy="webp2jpg(singer.singer_pic)" />
@@ -38,7 +38,7 @@
 					:key="item"
 					:class="{ active: currentIndex === index }"
 					:data-index="index"
-					@click="shortcutClick"
+					@click.stop="shortcutClick"
 				>
 					{{ item }}
 				</li>
@@ -118,8 +118,8 @@ export default class ListView extends Mixins(PlaylistMixin) {
 		const index = (e.currentTarget as HTMLElement).dataset.index;
 		if (index) {
 			this.currentIndex = parseInt(index);
-			this._scrollTo(this.currentIndex);
 			this.isClick = true;
+			this._scrollTo(this.currentIndex);
 		}
 	}
 

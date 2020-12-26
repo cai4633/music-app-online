@@ -1,5 +1,5 @@
 <template>
-	<div class="player" v-show="playlist.length">
+	<div class="m-player" v-show="playlist.length">
 		<transition name="normal" @enter="enter">
 			<div class="normal-player" v-show="fullScreen">
 				<h1>{{ currentSong.name }}</h1>
@@ -269,21 +269,25 @@ export default class Player extends Mixins(PlayerMixin) {
 		const left = this.currentShow === "cd" ? 0 : -width;
 		const offsetWidth = Math.min(0, Math.max(-width, left + dx));
 		this.touch.percent = Math.abs(offsetWidth / width);
-		this.$refs.lyrics.$el.style["transform"] = `translateX(${offsetWidth}px)`;
+		(this.$refs.lyrics.$el as HTMLElement).style[
+			"transform"
+		] = `translateX(${offsetWidth}px)`;
 	}
 	lyricEnd() {
 		const width = document.documentElement.clientWidth;
 		if (this.currentShow === "cd") {
 			//cd
 			if (this.touch.percent > 0.05 && this.touch.moved) {
-				this.$refs.lyrics.$el.style["transform"] = `translateX(${-width}px)`;
+				(<HTMLElement>this.$refs.lyrics.$el).style[
+					"transform"
+				] = `translateX(${-width}px)`;
 				this.$refs.mainDiskWrap.style.opacity = "0";
 				this.currentShow = "lyric";
 			}
 		} else {
 			//lyric
 			if (this.touch.percent < 0.95 && this.touch.moved) {
-				this.$refs.lyrics.$el.style["transform"] = `translateX(0px)`;
+				(this.$refs.lyrics.$el as HTMLElement).style["transform"] = `translateX(0px)`;
 				this.$refs.mainDiskWrap.style.opacity = "1";
 				this.currentShow = "cd";
 			}
@@ -379,192 +383,194 @@ export default class Player extends Mixins(PlayerMixin) {
 @import '~common/stylus/mixin.styl'
 
 .normal-enter-active,.normal-leave-to-active,.mini-enter-active,.mini-leave-active
-  transition all 0.4s cubic-bezier(.51,.77,.62,1.42)
+	transition all 0.4s cubic-bezier(.51,.77,.62,1.42)
 .normal-enter,.normal-leave-to
-  transform translateY(-5%)
-  opacity 0
+	transform translateY(-5%)
+	opacity 0
 .mini-enter,.mini-leave-to
-  transform translateY(100%)
-  opacity 0
+	transform translateY(100%)
+	opacity 0
 
 @keyframes myPlay
-  0%
-    transform rotate(0deg)
-  100%
-    transform rotate(360deg)
+	0%
+		transform rotate(0deg)
+	100%
+		transform rotate(360deg)
 
-.player
-  .back
-    position absolute
-    top 10px
-    left 20px
-    svg
-      width 20px
-      height @width
-      fill $text-highlight-color
-  .normal-player
-    position absolute
-    top 0
-    left 0
-    bottom 0
-    right 0
-    z-index $player-zindex
-    background-color $background-color
-    color #fff
-    .bg
-      position absolute
-      top 0
-      left 0
-      bottom 0
-      right 0
-      background-repeat no-repeat
-      background-position center
-      background-size cover
-      filter blur(3px)
-      z-index -1
-      &::after
-        content ""
-        display block
-        position absolute
-        width 100%
-        height 100%
-        top 0
-        left 0
-        background-color rgba(0,0,0,.6)
-    h1
-      margin 10px 0px
-      font-size 18px
-      padding 0px 45px
-      cursor pointer
-      no-wrap()
-    h2
-      font-size 14px
-      padding 0px 30px
-      cursor pointer
-      no-wrap()
-    .main
-      position absolute
-      left 0
-      right 0
-      top 50px
-      bottom 20px
-      margin-top 16px
-      .main-disk-wrap
-        transition all 0.5s linear
-        cursor pointer
-        .disk-wrap
-          position relative
-          margin-top 20px
-          transition all 0.5s linear
-          &.play
-            animation myPlay 18s linear infinite
-          &.pause
-            animation-play-state paused
-          .disk
-            display inline-block
-            transition all 0.5s linear
-            img
-              box-shadow 0px 0px 0px 8px rgba(255,255,255,.1)
-              border-radius  50%
-              width 200px
-              height 200px
-              vertical-align top
-            img[src='']
-              opacity 0
-        .current-lyric
-          margin-top 20px
-          color $text-color
-      .lyric-wrap
-        position: absolute
-        overflow hidden
-        top 10px
-        bottom 100px
-        left 100%
-        width 100%
-        color $text-color
-        transition all 0.5s linear
-        .lyric
-          p
-            line-height 1.5
-            &.current
-              color #fff
-    .control-wrap
-        position absolute
-        width 100%
-        left 0
-        bottom 30px
-        .control
-          display flex
-          padding 0 20px
-          justify-content space-between
-          flex-wrap wrap
-          .progress-bar-wrap
-            cursor pointer
-            width 100%
-            margin-bottom 10px
+.m-player
+	.back
+		position absolute
+		top 10px
+		left 20px
+		svg
+			width 20px
+			height @width
+			fill $text-highlight-color
+	.normal-player
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		right 0
+		z-index $player-zindex
+		background-color $background-color
+		color #fff
+		.bg
+			position absolute
+			top 0
+			left 0
+			bottom 0
+			right 0
+			background-repeat no-repeat
+			background-position center
+			background-size cover
+			filter blur(3px)
+			z-index -1
+			&::after
+				content ""
+				display block
+				position absolute
+				width 100%
+				height 100%
+				top 0
+				left 0
+				background-color rgba(0,0,0,.6)
+		h1
+			margin 10px 0px
+			font-size 18px
+			padding 0px 45px
+			cursor pointer
+			no-wrap()
+		h2
+			font-size 14px
+			padding 0px 30px
+			cursor pointer
+			no-wrap()
+		.main
+			position absolute
+			left 0
+			right 0
+			top 50px
+			bottom 20px
+			margin-top 4em
+			.main-disk-wrap
+				transition all 0.5s linear
+				cursor pointer
+				.disk-wrap
+					position relative
+					transition all 0.5s linear
+					display inline-block
+					border-radius 50%
+					&.play
+						animation myPlay 18s linear infinite
+					&.pause
+						animation-play-state paused
+					.disk
+						display inline-block
+						transition all 0.5s linear
+						border-radius 50%
+						img
+							box-shadow 0px 0px 0px 8px rgba(255,255,255,.1)
+							border-radius  50%
+							width 200px
+							height 200px
+							vertical-align top
+						img[src='']
+							opacity 0
+				.current-lyric
+					margin-top 20px
+					color $text-color
+			.lyric-wrap
+				position: absolute
+				overflow hidden
+				top 10px
+				bottom 100px
+				left 100%
+				width 100%
+				color $text-color
+				transition all 0.5s linear
+				.lyric
+					p
+						line-height 1.5
+						&.current
+							color #fff
+		.control-wrap
+				position absolute
+				width 100%
+				left 0
+				bottom 30px
+				.control
+					display flex
+					padding 0 20px
+					justify-content space-between
+					flex-wrap wrap
+					.progress-bar-wrap
+						cursor pointer
+						width 100%
+						margin-bottom 10px
 
-        svg
-          width 20px
-          height 20px
-          cursor pointer
-          fill $text-highlight-color
-  .mini-player
-    position absolute
-    z-index $mini-player-zindex
-    bottom 0px
-    height 60px
-    background-color #333
-    left 0
-    width 100%
-    color #fff
-    .content
-      display flex
-      align-items center
-      height 100%
-      padding  0 20px
-      .avatar
-        img
-          cursor pointer
-          width 40px
-          height @width
-          border-radius 50%
-          display block
-      .text
-        margin 0 10px
-        flex 1
-        min-width 0
-        cursor pointer
-        h2
-          font-size 12px
-          font-weight normal
-          text-align left
-          line-height: 1.2
-          no-wrap()
-        h3
-          font-size 12px
-          font-weight normal
-          color #777
-          text-align left
-      .control
-        flex 0
-        display flex
-        justify-content flex-end
-        align-items center
-        .progress-circle
-          cursor pointer
-          .play
-            position absolute
-            margin auto
-            top 50%
-            left 50%
-            transform translate3d(-50%,-50%,0)
-        svg
-          display block
-          fill $text-highlight-color
-          width 15px
-          height @width
+				svg
+					width 20px
+					height 20px
+					cursor pointer
+					fill $text-highlight-color
+	.mini-player
+		position absolute
+		z-index $mini-player-zindex
+		bottom 0px
+		height 60px
+		background-color #333
+		left 0
+		width 100%
+		color #fff
+		.content
+			display flex
+			align-items center
+			height 100%
+			padding  0 20px
+			.avatar
+				img
+					cursor pointer
+					width 40px
+					height @width
+					border-radius 50%
+					display block
+			.text
+				margin 0 10px
+				flex 1
+				min-width 0
+				cursor pointer
+				h2
+					font-size 12px
+					font-weight normal
+					text-align left
+					line-height: 1.2
+					no-wrap()
+				h3
+					font-size 12px
+					font-weight normal
+					color #777
+					text-align left
+			.control
+				flex 0
+				display flex
+				justify-content flex-end
+				align-items center
+				.progress-circle
+					cursor pointer
+					.play
+						position absolute
+						margin auto
+						top 50%
+						left 50%
+						transform translate3d(-50%,-50%,0)
+				svg
+					display block
+					fill $text-highlight-color
+					width 15px
+					height @width
 
-        .list
-          margin-left 15px
-          cursor pointer
+				.list
+					margin-left 15px
+					cursor pointer
 </style>
