@@ -17,6 +17,7 @@
     "babel-runtime": "^6.0.0",
     "better-scroll": "^2.0.5",
     "body-parser": "^1.19.0",
+    "compression-webpack-plugin": "1.1.12",
     "core-js": "^3.6.4",
     "create-keyframe-animation": "^0.1.0",
     "eslint-plugin-html": "^6.0.2",

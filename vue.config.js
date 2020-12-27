@@ -5,7 +5,7 @@ const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
-
+const CompressionPlugin = require("compression-webpack-plugin")
 const axios = require("axios")
 const express = require("express")
 const app = express()
@@ -19,11 +19,25 @@ app.use("/api", apiRoutes)
 module.exports = {
   //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
   publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
-
+  productionSourceMap: false,
   outputDir: "docs",
   assetsDir: "static",
   lintOnSave: true,
-
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === "production") {
+      // 为生产环境修改配置...
+      config.mode = "production"
+      return {
+        plugins: [
+          new CompressionPlugin({
+            test: /\.js$|\.html$|\.css/, //匹配文件名
+            threshold: 10240, //对超过10k的数据进行压缩
+            deleteOriginalAssets: true //是否删除原文件
+          })
+        ]
+      }
+    }
+  },
   chainWebpack: config => {
     config.plugin("html").tap(args => {
       args[0].title = "逸辰音乐"
@@ -69,19 +83,6 @@ module.exports = {
     before(app) {
       // app + apiRoutes + before(app) 实现跨域，拦截，mock等功能，偏后端
     }
-  },
+  }
 
-
-
-  // pluginOptions: {
-  //   prerenderSpa: {
-  //     registry: undefined,
-  //     renderRoutes: [
-  //       '/'
-  //     ],
-  //     useRenderEvent: true,
-  //     headless: true,
-  //     onlyProduction: true
-  //   }
-  // }
 }
