@@ -2,13 +2,6 @@ import Vue from "vue"
 import VueRouter, { RouteConfig } from "vue-router"
 Vue.use(VueRouter)
 
-// import rank from "@/views/rank/rank.vue"
-// import search from "@/views/search/search.vue"
-// import singer from "@/views/singer/singer.vue"
-// import singerDetails from "@/views/singer-details/singer-details.vue"
-// import RecommendDetails from "@/views/recommend-details/recommend-details.vue"
-// import Toplist from "@/views/toplist/toplist.vue"
-
 // 路由懒加载
 const recommend = () => import("@/views/recommend/recommend.vue")
 const rank = () => import("@/views/rank/rank.vue")
@@ -73,13 +66,11 @@ const routes: Array<RouteConfig> = [
   {
     path: "*",
     name: "NotFound",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/NotFound.vue")
+    component: () => import("../views/NotFound.vue")
   }
 ]
 
 const router = new VueRouter({
-  mode: "history",
   routes
 })
 
