@@ -1,6 +1,5 @@
 import jsonp0 from "@/common/js/jsonp"
 import { queryData, options, options2, descQuery, xhrOptions } from "./config"
-import axios from "axios"
 import { sign_generator } from "common/js/xhr"
 
 function getRecommend() {
@@ -49,12 +48,15 @@ function getCdInfoById(albumMid: string) {
     format: "jsonp",
     data
   })
-  return jsonp0("https://u.y.qq.com/cgi-bin/musics.fcg", param, {
+
+  const ret = jsonp0("https://u.y.qq.com/cgi-bin/musics.fcg", param, {
     param: "callback",
-    name: "callback123"
-  }).then((response: any) => {
-    return Promise.resolve(response.albumSonglist)
+    name: "callback4"
   })
+  return ret
+    .then((response: any) => {
+      return Promise.resolve(response.albumSonglist)
+    })
 }
 
 export { getAlbums, getRecommend, getCdInfoById }

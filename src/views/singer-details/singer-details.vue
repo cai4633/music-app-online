@@ -1,7 +1,12 @@
 <template>
-  <div class="singer-details">
-    <music-list :songs="songs" ref="musicList" :title="singer.name" :bgImg="singer.avatar" ></music-list>
-  </div>
+	<div class="singer-details">
+		<music-list
+			:songs="songs"
+			ref="musicList"
+			:title="singer.name"
+			:bgImg="singer.avatar"
+		></music-list>
+	</div>
 </template>
 
 <script lang="ts">
@@ -15,43 +20,43 @@ import Player from "components/player/player.vue";
 import MusicList from "components/music-list/music-list.vue";
 import { Getter } from "vuex-class";
 @Component({
-  components: {
-    MusicList,
-    Player
-  }
+	components: {
+		MusicList,
+		Player,
+	},
 })
 export default class SingerDetails extends Vue {
-  songs = [];
+	songs = [];
 
-  @Getter("singer") singer!: any;
+	@Getter("singer") singer!: any;
 
-  mounted() {
-    this.$nextTick(() => {
-      if (!this.singer.mid) {
-        this.$router.push({ path: "/singer" });
-      }
-      this._getSingerSongs(this.singer.mid);
-    });
-  }
+	mounted() {
+		this.$nextTick(() => {
+			if (!this.$route.params.mid) {
+				this.$router.push({ path: "/singer" });
+			}
+			this._getSingerSongs(this.$route.params.mid);
+		});
+	}
 
-  normalizeData(data: any) {
-    return data.map((item: any) => {
-      return createSong(item);
-    });
-  }
+	normalizeData(data: any) {
+		return data.map((item: any) => {
+			return createSong(item);
+		});
+	}
 
-  _getSingerSongs(mid: string) {
-    getSingerSongs(mid).then(({ data, code }) => {
-      if (code === ERR_OK) {
-        this._getSongUrl(data.songList).then((res: any) => {
-          this.songs = this.normalizeData(res);
-        });
-      }
-    });
-  }
-  _getSongUrl(data: any) {
-    return getSongUrl(data);
-  }
+	_getSingerSongs(mid: string) {
+		getSingerSongs(mid).then(({ data, code }) => {
+			if (code === ERR_OK) {
+				this._getSongUrl(data.songList).then((res: any) => {
+					this.songs = this.normalizeData(res);
+				});
+			}
+		});
+	}
+	_getSongUrl(data: any) {
+		return getSongUrl(data);
+	}
 }
 </script>
 
@@ -69,5 +74,5 @@ export default class SingerDetails extends Vue {
     left calc(50% - 360px)
     width 720px
   }
-  z-index $singer-detail-zindex 
+  z-index $singer-detail-zindex
 </style>

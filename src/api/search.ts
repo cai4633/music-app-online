@@ -1,11 +1,11 @@
 import jsonp0 from "common/js/jsonp"
 import { jsonpOptions, options } from "./config"
-import axios from "axios"
 
 export function getHotKey() {
   const url = "https://c.y.qq.com/splcloud/fcgi-bin/gethotkey.fcg"
   const data = Object.assign({}, jsonpOptions, { g_tk: +new Date() })
-  return jsonp0(url, data, options)
+  const opt = Object.assign({},options,{name: "jsonp678"})
+  return jsonp0(url, data, opt)
 }
 
 export function getSearchInfo(key = "", page = 1, zhida = true, perpage = 20) {
@@ -40,7 +40,9 @@ export function getSearchInfo(key = "", page = 1, zhida = true, perpage = 20) {
   // return axios.get("/soso/fcgi-bin/search_for_qq_cp", { params: data }).then(res => {
   //   return Promise.resolve(res.data);
   // });
-  return jsonp0(url, data, options).then((res: any) => {
+  const opt = Object.assign({},options,{name: "jsonp789"})
+
+  return jsonp0(url, data, opt).then((res: any) => {
     return Promise.resolve(res)
   })
 }

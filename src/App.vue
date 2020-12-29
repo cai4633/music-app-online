@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
-    <m-header></m-header>
-    <tab></tab>
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>
-    <player></player>
-  </div>
+	<div id="app">
+		<m-header></m-header>
+		<tab></tab>
+		<keep-alive>
+			<router-view></router-view>
+		</keep-alive>
+		<player></player>
+	</div>
 </template>
 
 <script lang="ts">
@@ -17,9 +17,9 @@ import Player from "components/player/player.vue";
 
 // TODO: 优化web端体验
 @Component({
-  components: { MHeader, Tab, Player }
+	components: { MHeader, Tab, Player },
 })
-export default class App extends Vue { }
+export default class App extends Vue {}
 </script>
 
 <style lang="stylus">
@@ -42,4 +42,3 @@ export default class App extends Vue { }
   margin auto
   background-color $background-color
 </style>
-

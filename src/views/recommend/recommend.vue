@@ -77,6 +77,11 @@ export default class Recommend extends Mixins(PlaylistMixin) {
 			this.__getRecommend();
 			this.__getDescLists();
 		}, 20); //instead of nextTick(),浏览器刷新时间一般是17ms
+
+		setTimeout(() => {
+			console.log(this.slideList);
+			console.log(this.albums);
+		}, 1000);
 	}
 	mounted() {
 		window.onresize = this.descListRefresh; //resize 更新位置
@@ -88,8 +93,9 @@ export default class Recommend extends Mixins(PlaylistMixin) {
 
 	selectItem(item: AlbumCls, index: string) {
 		this.setDisc(item);
-		this.$router.push({ path: `/recommend/${item.mid}` });
+		this.$router.push(`/recommend/${item.mid}`);
 	}
+
 	handlePlaylist() {
 		const BOTTOM = this.playlist.length ? 65 : 0;
 		if (this.$refs.recommend) {
@@ -107,12 +113,6 @@ export default class Recommend extends Mixins(PlaylistMixin) {
 		});
 	}
 
-	descListRefresh() {
-		if (this.$refs.banner) {
-			this.$refs.descLists.style.top = `${this.$refs.banner.offsetHeight}px`;
-		}
-	}
-
 	__getDescLists() {
 		getAlbums().then((res: MyResponse) => {
 			if (res.code === ERR_OK && res.new_album) {
@@ -122,9 +122,17 @@ export default class Recommend extends Mixins(PlaylistMixin) {
 			}
 		});
 	}
+
+	descListRefresh() {
+		if (this.$refs.banner) {
+			this.$refs.descLists.style.top = `${this.$refs.banner.offsetHeight}px`;
+		}
+	}
+
 	getListenNum(number: string) {
 		return (parseFloat(number) / 10000).toFixed(1);
 	}
+
 	imgLoad() {
 		this.$refs.recommend.refresh();
 	}

@@ -29,7 +29,8 @@ const routes: Array<RouteConfig> = [
     component: recommend,
     children: [
       {
-        path: ":id",
+        name:'recommendDetails',
+        path: ":mid",
         component: RecommendDetails,
       },
     ],
@@ -59,7 +60,7 @@ const routes: Array<RouteConfig> = [
     component: singer,
     children: [
       {
-        path: ":id",
+        path: ":mid",
         component: singerDetails,
       },
     ],
