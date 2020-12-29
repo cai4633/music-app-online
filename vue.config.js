@@ -18,7 +18,7 @@ app.use("/api", apiRoutes)
 
 module.exports = {
   //打包路径：'/'适用于服务器端，'./'适用于本地或者GitPage
-  publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/music-app-online/" : "/",
   productionSourceMap: false,
   outputDir: "docs",
   assetsDir: "static",
