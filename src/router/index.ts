@@ -15,25 +15,26 @@ const rank = () => import("@/views/rank/rank.vue")
 const search = () => import("@/views/search/search.vue")
 const singer = () => import("@/views/singer/singer.vue")
 const singerDetails = () => import("@/views/singer-details/singer-details.vue")
-const RecommendDetails = () => import("@/views/recommend-details/recommend-details.vue")
+const RecommendDetails = () =>
+  import("@/views/recommend-details/recommend-details.vue")
 const Toplist = () => import("@/views/toplist/toplist.vue")
 const UserCenter = () => import("@/views/user-center/user-center.vue")
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    redirect: "/recommend",
+    redirect: "/recommend"
   },
   {
     path: "/recommend",
     component: recommend,
     children: [
       {
-        name:'recommendDetails',
+        name: "recommendDetails",
         path: ":mid",
-        component: RecommendDetails,
-      },
-    ],
+        component: RecommendDetails
+      }
+    ]
   },
   {
     path: "/rank",
@@ -41,9 +42,9 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: ":id",
-        component: Toplist,
-      },
-    ],
+        component: Toplist
+      }
+    ]
   },
   {
     path: "/search",
@@ -51,9 +52,9 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: ":id",
-        component: singerDetails,
-      },
-    ],
+        component: singerDetails
+      }
+    ]
   },
   {
     path: "/singer",
@@ -61,23 +62,25 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: ":mid",
-        component: singerDetails,
-      },
-    ],
+        component: singerDetails
+      }
+    ]
   },
   {
     path: "/user-center",
-    component: UserCenter,
+    component: UserCenter
   },
   {
-    path: "/home",
-    name: "Home",
-    component: () => import(/* webpackChunkName: "about" */ "../views/Home.vue"),
-  },
+    path: "*",
+    name: "NotFound",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/NotFound.vue")
+  }
 ]
 
 const router = new VueRouter({
-  routes,
+  mode: "history",
+  routes
 })
 
 export default router

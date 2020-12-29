@@ -78,10 +78,6 @@ export default class Recommend extends Mixins(PlaylistMixin) {
 			this.__getDescLists();
 		}, 20); //instead of nextTick(),浏览器刷新时间一般是17ms
 
-		setTimeout(() => {
-			console.log(this.slideList);
-			console.log(this.albums);
-		}, 1000);
 	}
 	mounted() {
 		window.onresize = this.descListRefresh; //resize 更新位置

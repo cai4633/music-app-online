@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <m-header></m-header>
+  <div class="not-found">
+    您访问的页面不存在！
   </div>
 </template>
 
@@ -14,3 +14,10 @@ export default {
   }
 };
 </script>
+
+<style lang="stylus">
+.not-found
+  margin-top 3em;
+  color #bbb;
+</style>
+
