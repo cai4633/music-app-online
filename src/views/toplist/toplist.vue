@@ -29,10 +29,10 @@ export default class Toplist extends Vue {
   @Getter("toplist") toplist!: any
 
   mounted() {
-    if (!this.toplist.id) {
+    if (!this.$route.params.id) {
       this.$router.push({ path: "/rank" })
     }
-    this._getSongsByTopid(this.toplist.id)
+    this._getSongsByTopid(parseInt(this.$route.params.id))
   }
   _getSongsByTopid(id: number) {
     return getSongsByTopid(id).then((res: MyResponse) => {
